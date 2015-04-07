@@ -1,3 +1,4 @@
+herokuAppName in Compile := "morning-wildwood-5483"
 name := """testApp"""
 
 version := "1.0-SNAPSHOT"
