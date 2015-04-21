@@ -2,7 +2,9 @@ import NativePackagerKeys._
 
 herokuAppName in Compile := "morning-wildwood-5483"
 
-name := """testApp"""
+name := """Grupp 11 App"""
+
+libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.27"
 
 version := "1.0-SNAPSHOT"
 
@@ -16,3 +18,6 @@ libraryDependencies ++= Seq(
   cache,
   javaWs
 )
+
+
+fork in run := true
