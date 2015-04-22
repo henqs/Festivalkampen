@@ -19,7 +19,7 @@ quiz_question_choice
 ______
 choice id (int(11)) AUTO_INCREMENT
 question_id (int(11))
-is_right_choice (enum('0','1')) - Standard value = 0
+is_right_choice (enum('0','1'))
 choice (varchar(255))
 
 
