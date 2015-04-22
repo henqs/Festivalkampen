@@ -1,0 +1,155 @@
+-- phpMyAdmin SQL Dump
+-- version 3.4.11.1deb2+deb7u1
+-- http://www.phpmyadmin.net
+--
+-- Värd: localhost
+-- Skapad: 22 apr 2015 kl 06:50
+-- Serverversion: 5.5.41
+-- PHP-version: 5.4.39-0+deb7u2
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Databas: `anek2876`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tabellstruktur `quiz`
+--
+
+CREATE TABLE IF NOT EXISTS `quiz` (
+  `id` int(11) NOT NULL,
+  `title` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellstruktur `quiz_question`
+--
+
+CREATE TABLE IF NOT EXISTS `quiz_question` (
+  `question_id` int(11) NOT NULL AUTO_INCREMENT,
+  `question` varchar(500) NOT NULL,
+  `is_active` enum('0','1') NOT NULL DEFAULT '0',
+  PRIMARY KEY (`question_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellstruktur `quiz_question_choice`
+--
+
+CREATE TABLE IF NOT EXISTS `quiz_question_choice` (
+  `choice_id` int(11) NOT NULL AUTO_INCREMENT,
+  `question_id` int(11) NOT NULL,
+  `is_right_choice` enum('0','1') NOT NULL DEFAULT '0',
+  `choice` varchar(255) NOT NULL,
+  PRIMARY KEY (`choice_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellstruktur `quiz_user_answer`
+--
+
+CREATE TABLE IF NOT EXISTS `quiz_user_answer` (
+  `user_id` int(11) NOT NULL COMMENT 'ID på användaren',
+  `question_id` int(11) NOT NULL COMMENT 'ID på besvarade frågan',
+  `choice_id` int(11) NOT NULL COMMENT 'Valda svarsalternativet',
+  `is_right` enum('0','1') NOT NULL DEFAULT '0' COMMENT 'Är svaret rätt? Kopplat till is_right_choice',
+  `answer_time` datetime NOT NULL COMMENT 'När svarade användaren på frågan?',
+  PRIMARY KEY (`question_id`,`choice_id`),
+  KEY `choice_id` (`choice_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellstruktur `team`
+--
+
+CREATE TABLE IF NOT EXISTS `team` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `bio` text,
+  `creation_date` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumpning av Data i tabell `team`
+--
+
+INSERT INTO `team` (`id`, `name`, `bio`, `creation_date`) VALUES
+(1, 'Röda laget', 'Vi är röda laget! HEJA HEJA HEJA!', '2015-04-21 09:32:36'),
+(2, 'Blåa laget', 'BLÅ BLÅ! HEEJA', '2015-04-18 13:37:37'),
+(3, 'Svarta laget', 'WE <3 darkness!\r\n\r\nDricka bärs!', '2015-04-10 16:40:35');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellstruktur `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `gender` enum('m','f') NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `user_password` varchar(30) NOT NULL,
+  `address` varchar(60) NOT NULL,
+  `zip_code` int(11) NOT NULL,
+  `city` varchar(60) NOT NULL,
+  `reg_date` datetime NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `account_permissions` enum('a','b','c') NOT NULL DEFAULT 'a',
+  `bio` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumpning av Data i tabell `user`
+--
+
+INSERT INTO `user` (`id`, `gender`, `name`, `username`, `user_password`, `address`, `zip_code`, `city`, `reg_date`, `email`, `account_permissions`, `bio`) VALUES
+(2, 'm', 'Anders Ekh', '', '', 'Filarvägen 7', 17671, 'Järfälla', '2015-04-22 00:00:00', 'anders.ekh@hotmail.com', 'c', 'Hej jag heter Anders!');
+
+--
+-- Restriktioner för dumpade tabeller
+--
+
+--
+-- Restriktioner för tabell `quiz_question`
+--
+ALTER TABLE `quiz_question`
+  ADD CONSTRAINT `quiz_question_ibfk_1` FOREIGN KEY (`question_id`) REFERENCES `quiz` (`id`);
+
+--
+-- Restriktioner för tabell `quiz_question_choice`
+--
+ALTER TABLE `quiz_question_choice`
+  ADD CONSTRAINT `quiz_question_choice_ibfk_1` FOREIGN KEY (`choice_id`) REFERENCES `quiz_question` (`question_id`);
+
+--
+-- Restriktioner för tabell `quiz_user_answer`
+--
+ALTER TABLE `quiz_user_answer`
+  ADD CONSTRAINT `quiz_user_answer_ibfk_1` FOREIGN KEY (`choice_id`) REFERENCES `quiz_question` (`question_id`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
