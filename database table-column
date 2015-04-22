@@ -1,0 +1,67 @@
+------------------------
+quiz
+______
+id (int(11))
+title (varchar(20))
+
+------------------------
+
+quiz_question
+______
+question_id (int(11))
+question (varchar(500))
+is_active (enum('0','1'))
+
+-------------------------
+
+
+quiz_question_choice
+______
+choice id (int(11)) AUTO_INCREMENT
+question_id (int(11))
+is_right_choice (enum('0','1')) - Standard value = 0
+choice (varchar(255))
+
+
+-------------------------
+
+
+quiz_user_answer
+______
+user_id (int(11))
+question_id (int(11))
+choice_id (int(11))
+is_right (enum('0','1'))
+answer_time (datetime)
+
+
+------------------------
+
+
+team
+______
+id (int(11))
+name (varchar(100))
+bio (text)
+creation_date (datetime)
+
+
+------------------------
+
+
+user
+______
+id (int(11)) AUTO_INCREMENT
+gender (enum('m','f'))
+name (varchar(255))
+username (varchar(30))
+user_password (varchar(30))
+adress (varchar(60))
+zip_code (int(11))
+city (varchar(60))
+reg_date (datetime)
+email (varchar(100))
+account_permissions (enum('a','b','c'))
+bio (text) 
+
+------------------------
