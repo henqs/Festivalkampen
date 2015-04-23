@@ -1,19 +1,25 @@
 package models;
 
-import javax.persistence.*;
 import javax.validation.*;
 import play.api.data.validation.*;
 import play.data.*;
+import javax.persistence.*;
 
-public class User {
+import play.db.ebean.*;
+
+
+public class User extends Model{
 	
 	public String namn;
 	public int ålder;
+	
+    @Id 
+    public int id;
 
 	
-	public User(String namn, int ålder){
-		this.namn = namn;
-		this.ålder = ålder;
+    // Queries
+	public User(int id){
+		this.id = id;
 	}
 
 }
