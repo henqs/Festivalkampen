@@ -23,17 +23,15 @@ public class Application extends Controller {
 
 	public static Result index() {
 		
-		return ok(index.render("Hej" + getName()));
+		return ok(index.render());
 
 
 	}
 	
 //	// Create user and send to database
 		public static void addUser() {
-	
-
 			
-			
+			ObjectNode result = Json.newObject();
 			Connection conn = null;
 			Statement stmt = null;
 
@@ -41,9 +39,9 @@ public class Application extends Controller {
 				conn = DB.getConnection();
 				stmt = conn.createStatement();
 
-				String insertIntoDatabase = "INSERT INTO `anek2876`.`testTabellPlsIgnore` (`ålder` , `namn`) VALUES ('456', 'Igen');";
+				String insertIntoDatabase = "INSERT INTO `anek2876`.`user` (`ålder` , `namn`) VALUES ('456', 'Igen');";
 
-				// execute insert SQL stetement
+				// execute insert SQL statement
 				stmt.executeUpdate(insertIntoDatabase);
 			} catch (SQLException se) {
 
