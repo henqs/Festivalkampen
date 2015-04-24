@@ -20,13 +20,12 @@ import play.mvc.*;
 import views.html.*;
 
 public class Application extends Controller {
-
-	public static Result index() {
-		
-		return ok();
-
-
-	}
+	  
+	  public static Result index() {
+	    return ok(index.render());
+	  }
+	  
+	
 	
 //	// Create user and send to database
 		public static void addUser() {
