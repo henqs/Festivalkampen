@@ -1,7 +1,26 @@
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
 @(message: String)
 
-@main("Welcome to Play") {
+@main(title = "Home") {
 
-    @play20.welcome(message, style = "Java")
-
+    
+  <h1>Välkommen till Festvalkampen</h1>
+  
+    <script>
+	$(document).ready(function(){
+	    $("p").click(function(){
+	        $(this).hide();
+	    });
+	});
+	</script>
+    
+	<p>If you click on me, I will disappear.</p>
+ 
+  <p id="demo">Njut av att klicka på knappen</p>
+  
+  <button type="button"
+	onclick="document.getElementById('demo').innerHTML = 'Väl klickat!!'">
+	Klicka här!</button>
+  
+  
 }
