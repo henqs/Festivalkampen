@@ -498,3 +498,58 @@ Copy resource mappings:
 Total time: 2 s, completed 2015-apr-24 11:35:37
 > server-post-command-cleanup
 > server-handle-next-server-request
+> jobStop 5
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@4d9f1d79, check cycles: false
+Total time: 0 s, completed 2015-apr-24 11:49:24
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@48221f04, check cycles: false
+Total time: 0 s, completed 2015-apr-24 11:49:35
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@73b49747, check cycles: false
+Total time: 0 s, completed 2015-apr-24 11:49:38
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@f148e31, check cycles: false
+Total time: 0 s, completed 2015-apr-24 11:49:39
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@4acd8183, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 2015-apr-24 11:49:52
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 6
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@445ce691, check cycles: false
+Total time: 0 s, completed 2015-apr-24 11:50:04
+> server-post-command-cleanup
+> server-handle-next-server-request

@@ -757,3 +757,34 @@ Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: Execut
 Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: DetachedLogEvent(LogMessage(debug,> server-handle-next-server-request))
 Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: BackgroundJobLogEvent(5,LogMessage(info,play - database [default] connected at jdbc:mysql://mysql.dsv.su.se/anek2876?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci))
 Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: BackgroundJobLogEvent(5,LogMessage(info,play - Application started (Dev)))
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: ExecutionWaiting(32,jobStop 5,ClientInfo(9ce6bbcc-5ce9-4308-b1cf-005184aa412d,activator,Activator,1,Vector()))
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: ExecutionStarting(32)
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: DetachedLogEvent(LogMessage(debug,> jobStop 5))
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: DetachedLogEvent(LogMessage(debug,Evaluating tasks: *:jobStop))
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: DetachedLogEvent(LogMessage(debug,Running task... Cancel: sbt.server.ServerTaskCancellation@4d9f1d79, check cycles: false))
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: DetachedLogEvent(LogMessage(debug,cancel strategy start enabled=true lastCommand=Some(LastCommand(CommandExecutionWork(ExecutionId(32),jobStop 5,Set(LiveClient(activator 9ce6bbcc-5ce9-4308-b1cf-005184aa412d)),sbt.server.WorkCancellationStatus$$anon$1@7ab0e37a)))))
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: TaskStarted(32,2211,Some(AttributeKey[void]("jobStop") in Scope(Global)))
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: TaskFinished(32,2211,Some(AttributeKey[void]("jobStop") in Scope(Global)),true,None)
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: BackgroundJobLogEvent(5,LogMessage(info,Stopping Play fork run ...))
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: TaskStarted(32,2210,None)
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: TaskFinished(32,2210,None,true,None)
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: TaskStarted(32,2209,None)
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: TaskFinished(32,2209,None,true,None)
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: DetachedLogEvent(LogMessage(debug,cancel strategy finish enabled=false lastCommand=Some(LastCommand(CommandExecutionWork(ExecutionId(32),jobStop 5,Set(LiveClient(activator 9ce6bbcc-5ce9-4308-b1cf-005184aa412d)),sbt.server.WorkCancellationStatus$$anon$1@7ab0e37a)))))
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: DetachedLogEvent(LogSuccess(Total time: 0 s, completed 2015-apr-24 11:49:24))
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: DetachedLogEvent(LogMessage(debug,> server-post-command-cleanup))
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: ExecutionSuccess(32)
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: DetachedLogEvent(LogMessage(debug,> server-handle-next-server-request))
+Got request: UnlistenToEvents()
+Reading next message from client.
+Sending msg to client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275: (12,ReceivedResponse())
+Got request: UnlistenToValue(AttributeKey[play.forkrun.protocol.ForkConfig]("playForkConfig") in Scope(Build: file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/, , Project: ProjectReference(file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/,root)))
+Reading next message from client.
+Got request: UnlistenToValue(AttributeKey[play.runsupport.Reloader$CompileResult]("playForkReload") in Scope(Build: file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/, , Project: ProjectReference(file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/,root)))
+Reading next message from client.
+Client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275 EOF, shutting down.
+Stopping client.
+Dropping message (13,ReceivedResponse()) to dead client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275
+Client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275 thread exiting.
+Dropping message (14,ReceivedResponse()) to dead client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275
+Dropping message (0,ReceivedResponse()) to dead client play-fork-run-bb45d147-ce74-4f23-8976-356a103cb275
