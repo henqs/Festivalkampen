@@ -16,6 +16,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/facebookSDK.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -23,8 +24,55 @@
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
+	<script>
+	window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '909582695765355',
+				cookie     : true,  // enable cookies to allow the server to access 
+									// the session
+				xfbml      : true,  // parse social plugins on this page
+				version    : 'v2.2' // use version 2.2
+			});
+	
+			FB.Event.subscribe('auth.login', function(){
+			window.location.href = 'index.html';
+			});
+			// Now that we've initialized the JavaScript SDK, we call 
+			// FB.getLoginStatus().  This function gets the state of the
+			// person visiting this page and can return one of three states to
+			// the callback you provide.  They can be:
+			//
+			// 1. Logged into your app ('connected')
+			// 2. Logged into Facebook, but not your app ('not_authorized')
+			// 3. Not logged into Facebook and can't tell if they are logged into
+			//    your app or not.
+			//
+			// These three cases are handled in the callback function.
+			
+			FB.getLoginStatus(function(response) {
+				statusChangeCallback(response);
+				if (response.status === 'connected') {
+					// Logged into your app and Facebook.
+					console.log('Logged in!');
+					var login = document.getElementById("login");
+					//login.style.display = 'none';
+					login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) {});" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
+					var welcomeText = document.getElementById("welcome-text");
+					FB.api('/me', function(response) {
+						console.log(response);
+						welcomeText.innerHTML = "Välkommen till Festivalkampen " + response.first_name + "!";
+						});
+					
+				} else if (response.status === 'not_authorized') {
+					// The person is logged into Facebook, but not your app.
+				} else {
+					// The person is not logged into Facebook, so we're not sure if
+					// they are logged into this app or not.
+				}
+			});
+		};
+		</script>
 	<body class="homepage">
-
 		<!-- Header -->
 			<div id="header-wrapper">
 				<header id="header" class="container">
@@ -65,13 +113,13 @@
 				<div id="banner" class="box container">
 					<div class="row">
 						<div class="7u">
-							<h2>Välkommen till Festivalkampen!</h2>
+							<h2 id="welcome-text">Välkommen till Festivalkampen!</h2>
 							<p>Detta är en app som förgyller din vistelse hos oss.</p>
 						</div>
 						<div class="5u">
 							<ul>
-								<li><a href="login.html" class="button big icon fa-arrow-circle-right">Logga in</a></li>
-								<li><a href="#" class="button alt big icon fa-question-circle">Mer info</a></li>
+								<li id="login"><a href="login.html" class="button big icon fa-arrow-circle-right">Logga in</a></li>
+								<li id="info"><a href="#" class="button alt big icon fa-question-circle">Mer info</a></li>
 							</ul>
 						</div>
 					</div>

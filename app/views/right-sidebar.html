@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <!--
 	PVT 15 - Grupp 11
-    Anledningen till varför det står på engelska är pga arbetsskada haha!!
-    Har även mycket automatgenererad kod via Dreamweaver. 
+    Den här HTML-filen är ett exempel på hur en sida som användaren inte får accessa utan att vara inloggad kan bete sig.
+	Den dirigerar helt enkelt om till login-sidan om användaren inte är inloggad.
 -->
 <html>
 	<head>
@@ -16,6 +16,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/facebookSDK.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -24,7 +25,45 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body class="right-sidebar">
+		<script>
+	 window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '909582695765355',
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.2' // use version 2.2
+  });
 
+  // Now that we've initialized the JavaScript SDK, we call 
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+	if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+	  console.log('Logged in!');
+    } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+	  window.location = 'login.html';
+    } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+	  window.location = 'login.html';
+    }
+  });
+
+  };
+	</script>
 		<!-- Header -->
 			<div id="header-wrapper">
 				<header id="header" class="container">
