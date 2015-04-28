@@ -20,7 +20,7 @@
 			.image img
 			{
 				position: relative;
-				-ms-behavior: url('css/ie/PIE.htc');
+				-ms-behavior: url("@routes.Assets.at("stylesheets/css/ie/PIE.htc")");
 			}
 	
 	/* Button */
@@ -31,7 +31,7 @@
 		.button
 		{
 			position: relative;
-			-ms-behavior: url('css/ie/PIE.htc');
+			-ms-behavior: url("@routes.Assets.at("stylesheets/css/ie/PIE.htc")";
 		}
 
 	/* Box */
@@ -39,7 +39,7 @@
 		.box
 		{
 			position: relative;
-			-ms-behavior: url('css/ie/PIE.htc');
+			-ms-behavior: url("@routes.Assets.at("stylesheets/css/ie/PIE.htc")";
 		}
 
 /*********************************************************************************/
@@ -65,7 +65,7 @@
 					.widget.contact ul li a
 					{
 						position: relative;
-						-ms-behavior: url('css/ie/PIE.htc');
+						-ms-behavior: url("@routes.Assets.at("stylesheets/css/ie/PIE.htc")";
 					}
 
 /*********************************************************************************/
@@ -79,7 +79,7 @@
 		#logo h1
 		{
 			position: relative;
-			-ms-behavior: url('css/ie/PIE.htc');
+			-ms-behavior: url("@routes.Assets.at("stylesheets/css/ie/PIE.htc")");
 		}
 						
 /*********************************************************************************/
@@ -102,14 +102,14 @@
 				#nav ul li span
 				{
 					position: relative;
-					-ms-behavior: url('css/ie/PIE.htc');
+					-ms-behavior: url("@routes.Assets.at("stylesheets/css/ie/PIE.htc")";
 				}
 				
 	.dropotron
 	{
 		border: solid 1px #eee;
 		box-shadow: none !important;
-		-ms-behavior: url('css/ie/PIE.htc');
+		-ms-behavior: url("@routes.Assets.at("stylesheets/css/ie/PIE.htc")";
 	}
 	
 		.dropotron.level-0
