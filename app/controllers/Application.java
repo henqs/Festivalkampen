@@ -20,13 +20,26 @@ import play.mvc.*;
 import views.html.*;
 
 public class Application extends Controller {
-
-	public static Result index() {
-		
-		return ok();
-
-
-	}
+	  
+	  public static Result index() {
+	    return ok(index.render());
+	  }
+	  
+	  public static Result login() {
+		return ok(login.render());
+	  }
+	  
+//	  public static Result javascriptRoutes() {
+//		    response().setContentType("text/javascript");
+//		    return ok(
+//		        Routes.javascriptRouter("jsRoutes",
+//		            controllers.routes.javascript.Projects.add(),
+//		            controllers.routes.javascript.Projects.delete(),
+//		            controllers.routes.javascript.Projects.rename(),
+//		            controllers.routes.javascript.Projects.addGroup()
+//		        )
+//		    );
+//		}
 	
 //	// Create user and send to database
 		public static void addUser() {

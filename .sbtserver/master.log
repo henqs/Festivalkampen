@@ -1,22 +1,22 @@
-New log file opened at Fri Apr 24 11:06:29 CEST 2015 by 8328@Henrik-Dator
-jvm 8328@Henrik-Dator
-jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.45-b02
+New log file opened at Wed Apr 29 13:51:23 CEST 2015 by 49380@Laban
+jvm 49380@Laban
+jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.40-b25
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
 Starting event engine
 Starting sbt command engine
 Waiting for sbt command engine
 Command engine arguments=List()
-Command engine baseDirectory=C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp
+Command engine baseDirectory=C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch
 Command engine initial remaining commands List(--initialize, onFailure load-failed, boot, server-send-ready-for-request, server-handle-next-server-request)
 > --initialize
 > initialize
 > onFailure load-failed
 > boot
 > reload
-[Loading] Scanning directory C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\project
+[Loading] Scanning directory C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\project
 [Loading] Found non-root projects 
-[Loading] Done in C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\project, returning: ()
+[Loading] Done in C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\project, returning: ()
 deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))))
   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.JUnitXmlReportPlugin)
 sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
@@ -25,9 +25,9 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin) not found List(sbt.plugins.JUnitXmlReportPlugin)
   :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin) not found List()
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
-[Loading] Done in C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\project, returning: (testapp-build)
-Loading project definition from C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@7f28320c, check cycles: false
+[Loading] Done in C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\project, returning: (testapp-andersekh-branch-build)
+Loading project definition from C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\project
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@251b0b4c, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -46,7 +46,7 @@ All initially invalidated sources: Set()
 
 Copy resource mappings: 
 	
-[Loading] Scanning directory C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp
+[Loading] Scanning directory C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch
 [Loading] Found root project root w/ remaining 
 deducing auto plugins based on known facts Set(Atom(play.PlayJava), Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.SbtEcho),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.SbtEcho),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(sbt.plugins.BackgroundRunPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(play.Play))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.SerializersPlugin))), Clause(Atom(play.Play),Set(Atom(com.typesafe.sbt.webdriver.SbtWebDriver))), Clause(Atom(play.Play),Set(Atom(play.twirl.sbt.SbtTwirl))), Clause(Atom(play.Play),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(play.PlayJava),Set(Atom(play.Play))), Clause(Atom(play.PlayScala),Set(Atom(play.Play))), Clause(Atom(play.twirl.sbt.SbtTwirl),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.AkkaAppPackaging),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.docker.DockerPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.archetypes.jar.ClasspathJarPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.debian.DebianDeployPlugin),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin))), Clause(Atom(com.typesafe.sbt.packager.debian.DebianPlugin),Set(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin))), Clause(Atom(com.typesafe.sbt.packager.debian.JDebPackaging),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin))), Clause(Atom(com.typesafe.sbt.packager.docker.DockerPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerDeployPlugin),Set(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin))), Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.jar.ClasspathJarPlugin))), Clause(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.packager.rpm.RpmDeployPlugin),Set(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin))), Clause(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin),Set(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin))), Clause(Atom(com.typesafe.sbt.packager.universal.UniversalDeployPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin),Set(Atom(com.typesafe.sbt.SbtNativePackager))), Clause(Atom(com.typesafe.sbt.packager.windows.WindowsDeployPlugin),Set(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin))), Clause(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(com.typesafe.sbt.webdriver.SbtWebDriver),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.heroku.sbt.HerokuPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.coffeescript.SbtCoffeeScript),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.less.SbtLess),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.jshint.SbtJSHint),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.rjs.SbtRjs),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.digest.SbtDigest),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.sbt.mocha.SbtMocha),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(And(Set(Atom(sbt.plugins.JvmPlugin), Atom(sbt.plugins.BackgroundRunPlugin))),Set(Atom(com.typesafe.sbt.SbtEcho))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.InteractionServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SendEventServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SerializersPlugin))), Clause(And(Set(Atom(sbt.plugins.BackgroundRunPlugin), Atom(play.Play), Atom(sbt.plugins.SerializersPlugin))),Set(Atom(play.sbt.forkrun.PlayForkRun))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.webdriver.SbtWebDriver))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(com.heroku.sbt.HerokuPlugin))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.coffeescript.SbtCoffeeScript))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.less.SbtLess))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jshint.SbtJSHint))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.rjs.SbtRjs))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.digest.SbtDigest))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.mocha.SbtMocha)))))
   :: deduced result: Matched(sbt.plugins.CorePlugin,play.PlayJava,sbt.plugins.InteractionServicePlugin,sbt.plugins.SendEventServicePlugin,play.Play,sbt.plugins.SerializersPlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,com.typesafe.sbt.jse.SbtJsTask,play.twirl.sbt.SbtTwirl,com.typesafe.sbt.webdriver.SbtWebDriver,com.typesafe.sbt.jshint.SbtJSHint,sbt.plugins.JUnitXmlReportPlugin,com.typesafe.sbt.mocha.SbtMocha,com.typesafe.sbt.less.SbtLess,com.typesafe.sbt.web.SbtWeb,com.typesafe.sbt.rjs.SbtRjs,com.typesafe.sbt.jse.SbtJsEngine,com.typesafe.sbt.coffeescript.SbtCoffeeScript,com.heroku.sbt.HerokuPlugin,sbt.plugins.BackgroundRunPlugin,com.typesafe.sbt.digest.SbtDigest,play.sbt.forkrun.PlayForkRun,com.typesafe.sbt.SbtEcho)
@@ -58,63 +58,16 @@ sorting: ns: List(sbt.plugins.CorePlugin, play.PlayJava, sbt.plugins.Interaction
   :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.digest.SbtDigest, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, com.typesafe.sbt.jshint.SbtJSHint, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, com.heroku.sbt.HerokuPlugin, sbt.plugins.BackgroundRunPlugin, play.Play, com.typesafe.sbt.SbtEcho) not found List(play.PlayJava, play.sbt.forkrun.PlayForkRun)
   :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.digest.SbtDigest, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, com.typesafe.sbt.jshint.SbtJSHint, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, com.heroku.sbt.HerokuPlugin, sbt.plugins.BackgroundRunPlugin, play.Play, com.typesafe.sbt.SbtEcho, play.PlayJava, play.sbt.forkrun.PlayForkRun) not found List()
   :: sorted deduced result: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.digest.SbtDigest, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, com.typesafe.sbt.jshint.SbtJSHint, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, com.heroku.sbt.HerokuPlugin, sbt.plugins.BackgroundRunPlugin, play.Play, com.typesafe.sbt.SbtEcho, play.PlayJava, play.sbt.forkrun.PlayForkRun)
-[Loading] Done in C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp, returning: (root)
-Set current project to Grupp 11 App (in build file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/)
+[Loading] Done in C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch, returning: (root)
+Set current project to Grupp 11 App (in build file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/)
 Reapplying settings...
-Set current project to Grupp 11 App (in build file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/)
+Set current project to Grupp 11 App (in build file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/)
 > iflast shell
 > server-send-ready-for-request
 > server-handle-next-server-request
-> compile
-Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@2bef840d, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
-
-Read from stdout: Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
-Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Running cached compiler 6542977, interfacing (CompilerInterface) with Scala compiler version 2.11.1
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
-	-classpath
-	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
-Scala compilation took 7.061265888 s
-New invalidations:
-	Set()
-Initial set of included nodes: Set()
-Previously invalidated, but (transitively) depend on new invalidations:
-	Set()
-All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Total time: 14 s, completed 2015-apr-24 11:07:05
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/compile:discoveredMainClasses
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@2521de9b, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@de1dfa4, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -131,36 +84,36 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 1 s, completed 2015-apr-24 11:07:06
+Total time: 1 s, completed 29-Apr-2015 13:51:28
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/compile:mainClass
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@7cdb1efc, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:07:06
+Running task... Cancel: sbt.server.ServerTaskCancellation@7c6611cc, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:51:28
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/echo:echoTraceSupported
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/echo:echoTraceSupported
 Evaluating tasks: echo:echoTraceSupported
-Running task... Cancel: sbt.server.ServerTaskCancellation@d0a8cfc, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:07:06
+Running task... Cancel: sbt.server.ServerTaskCancellation@2ac1cbf7, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:51:28
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/echo:echoPlayVersionReport
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/echo:echoPlayVersionReport
 Evaluating tasks: echo:echoPlayVersionReport
-Running task... Cancel: sbt.server.ServerTaskCancellation@334b3d02, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:07:06
+Running task... Cancel: sbt.server.ServerTaskCancellation@59fd4a43, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:51:28
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/echo:echoAkkaVersionReport
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/echo:echoAkkaVersionReport
 Evaluating tasks: echo:echoAkkaVersionReport
-Running task... Cancel: sbt.server.ServerTaskCancellation@4e45681a, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:07:06
+Running task... Cancel: sbt.server.ServerTaskCancellation@67554525, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:51:28
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/compile:discoveredMainClasses
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@5e7d6579, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@79893507, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -177,30 +130,48 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 0 s, completed 2015-apr-24 11:07:07
+Total time: 0 s, completed 29-Apr-2015 13:51:29
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@5c3da01a, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:51:29
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/echo:echoTraceSupported
+Evaluating tasks: echo:echoTraceSupported
+Running task... Cancel: sbt.server.ServerTaskCancellation@534caf84, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:51:29
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/echo:echoPlayVersionReport
+Evaluating tasks: echo:echoPlayVersionReport
+Running task... Cancel: sbt.server.ServerTaskCancellation@4a2458a8, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:51:29
 > server-post-command-cleanup
 > server-handle-next-server-request
 > backgroundRun
 Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@6f9492cb, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:07:25
+Running task... Cancel: sbt.server.ServerTaskCancellation@66f7f135, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:51:33
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkConfig
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@75542f87, check cycles: false
-Total time: 1 s, completed 2015-apr-24 11:07:28
+Running task... Cancel: sbt.server.ServerTaskCancellation@3928fd53, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:51:36
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@6a4f8412, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:07:30
+Running task... Cancel: sbt.server.ServerTaskCancellation@591cdf35, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:51:37
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@6535e4ba, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@7b354ff9, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -218,38 +189,131 @@ Sources indirectly invalidated by:
 All initially invalidated sources: Set()
 
 Copy resource mappings: 
-	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
-	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
-Total time: 1 s, completed 2015-apr-24 11:07:39
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\application.conf,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\application.conf)
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\routes,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 29-Apr-2015 13:51:39
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@b79c241, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_routing.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_routing.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_routing.scala)
+
+Read from stdout: Compiling 2 Scala sources and 1 Java source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Compiling 2 Scala sources and 1 Java source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 7851574c, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jre1.8.0_40\lib\resources.jar;C:\Program Files\Java\jre1.8.0_40\lib\rt.jar;C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_40\lib\jce.jar;C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_40\classes;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\svett_000\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\svett_000\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\svett_000\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\svett_000\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\svett_000\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\svett_000\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\svett_000\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\svett_000\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\svett_000\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\svett_000\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\svett_000\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\svett_000\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\svett_000\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 5.313385311 s
+Java compilation took 0.765141265 s
+Java analysis took 0.053716061 s
+Java compile + analysis took 0.8323244 s
+Invalidating C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
+Invalidating (transitively) by inheritance from C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
+Initial set of included nodes: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
+Invalidated by transitive inheritance dependency: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
+The C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala source file has the following regular definitions changed:
+	login, index.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java
+The following modified names cause invalidation of C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala: Set(index)
+The following modified names cause invalidation of C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\login.template.scala: Set(login)
+New invalidations:
+	Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\login.template.scala)
+Initial set of included nodes: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\login.template.scala)
+Including C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala by C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java
+Including C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\app\controllers\Application.java by C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala
+Including C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala by C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\app\controllers\Application.java
+Including C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\login.template.scala by C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala
+Including C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_routing.scala by C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\app\controllers\Application.java
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
+All newly invalidated sources after taking into account (previously) recompiled sources:Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\login.template.scala)
+Read from stdout: Compiling 3 Scala sources and 1 Java source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Compiling 3 Scala sources and 1 Java source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 2d83f86a, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jre1.8.0_40\lib\resources.jar;C:\Program Files\Java\jre1.8.0_40\lib\rt.jar;C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_40\lib\jce.jar;C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_40\classes;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\svett_000\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\svett_000\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\svett_000\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\svett_000\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\svett_000\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\svett_000\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\svett_000\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\svett_000\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\svett_000\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\svett_000\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\svett_000\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\svett_000\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\svett_000\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 1.953800476 s
+Java compilation took 0.669662391 s
+Java analysis took 0.017368387 s
+Java compile + analysis took 0.697167433 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 10 s, completed 29-Apr-2015 13:53:53
 > server-post-command-cleanup
 > server-handle-next-server-request
 > jobStop 1
 Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@4da461a0, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:08:47
+Running task... Cancel: sbt.server.ServerTaskCancellation@4ade7f08, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:53:57
 > server-post-command-cleanup
 > server-handle-next-server-request
 > backgroundRun
 Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@2dff2b13, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:08:58
+Running task... Cancel: sbt.server.ServerTaskCancellation@582aaef6, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:54:11
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkConfig
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@1f7fd90e, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:09:01
+Running task... Cancel: sbt.server.ServerTaskCancellation@8d45882, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:54:13
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@7b057eb6, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:09:01
+Running task... Cancel: sbt.server.ServerTaskCancellation@7d2e6213, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:54:14
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@45347254, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@37ed85d1, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -267,264 +331,106 @@ Sources indirectly invalidated by:
 All initially invalidated sources: Set()
 
 Copy resource mappings: 
-	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
-	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
-Total time: 1 s, completed 2015-apr-24 11:09:05
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\application.conf,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\application.conf)
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\routes,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 29-Apr-2015 13:54:16
 > server-post-command-cleanup
 > server-handle-next-server-request
 > jobStop 2
 Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@3eaf5741, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:20:44
+Running task... Cancel: sbt.server.ServerTaskCancellation@c36443f, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:55:23
 > server-post-command-cleanup
 > server-handle-next-server-request
-> backgroundRun
-Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@2e2ac6df, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:20:56
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkConfig
-Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@4e78dcb0, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:20:58
-> server-post-command-cleanup
-> server-handle-next-server-request
-> root/playForkNotifyStart http://localhost:9000
-Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@53e7fad0, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:20:59
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@66ccdf17, check cycles: false
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@1841c11d, check cycles: false
 
 Initial source changes: 
 	removed:Set()
 	added: Set()
-	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
+	modified: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala)
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
+Initial directly invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala)
 
 Sources indirectly invalidated by:
 	product: Set()
 	binary dep: Set()
 	external source: Set()
-All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
+All initially invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala)
 
-Read from stdout: Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
-Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Read from stdout: Compiling 1 Scala source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
 Getting compiler-interface from component compiler for Scala 2.11.1
 Other repositories:
 Default repositories:
 Getting compiler-interface from component compiler for Scala 2.11.1
 Other repositories:
 Default repositories:
-Running cached compiler 29011c04, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Running cached compiler 7aa8bdf, interfacing (CompilerInterface) with Scala compiler version 2.11.1
 Calling Scala compiler with arguments  (CompilerInterface):
 	-deprecation
 	-unchecked
 	-encoding
 	utf8
 	-bootclasspath
-	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	C:\Program Files\Java\jre1.8.0_40\lib\resources.jar;C:\Program Files\Java\jre1.8.0_40\lib\rt.jar;C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_40\lib\jce.jar;C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_40\classes;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
 	-classpath
-	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
-Read from stdout: C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\views\index.scala.html:3: not found: value message
-C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\views\index.scala.html:3: not found: value message
-Read from stdout: @(message: String)
-@(message: String)
-Read from stdout: ^
-    ^
-Read from stdout: C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\views\index.scala.html:10: not found: value myForm
-C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\views\index.scala.html:10: not found: value myForm
-Read from stdout: @(myForm: Form[User])
-    @(myForm: Form[User])
-Read from stdout: ^
-               ^
-Read from stdout: two errors found
-two errors found
-Compilation failed (CompilerInterface)
-Total time: 2 s, completed 2015-apr-24 11:21:06
-> server-post-command-cleanup
-> server-handle-next-server-request
-> jobStop 3
-Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@65edfea1, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:21:28
-> server-post-command-cleanup
-> server-handle-next-server-request
-> backgroundRun
-Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@3d8de6b6, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:21:48
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkConfig
-Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@60c055d0, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:21:50
-> server-post-command-cleanup
-> server-handle-next-server-request
-> root/playForkNotifyStart http://localhost:9000
-Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@590f4e22, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:21:51
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@773623bd, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
-
-Read from stdout: Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
-Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Running cached compiler 3e4499c2, interfacing (CompilerInterface) with Scala compiler version 2.11.1
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
-	-classpath
-	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
-Read from stdout: C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\views\index.scala.html:11: not found: value myForm
-C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\views\index.scala.html:11: not found: value myForm
-Read from stdout: @(myForm: Form[User])
-    @(myForm: Form[User])
-Read from stdout: ^
-                ^
-Read from stdout: one error found
-one error found
-Compilation failed (CompilerInterface)
-Total time: 1 s, completed 2015-apr-24 11:21:56
-> server-post-command-cleanup
-> server-handle-next-server-request
-> jobStop 4
-Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@23a95581, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:22:09
-> server-post-command-cleanup
-> server-handle-next-server-request
-> backgroundRun
-Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@453244a8, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:35:04
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkConfig
-Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@367ec2b4, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:35:06
-> server-post-command-cleanup
-> server-handle-next-server-request
-> root/playForkNotifyStart http://localhost:9000
-Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@381ec81a, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:35:07
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@77c0bf20, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
-
-Read from stdout: Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
-Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Running cached compiler 14969b9b, interfacing (CompilerInterface) with Scala compiler version 2.11.1
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
-	-classpath
-	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
-Scala compilation took 0.999943776 s
+	C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\svett_000\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\svett_000\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\svett_000\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\svett_000\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\svett_000\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\svett_000\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\svett_000\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\svett_000\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\svett_000\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\svett_000\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\svett_000\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\svett_000\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\svett_000\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.996528889 s
 New invalidations:
 	Set()
 Initial set of included nodes: Set()
 Previously invalidated, but (transitively) depend on new invalidations:
 	Set()
 All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Copy resource mappings: 
-	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
-	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
-Total time: 2 s, completed 2015-apr-24 11:35:37
+Total time: 2 s, completed 29-Apr-2015 13:55:27
 > server-post-command-cleanup
 > server-handle-next-server-request
-> jobStop 5
+> jobStop 2
 Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@4d9f1d79, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:49:24
+Running task... Cancel: sbt.server.ServerTaskCancellation@568f0a7f, check cycles: false
+Exception in thread "sbt-bg-threads-2" java.lang.Error: java.lang.InterruptedException: sleep interrupted
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at play.sbt.forkrun.PlayForkProcess$.timedWaitFor$1(PlayForkProcess.scala:57)
+	at play.sbt.forkrun.PlayForkProcess$.play$sbt$forkrun$PlayForkProcess$$stop$1(PlayForkProcess.scala:64)
+	at play.sbt.forkrun.PlayForkProcess$.run(PlayForkProcess.scala:82)
+	at play.sbt.forkrun.PlayForkProcess$.apply(PlayForkProcess.scala:34)
+	at play.sbt.forkrun.PlayForkRun$$anonfun$backgroundForkRunTask$1$$anonfun$apply$7$$anonfun$apply$8$$anonfun$apply$9.apply(PlayForkRun.scala:108)
+	at play.sbt.forkrun.PlayForkRun$$anonfun$backgroundForkRunTask$1$$anonfun$apply$7$$anonfun$apply$8$$anonfun$apply$9.apply(PlayForkRun.scala:107)
+	at sbt.BackgroundThreadPool$$anonfun$1.apply$mcV$sp(AbstractBackgroundJobService.scala:134)
+	at sbt.BackgroundThreadPool$BackgroundRunnable.run(AbstractBackgroundJobService.scala:68)
+	... 3 more
+Total time: 0 s, completed 29-Apr-2015 13:55:31
 > server-post-command-cleanup
 > server-handle-next-server-request
 > backgroundRun
 Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@48221f04, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:49:35
+Running task... Cancel: sbt.server.ServerTaskCancellation@503a5e00, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:55:33
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkConfig
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@73b49747, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:49:38
+Running task... Cancel: sbt.server.ServerTaskCancellation@15b5acaa, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:55:35
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@f148e31, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:49:39
+Running task... Cancel: sbt.server.ServerTaskCancellation@3990b619, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:55:36
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@4acd8183, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@37c248d2, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -542,14 +448,947 @@ Sources indirectly invalidated by:
 All initially invalidated sources: Set()
 
 Copy resource mappings: 
-	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
-	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
-Total time: 1 s, completed 2015-apr-24 11:49:52
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\application.conf,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\application.conf)
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\routes,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 29-Apr-2015 13:55:38
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 3
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@1efc1c13, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:57:29
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@19f300bf, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_routing.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_routing.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_routing.scala)
+
+Read from stdout: Compiling 3 Scala sources and 1 Java source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Compiling 3 Scala sources and 1 Java source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 1f8b78b4, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jre1.8.0_40\lib\resources.jar;C:\Program Files\Java\jre1.8.0_40\lib\rt.jar;C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_40\lib\jce.jar;C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_40\classes;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\svett_000\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\svett_000\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\svett_000\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\svett_000\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\svett_000\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\svett_000\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\svett_000\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\svett_000\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\svett_000\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\svett_000\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\svett_000\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\svett_000\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\svett_000\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 2.205956611 s
+Java compilation took 0.701856021 s
+Java analysis took 0.01774385 s
+Java compile + analysis took 0.730053831 s
+Invalidating C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
+Invalidating (transitively) by inheritance from C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
+Initial set of included nodes: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
+Invalidated by transitive inheritance dependency: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
+The C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala source file has the following regular definitions changed:
+	login.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java
+None of the modified names appears in C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala. This dependency is not being considered for invalidation.
+The following modified names cause invalidation of C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\login.template.scala: Set(login)
+New invalidations:
+	Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\login.template.scala)
+Initial set of included nodes: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\login.template.scala)
+Including C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala by C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java
+Including C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\app\controllers\Application.java by C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala
+Including C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala by C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\app\controllers\Application.java
+Including C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\login.template.scala by C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala
+Including C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_routing.scala by C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\app\controllers\Application.java
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
+All newly invalidated sources after taking into account (previously) recompiled sources:Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\login.template.scala)
+Read from stdout: Compiling 2 Scala sources and 1 Java source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Compiling 2 Scala sources and 1 Java source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 43baaf1, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jre1.8.0_40\lib\resources.jar;C:\Program Files\Java\jre1.8.0_40\lib\rt.jar;C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_40\lib\jce.jar;C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_40\classes;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\svett_000\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\svett_000\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\svett_000\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\svett_000\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\svett_000\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\svett_000\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\svett_000\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\svett_000\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\svett_000\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\svett_000\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\svett_000\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\svett_000\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\svett_000\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 1.306188218 s
+Java compilation took 0.723741942 s
+Java analysis took 0.058604354 s
+Java compile + analysis took 0.792682228 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 6 s, completed 29-Apr-2015 13:57:40
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@6b5829b0, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:57:44
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@9f100e5, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:57:46
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@290b6cd6, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 13:57:47
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@1478edaa, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\application.conf,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\application.conf)
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\routes,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\routes)
+Total time: 0 s, completed 29-Apr-2015 13:57:51
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@1e64c8a, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 29-Apr-2015 13:59:06
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@438395dd, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 29-Apr-2015 14:01:05
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 4
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@3452bbf1, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:01:17
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@6bb157c6, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 29-Apr-2015 14:02:26
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@3c46ab6c, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 29-Apr-2015 14:02:31
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@a7b06ca, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:02:40
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@58c87dcf, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:02:42
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@6313ba04, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:02:43
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@57de39a8, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\application.conf,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\application.conf)
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\routes,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\routes)
+Total time: 0 s, completed 29-Apr-2015 14:02:47
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 5
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@5b0724ce, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:04:30
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@15270fae, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 1ecfb4d4, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jre1.8.0_40\lib\resources.jar;C:\Program Files\Java\jre1.8.0_40\lib\rt.jar;C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_40\lib\jce.jar;C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_40\classes;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\svett_000\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\svett_000\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\svett_000\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\svett_000\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\svett_000\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\svett_000\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\svett_000\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\svett_000\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\svett_000\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\svett_000\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\svett_000\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\svett_000\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\svett_000\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.655902815 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 29-Apr-2015 14:05:34
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@6253a968, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:05:39
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@67f3f649, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:05:41
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@58e4a2f6, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:05:42
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@79c7915a, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\application.conf,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\application.conf)
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\routes,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\routes)
+Total time: 0 s, completed 29-Apr-2015 14:05:46
 > server-post-command-cleanup
 > server-handle-next-server-request
 > jobStop 6
 Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@445ce691, check cycles: false
-Total time: 0 s, completed 2015-apr-24 11:50:04
+Running task... Cancel: sbt.server.ServerTaskCancellation@f5126d5, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:07:09
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@32adc40b, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_routing.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_routing.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_routing.scala)
+
+Read from stdout: Compiling 2 Scala sources and 1 Java source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Compiling 2 Scala sources and 1 Java source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 719d888d, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jre1.8.0_40\lib\resources.jar;C:\Program Files\Java\jre1.8.0_40\lib\rt.jar;C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_40\lib\jce.jar;C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_40\classes;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\svett_000\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\svett_000\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\svett_000\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\svett_000\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\svett_000\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\svett_000\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\svett_000\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\svett_000\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\svett_000\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\svett_000\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\svett_000\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\svett_000\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\svett_000\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 1.417959122 s
+Java compilation took 0.739942457 s
+Java analysis took 0.020529463 s
+Java compile + analysis took 0.769946169 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 2 s, completed 29-Apr-2015 14:07:17
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@73ced067, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:07:21
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@7bd408ad, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:07:24
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@1834ab16, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:07:24
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@59d76924, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\application.conf,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\application.conf)
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\routes,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\routes)
+Total time: 0 s, completed 29-Apr-2015 14:07:29
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 7
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@39c65038, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:08:35
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@766b6357, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 1bceaa03, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jre1.8.0_40\lib\resources.jar;C:\Program Files\Java\jre1.8.0_40\lib\rt.jar;C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_40\lib\jce.jar;C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_40\classes;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\svett_000\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\svett_000\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\svett_000\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\svett_000\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\svett_000\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\svett_000\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\svett_000\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\svett_000\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\svett_000\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\svett_000\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\svett_000\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\svett_000\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\svett_000\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.612412356 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 29-Apr-2015 14:09:25
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@6a4c907e, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:09:35
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@5af95288, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:09:37
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@3cde0117, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:09:38
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@2b49fd94, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\application.conf,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\application.conf)
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\routes,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\routes)
+Total time: 0 s, completed 29-Apr-2015 14:09:42
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 8
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@9672f93, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:15:25
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@57307e49, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\login.template.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_routing.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\login.template.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_routing.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\login.template.scala, C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\src_managed\main\routes_routing.scala)
+
+Recompiling all 8 sources: invalidated sources (5) exceeded 50.0% of all sources
+Read from stdout: Compiling 5 Scala sources and 3 Java sources to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Compiling 5 Scala sources and 3 Java sources to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 6c021b3e, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jre1.8.0_40\lib\resources.jar;C:\Program Files\Java\jre1.8.0_40\lib\rt.jar;C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_40\lib\jce.jar;C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_40\classes;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\svett_000\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\svett_000\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\svett_000\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\svett_000\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\svett_000\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\svett_000\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\svett_000\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\svett_000\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\svett_000\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\svett_000\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\svett_000\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\svett_000\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\svett_000\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 1.435964684 s
+Java compilation took 0.799045862 s
+Java analysis took 0.106770998 s
+Java compile + analysis took 0.917756422 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 3 s, completed 29-Apr-2015 14:15:31
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@a78c951, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:15:38
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@4e6cc88f, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:15:40
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@55b1457f, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:15:41
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@daf4dcc, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\application.conf,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\application.conf)
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\routes,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\routes)
+Total time: 0 s, completed 29-Apr-2015 14:15:46
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 9
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@aa3fb, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:20:11
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@1fb71e10, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 29-Apr-2015 14:20:20
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@5dea346f, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:20:23
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@a80cf66, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:20:26
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@382a8c3c, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:20:26
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@370695a3, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\application.conf,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\application.conf)
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\routes,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 29-Apr-2015 14:20:28
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 10
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@4abedddc, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:21:01
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@3ef60b06, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 41ff0f69, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jre1.8.0_40\lib\resources.jar;C:\Program Files\Java\jre1.8.0_40\lib\rt.jar;C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_40\lib\jce.jar;C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_40\classes;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\svett_000\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\svett_000\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\svett_000\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\svett_000\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\svett_000\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\svett_000\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\svett_000\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\svett_000\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\svett_000\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\svett_000\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\svett_000\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\svett_000\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\svett_000\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.545955345 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 29-Apr-2015 14:21:05
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@642db5e3, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:21:13
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@368ddf31, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:21:15
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@ad8717a, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:21:15
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@3b7059ff, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\application.conf,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\application.conf)
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\routes,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\routes)
+Total time: 0 s, completed 29-Apr-2015 14:21:18
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 11
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@6dcfa5a2, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:22:16
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@29a01a98, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 7299bdf6, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jre1.8.0_40\lib\resources.jar;C:\Program Files\Java\jre1.8.0_40\lib\rt.jar;C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_40\lib\jce.jar;C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_40\classes;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\svett_000\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\svett_000\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\svett_000\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\svett_000\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\svett_000\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\svett_000\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\svett_000\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\svett_000\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\svett_000\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\svett_000\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\svett_000\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\svett_000\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\svett_000\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\svett_000\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\svett_000\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\svett_000\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\svett_000\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\svett_000\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\svett_000\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\svett_000\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\svett_000\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.540805339 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 29-Apr-2015 14:22:22
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@40bd821d, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:22:31
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@6031de0a, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:22:33
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@11d011d7, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:22:34
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/svett_000/Documents/GitHub/testApp-AndersEkh-branch/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@6053c27c, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\application.conf,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\application.conf)
+	(C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\conf\routes,C:\Users\svett_000\Documents\GitHub\testApp-AndersEkh-branch\target\scala-2.11\classes\routes)
+Total time: 0 s, completed 29-Apr-2015 14:22:36
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 12
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@2881a595, check cycles: false
+Total time: 0 s, completed 29-Apr-2015 14:24:08
 > server-post-command-cleanup
 > server-handle-next-server-request
