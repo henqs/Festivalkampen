@@ -1,26 +1,17 @@
-<link rel="stylesheet" type="text/css" href="css/main.css"/>
 @(message: String)
 
-@main(title = "Home") {
+@main("Welcome to Play") {
 
+    @message
     
-  <h1>Välkommen till Festvalkampen</h1>
-  
-    <script>
-	$(document).ready(function(){
-	    $("p").click(function(){
-	        $(this).hide();
-	    });
-	});
-	</script>
-    
-	<p>If you click on me, I will disappear.</p>
- 
-  <p id="demo">Njut av att klicka på knappen</p>
-  
-  <button type="button"
-	onclick="document.getElementById('demo').innerHTML = 'Väl klickat!!'">
-	Klicka här!</button>
-  
-  
+    <form>
+					</br>
+		<input type="radio" name="svar" value="male">svar1
+		<input type="radio" name="svar" value="female">svar2
+		<input type="radio" name="svar" value="male">svar3
+		<input type="radio" name="svar" value="female">svar4</br>
+    	<button>Klar</button>
+    </form>
+
 }
+

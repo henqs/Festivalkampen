@@ -1,130 +1,67 @@
 package controllers;
 
-import play.*;
-import play.mvc.*;
 
-import java.sql.*;
 
-import models.User;
-import views.html.*;
-import play.data.Form;
-import play.db.*;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
-import play.libs.Json;
+
+
+
+
+import models.quiz_question;
 import play.*;
+import play.data.Form;
+import play.db.DB;
+import play.db.ebean.Model;
+import play.db.ebean.Model.Finder;
 import play.libs.Json;
 import play.mvc.*;
 import views.html.*;
+import static play.libs.Json.toJson;
+
+
 
 public class Application extends Controller {
-
-	public static Result index() {
-		
-		return ok();
-
-
-	}
 	
-//	// Create user and send to database
-		public static void addUser() {
+	static int i = 0;
 	
-			ObjectNode result = Json.newObject();
-			Connection conn = null;
-			Statement stmt = null;
-
-			try {
-				conn = DB.getConnection();
-				stmt = conn.createStatement();
-
-				String insertIntoDatabase = "INSERT INTO `anek2876`.`user` (`ålder` , `namn`) VALUES ('456', 'Igen');";
-
-				// execute insert SQL stetement
-				stmt.executeUpdate(insertIntoDatabase);
-			} catch (SQLException se) {
-
-			}
-			}
-
-				// user.save();
-			//	return redirect(routes.Application.newUserPage());
-//			} catch (SQLException se) {
-//				// Handle errors for JDBC
-//				return internalServerError(se.toString());
-//			} catch (Exception e) {
-//				// Handle errors for Class.forName
-//				return internalServerError(e.toString());
-//			} finally {
-//				// finally block used to close resources
-//				try {
-//					if (stmt != null)
-//						conn.close();
-//				} catch (SQLException se) {
-//				}// do nothing
-//				try {
-//					if (conn != null)
-//						conn.close();
-//				} catch (SQLException se) {
-//					return internalServerError(se.toString());
-//				}// end finally try
-//			}// end try
-
-
-	public static Result getName() {
-
-		ObjectNode result = Json.newObject();
-		Connection connection = null;
-		Statement statement = null;
-
-		try {
-
-			connection = DB.getConnection();
-			statement = connection.createStatement();
-
-			String sql = "SELECT * FROM testTabellPlsIgnore";
-
-			ResultSet rs = statement.executeQuery(sql);
-
-			while (rs.next()) {
-				int ålder = rs.getInt("ålder");
-				String namn = rs.getString("namn");
-				ObjectNode test = Json.newObject();
-				test.put("Name", namn);
-				test.put("Age", ålder);
-
-				result.put(namn, ålder);
-			}
-
-			rs.close();
-
-			return ok(result);
-
-		} catch (SQLException se) {
-			// Handle errors for JDBC
-			return internalServerError(se.toString());
-		} catch (Exception e) {
-			// Handle errors for Class.forName
-			return internalServerError(e.toString());
-		} finally {
-			// finally block used to close resources
-			try {
-				if (statement != null)
-					connection.close();
-			} catch (SQLException se) {
-			}// do nothing
-			try {
-				if (connection != null)
-					connection.close();
-			} catch (SQLException se) {
-				return internalServerError(se.toString());
-			}// end finally try
-		}// end try
-
-	}
-
-	public static void testPush() {
-		// do nothing
-	}
+    public static Result index() {
+        
+    	
+    	return ok(index.render(getFraga()));
+    }
+    
+//    public static Result addPerson(){
+//    	Person person = Form.form(Person.class).bindFromRequest().get();
+//    	
+//    	person.id = i;
+//    	person.save();
+//    	i++;
+//    	
+//    	return redirect(routes.Application.index());//går tillbaka till start efter denna metod är körd
+//   }
+    
+//    public static Result getPersons(){
+//    	List<Person> persons = new Model.Finder(String.class,Person.class).all();//första parametern är typ av primärnyckeln och andra är typen
+//    	return ok(toJson(persons));
+//    }
+    public static String getFraga(){
+    	ArrayList<String> allaFrågor = new ArrayList<String>();
+    	List<quiz_question> qq = quiz_question.find.all();
+    	int nu = i;
+    	for(quiz_question q : qq){
+    		String fråga = q.getQuestion();
+    		allaFrågor.add(fråga);
+    	}
+    	i++;
+    	return allaFrågor.get(nu);
+    }
+    
 }
+
