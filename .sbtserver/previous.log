@@ -1,5 +1,5 @@
-New log file opened at Tue Apr 28 12:39:18 CEST 2015 by 4168@Henrik-Dator
-jvm 4168@Henrik-Dator
+New log file opened at Tue Apr 28 16:06:52 CEST 2015 by 7272@Henrik-Dator
+jvm 7272@Henrik-Dator
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.45-b02
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\project, returning: (testapp-build)
 Loading project definition from C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@3c76708b, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@2194e11d, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -67,7 +67,7 @@ Set current project to Grupp 11 App (in build file:/C:/Users/Henrik/Desktop/acti
 > server-handle-next-server-request
 > compile
 Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@73fbf931, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@e4d0bce, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -84,58 +84,18 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 1 s, completed 2015-apr-28 12:39:25
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@11fc5698, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Total time: 1 s, completed 2015-apr-28 12:39:26
+Total time: 1 s, completed 2015-apr-28 16:07:07
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@689beb86, check cycles: false
-Total time: 0 s, completed 2015-apr-28 12:39:26
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/echo:echoTraceSupported
-Evaluating tasks: echo:echoTraceSupported
-Running task... Cancel: sbt.server.ServerTaskCancellation@18b87a12, check cycles: false
-Total time: 0 s, completed 2015-apr-28 12:39:26
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/echo:echoPlayVersionReport
-Evaluating tasks: echo:echoPlayVersionReport
-Running task... Cancel: sbt.server.ServerTaskCancellation@6cb39927, check cycles: false
-Total time: 0 s, completed 2015-apr-28 12:39:26
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/echo:echoAkkaVersionReport
-Evaluating tasks: echo:echoAkkaVersionReport
-Running task... Cancel: sbt.server.ServerTaskCancellation@614260fc, check cycles: false
-Total time: 0 s, completed 2015-apr-28 12:39:26
+Running task... Cancel: sbt.server.ServerTaskCancellation@6c5d87f0, check cycles: false
+Total time: 0 s, completed 2015-apr-28 16:07:07
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@2d6e463d, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@15bef471, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -152,30 +112,76 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 0 s, completed 2015-apr-28 12:39:26
+Total time: 1 s, completed 2015-apr-28 16:07:08
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/echo:echoTraceSupported
+Evaluating tasks: echo:echoTraceSupported
+Running task... Cancel: sbt.server.ServerTaskCancellation@3bb055e5, check cycles: false
+Total time: 0 s, completed 2015-apr-28 16:07:08
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/echo:echoPlayVersionReport
+Evaluating tasks: echo:echoPlayVersionReport
+Running task... Cancel: sbt.server.ServerTaskCancellation@426bef33, check cycles: false
+Total time: 0 s, completed 2015-apr-28 16:07:08
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/echo:echoAkkaVersionReport
+Evaluating tasks: echo:echoAkkaVersionReport
+Running task... Cancel: sbt.server.ServerTaskCancellation@574fe2bd, check cycles: false
+Total time: 0 s, completed 2015-apr-28 16:07:08
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@766838cb, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 2015-apr-28 16:07:09
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@10a3b6ee, check cycles: false
+Total time: 0 s, completed 2015-apr-28 16:07:09
 > server-post-command-cleanup
 > server-handle-next-server-request
 > backgroundRun
 Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@22b80ee8, check cycles: false
-Total time: 0 s, completed 2015-apr-28 12:39:29
+Running task... Cancel: sbt.server.ServerTaskCancellation@50ae1ee0, check cycles: false
+Total time: 0 s, completed 2015-apr-28 16:07:10
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@7b8aefff, check cycles: false
-Total time: 0 s, completed 2015-apr-28 12:39:31
+Running task... Cancel: sbt.server.ServerTaskCancellation@401783a1, check cycles: false
+Total time: 0 s, completed 2015-apr-28 16:07:13
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@17a97b63, check cycles: false
-Total time: 0 s, completed 2015-apr-28 12:39:32
+Running task... Cancel: sbt.server.ServerTaskCancellation@2799e346, check cycles: false
+Total time: 0 s, completed 2015-apr-28 16:07:14
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@66a002bc, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@505a9eb5, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -195,91 +201,13 @@ All initially invalidated sources: Set()
 Copy resource mappings: 
 	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
 	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
-Total time: 1 s, completed 2015-apr-28 12:39:37
+Total time: 1 s, completed 2015-apr-28 16:07:28
 > server-post-command-cleanup
 > server-handle-next-server-request
-> jobStop 1
-Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@540673f8, check cycles: false
-Total time: 0 s, completed 2015-apr-28 12:39:58
-> server-post-command-cleanup
-> server-handle-next-server-request
-> backgroundRun
-Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@2333a3e7, check cycles: false
-Total time: 0 s, completed 2015-apr-28 12:46:33
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkConfig
-Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@7a0b6b96, check cycles: false
-Total time: 0 s, completed 2015-apr-28 12:46:36
-> server-post-command-cleanup
-> server-handle-next-server-request
-> root/playForkNotifyStart http://localhost:9000
-Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@682a1490, check cycles: false
-Total time: 0 s, completed 2015-apr-28 12:46:37
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@39dc1cfe, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
-	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
-Total time: 1 s, completed 2015-apr-28 12:46:40
-> server-post-command-cleanup
-> server-handle-next-server-request
-> jobStop 2
-Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@604b8404, check cycles: false
-Total time: 0 s, completed 2015-apr-28 12:49:47
-> server-post-command-cleanup
-> server-handle-next-server-request
-> backgroundRun
-Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@4dfe00b1, check cycles: false
-Total time: 0 s, completed 2015-apr-28 12:54:02
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkConfig
-Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@5e8e853b, check cycles: false
-Total time: 1 s, completed 2015-apr-28 12:54:08
-> server-post-command-cleanup
-> server-handle-next-server-request
-> root/playForkNotifyStart http://localhost:9000
-Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@3c1ba0e9, check cycles: false
-Total time: 0 s, completed 2015-apr-28 12:54:10
-> server-post-command-cleanup
-> server-handle-next-server-request
-> backgroundRun
-Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@bfa6486, check cycles: false
-Total time: 0 s, completed 2015-apr-28 12:57:49
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkConfig
-Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@4595f6df, check cycles: false
-Total time: 1 s, completed 2015-apr-28 12:57:55
-> server-post-command-cleanup
-> server-handle-next-server-request
+Done executing sbt server engine, result Right(Exit(0))
+Closing listening server socket
+Waiting for socket thread
+Waiting for request processor thread
+Waiting for command engine result
+Returning control to sbt launcher with result Exit(0)
+Closing the 7272@Henrik-Dator logs at Tue Apr 28 16:13:03 CEST 2015, goodbye.
