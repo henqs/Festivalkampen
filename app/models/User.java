@@ -11,7 +11,7 @@ import play.db.ebean.*;
 public class User extends Model{
 	
 	public String namn;
-	public int ålder;
+	public char gender;
 	
     @Id 
     public int id;

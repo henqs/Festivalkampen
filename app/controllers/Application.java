@@ -42,24 +42,24 @@ public class Application extends Controller {
 //		}
 	
 //	// Create user and send to database
-		public static void addUser() {
-	
-			ObjectNode result = Json.newObject();
+		public static Result addUser(String firstName) {
+	        
+	        ObjectNode result = Json.newObject();
 			Connection conn = null;
 			Statement stmt = null;
-
+	        
 			try {
 				conn = DB.getConnection();
 				stmt = conn.createStatement();
-
-				String insertIntoDatabase = "INSERT INTO `anek2876`.`user` (`ålder` , `namn`) VALUES ('456', 'Igen');";
-
+				//Får inte det här att funka, ska fortsätta mecka med det - Axel
+				String insertIntoDatabase = "INSERT INTO `anek2876`.`user` (`gender`, `name`) VALUES ('m', '" + firstName + "')";
 				// execute insert SQL stetement
 				stmt.executeUpdate(insertIntoDatabase);
 			} catch (SQLException se) {
 
 			}
-			}
+			return ok(index.render());
+		}
 
 				// user.save();
 			//	return redirect(routes.Application.newUserPage());
