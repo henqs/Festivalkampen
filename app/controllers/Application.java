@@ -50,12 +50,12 @@ public class Application extends Controller {
 			int idValue = -1;
 	        String getId = "SELECT `id` FROM `user` WHERE `id`='"+id+"'";
 			try {
-			    ResultSet rs = stmt.executeQuery(getId);
+				conn = DB.getConnection();
+				stmt = conn.createStatement();
+				 ResultSet rs = stmt.executeQuery(getId);
 			    while(rs.next()){
 			        idValue = rs.getInt("id");
 			    }
-				conn = DB.getConnection();
-				stmt = conn.createStatement();
 				String actionCommand = "";
 	            if(idValue == id){
 	                actionCommand = "UPDATE";

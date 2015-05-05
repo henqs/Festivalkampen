@@ -78,21 +78,20 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 					console.log('Logged in!');
 					var login = document.getElementById("login");
 					//login.style.display = 'none';
-					login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) """),format.raw/*53.81*/("""{"""),format.raw/*53.82*/("""}"""),format.raw/*53.83*/(""");" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
+					login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) """),format.raw/*53.81*/("""{"""),format.raw/*53.82*/("""}"""),format.raw/*53.83*/("""); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
 					var welcomeText = document.getElementById("welcome-text");
 					FB.api('/me', function(response) """),format.raw/*55.39*/("""{"""),format.raw/*55.40*/("""
 						"""),format.raw/*56.7*/("""console.log(response);
 						welcomeText.innerHTML = "Välkommen till Festivalkampen " + response.first_name + "!";
 						"""),format.raw/*58.7*/("""}"""),format.raw/*58.8*/(""");
-					
-				"""),format.raw/*60.5*/("""}"""),format.raw/*60.6*/(""" """),format.raw/*60.7*/("""else if (response.status === 'not_authorized') """),format.raw/*60.54*/("""{"""),format.raw/*60.55*/("""
-					"""),format.raw/*61.6*/("""// The person is logged into Facebook, but not your app.
-				"""),format.raw/*62.5*/("""}"""),format.raw/*62.6*/(""" """),format.raw/*62.7*/("""else """),format.raw/*62.12*/("""{"""),format.raw/*62.13*/("""
-					"""),format.raw/*63.6*/("""// The person is not logged into Facebook, so we're not sure if
+				"""),format.raw/*59.5*/("""}"""),format.raw/*59.6*/(""" """),format.raw/*59.7*/("""else if (response.status === 'not_authorized') """),format.raw/*59.54*/("""{"""),format.raw/*59.55*/("""
+					"""),format.raw/*60.6*/("""// The person is logged into Facebook, but not your app.
+				"""),format.raw/*61.5*/("""}"""),format.raw/*61.6*/(""" """),format.raw/*61.7*/("""else """),format.raw/*61.12*/("""{"""),format.raw/*61.13*/("""
+					"""),format.raw/*62.6*/("""// The person is not logged into Facebook, so we're not sure if
 					// they are logged into this app or not.
-				"""),format.raw/*65.5*/("""}"""),format.raw/*65.6*/("""
-			"""),format.raw/*66.4*/("""}"""),format.raw/*66.5*/(""");
-		"""),format.raw/*67.3*/("""}"""),format.raw/*67.4*/(""";
+				"""),format.raw/*64.5*/("""}"""),format.raw/*64.6*/("""
+			"""),format.raw/*65.4*/("""}"""),format.raw/*65.5*/(""");
+		"""),format.raw/*66.3*/("""}"""),format.raw/*66.4*/(""";
 		</script>
 		<!-- Header -->
 			<div id="header-wrapper">
@@ -100,7 +99,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 				
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.scala.html">Festivalkampen</a></h1>
+							<h1><a href=""""),_display_(/*74.22*/routes/*74.28*/.Application.index()),format.raw/*74.48*/("""">Festivalkampen</a></h1>
 							<span>av Grupp 11</span>
 						</div>
 					
@@ -139,7 +138,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 						</div>
 						<div class="5u">
 							<ul>
-								<li id="login"><a href=""""),_display_(/*114.34*/routes/*114.40*/.Application.login()),format.raw/*114.60*/("""" class="button big icon fa-arrow-circle-right">Logga in</a></li>
+								<li id="login"><a href=""""),_display_(/*113.34*/routes/*113.40*/.Application.login()),format.raw/*113.60*/("""" class="button big icon fa-arrow-circle-right">Logga in</a></li>
 								<li id="info"><a href="#" class="button alt big icon fa-question-circle">Mer info</a></li>
 							</ul>
 						</div>
@@ -155,7 +154,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 						
 							<!-- Box -->
 								<section class="box feature">
-									 <a href="#" class="image featured"><img src=""""),_display_(/*130.57*/routes/*130.63*/.Assets.at("images/pic01.jpg")),format.raw/*130.93*/("""">
+									 <a href="#" class="image featured"><img src=""""),_display_(/*129.57*/routes/*129.63*/.Assets.at("images/pic01.jpg")),format.raw/*129.93*/("""">
 									<div class="inner">
 										<header>
 											<h2>Plats för text</h2>
@@ -170,7 +169,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 						
 							<!-- Box -->
 								<section class="box feature">
-									<a href="#" class="image featured"><img src=""""),_display_(/*145.56*/routes/*145.62*/.Assets.at("images/pic02.jpg")),format.raw/*145.92*/("""">
+									<a href="#" class="image featured"><img src=""""),_display_(/*144.56*/routes/*144.62*/.Assets.at("images/pic02.jpg")),format.raw/*144.92*/("""">
 									<div class="inner">
 										<header>
 											<h2>Plats för text</h2>
@@ -185,7 +184,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 						
 							<!-- Box -->
 								<section class="box feature last">
-									<a href="#" class="image featured"><img src=""""),_display_(/*160.56*/routes/*160.62*/.Assets.at("images/pic03.jpg")),format.raw/*160.92*/(""""/>
+									<a href="#" class="image featured"><img src=""""),_display_(/*159.56*/routes/*159.62*/.Assets.at("images/pic03.jpg")),format.raw/*159.92*/(""""/>
 									<div class="inner">
 										<header>
 											<h2>Plats för text</h2>
@@ -212,12 +211,12 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 										<h3>Logga in</h3>
 										<div class="grid">
 											<div class="row no-collapse 50%">
-												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*187.70*/routes/*187.76*/.Assets.at("images/pic04.jpg")),format.raw/*187.106*/("""" alt="" /></a></div>
-												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*188.70*/routes/*188.76*/.Assets.at("images/pic05.jpg")),format.raw/*188.106*/("""" alt="" /></a></div>
+												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*186.70*/routes/*186.76*/.Assets.at("images/pic04.jpg")),format.raw/*186.106*/("""" alt="" /></a></div>
+												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*187.70*/routes/*187.76*/.Assets.at("images/pic05.jpg")),format.raw/*187.106*/("""" alt="" /></a></div>
 											</div>
 											<div class="row no-collapse 50%">
-												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*191.70*/routes/*191.76*/.Assets.at("images/pic06.jpg")),format.raw/*191.106*/("""" alt="" /></a></div>
-												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*192.70*/routes/*192.76*/.Assets.at("images/pic07.jpg")),format.raw/*192.106*/("""" alt="" /></a></div>
+												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*190.70*/routes/*190.76*/.Assets.at("images/pic06.jpg")),format.raw/*190.106*/("""" alt="" /></a></div>
+												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*191.70*/routes/*191.76*/.Assets.at("images/pic07.jpg")),format.raw/*191.106*/("""" alt="" /></a></div>
 											</div>
 										</div>
 										<a href="#" class="button icon fa-file-text-o">Glömt lösenord</a>
@@ -323,11 +322,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 }
               /*
                   -- GENERATED --
-                  DATE: Tue May 05 08:35:12 CEST 2015
+                  DATE: Tue May 05 14:14:12 CEST 2015
                   SOURCE: C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/app/views/index.scala.html
-                  HASH: 32eebcb0b1baee34aad0275be21a9d32fa33eb91
-                  MATRIX: 798->0|1247->422|1262->428|1328->473|1397->515|1412->521|1473->561|1530->591|1545->597|1616->647|1673->677|1688->683|1747->721|1804->751|1819->757|1885->802|1942->832|1957->838|2012->872|2069->902|2084->908|2146->949|2240->1016|2255->1022|2315->1061|2441->1159|2470->1160|2502->1165|2538->1173|2567->1174|2600->1180|2868->1421|2896->1422|3513->2011|3542->2012|3575->2018|3677->2092|3706->2093|3740->2100|4010->2342|4039->2343|4068->2344|4270->2518|4299->2519|4334->2527|4484->2650|4512->2651|4554->2666|4582->2667|4610->2668|4685->2715|4714->2716|4748->2723|4837->2785|4865->2786|4893->2787|4926->2792|4955->2793|4989->2800|5132->2916|5160->2917|5192->2922|5220->2923|5253->2929|5281->2930|6643->4264|6659->4270|6701->4290|7218->4779|7234->4785|7286->4815|7703->5204|7719->5210|7771->5240|8193->5634|8209->5640|8261->5670|8974->6355|8990->6361|9043->6391|9163->6483|9179->6489|9232->6519|9417->6676|9433->6682|9486->6712|9606->6804|9622->6810|9675->6840
-                  LINES: 29->1|41->13|41->13|41->13|42->14|42->14|42->14|43->15|43->15|43->15|44->16|44->16|44->16|45->17|45->17|45->17|46->18|46->18|46->18|47->19|47->19|47->19|49->21|49->21|49->21|53->25|53->25|54->26|54->26|54->26|55->27|60->32|60->32|74->46|74->46|75->47|76->48|76->48|77->49|81->53|81->53|81->53|83->55|83->55|84->56|86->58|86->58|88->60|88->60|88->60|88->60|88->60|89->61|90->62|90->62|90->62|90->62|90->62|91->63|93->65|93->65|94->66|94->66|95->67|95->67|142->114|142->114|142->114|158->130|158->130|158->130|173->145|173->145|173->145|188->160|188->160|188->160|215->187|215->187|215->187|216->188|216->188|216->188|219->191|219->191|219->191|220->192|220->192|220->192
+                  HASH: 819d4e78c23bfe5cf4d472c1d7f2a88d016f0507
+                  MATRIX: 798->0|1247->422|1262->428|1328->473|1397->515|1412->521|1473->561|1530->591|1545->597|1616->647|1673->677|1688->683|1747->721|1804->751|1819->757|1885->802|1942->832|1957->838|2012->872|2069->902|2084->908|2146->949|2240->1016|2255->1022|2315->1061|2441->1159|2470->1160|2502->1165|2538->1173|2567->1174|2600->1180|2868->1421|2896->1422|3513->2011|3542->2012|3575->2018|3677->2092|3706->2093|3740->2100|4010->2342|4039->2343|4068->2344|4289->2537|4318->2538|4353->2546|4503->2669|4531->2670|4566->2678|4594->2679|4622->2680|4697->2727|4726->2728|4760->2735|4849->2797|4877->2798|4905->2799|4938->2804|4967->2805|5001->2812|5144->2928|5172->2929|5204->2934|5232->2935|5265->2941|5293->2942|5499->3121|5514->3127|5555->3147|6723->4287|6739->4293|6781->4313|7298->4802|7314->4808|7366->4838|7783->5227|7799->5233|7851->5263|8273->5657|8289->5663|8341->5693|9054->6378|9070->6384|9123->6414|9243->6506|9259->6512|9312->6542|9497->6699|9513->6705|9566->6735|9686->6827|9702->6833|9755->6863
+                  LINES: 29->1|41->13|41->13|41->13|42->14|42->14|42->14|43->15|43->15|43->15|44->16|44->16|44->16|45->17|45->17|45->17|46->18|46->18|46->18|47->19|47->19|47->19|49->21|49->21|49->21|53->25|53->25|54->26|54->26|54->26|55->27|60->32|60->32|74->46|74->46|75->47|76->48|76->48|77->49|81->53|81->53|81->53|83->55|83->55|84->56|86->58|86->58|87->59|87->59|87->59|87->59|87->59|88->60|89->61|89->61|89->61|89->61|89->61|90->62|92->64|92->64|93->65|93->65|94->66|94->66|102->74|102->74|102->74|141->113|141->113|141->113|157->129|157->129|157->129|172->144|172->144|172->144|187->159|187->159|187->159|214->186|214->186|214->186|215->187|215->187|215->187|218->190|218->190|218->190|219->191|219->191|219->191
                   -- GENERATED --
               */
           
