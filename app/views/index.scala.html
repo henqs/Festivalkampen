@@ -50,13 +50,12 @@
 					console.log('Logged in!');
 					var login = document.getElementById("login");
 					//login.style.display = 'none';
-					login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) {});" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
+					login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) {}); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
 					var welcomeText = document.getElementById("welcome-text");
 					FB.api('/me', function(response) {
 						console.log(response);
 						welcomeText.innerHTML = "Välkommen till Festivalkampen " + response.first_name + "!";
 						});
-					
 				} else if (response.status === 'not_authorized') {
 					// The person is logged into Facebook, but not your app.
 				} else {
@@ -72,7 +71,7 @@
 				
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.scala.html">Festivalkampen</a></h1>
+							<h1><a href="@routes.Application.index()">Festivalkampen</a></h1>
 							<span>av Grupp 11</span>
 						</div>
 					

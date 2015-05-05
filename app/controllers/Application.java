@@ -22,6 +22,7 @@ import views.html.*;
 public class Application extends Controller {
 	  
 	  public static Result index() {
+	   userTableUpdate(17, 'f', "Ralf", "ralfralf@ralf.com");
 	    return ok(index.render());
 	  }
 	  
@@ -42,23 +43,31 @@ public class Application extends Controller {
 //		}
 	
 //	// Create user and send to database
-		public static Result addUser(String firstName) {
-	        
+		public static void userTableUpdate(int id, char gender, String name, String email) {
 	        ObjectNode result = Json.newObject();
 			Connection conn = null;
 			Statement stmt = null;
-	        
+			int idValue = -1;
+	        String getId = "SELECT `id` FROM `user` WHERE `id`='"+id+"'";
 			try {
+			    ResultSet rs = stmt.executeQuery(getId);
+			    while(rs.next()){
+			        idValue = rs.getInt("id");
+			    }
 				conn = DB.getConnection();
 				stmt = conn.createStatement();
-				//Får inte det här att funka, ska fortsätta mecka med det - Axel
-				String insertIntoDatabase = "INSERT INTO `anek2876`.`user` (`gender`, `name`) VALUES ('m', '" + firstName + "')";
+				String actionCommand = "";
+	            if(idValue == id){
+	                actionCommand = "UPDATE";
+	            }else{
+	                actionCommand = "INSERT";
+	            }
+				String insertIntoDatabase = actionCommand+" INTO `user`(`id`, `gender`, `name`, `email`) VALUES ('"+id+"','"+gender+"','"+name+"','"+email+"')";
 				// execute insert SQL stetement
 				stmt.executeUpdate(insertIntoDatabase);
 			} catch (SQLException se) {
 
 			}
-			return ok(index.render());
 		}
 
 				// user.save();
