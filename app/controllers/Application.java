@@ -33,8 +33,17 @@ public class Application extends Controller {
 	
     public static Result index() {
         
-    	
-    	return ok(index.render(getFraga()));
+    
+    	return ok();
+    }
+    
+    public static Result quiz(){
+        return ok(quizz.render());
+    }
+    
+    public static Result postQuery(String query) {
+    System.out.print(query);
+    return TODO;
     }
     
 //    public static Result addPerson(){

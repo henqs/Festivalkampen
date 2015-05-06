@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<script src ="https://code.jquery.com/jquery-1.10.2.js"></script>
+<body>
+  Fråga 1: Hur stavas Justin Bieber <br>
+  <br>
+<form>
+<input type="radio" id="answer" name="Lorem Ipsum" value="A">A: Bieber stavas Bieber<br>
+<input type="radio" id="answer" name="Lorem Ipsum" value="B">B: Bieber stavas Bäber
+<br>
+<input type="radio" id="answer" name="Lorem Ipsum" value="C">C: Bieber stavas buber<br>
+<input type="radio" id="answer" name="Lorem Ipsum" value="D">D: Bieber stavas biiber<br>
+
+<input onClick="JSONAnswerObject();" type="button" id="theSubmit" name="theSubmit" value="Fire away!!"/>
+</form>
+
+<script type = "text/javascript">
+  function JSONanswerObject() {
+
+          var JSONObject={
+            
+            "answer" : document.getElementById("answer").value,           
+        };
+        $.ajax( {
+            type: "POST",
+            url: "http://localhost:9000/postquiz",
+            dataType: "application/json",
+            data: JSONObject,
+            success: function(result) {
+                console.log(result);
+                alert("baboom");
+            }
+            
+            
+        })
+  }
+
+
+ </script>
+
+</body>
+</html>
