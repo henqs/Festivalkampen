@@ -1,7 +1,22 @@
-New log file opened at Thu May 07 17:14:13 CEST 2015 by 3183@captiveportal-23-110.local.su.se
-Taking next connection to: 49474
-New client attempting to connect on port: 49475-49474
-  Address = /10.100.23.110:49474
-This client on port 49475 has uuid 716b87dd-7c87-40d8-ba02-995b784a14dc configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-716b87dd-7c87-40d8-ba02-995b784a14dc
-Taking next connection to: 49474
+New log file opened at Thu May 07 17:49:59 CEST 2015 by 3602@captiveportal-23-110.local.su.se
+Taking next connection to: 51910
+New client attempting to connect on port: 51911-51910
+  Address = /10.100.23.110:51910
+This client on port 51911 has uuid 46022bda-4dc8-4515-98c7-db568547d62e configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-46022bda-4dc8-4515-98c7-db568547d62e
+Taking next connection to: 51910
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51910
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51910
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51910
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51910
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51910
