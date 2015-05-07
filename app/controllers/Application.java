@@ -22,7 +22,8 @@ import views.html.*;
 public class Application extends Controller {
 	  
 	  public static Result index() {
-	   //Här kan man testköra updateUserTable().
+	   //updateUserTable(17, 'f', "Raoul", "raoul@slemmail.com");
+	   System.out.println("Hej");
 	   return ok(index.render());
 	  }
 	  
@@ -43,7 +44,7 @@ public class Application extends Controller {
 //		}
 	
 //	// Create user and send to database
-		public static void userTableUpdate(int id, char gender, String name, String email) {
+		public static void updateUserTable(int id, char gender, String name, String email) {
 	        ObjectNode result = Json.newObject();
 			Connection conn = null;
 			Statement stmt = null;
@@ -69,7 +70,7 @@ public class Application extends Controller {
 
 			}
 		}
-
+		
 				// user.save();
 			//	return redirect(routes.Application.newUserPage());
 //			} catch (SQLException se) {
@@ -92,7 +93,20 @@ public class Application extends Controller {
 //					return internalServerError(se.toString());
 //				}// end finally try
 //			}// end try
-
+    public static Result testMethod(String s){
+            System.out.println(s);
+            return ok(ajax_result.render(s));
+    }
+    
+    public static Result javascriptRoutes() {
+    response().setContentType("text/javascript");
+    return ok(
+      Routes.javascriptRouter("jsRoutes",
+        // Routes
+        controllers.routes.javascript.Application.testMethod()
+      )
+    );
+  }
 
 	public static Result getName() {
 

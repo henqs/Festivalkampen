@@ -6,6 +6,8 @@
 -->
 <html>
 	<head>
+	    @import helper._
+        @import controllers.routes.javascript._
 		<title>Festivalkampen</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
@@ -17,10 +19,28 @@
 		<script  src="@routes.Assets.at("/javascripts/skel-layers.min.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/init.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
+		<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
 		
 		<!--[if lte IE 8]><link rel="stylesheet" href="@routes.Assets.at("stylesheets/css/ie/v8.css")" /><![endif]-->
 	</head>
 	<body class="homepage">
+	<input type='button' value='+' id='testBtn' />
+	<script type="text/javascript" charset="utf-8">
+	  var test = function() {
+      var s = "TEST";
+      console.log(s);
+      jsRoutes.controllers.Application.testMethod("Hejhejehej!!!").ajax({
+        success: function(data) {
+          $("#result").html(data);
+        },
+        error: function() {
+          alert("Error!")
+        }
+      })
+    };
+    
+    $('#testBtn').click(test);
+	</script>
 	<script>
 	window.fbAsyncInit = function() {
 			FB.init({
@@ -48,6 +68,7 @@
 				if (response.status === 'connected') {
 					// Logged into your app and Facebook.
 					console.log('Logged in!');
+					//Här vill vi köra updateUserTable()
 					var login = document.getElementById("login");
 					//login.style.display = 'none';
 					login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) {}); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
@@ -64,6 +85,7 @@
 				}
 			});
 		};
+	    
 		</script>
 		<!-- Header -->
 			<div id="header-wrapper">

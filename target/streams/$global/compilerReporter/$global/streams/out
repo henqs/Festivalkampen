@@ -1,0 +1,3 @@
+[error] C:\Users\svett_000\Documents\GitHub\testApp\app\controllers\Application.java:26:  error: cannot find symbol
+[error] 	   System.out.println(s);
+[error] 	                      ^
