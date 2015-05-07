@@ -24,23 +24,24 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="@routes.Assets.at("stylesheets/css/ie/v8.css")" /><![endif]-->
 	</head>
 	<body class="homepage">
-	<input type='button' value='+' id='testBtn' />
-	<script type="text/javascript" charset="utf-8">
-	  var test = function() {
-      var s = "TEST";
-      console.log(s);
-      jsRoutes.controllers.Application.testMethod("Hejhejehej!!!").ajax({
-        success: function(data) {
-          $("#result").html(data);
-        },
-        error: function() {
-          alert("Error!")
-        }
-      })
-    };
-    
-    $('#testBtn').click(test);
+	<!--DET HÄR ÄR POÄNGGIVARTESTER-->
+	<input type='button' value='Ge Axel 10 poäng' id='givePointsBtn' />
+	
+	<script>
+	    var givePoints = function() {
+		    var userId = "628246407306132";
+            jsRoutes.controllers.Application.givePoints(userId, "10").ajax({
+                success: function(data) {
+                    $("#result").html(data);
+                },
+                error: function() {
+                    alert("Problem med att ge poäng.")
+                }
+            })
+        };
+                         $('#givePointsBtn').click(givePoints);
 	</script>
+	<!--HÄR TAR POÄNGGIVARTESTET SLUT-->
 	<script>
 	window.fbAsyncInit = function() {
 			FB.init({
@@ -68,7 +69,6 @@
 				if (response.status === 'connected') {
 					// Logged into your app and Facebook.
 					console.log('Logged in!');
-					//Här vill vi köra updateUserTable()
 					var login = document.getElementById("login");
 					//login.style.display = 'none';
 					login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) {}); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
@@ -76,7 +76,27 @@
 					FB.api('/me', function(response) {
 						console.log(response);
 						welcomeText.innerHTML = "Välkommen till Festivalkampen " + response.first_name + "!";
-						});
+						//Här vill vi köra updateUserTable()
+				        var updateDatabase = function() {
+				            var userId = ""+response.id;
+				            var userGender = ""+response.gender;
+				            var userFullName = ""+response.first_name+" "+response.last_name;
+				            var userEmail = ""+response.email;
+				            console.log(userId);
+				            console.log(userGender);
+				            console.log(userFullName);
+				            console.log(userEmail);
+                            jsRoutes.controllers.Application.updateUserTable(userId, userGender, userFullName, userEmail).ajax({
+                                success: function(data) {
+                                    $("#result").html(data);
+                                },
+                                error: function() {
+                                    alert("Problem med anslutningen till Facebook.")
+                                }
+                            })
+                        };
+						updateDatabase();
+					});
 				} else if (response.status === 'not_authorized') {
 					// The person is logged into Facebook, but not your app.
 				} else {

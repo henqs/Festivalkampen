@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/svett_000/Documents/GitHub/testApp/conf/routes
-// @HASH:94b92d0dcb144d05bde369245cae8cb337c30336
-// @DATE:Wed May 06 19:33:40 CEST 2015
+// @HASH:0bd41c9ae3c9322066fffab9f09f3b24348bb20c
+// @DATE:Thu May 07 14:50:18 CEST 2015
 
 
 import play.core._
@@ -43,7 +43,7 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "index",
 private[this] lazy val controllers_Application_javascriptRoutes1_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/javascripts/routes"))))
 private[this] lazy val controllers_Application_javascriptRoutes1_invoker = createInvoker(
 controllers.Application.javascriptRoutes(),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "javascriptRoutes", Nil,"GET", """ TEST JS ROUTES""", Routes.prefix + """assets/javascripts/routes"""))
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "javascriptRoutes", Nil,"GET", """ JS routes""", Routes.prefix + """assets/javascripts/routes"""))
         
 
 // @LINE:12
@@ -54,19 +54,26 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "login",
         
 
 // @LINE:15
-private[this] lazy val controllers_Application_testMethod3_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("testMethod"))))
-private[this] lazy val controllers_Application_testMethod3_invoker = createInvoker(
-controllers.Application.testMethod(fakeValue[String]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "testMethod", Seq(classOf[String]),"GET", """ TEST""", Routes.prefix + """testMethod"""))
+private[this] lazy val controllers_Application_updateUserTable3_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("updateUserTable"))))
+private[this] lazy val controllers_Application_updateUserTable3_invoker = createInvoker(
+controllers.Application.updateUserTable(fakeValue[String], fakeValue[String], fakeValue[String], fakeValue[String]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "updateUserTable", Seq(classOf[String], classOf[String], classOf[String], classOf[String]),"GET", """ Update user table""", Routes.prefix + """updateUserTable"""))
         
 
 // @LINE:18
-private[this] lazy val controllers_Assets_at4_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
-private[this] lazy val controllers_Assets_at4_invoker = createInvoker(
+private[this] lazy val controllers_Application_givePoints4_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("givePoints"))))
+private[this] lazy val controllers_Application_givePoints4_invoker = createInvoker(
+controllers.Application.givePoints(fakeValue[String], fakeValue[String]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "givePoints", Seq(classOf[String], classOf[String]),"GET", """ Give user points""", Routes.prefix + """givePoints"""))
+        
+
+// @LINE:21
+private[this] lazy val controllers_Assets_at5_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
+private[this] lazy val controllers_Assets_at5_invoker = createInvoker(
 controllers.Assets.at(fakeValue[String], fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/javascripts/routes""","""controllers.Application.javascriptRoutes()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """views/login.scala.html""","""controllers.Application.login()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """testMethod""","""controllers.Application.testMethod(s:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/javascripts/routes""","""controllers.Application.javascriptRoutes()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """views/login.scala.html""","""controllers.Application.login()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """updateUserTable""","""controllers.Application.updateUserTable(id:String, gender:String, name:String, email:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """givePoints""","""controllers.Application.givePoints(id:String, points:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -99,17 +106,25 @@ case controllers_Application_login2_route(params) => {
         
 
 // @LINE:15
-case controllers_Application_testMethod3_route(params) => {
-   call(params.fromQuery[String]("s", None)) { (s) =>
-        controllers_Application_testMethod3_invoker.call(controllers.Application.testMethod(s))
+case controllers_Application_updateUserTable3_route(params) => {
+   call(params.fromQuery[String]("id", None), params.fromQuery[String]("gender", None), params.fromQuery[String]("name", None), params.fromQuery[String]("email", None)) { (id, gender, name, email) =>
+        controllers_Application_updateUserTable3_invoker.call(controllers.Application.updateUserTable(id, gender, name, email))
    }
 }
         
 
 // @LINE:18
-case controllers_Assets_at4_route(params) => {
+case controllers_Application_givePoints4_route(params) => {
+   call(params.fromQuery[String]("id", None), params.fromQuery[String]("points", None)) { (id, points) =>
+        controllers_Application_givePoints4_invoker.call(controllers.Application.givePoints(id, points))
+   }
+}
+        
+
+// @LINE:21
+case controllers_Assets_at5_route(params) => {
    call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at4_invoker.call(controllers.Assets.at(path, file))
+        controllers_Assets_at5_invoker.call(controllers.Assets.at(path, file))
    }
 }
         
