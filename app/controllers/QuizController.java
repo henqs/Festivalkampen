@@ -18,6 +18,9 @@ import play.libs.Json;
 
 
 	public class QuizController extends Controller{
+		
+		static int i = 0;
+		static int idata;
 
  //   @BodyParser.Of(BodyParser.Json.class)
  //   public Result sayHello() {
@@ -26,6 +29,7 @@ import play.libs.Json;
 
 public static Result sayHello(String data) {
     System.out.println(data +"rahim");
+    idata = Integer.parseInt(data);
     return ok(data);
 }
 
@@ -40,10 +44,10 @@ public static Result sayHello(String data) {
   }
  
  public static Result registreraSvar(){
- 	quiz_user_answer quiz = Form.form(quiz_user_answer.class).bindFromRequest().get();
+ 	quiz_user_answer quiz = new quiz_user_answer();
  	quiz.user_id = 1;
  	quiz.question_id = i+1;
- 	quiz.choice_id = 1;
+ 	quiz.choice_id = idata;
  
  	Calendar cal = Calendar.getInstance();
  	quiz.answer_time = cal.getTime();
