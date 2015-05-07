@@ -28,7 +28,7 @@ create table quiz_user_answer (
   question_id               integer,
   choice_id                 integer,
   is_right                  tinyint(1) default 0,
-  answer_time               date,
+  answer_time               datetime,
   constraint pk_quiz_user_answer primary key (user_id))
 ;
 

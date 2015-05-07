@@ -52,6 +52,6 @@ public static Result sayHello(String data) {
  	Calendar cal = Calendar.getInstance();
  	quiz.answer_time = cal.getTime();
  	quiz.save();
- 	return index();
+ 	return Application.index();
  }
 }
