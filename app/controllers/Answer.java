@@ -12,7 +12,9 @@ public class Answer extends Controller{
     return TODO;
     }    
     
-    public static Result getContentOf()
+    public static Result getContentOf() {
+        return TODO;
+    }
     public static Result list() {
     return ok();
     }

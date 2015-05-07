@@ -5,9 +5,14 @@
 # Home page
 GET     /                           controllers.Application.index()
 
-# http-post ett json object
-GET   /postquiz/:data              controllers.QuizController.sayHello(data: String)
+# TEST JS ROUTES
+GET    /assets/javascripts/routes   controllers.QuizController.javascriptRoutes()
+
+# skicka quiz-svar
+GET   /postquiz                     controllers.QuizController.sayHello(data: String)
 GET    /quiz                        controllers.Application.quiz()    
+
+
 
 # Testgrejer under här
 

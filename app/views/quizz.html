@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
+    @import helper._
+        @import controllers.routes.javascript._
 <script src ="https://code.jquery.com/jquery-1.10.2.js"></script>
-<body>
+<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
+
   Fråga 1: Hur stavas Justin Bieber <br>
   <br>
 <form>
@@ -15,28 +18,32 @@
 </form>
 
 <script type = "text/javascript">
+    
+    var data = "hello";
+
   function JSONanswerObject() {
 
-          var JSONObject={
-            
-            "answer" : document.getElementById("answer").value,           
-        };
+          
         $.ajax( {
-            type: "POST",
-            url: "http://localhost:9000/postquiz",
-            dataType: "application/json",
-            data: JSONObject,
+            url: "jsRoutes.controllers.QuizController.sayHello(data).ajax()",
+            
+            data: data,
             success: function(result) {
                 console.log(result);
-                alert("baboom");
+                alert("plupp");
             }
             
             
         })
   }
-
+   var test = function() {
+       jsRoutes.controllers.QuizController.sayHello("hej").ajax( {
+           alert("dsdsds");
+       });
+   }
+    test();
 
  </script>
 
-</body>
+
 </html>

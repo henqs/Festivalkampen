@@ -11,14 +11,14 @@ import play.db.ebean.Model;
 public class quiz_user_answer extends Model{
 	
 	@Id
-	int user_id;
+	public int user_id;
 	
-	int question_id;
+	public int question_id;
 	
-	int choice_id;
+	public int choice_id;
 	
-	boolean is_right;
+	public boolean is_right;
 	
-	Date answer_time;
+	public Date answer_time;
 	
 }

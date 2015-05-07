@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html>
+	    @import helper._
+        @import controllers.routes.javascript._
 <script src ="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="@routes.QuizController.javascriptRoutes"></script>
 <body>
   Fråga 1: Hur stavas Justin Bieber? <br>
   <br>
   
 <form>
-<input type="radio" id="answer" name="Lorem Ipsum" value="A">A: Bieber stavas Bieber<br>
-<input type="radio" id="answer" name="Lorem Ipsum" value="B">B: Bieber stavas Bäber<br>
-<input type="radio" id="answer" name="Lorem Ipsum" value="C">C: Bieber stavas buber<br>
-<input type="radio" id="answer" name="Lorem Ipsum" value="D">D: Bieber stavas biiber<br>
+<input type="radio" id="answer" name="Svar" value="A">A: Bieber stavas Bieber<br>
+<input type="radio" id="answer" name="Svar" value="B">B: Bieber stavas Bäber<br>
+<input type="radio" id="answer" name="Svar" value="C">C: Bieber stavas buber<br>
+<input type="radio" id="answer" name="Svar" value="D">D: Bieber stavas biiber<br>
 
-<input onClick="JSONAnswerObject()" type="button" id="answer" name="theSubmit" value="Svara"/>
+<input onClick="test()" type="button" id="answer" name="theSubmit" value="Svara"/>
 </form>
 
-<script type = "text/javascript">
-
-  function JSONAnswerObject() {
-            alert("baboom");
-          var data = "A";
-        $.ajax( {
-            data: data,
-            type: "GET",
-            url: "/postquiz",
-            dataType: "application/json",
-            contentType: "application/json; charset=utf-8",
-            success: alert(data)
-            
-            
-        })
-  }
 
 
+<script type="text/javascript" charset="utf-8">
+
+	function test() {
+	  var svar = document.getElementsByName("Svar");
+	  var len = svar.length
+      for(i = 0; i < len; i++) {
+      	if(svar[i].checked) {
+      		var answer = i;
+      	}
+      }          
+      jsRoutes.controllers.QuizController.sayHello(answer).ajax({
+      
+        success: function(data) {
+        	alert("success");
+          $("#result").html(data);
+        },
+        error: function() {
+          alert("Error!")
+        }
+      })
+    };
  </script>
+ 
 
 </body>
 </html>
