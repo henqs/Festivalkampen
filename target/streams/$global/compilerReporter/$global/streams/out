@@ -1,3 +1,3 @@
-[error] C:\Users\svett_000\Documents\GitHub\testApp\app\controllers\Application.java:109:  error: cannot find symbol
-[error]         controllers.routes.javascript.Application.givePoints()
-[error]                                                  ^
+[error] C:\Users\svett_000\Documents\GitHub\testApp-master\app\controllers\Application.java:98:  error: cannot find symbol
+[error] 	                thisUserTeam = newUserTeam%3;
+[error] 	                ^
