@@ -33,6 +33,14 @@ public class Application extends Controller {
 	  public static Result gruppSida() {
 	    return ok(gruppsida.render());
 	  }
+
+	public static Result kontakta() {
+	    return ok(kontakta.render());
+	  }
+	  
+	  	public static Result spelhub() {
+	    return ok(spelhub.render());
+	  }
 	  
 	  public static Result givePoints(String id, String points){
 	        Connection conn = null;

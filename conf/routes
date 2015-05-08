@@ -14,6 +14,12 @@ GET     /views/login.scala.html     controllers.Application.login()
 # Grupp page
 GET     /views/gruppsida.scala.html     controllers.Application.gruppSida()
 
+# Kontakta page
+GET     /views/kontakta.scala.html     controllers.Application.kontakta()
+
+# Spelhub page
+GET     /views/spelhub.scala.html     controllers.Application.spelhub()
+
 # Update user table
 GET    /updateUserTable             controllers.Application.updateUserTable(id: String, gender: String, name: String, email: String)
 

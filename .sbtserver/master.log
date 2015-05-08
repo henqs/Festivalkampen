@@ -10839,3 +10839,752 @@ Copy resource mappings:
 Total time: 2 s, completed 2015-maj-08 13:57:15
 > server-post-command-cleanup
 > server-handle-next-server-request
+> jobStop 5
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@79afab32, check cycles: false
+Total time: 0 s, completed 2015-maj-08 14:06:24
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@4fe499cf, check cycles: false
+Total time: 0 s, completed 2015-maj-08 14:06:36
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@25bd4349, check cycles: false
+Total time: 0 s, completed 2015-maj-08 14:06:38
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@b89262, check cycles: false
+Total time: 0 s, completed 2015-maj-08 14:06:39
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@4c9c4036, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 780a3c80, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.846660306 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 2015-maj-08 14:06:42
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@398f228, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 33d21333, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.827173406 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 2015-maj-08 14:08:02
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@7bf57254, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 1ebc0f6c, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.774796479 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 2015-maj-08 14:12:33
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@633cd450, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\login.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\login.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\login.template.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 56e3dede, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.808403584 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
+Total time: 2 s, completed 2015-maj-08 14:18:44
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@1131be64, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\login.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\login.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\login.template.scala)
+
+Read from stdout: Compiling 2 Scala sources to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Compiling 2 Scala sources to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 38b78398, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.814991139 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 2015-maj-08 14:21:10
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@cfcbecf, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@29668640 directly...
+Java compilation took 0.233501439 s
+Java analysis took 0.010603094 s
+Java compile + analysis took 0.262938167 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 2015-maj-08 14:29:38
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@1087fe3d, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Read from stdout: Compiling 3 Scala sources and 1 Java source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Compiling 3 Scala sources and 1 Java source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 1b70ac7c, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 2.000651929 s
+Attempting to call com.sun.tools.javac.api.JavacTool@2d656d50 directly...
+Java compilation took 0.172603483 s
+Java analysis took 0.010685199 s
+Java compile + analysis took 0.203237419 s
+Invalidating C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
+Invalidating (transitively) by inheritance from C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
+Initial set of included nodes: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
+The C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala source file has the following regular definitions changed:
+	kontakta.
+All member reference dependencies will be considered within this context.
+The following modified names cause invalidation of C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala: Set(kontakta)
+None of the modified names appears in C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\login.template.scala. This dependency is not being considered for invalidation.
+None of the modified names appears in C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala. This dependency is not being considered for invalidation.
+New invalidations:
+	Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
+Initial set of included nodes: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
+Total time: 3 s, completed 2015-maj-08 14:30:56
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@7da649ae, check cycles: false
+Invalidating C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\controllers\routes.class: stamp changed from lastModified(1431085883602) to lastModified(1431088255859)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\login.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\controllers\routes.class)
+Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\login.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\login.template.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\login.template.scala)
+
+Read from stdout: Compiling 2 Scala sources to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Compiling 2 Scala sources to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 423d9254, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.793790751 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 2015-maj-08 14:32:07
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@806e168, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\controllers\routes.java)
+
+Read from stdout: Compiling 2 Scala sources and 1 Java source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Compiling 2 Scala sources and 1 Java source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 6edbf930, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Read from stdout: C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes:21: value spelhub is not a member of object controllers.Application
+C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes:21: value spelhub is not a member of object controllers.Application
+Read from stdout: GET     /views/spelhub.scala.html     controllers.Application.spelhub()
+GET     /views/spelhub.scala.html     controllers.Application.spelhub()
+Read from stdout: C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes:21: value spelhub is not a member of object controllers.Application
+C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes:21: value spelhub is not a member of object controllers.Application
+Read from stdout: GET     /views/spelhub.scala.html     controllers.Application.spelhub()
+GET     /views/spelhub.scala.html     controllers.Application.spelhub()
+Read from stdout: two errors found
+two errors found
+Compilation failed (CompilerInterface)
+Total time: 1 s, completed 2015-maj-08 14:34:32
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@6fe39dd8, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\controllers\routes.java)
+
+Read from stdout: Compiling 2 Scala sources and 2 Java sources to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Compiling 2 Scala sources and 2 Java sources to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler bb3583b, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 1.588741676 s
+Attempting to call com.sun.tools.javac.api.JavacTool@78d4f401 directly...
+Read from stdout: C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java:42: cannot find symbol
+Read from stdout: symbol:   variable spelhub
+Read from stdout: location: class controllers.Application
+C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java:42: cannot find symbol
+  symbol:   variable spelhub
+  location: class controllers.Application
+Read from stdout: spelhub
+spelhub
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 2 s, completed 2015-maj-08 14:35:45
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@13896dc6, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\controllers\routes.java)
+
+Read from stdout: Compiling 2 Scala sources and 2 Java sources to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Compiling 2 Scala sources and 2 Java sources to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 49bb9b45, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 1.571008423 s
+Attempting to call com.sun.tools.javac.api.JavacTool@79a69481 directly...
+Read from stdout: C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java:42: cannot find symbol
+Read from stdout: symbol:   variable spelhub
+Read from stdout: location: class controllers.Application
+C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java:42: cannot find symbol
+  symbol:   variable spelhub
+  location: class controllers.Application
+Read from stdout: spelhub
+spelhub
+Total time: 2 s, completed 2015-maj-08 14:35:50
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@3ddb2e79, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\spelhub.template.scala)
+	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\spelhub.template.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\spelhub.template.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\controllers\routes.java)
+
+Read from stdout: Compiling 3 Scala sources and 2 Java sources to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Compiling 3 Scala sources and 2 Java sources to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 2012a547, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 1.581618656 s
+Attempting to call com.sun.tools.javac.api.JavacTool@43f7870a directly...
+Java compilation took 0.193551755 s
+Java analysis took 0.010649947 s
+Java compile + analysis took 0.218331277 s
+Invalidating C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
+Invalidating (transitively) by inheritance from C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
+Initial set of included nodes: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
+The C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\src_managed\main\routes_reverseRouting.scala source file has the following regular definitions changed:
+	spelhub.
+All member reference dependencies will be considered within this context.
+None of the modified names appears in C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\login.template.scala. This dependency is not being considered for invalidation.
+None of the modified names appears in C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala. This dependency is not being considered for invalidation.
+None of the modified names appears in C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala. This dependency is not being considered for invalidation.
+Invalidating C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\spelhub.template.scala...
+Invalidating (transitively) by inheritance from C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\spelhub.template.scala...
+Initial set of included nodes: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\spelhub.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\spelhub.template.scala)
+The C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\spelhub.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, spelhub, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
+Total time: 2 s, completed 2015-maj-08 14:36:24
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@5519695c, check cycles: false
+Invalidating C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\controllers\routes.class: stamp changed from lastModified(1431088255859) to lastModified(1431088583811)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\controllers\routes.class)
+Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\login.template.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\gruppsida.template.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\login.template.scala, C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Read from stdout: Compiling 3 Scala sources to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Compiling 3 Scala sources to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 2e0bae06, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.791085762 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
+Total time: 2 s, completed 2015-maj-08 14:37:05
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@7005533f, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 14f4f334, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Henrik\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Henrik\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Henrik\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Henrik\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Henrik\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Henrik\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Henrik\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Henrik\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Henrik\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Henrik\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Henrik\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Henrik\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Henrik\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Henrik\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Henrik\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Henrik\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Henrik\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Henrik\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Henrik\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Henrik\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Henrik\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.706389522 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\application.conf,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\application.conf)
+	(C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\conf\routes,C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 2015-maj-08 14:37:50
+> server-post-command-cleanup
+> server-handle-next-server-request

@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/conf/routes
-// @HASH:e9826da79237cd20f5c4ce52e45b1f884950acbf
-// @DATE:Fri May 08 13:51:17 CEST 2015
+// @HASH:619df895b3c8fe75d8998db343ce83faed289833
+// @DATE:Fri May 08 14:34:31 CEST 2015
 
 package controllers;
 

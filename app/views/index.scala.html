@@ -122,20 +122,15 @@
 							<ul>
 								<li class="current"><a name="toppen" href="index.scala.html">Välkommen</a></li>
 								<li>
-									<a href="">Droppmeny</a>
-									<ul>
-										<li><a href="#">Din grupp</a></li>
-										<li><a href="#">Logga ut</a></li>
-										<li>
-											<a href="">Spel</a>
+											<a href="@routes.Application.spelhub()">Spel</a>
 											<ul>
 												<li><a href="#">Quiz</a></li>
 												<li><a href="#">Skyrim</a></li>
 											</ul>
-									</ul>
+									
 								</li>
 								<li><a href="@routes.Application.gruppSida()">Gruppsida</a></li>
-								<li><a href="#kontakta">Kontakta oss</a></li>
+								<li><a href="@routes.Application.kontakta()">Kontakta oss</a></li>
 							</ul>
 						</nav>
 					

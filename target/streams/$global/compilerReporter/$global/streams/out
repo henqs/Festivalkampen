@@ -1,4 +1,4 @@
-[error] C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\views\gruppsida.scala.html:92: value gruppSida is not a member of controllers.ReverseApplication
-[error] 								<li><a href="no-sidebar.html">Kontakta oss</a></li>
-[error] 								                                                  ^
-[error] one error found
+[error] C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java:42: cannot find symbol
+[error]   symbol:   variable spelhub
+[error]   location: class controllers.Application
+[error] spelhub

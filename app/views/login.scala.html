@@ -67,16 +67,16 @@
 				
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.scala.html">Festivalkampen</a></h1>
+							<h1><a href="@routes.Application.index()">Festivalkampen</a></h1>
 							<span>av Grupp 11</span>
 						</div>
 					
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="index.scala.html">Välkommen</a></li>
+								<li><a href="@routes.Application.index()">Välkommen</a></li>
 								<li>
-									<a href="">Droppmeny</a>
+									<a href="">Spel</a>
 									<ul>
 										<li><a href="#">Meny steg 1.1</a></li>
 										<li><a href="#">Meny steg 1.2</a></li>
@@ -88,8 +88,8 @@
 											</ul>
 									</ul>
 								</li>
-								<li><a href="right-sidebar.html">Senaste nytt</a></li>
-								<li><a href="no-sidebar.html">Kontakta oss</a></li>
+								<li><a href="@routes.Application.gruppSida()">Gruppsida</a></li>
+								<li><a href="@routes.Application.kontakta()">Kontakta oss</a></li>
 							</ul>
 						</nav>
 					
