@@ -1,6 +1,6 @@
-// @SOURCE:C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/conf/routes
-// @HASH:b0c8a42272d503367cecfbbda24d26c970554319
-// @DATE:Wed Apr 29 15:26:58 CEST 2015
+// @SOURCE:C:/Users/svett_000/Documents/GitHub/testApp/conf/routes
+// @HASH:0bd41c9ae3c9322066fffab9f09f3b24348bb20c
+// @DATE:Thu May 07 14:50:18 CEST 2015
 
 package controllers;
 

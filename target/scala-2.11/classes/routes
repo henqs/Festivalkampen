@@ -5,8 +5,17 @@
 # Home page
 GET     /                           controllers.Application.index()
 
-# Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+# JS routes
+GET    /assets/javascripts/routes      controllers.Application.javascriptRoutes()
 
 # Login page
 GET     /views/login.scala.html     controllers.Application.login()
+
+# Update user table
+GET    /updateUserTable             controllers.Application.updateUserTable(id: String, gender: String, name: String, email: String)
+
+# Give user points
+GET     /givePoints                 controllers.Application.givePoints(id: String, points: String)    
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

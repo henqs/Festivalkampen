@@ -1,0 +1,4 @@
+[error] C:\Users\svett_000\Documents\GitHub\testApp\app\views\index.scala.html:77: Not parsed?
+[error]     }; 
+[error]     ^
+[error] (compile:twirlCompileTemplates) Twirl compilation failed

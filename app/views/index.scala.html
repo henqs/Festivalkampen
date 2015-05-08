@@ -6,6 +6,8 @@
 -->
 <html>
 	<head>
+	    @import helper._
+        @import controllers.routes.javascript._
 		<title>Festivalkampen</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
@@ -17,10 +19,29 @@
 		<script  src="@routes.Assets.at("/javascripts/skel-layers.min.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/init.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
+		<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
 		
 		<!--[if lte IE 8]><link rel="stylesheet" href="@routes.Assets.at("stylesheets/css/ie/v8.css")" /><![endif]-->
 	</head>
 	<body class="homepage">
+	<!--DET HÄR ÄR POÄNGGIVARTESTER-->
+	<input type='button' value='Ge Axel 10 poäng' id='givePointsBtn' />
+	
+	<script>
+	    var givePoints = function() {
+		    var userId = "628246407306132";
+            jsRoutes.controllers.Application.givePoints(userId, "10").ajax({
+                success: function(data) {
+                    $("#result").html(data);
+                },
+                error: function() {
+                    alert("Problem med att ge poäng.")
+                }
+            })
+        };
+        $('#givePointsBtn').click(givePoints);
+	</script>
+	<!--HÄR TAR POÄNGGIVARTESTET SLUT-->
 	<script>
 	window.fbAsyncInit = function() {
 			FB.init({
@@ -55,7 +76,27 @@
 					FB.api('/me', function(response) {
 						console.log(response);
 						welcomeText.innerHTML = "Välkommen till Festivalkampen " + response.first_name + "!";
-						});
+						//Här vill vi köra updateUserTable()
+				        var updateDatabase = function() {
+				            var userId = ""+response.id;
+				            var userGender = ""+response.gender;
+				            var userFullName = ""+response.first_name+" "+response.last_name;
+				            var userEmail = ""+response.email;
+				            console.log(userId);
+				            console.log(userGender);
+				            console.log(userFullName);
+				            console.log(userEmail);
+                            jsRoutes.controllers.Application.updateUserTable(userId, userGender, userFullName, userEmail).ajax({
+                                success: function(data) {
+                                    $("#result").html(data);
+                                },
+                                error: function() {
+                                    alert("Problem med anslutningen till Facebook.")
+                                }
+                            })
+                        };
+						updateDatabase();
+					});
 				} else if (response.status === 'not_authorized') {
 					// The person is logged into Facebook, but not your app.
 				} else {
@@ -64,6 +105,7 @@
 				}
 			});
 		};
+	    
 		</script>
 		<!-- Header -->
 			<div id="header-wrapper">

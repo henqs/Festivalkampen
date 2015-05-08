@@ -24,7 +24,8 @@ object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Form
 
   /**/
   def apply():play.twirl.api.HtmlFormat.Appendable = {
-      _display_ {
+      _display_ {import helper._
+import controllers.routes.javascript._
 
 Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 <!--
@@ -34,30 +35,49 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 -->
 <html>
 	<head>
-		<title>Festivalkampen</title>
+	    """),format.raw/*10.1*/("""        """),format.raw/*11.1*/("""		"""),format.raw/*11.3*/("""<title>Festivalkampen</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src=""""),_display_(/*13.35*/routes/*13.41*/.Assets.at("stylesheets/css/ie/html5shiv.js")),format.raw/*13.86*/(""""></script><![endif]-->
-		<script  src=""""),_display_(/*14.18*/routes/*14.24*/.Assets.at("/javascripts/jquery.min.js")),format.raw/*14.64*/(""""></script>
-		<script  src=""""),_display_(/*15.18*/routes/*15.24*/.Assets.at("/javascripts/jquery.dropotron.min.js")),format.raw/*15.74*/(""""></script>
-		<script  src=""""),_display_(/*16.18*/routes/*16.24*/.Assets.at("/javascripts/skel.min.js")),format.raw/*16.62*/(""""></script>
-		<script  src=""""),_display_(/*17.18*/routes/*17.24*/.Assets.at("/javascripts/skel-layers.min.js")),format.raw/*17.69*/(""""></script>
-		<script  src=""""),_display_(/*18.18*/routes/*18.24*/.Assets.at("/javascripts/init.js")),format.raw/*18.58*/(""""></script>
-		<script  src=""""),_display_(/*19.18*/routes/*19.24*/.Assets.at("/javascripts/facebookSDK.js")),format.raw/*19.65*/(""""></script>
+		<!--[if lte IE 8]><script src=""""),_display_(/*15.35*/routes/*15.41*/.Assets.at("stylesheets/css/ie/html5shiv.js")),format.raw/*15.86*/(""""></script><![endif]-->
+		<script  src=""""),_display_(/*16.18*/routes/*16.24*/.Assets.at("/javascripts/jquery.min.js")),format.raw/*16.64*/(""""></script>
+		<script  src=""""),_display_(/*17.18*/routes/*17.24*/.Assets.at("/javascripts/jquery.dropotron.min.js")),format.raw/*17.74*/(""""></script>
+		<script  src=""""),_display_(/*18.18*/routes/*18.24*/.Assets.at("/javascripts/skel.min.js")),format.raw/*18.62*/(""""></script>
+		<script  src=""""),_display_(/*19.18*/routes/*19.24*/.Assets.at("/javascripts/skel-layers.min.js")),format.raw/*19.69*/(""""></script>
+		<script  src=""""),_display_(/*20.18*/routes/*20.24*/.Assets.at("/javascripts/init.js")),format.raw/*20.58*/(""""></script>
+		<script  src=""""),_display_(/*21.18*/routes/*21.24*/.Assets.at("/javascripts/facebookSDK.js")),format.raw/*21.65*/(""""></script>
+		<script type="text/javascript" src=""""),_display_(/*22.40*/routes/*22.46*/.Application.javascriptRoutes),format.raw/*22.75*/(""""></script>
 		
-		<!--[if lte IE 8]><link rel="stylesheet" href=""""),_display_(/*21.51*/routes/*21.57*/.Assets.at("stylesheets/css/ie/v8.css")),format.raw/*21.96*/("""" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href=""""),_display_(/*24.51*/routes/*24.57*/.Assets.at("stylesheets/css/ie/v8.css")),format.raw/*24.96*/("""" /><![endif]-->
 	</head>
 	<body class="homepage">
+	<!--DET HÄR ÄR POÄNGGIVARTESTER-->
+	<input type='button' value='Ge Axel 10 poäng' id='givePointsBtn' />
+	
 	<script>
-	window.fbAsyncInit = function() """),format.raw/*25.34*/("""{"""),format.raw/*25.35*/("""
-			"""),format.raw/*26.4*/("""FB.init("""),format.raw/*26.12*/("""{"""),format.raw/*26.13*/("""
-				"""),format.raw/*27.5*/("""appId      : '909582695765355',
+	    var givePoints = function() """),format.raw/*31.34*/("""{"""),format.raw/*31.35*/("""
+		    """),format.raw/*32.7*/("""var userId = "628246407306132";
+            jsRoutes.controllers.Application.givePoints(userId, "10").ajax("""),format.raw/*33.76*/("""{"""),format.raw/*33.77*/("""
+                """),format.raw/*34.17*/("""success: function(data) """),format.raw/*34.41*/("""{"""),format.raw/*34.42*/("""
+                    """),format.raw/*35.21*/("""$("#result").html(data);
+                """),format.raw/*36.17*/("""}"""),format.raw/*36.18*/(""",
+                error: function() """),format.raw/*37.35*/("""{"""),format.raw/*37.36*/("""
+                    """),format.raw/*38.21*/("""alert("Problem med att ge poäng.")
+                """),format.raw/*39.17*/("""}"""),format.raw/*39.18*/("""
+            """),format.raw/*40.13*/("""}"""),format.raw/*40.14*/(""")
+        """),format.raw/*41.9*/("""}"""),format.raw/*41.10*/(""";
+        $('#givePointsBtn').click(givePoints);
+	</script>
+	<!--HÄR TAR POÄNGGIVARTESTET SLUT-->
+	<script>
+	window.fbAsyncInit = function() """),format.raw/*46.34*/("""{"""),format.raw/*46.35*/("""
+			"""),format.raw/*47.4*/("""FB.init("""),format.raw/*47.12*/("""{"""),format.raw/*47.13*/("""
+				"""),format.raw/*48.5*/("""appId      : '909582695765355',
 				cookie     : true,  // enable cookies to allow the server to access 
 									// the session
 				xfbml      : true,  // parse social plugins on this page
 				version    : 'v2.2' // use version 2.2
-			"""),format.raw/*32.4*/("""}"""),format.raw/*32.5*/(""");
+			"""),format.raw/*53.4*/("""}"""),format.raw/*53.5*/(""");
 	
 			// Now that we've initialized the JavaScript SDK, we call 
 			// FB.getLoginStatus().  This function gets the state of the
@@ -71,27 +91,48 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 			//
 			// These three cases are handled in the callback function.
 			
-			FB.getLoginStatus(function(response) """),format.raw/*46.41*/("""{"""),format.raw/*46.42*/("""
-				"""),format.raw/*47.5*/("""statusChangeCallback(response);
-				if (response.status === 'connected') """),format.raw/*48.42*/("""{"""),format.raw/*48.43*/("""
-					"""),format.raw/*49.6*/("""// Logged into your app and Facebook.
+			FB.getLoginStatus(function(response) """),format.raw/*67.41*/("""{"""),format.raw/*67.42*/("""
+				"""),format.raw/*68.5*/("""statusChangeCallback(response);
+				if (response.status === 'connected') """),format.raw/*69.42*/("""{"""),format.raw/*69.43*/("""
+					"""),format.raw/*70.6*/("""// Logged into your app and Facebook.
 					console.log('Logged in!');
 					var login = document.getElementById("login");
 					//login.style.display = 'none';
-					login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) """),format.raw/*53.81*/("""{"""),format.raw/*53.82*/("""}"""),format.raw/*53.83*/("""); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
+					login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) """),format.raw/*74.81*/("""{"""),format.raw/*74.82*/("""}"""),format.raw/*74.83*/("""); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
 					var welcomeText = document.getElementById("welcome-text");
-					FB.api('/me', function(response) """),format.raw/*55.39*/("""{"""),format.raw/*55.40*/("""
-						"""),format.raw/*56.7*/("""console.log(response);
+					FB.api('/me', function(response) """),format.raw/*76.39*/("""{"""),format.raw/*76.40*/("""
+						"""),format.raw/*77.7*/("""console.log(response);
 						welcomeText.innerHTML = "Välkommen till Festivalkampen " + response.first_name + "!";
-						"""),format.raw/*58.7*/("""}"""),format.raw/*58.8*/(""");
-				"""),format.raw/*59.5*/("""}"""),format.raw/*59.6*/(""" """),format.raw/*59.7*/("""else if (response.status === 'not_authorized') """),format.raw/*59.54*/("""{"""),format.raw/*59.55*/("""
-					"""),format.raw/*60.6*/("""// The person is logged into Facebook, but not your app.
-				"""),format.raw/*61.5*/("""}"""),format.raw/*61.6*/(""" """),format.raw/*61.7*/("""else """),format.raw/*61.12*/("""{"""),format.raw/*61.13*/("""
-					"""),format.raw/*62.6*/("""// The person is not logged into Facebook, so we're not sure if
+						//Här vill vi köra updateUserTable()
+				        var updateDatabase = function() """),format.raw/*80.45*/("""{"""),format.raw/*80.46*/("""
+				            """),format.raw/*81.17*/("""var userId = ""+response.id;
+				            var userGender = ""+response.gender;
+				            var userFullName = ""+response.first_name+" "+response.last_name;
+				            var userEmail = ""+response.email;
+				            console.log(userId);
+				            console.log(userGender);
+				            console.log(userFullName);
+				            console.log(userEmail);
+                            jsRoutes.controllers.Application.updateUserTable(userId, userGender, userFullName, userEmail).ajax("""),format.raw/*89.128*/("""{"""),format.raw/*89.129*/("""
+                                """),format.raw/*90.33*/("""success: function(data) """),format.raw/*90.57*/("""{"""),format.raw/*90.58*/("""
+                                    """),format.raw/*91.37*/("""$("#result").html(data);
+                                """),format.raw/*92.33*/("""}"""),format.raw/*92.34*/(""",
+                                error: function() """),format.raw/*93.51*/("""{"""),format.raw/*93.52*/("""
+                                    """),format.raw/*94.37*/("""alert("Problem med anslutningen till Facebook.")
+                                """),format.raw/*95.33*/("""}"""),format.raw/*95.34*/("""
+                            """),format.raw/*96.29*/("""}"""),format.raw/*96.30*/(""")
+                        """),format.raw/*97.25*/("""}"""),format.raw/*97.26*/(""";
+						updateDatabase();
+					"""),format.raw/*99.6*/("""}"""),format.raw/*99.7*/(""");
+				"""),format.raw/*100.5*/("""}"""),format.raw/*100.6*/(""" """),format.raw/*100.7*/("""else if (response.status === 'not_authorized') """),format.raw/*100.54*/("""{"""),format.raw/*100.55*/("""
+					"""),format.raw/*101.6*/("""// The person is logged into Facebook, but not your app.
+				"""),format.raw/*102.5*/("""}"""),format.raw/*102.6*/(""" """),format.raw/*102.7*/("""else """),format.raw/*102.12*/("""{"""),format.raw/*102.13*/("""
+					"""),format.raw/*103.6*/("""// The person is not logged into Facebook, so we're not sure if
 					// they are logged into this app or not.
-				"""),format.raw/*64.5*/("""}"""),format.raw/*64.6*/("""
-			"""),format.raw/*65.4*/("""}"""),format.raw/*65.5*/(""");
-		"""),format.raw/*66.3*/("""}"""),format.raw/*66.4*/(""";
+				"""),format.raw/*105.5*/("""}"""),format.raw/*105.6*/("""
+			"""),format.raw/*106.4*/("""}"""),format.raw/*106.5*/(""");
+		"""),format.raw/*107.3*/("""}"""),format.raw/*107.4*/(""";
+	    
 		</script>
 		<!-- Header -->
 			<div id="header-wrapper">
@@ -99,7 +140,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 				
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href=""""),_display_(/*74.22*/routes/*74.28*/.Application.index()),format.raw/*74.48*/("""">Festivalkampen</a></h1>
+							<h1><a href=""""),_display_(/*116.22*/routes/*116.28*/.Application.index()),format.raw/*116.48*/("""">Festivalkampen</a></h1>
 							<span>av Grupp 11</span>
 						</div>
 					
@@ -138,7 +179,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 						</div>
 						<div class="5u">
 							<ul>
-								<li id="login"><a href=""""),_display_(/*113.34*/routes/*113.40*/.Application.login()),format.raw/*113.60*/("""" class="button big icon fa-arrow-circle-right">Logga in</a></li>
+								<li id="login"><a href=""""),_display_(/*155.34*/routes/*155.40*/.Application.login()),format.raw/*155.60*/("""" class="button big icon fa-arrow-circle-right">Logga in</a></li>
 								<li id="info"><a href="#" class="button alt big icon fa-question-circle">Mer info</a></li>
 							</ul>
 						</div>
@@ -154,7 +195,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 						
 							<!-- Box -->
 								<section class="box feature">
-									 <a href="#" class="image featured"><img src=""""),_display_(/*129.57*/routes/*129.63*/.Assets.at("images/pic01.jpg")),format.raw/*129.93*/("""">
+									 <a href="#" class="image featured"><img src=""""),_display_(/*171.57*/routes/*171.63*/.Assets.at("images/pic01.jpg")),format.raw/*171.93*/("""">
 									<div class="inner">
 										<header>
 											<h2>Plats för text</h2>
@@ -169,7 +210,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 						
 							<!-- Box -->
 								<section class="box feature">
-									<a href="#" class="image featured"><img src=""""),_display_(/*144.56*/routes/*144.62*/.Assets.at("images/pic02.jpg")),format.raw/*144.92*/("""">
+									<a href="#" class="image featured"><img src=""""),_display_(/*186.56*/routes/*186.62*/.Assets.at("images/pic02.jpg")),format.raw/*186.92*/("""">
 									<div class="inner">
 										<header>
 											<h2>Plats för text</h2>
@@ -184,7 +225,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 						
 							<!-- Box -->
 								<section class="box feature last">
-									<a href="#" class="image featured"><img src=""""),_display_(/*159.56*/routes/*159.62*/.Assets.at("images/pic03.jpg")),format.raw/*159.92*/(""""/>
+									<a href="#" class="image featured"><img src=""""),_display_(/*201.56*/routes/*201.62*/.Assets.at("images/pic03.jpg")),format.raw/*201.92*/(""""/>
 									<div class="inner">
 										<header>
 											<h2>Plats för text</h2>
@@ -211,12 +252,12 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 										<h3>Logga in</h3>
 										<div class="grid">
 											<div class="row no-collapse 50%">
-												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*186.70*/routes/*186.76*/.Assets.at("images/pic04.jpg")),format.raw/*186.106*/("""" alt="" /></a></div>
-												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*187.70*/routes/*187.76*/.Assets.at("images/pic05.jpg")),format.raw/*187.106*/("""" alt="" /></a></div>
+												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*228.70*/routes/*228.76*/.Assets.at("images/pic04.jpg")),format.raw/*228.106*/("""" alt="" /></a></div>
+												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*229.70*/routes/*229.76*/.Assets.at("images/pic05.jpg")),format.raw/*229.106*/("""" alt="" /></a></div>
 											</div>
 											<div class="row no-collapse 50%">
-												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*190.70*/routes/*190.76*/.Assets.at("images/pic06.jpg")),format.raw/*190.106*/("""" alt="" /></a></div>
-												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*191.70*/routes/*191.76*/.Assets.at("images/pic07.jpg")),format.raw/*191.106*/("""" alt="" /></a></div>
+												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*232.70*/routes/*232.76*/.Assets.at("images/pic06.jpg")),format.raw/*232.106*/("""" alt="" /></a></div>
+												<div class="6u"><a href="#" class="image fit"><img src=""""),_display_(/*233.70*/routes/*233.76*/.Assets.at("images/pic07.jpg")),format.raw/*233.106*/("""" alt="" /></a></div>
 											</div>
 										</div>
 										<a href="#" class="button icon fa-file-text-o">Glömt lösenord</a>
@@ -322,11 +363,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 }
               /*
                   -- GENERATED --
-                  DATE: Tue May 05 14:14:12 CEST 2015
-                  SOURCE: C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/app/views/index.scala.html
-                  HASH: 819d4e78c23bfe5cf4d472c1d7f2a88d016f0507
-                  MATRIX: 798->0|1247->422|1262->428|1328->473|1397->515|1412->521|1473->561|1530->591|1545->597|1616->647|1673->677|1688->683|1747->721|1804->751|1819->757|1885->802|1942->832|1957->838|2012->872|2069->902|2084->908|2146->949|2240->1016|2255->1022|2315->1061|2441->1159|2470->1160|2502->1165|2538->1173|2567->1174|2600->1180|2868->1421|2896->1422|3513->2011|3542->2012|3575->2018|3677->2092|3706->2093|3740->2100|4010->2342|4039->2343|4068->2344|4289->2537|4318->2538|4353->2546|4503->2669|4531->2670|4566->2678|4594->2679|4622->2680|4697->2727|4726->2728|4760->2735|4849->2797|4877->2798|4905->2799|4938->2804|4967->2805|5001->2812|5144->2928|5172->2929|5204->2934|5232->2935|5265->2941|5293->2942|5499->3121|5514->3127|5555->3147|6723->4287|6739->4293|6781->4313|7298->4802|7314->4808|7366->4838|7783->5227|7799->5233|7851->5263|8273->5657|8289->5663|8341->5693|9054->6378|9070->6384|9123->6414|9243->6506|9259->6512|9312->6542|9497->6699|9513->6705|9566->6735|9686->6827|9702->6833|9755->6863
-                  LINES: 29->1|41->13|41->13|41->13|42->14|42->14|42->14|43->15|43->15|43->15|44->16|44->16|44->16|45->17|45->17|45->17|46->18|46->18|46->18|47->19|47->19|47->19|49->21|49->21|49->21|53->25|53->25|54->26|54->26|54->26|55->27|60->32|60->32|74->46|74->46|75->47|76->48|76->48|77->49|81->53|81->53|81->53|83->55|83->55|84->56|86->58|86->58|87->59|87->59|87->59|87->59|87->59|88->60|89->61|89->61|89->61|89->61|89->61|90->62|92->64|92->64|93->65|93->65|94->66|94->66|102->74|102->74|102->74|141->113|141->113|141->113|157->129|157->129|157->129|172->144|172->144|172->144|187->159|187->159|187->159|214->186|214->186|214->186|215->187|215->187|215->187|218->190|218->190|218->190|219->191|219->191|219->191
+                  DATE: Thu May 07 16:14:39 CEST 2015
+                  SOURCE: C:/Users/svett_000/Documents/GitHub/testApp/app/views/index.scala.html
+                  HASH: 9d978e5c48715c8c5929a7bb0e0f99c862ed363d
+                  MATRIX: 852->0|1085->224|1120->273|1149->275|1395->494|1410->500|1476->545|1545->587|1560->593|1621->633|1678->663|1693->669|1764->719|1821->749|1836->755|1895->793|1952->823|1967->829|2033->874|2090->904|2105->910|2160->944|2217->974|2232->980|2294->1021|2373->1073|2388->1079|2438->1108|2532->1175|2547->1181|2607->1220|2843->1428|2872->1429|2907->1437|3043->1545|3072->1546|3118->1564|3170->1588|3199->1589|3249->1611|3319->1653|3348->1654|3413->1691|3442->1692|3492->1714|3572->1766|3601->1767|3643->1781|3672->1782|3710->1793|3739->1794|3913->1940|3942->1941|3974->1946|4010->1954|4039->1955|4072->1961|4340->2202|4368->2203|4985->2792|5014->2793|5047->2799|5149->2873|5178->2874|5212->2881|5482->3123|5511->3124|5540->3125|5761->3318|5790->3319|5825->3327|6058->3532|6087->3533|6133->3551|6673->4062|6703->4063|6765->4097|6817->4121|6846->4122|6912->4160|6998->4218|7027->4219|7108->4272|7137->4273|7203->4311|7313->4393|7342->4394|7400->4424|7429->4425|7484->4452|7513->4453|7573->4486|7601->4487|7637->4495|7666->4496|7695->4497|7771->4544|7801->4545|7836->4552|7926->4614|7955->4615|7984->4616|8018->4621|8048->4622|8083->4629|8227->4745|8256->4746|8289->4751|8318->4752|8352->4758|8381->4759|8595->4945|8611->4951|8653->4971|9821->6111|9837->6117|9879->6137|10396->6626|10412->6632|10464->6662|10881->7051|10897->7057|10949->7087|11371->7481|11387->7487|11439->7517|12152->8202|12168->8208|12221->8238|12341->8330|12357->8336|12410->8366|12595->8523|12611->8529|12664->8559|12784->8651|12800->8657|12853->8687
+                  LINES: 30->1|38->10|38->11|38->11|42->15|42->15|42->15|43->16|43->16|43->16|44->17|44->17|44->17|45->18|45->18|45->18|46->19|46->19|46->19|47->20|47->20|47->20|48->21|48->21|48->21|49->22|49->22|49->22|51->24|51->24|51->24|58->31|58->31|59->32|60->33|60->33|61->34|61->34|61->34|62->35|63->36|63->36|64->37|64->37|65->38|66->39|66->39|67->40|67->40|68->41|68->41|73->46|73->46|74->47|74->47|74->47|75->48|80->53|80->53|94->67|94->67|95->68|96->69|96->69|97->70|101->74|101->74|101->74|103->76|103->76|104->77|107->80|107->80|108->81|116->89|116->89|117->90|117->90|117->90|118->91|119->92|119->92|120->93|120->93|121->94|122->95|122->95|123->96|123->96|124->97|124->97|126->99|126->99|127->100|127->100|127->100|127->100|127->100|128->101|129->102|129->102|129->102|129->102|129->102|130->103|132->105|132->105|133->106|133->106|134->107|134->107|143->116|143->116|143->116|182->155|182->155|182->155|198->171|198->171|198->171|213->186|213->186|213->186|228->201|228->201|228->201|255->228|255->228|255->228|256->229|256->229|256->229|259->232|259->232|259->232|260->233|260->233|260->233
                   -- GENERATED --
               */
           
