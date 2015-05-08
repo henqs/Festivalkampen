@@ -19,6 +19,7 @@
 		<script  src="@routes.Assets.at("/javascripts/init.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
 		<script>
+		
 		window.fbAsyncInit = function() {
 			FB.init({
 				appId      : '909582695765355',
@@ -28,9 +29,6 @@
 				version    : 'v2.2' // use version 2.2
 			});
 	
-			FB.Event.subscribe('auth.login', function(){
-			window.location.href = "@routes.Application.index()";
-			});
 			// Now that we've initialized the JavaScript SDK, we call 
 			// FB.getLoginStatus().  This function gets the state of the
 			// person visiting this page and can return one of three states to
@@ -48,7 +46,34 @@
 				if (response.status === 'connected') {
 					// Logged into your app and Facebook.
 					console.log('Logged in!');
-					window.location = "@routes.Application.index()";
+					var login = document.getElementById("login");
+					//login.style.display = 'none';
+					login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) {}); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
+					var welcomeText = document.getElementById("welcome-text");
+					FB.api('/me', function(response) {
+						console.log(response);
+						welcomeText.innerHTML = "Välkommen till Festivalkampen " + response.first_name + "!";
+						//Här vill vi köra updateUserTable()
+				        var updateDatabase = function() {
+				            var userId = ""+response.id;
+				            var userGender = ""+response.gender;
+				            var userFullName = ""+response.first_name+" "+response.last_name;
+				            var userEmail = ""+response.email;
+				            console.log(userId);
+				            console.log(userGender);
+				            console.log(userFullName);
+				            console.log(userEmail);
+                            jsRoutes.controllers.Application.updateUserTable(userId, userGender, userFullName, userEmail).ajax({
+                                success: function(data) {
+                                    $("#result").html(data);
+                                },
+                                error: function() {
+                                    alert("Problem med anslutningen till Facebook.")
+                                }
+                            })
+                        };
+						updateDatabase();
+					});
 				} else if (response.status === 'not_authorized') {
 					// The person is logged into Facebook, but not your app.
 				} else {
@@ -117,21 +142,20 @@
 						
 							<!-- Box -->
 								<section class="box feature">
- <a class="twitter-timeline"
- href="https://twitter.com/hashtag/FKBl%C3%A5"
- data-widget-id="596629683980115968">
- #FKBlå Tweets
- </a> 
- <script>
- !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],
- p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);
- js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);
- }}(document,"script","twitter-wjs");
- </script> 
-							 <p>Twittra gärna om festivalen!</p>
-							 </div>
+									<a class="twitter-timeline"
+										href="https://twitter.com/hashtag/FKBl%C3%A5"
+										data-widget-id="596629683980115968">
+										#FKBlå Tweets
+									</a> 
+									<script>
+											!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],
+											p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);
+											js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);
+											}}(document,"script","twitter-wjs");
+									</script> 
+										<p>Twittra gärna om festivalen!</p>
+								</div>
 							</a>
-					
 						</div>
 						
 		<!-- Footer -->
