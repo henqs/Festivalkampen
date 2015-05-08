@@ -1,7 +1,7 @@
-New log file opened at Fri May 08 15:20:32 CEST 2015 by 4706@Anderss-MacBook-Pro-2.local
-Taking next connection to: 64232
-New client attempting to connect on port: 64250-64232
-  Address = /10.100.23.110:64232
-This client on port 64250 has uuid cfa20915-2155-461b-9326-2784f3b0f7e8 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-cfa20915-2155-461b-9326-2784f3b0f7e8
-Taking next connection to: 64232
+New log file opened at Fri May 08 16:11:36 CEST 2015 by 5720@captiveportal-23-110.local.su.se
+Taking next connection to: 51447
+New client attempting to connect on port: 51448-51447
+  Address = /10.100.23.110:51447
+This client on port 51448 has uuid 15995bda-1f20-42cb-84d1-707c33f2c9fb configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-15995bda-1f20-42cb-84d1-707c33f2c9fb
+Taking next connection to: 51447
