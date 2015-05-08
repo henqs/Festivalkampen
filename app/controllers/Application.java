@@ -42,6 +42,14 @@ public class Application extends Controller {
 	    return ok(spelhub.render());
 	  }
 	  
+	  	  	public static Result quiz() {
+	    return ok(Quiz.render());
+	  }
+	  
+	  	  	  	public static Result quizStart() {
+	    return ok(QuizStartsida.render());
+	  }
+	  
 	  public static Result givePoints(String id, String points){
 	        Connection conn = null;
 		    Statement stmt = null;

@@ -20,6 +20,13 @@ GET     /views/kontakta.scala.html     controllers.Application.kontakta()
 # Spelhub page
 GET     /views/spelhub.scala.html     controllers.Application.spelhub()
 
+# Spelhub page
+GET     /views/Quiz.scala.html     controllers.Application.quiz()
+
+# Spelhub page
+GET     /views/QuizStartsida.scala.html     controllers.Application.quizStart()
+
+
 # Update user table
 GET    /updateUserTable             controllers.Application.updateUserTable(id: String, gender: String, name: String, email: String)
 

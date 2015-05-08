@@ -11,21 +11,12 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-			<style type="text/css">
-			body {
-	background-image: url(../../../../pic03.jpg);
-}
-            </style>
-		</noscript>
+		<script  src="@routes.Assets.at("/javascripts/jquery.min.js")"></script>
+		<script  src="@routes.Assets.at("/javascripts/jquery.dropotron.min.js")"></script>
+		<script  src="@routes.Assets.at("/javascripts/skel.min.js")"></script>
+		<script  src="@routes.Assets.at("/javascripts/skel-layers.min.js")"></script>
+		<script  src="@routes.Assets.at("/javascripts/init.js")"></script>
+
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
     <script type="text/javascript">
 function MM_swapImgRestore() { //v3.0
@@ -90,48 +81,28 @@ function MM_swapImage() { //v3.0
 		
 		<!-- Banner -->
 			<div id="banner-wrapper">
-<div class="box container"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a>
-    <div class="row">
-						<div class="7u">
-						  <h2>Quizfråga nr. 1</h2>
-</div>
-					  <div class="5u">
-						  <ul>
-								<li></li>
-								<li></li>
-							</ul>
-						</div>
-					</div>
-				</div>
+<div class="container"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a></div>
 	</div>
 		
 		<!-- Features --><!-- Main -->
 			<table width="200" height="223">
 			  <tr>
-			    <td><label>
-			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_0">
-Svarsalternativ 1</label></td>
+			    <td>&nbsp;</td>
 		      </tr>
 			  <tr>
-			    <td><label>
-			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_1">
-Svarsalternativ 2</label></td>
+			    <td>&nbsp;</td>
 		      </tr>
 			  <tr>
-			    <td><label>
-			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_2">
-Svarsalternativ 3</label></td>
+			    <td>&nbsp;</td>
 		      </tr>
 			  <tr>
-			    <td><label>
-			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_3">
-		        Svarsalternativ 4 </label></td>
+			    <td>&nbsp;</td>
 		      </tr>
     </table>
 <!-- Footer -->
-			<input type="button" name="button" id="button" value="Nästa fråga">
-			<div id="footer-wrapper">
-				<footer id="footer" class="container">
+<input> <a href="@routes.Application.quiz()" type="button" name="button" id="button" value="Starta din quiz"></a>
+<div id="footer-wrapper">
+	<footer id="footer" class="container">
 					<div class="row">
 						<div class="3u">
 						
