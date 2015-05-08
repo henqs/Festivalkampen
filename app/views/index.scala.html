@@ -120,22 +120,22 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="index.scala.html">Välkommen</a></li>
+								<li class="current"><a name="toppen" href="index.scala.html">Välkommen</a></li>
 								<li>
 									<a href="">Droppmeny</a>
 									<ul>
-										<li><a href="#">Meny steg 1.1</a></li>
-										<li><a href="#">Meny steg 1.2</a></li>
+										<li><a href="#">Din grupp</a></li>
+										<li><a href="#">Logga ut</a></li>
 										<li>
-											<a href="">Undermeny steg2</a>
+											<a href="">Spel</a>
 											<ul>
-												<li><a href="#">Test3.1</a></li>
-												<li><a href="#">Test3.2</a></li>
+												<li><a href="#">Quiz</a></li>
+												<li><a href="#">Skyrim</a></li>
 											</ul>
 									</ul>
 								</li>
-								<li><a href="right-sidebar.html">Senaste nytt</a></li>
-								<li><a href="no-sidebar.html">Kontakta oss</a></li>
+								<li><a href="@routes.Application.gruppSida()">Gruppsida</a></li>
+								<li><a href="#kontakta">Kontakta oss</a></li>
 							</ul>
 						</nav>
 					
@@ -168,7 +168,7 @@
 						
 							<!-- Box -->
 								<section class="box feature">
-									 <a href="#" class="image featured"><img src="@routes.Assets.at("images/pic01.jpg")">
+									<a href="#" class="image featured"><img src="@routes.Assets.at("images/pic02.jpg")">
 									<div class="inner">
 										<header>
 											<h2>Plats för text</h2>
@@ -198,13 +198,14 @@
 						
 							<!-- Box -->
 								<section class="box feature last">
-									<a href="#" class="image featured"><img src="@routes.Assets.at("images/pic03.jpg")"/>
+									<a href="@routes.Application.gruppSida()" class="image featured"><img src="@routes.Assets.at("images/pic03.jpg")">
 									<div class="inner">
 										<header>
-											<h2>Plats för text</h2>
-											<p>Även bild kan redigeras</p>
+											<h2><a href="@routes.Application.gruppSida()">Klicka här för att komma till gruppsidan</a></h2>
+											<p>Möt din grupp!</p>
 										</header>
-										<p>Informativ text.</p>
+										<p>Chatta med gruppen!
+										Se din grupps totala poäng!</p>
 									</div>
 								</section>
 
@@ -277,7 +278,7 @@
 								<section class="widget links">
 									<h3>Vad som helst2</h3>
 									<ul class="style2">
-										<li><a href="#">Text alt. länk - rad1, kolumn 2</a></li>
+										<li><a href="@routes.Application.gruppSida()">Klicka här för att komma till gruppsidan</a></li>
 										<li>Text alt. länk - rad2, kolumn 2</li>
 									</ul>
 								</section>
@@ -287,9 +288,9 @@
 						
 							<!-- Links -->
 								<section class="widget links">
-									<h3>Vad som helst3</h3>
+									<h3><a href="#toppen">Tillbaka till början</a></h3>
 									<ul class="style2">
-										<li><a href="#">Text alt. länk - rad1, kolumn 3</a></li>
+										<li><a href="#">Tillbaka till toppen</a></li>
 									</ul>
 								</section>
 						
@@ -298,7 +299,7 @@
 						
 							<!-- Contact -->
 								<section class="widget contact last">
-									<h3>Kontakta oss</h3>
+									<h3><a name="kontakta"> Kontakta oss</a></h3>
 									<ul>
 										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="http://facebook.com/festivalkampen" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>

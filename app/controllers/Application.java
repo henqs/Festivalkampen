@@ -29,6 +29,10 @@ public class Application extends Controller {
 	  public static Result login() {
 	    return ok(login.render());
 	  }
+
+	  public static Result gruppSida() {
+	    return ok(gruppsida.render());
+	  }
 	  
 	  public static Result givePoints(String id, String points){
 	        Connection conn = null;

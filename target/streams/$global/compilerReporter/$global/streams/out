@@ -1,3 +1,4 @@
-[error] C:\Users\svett_000\Documents\GitHub\testApp-master\app\controllers\Application.java:98:  error: cannot find symbol
-[error] 	                thisUserTeam = newUserTeam%3;
-[error] 	                ^
+[error] C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\views\gruppsida.scala.html:92: value gruppSida is not a member of controllers.ReverseApplication
+[error] 								<li><a href="no-sidebar.html">Kontakta oss</a></li>
+[error] 								                                                  ^
+[error] one error found

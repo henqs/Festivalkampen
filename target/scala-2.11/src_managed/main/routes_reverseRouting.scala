@@ -1,6 +1,6 @@
-// @SOURCE:C:/Users/svett_000/Documents/GitHub/testApp-master/conf/routes
-// @HASH:30310e8ad51cac2df22bb040ec752a706a2e3191
-// @DATE:Fri May 08 11:37:58 CEST 2015
+// @SOURCE:C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/conf/routes
+// @HASH:e9826da79237cd20f5c4ce52e45b1f884950acbf
+// @DATE:Fri May 08 13:51:17 CEST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,6 +15,7 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:24
 // @LINE:21
 // @LINE:18
 // @LINE:15
@@ -23,11 +24,11 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
-// @LINE:21
+// @LINE:24
 class ReverseAssets {
 
 
-// @LINE:21
+// @LINE:24
 def at(file:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -37,6 +38,7 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:21
 // @LINE:18
 // @LINE:15
 // @LINE:12
@@ -46,13 +48,20 @@ class ReverseApplication {
 
 
 // @LINE:15
+def gruppSida(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "views/gruppsida.scala.html")
+}
+                        
+
+// @LINE:18
 def updateUserTable(id:String, gender:String, name:String, email:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "updateUserTable" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("id", id)), Some(implicitly[QueryStringBindable[String]].unbind("gender", gender)), Some(implicitly[QueryStringBindable[String]].unbind("name", name)), Some(implicitly[QueryStringBindable[String]].unbind("email", email)))))
 }
                         
 
-// @LINE:18
+// @LINE:21
 def givePoints(id:String, points:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "givePoints" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("id", id)), Some(implicitly[QueryStringBindable[String]].unbind("points", points)))))
@@ -86,6 +95,7 @@ def login(): Call = {
                   
 
 
+// @LINE:24
 // @LINE:21
 // @LINE:18
 // @LINE:15
@@ -95,11 +105,11 @@ def login(): Call = {
 package controllers.javascript {
 import ReverseRouteContext.empty
 
-// @LINE:21
+// @LINE:24
 class ReverseAssets {
 
 
-// @LINE:21
+// @LINE:24
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -113,6 +123,7 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:21
 // @LINE:18
 // @LINE:15
 // @LINE:12
@@ -122,6 +133,17 @@ class ReverseApplication {
 
 
 // @LINE:15
+def gruppSida : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.gruppSida",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "views/gruppsida.scala.html"})
+      }
+   """
+)
+                        
+
+// @LINE:18
 def updateUserTable : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.updateUserTable",
    """
@@ -132,7 +154,7 @@ def updateUserTable : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:18
+// @LINE:21
 def givePoints : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.givePoints",
    """
@@ -182,6 +204,7 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:24
 // @LINE:21
 // @LINE:18
 // @LINE:15
@@ -191,11 +214,11 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
-// @LINE:21
+// @LINE:24
 class ReverseAssets {
 
 
-// @LINE:21
+// @LINE:24
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -204,6 +227,7 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:21
 // @LINE:18
 // @LINE:15
 // @LINE:12
@@ -213,12 +237,18 @@ class ReverseApplication {
 
 
 // @LINE:15
+def gruppSida(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.gruppSida(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "gruppSida", Seq(), "GET", """ Grupp page""", _prefix + """views/gruppsida.scala.html""")
+)
+                      
+
+// @LINE:18
 def updateUserTable(id:String, gender:String, name:String, email:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.updateUserTable(id, gender, name, email), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "updateUserTable", Seq(classOf[String], classOf[String], classOf[String], classOf[String]), "GET", """ Update user table""", _prefix + """updateUserTable""")
 )
                       
 
-// @LINE:18
+// @LINE:21
 def givePoints(id:String, points:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.givePoints(id, points), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "givePoints", Seq(classOf[String], classOf[String]), "GET", """ Give user points""", _prefix + """givePoints""")
 )

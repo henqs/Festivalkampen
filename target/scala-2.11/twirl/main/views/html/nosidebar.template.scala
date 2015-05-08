@@ -209,9 +209,9 @@ Seq[Any](format.raw/*1.2*/("""<!DOCTYPE HTML>
 }
               /*
                   -- GENERATED --
-                  DATE: Tue May 05 16:37:36 CEST 2015
-                  SOURCE: C:/Users/svett_000/Documents/GitHub/testApp/app/views/nosidebar.scala.html
-                  HASH: cc70c13ac3fdc72b06eae0eab630127b9d396bba
+                  DATE: Fri May 08 13:48:17 CEST 2015
+                  SOURCE: C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/app/views/nosidebar.scala.html
+                  HASH: 9a300b1f25aff1955cdb304e76c8cbe9d0a1dc76
                   MATRIX: 802->1
                   LINES: 29->1
                   -- GENERATED --
