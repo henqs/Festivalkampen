@@ -18,18 +18,17 @@ create table quiz_question (
 create table quiz_question_choice (
   choice_id                 integer auto_increment not null,
   question_id               integer,
-  is_right_choice           tinyint(1) default 0,
+  is_right_choice           tinyint,
   choice                    varchar(255),
   constraint pk_quiz_question_choice primary key (choice_id))
 ;
 
 create table quiz_user_answer (
-  user_id                   integer auto_increment not null,
+  user_id                   bigint,
   question_id               integer,
   choice_id                 integer,
-  is_right                  tinyint(1) default 0,
-  answer_time               datetime,
-  constraint pk_quiz_user_answer primary key (user_id))
+  is_right                  tinyint,
+  answer_time               datetime)
 ;
 
 

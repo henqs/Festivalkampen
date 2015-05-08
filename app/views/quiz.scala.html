@@ -1,0 +1,22 @@
+
+@(message: String, alt1: String,alt2 : String, alt3: String, alt4: String)
+    @import helper._
+        @import controllers.routes.javascript._
+<!DOCTYPE HTML>
+<html>
+ <head>
+ 
+ </head>
+    @message
+    <body>
+    <form action=@routes.QuizController.registreraSvar() method="post">
+					<br>
+		<input type="radio" name="svar" value="male">@alt1
+		<input type="radio" name="svar" value="female">@alt2
+		<input type="radio" name="svar" value="male">@alt3
+		<input type="radio" name="svar" value="female">@alt4><br>
+    	<button>Klar</button>
+    </form>
+
+	</body>
+</html>

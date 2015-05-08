@@ -10,13 +10,12 @@ GET    /assets/javascripts/routes   controllers.QuizController.javascriptRoutes(
 
 # skicka quiz-svar
 GET   /postquiz                     controllers.QuizController.sayHello(data: String)
-GET    /quiz                        controllers.Application.quiz()    
+    
+GET   /views/quiz.scala.html        controllers.QuizController.quiz()
 
 
 
-# Testgrejer under här
-
-GET     /showOK                     controllers.Answer.list()    
+POST   /registrerasvar              controllers.QuizController.registreraSvar()  
 
 
 
