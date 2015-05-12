@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 // @SOURCE:C:/Users/svett_000/Documents/GitHub/testApp/conf/routes
-// @HASH:aec515a0e33bedd442435e5ca0371b7945bc4e60
-// @DATE:Tue May 12 11:47:50 CEST 2015
-=======
-// @SOURCE:C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/conf/routes
-// @HASH:02ef395f184ca7f3a7a23e9fb79eb3186205fa7b
-// @DATE:Fri May 08 15:36:57 CEST 2015
->>>>>>> origin/master
+// @HASH:12406ca29966b856e7a31785726b19ce6ee6c35d
+// @DATE:Tue May 12 12:14:11 CEST 2015
 
 
 import play.core._
@@ -94,7 +88,6 @@ controllers.Application.quizStart(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "quizStart", Nil,"GET", """ Spelhub page""", Routes.prefix + """views/QuizStartsida.scala.html"""))
         
 
-<<<<<<< HEAD
 // @LINE:30
 private[this] lazy val controllers_Application_getTeamStandings8_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("getTeamStandings"))))
 private[this] lazy val controllers_Application_getTeamStandings8_invoker = createInvoker(
@@ -105,29 +98,17 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "getTeam
 // @LINE:33
 private[this] lazy val controllers_Application_updateUserTable9_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("updateUserTable"))))
 private[this] lazy val controllers_Application_updateUserTable9_invoker = createInvoker(
-=======
-// @LINE:31
-private[this] lazy val controllers_Application_updateUserTable8_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("updateUserTable"))))
-private[this] lazy val controllers_Application_updateUserTable8_invoker = createInvoker(
->>>>>>> origin/master
 controllers.Application.updateUserTable(fakeValue[String], fakeValue[String], fakeValue[String], fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "updateUserTable", Seq(classOf[String], classOf[String], classOf[String], classOf[String]),"GET", """ Update user table""", Routes.prefix + """updateUserTable"""))
         
 
-<<<<<<< HEAD
 // @LINE:36
 private[this] lazy val controllers_Application_givePoints10_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("givePoints"))))
 private[this] lazy val controllers_Application_givePoints10_invoker = createInvoker(
-=======
-// @LINE:34
-private[this] lazy val controllers_Application_givePoints9_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("givePoints"))))
-private[this] lazy val controllers_Application_givePoints9_invoker = createInvoker(
->>>>>>> origin/master
 controllers.Application.givePoints(fakeValue[String], fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "givePoints", Seq(classOf[String], classOf[String]),"GET", """ Give user points""", Routes.prefix + """givePoints"""))
         
 
-<<<<<<< HEAD
 // @LINE:39
 private[this] lazy val controllers_Assets_at11_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
 private[this] lazy val controllers_Assets_at11_invoker = createInvoker(
@@ -135,15 +116,6 @@ controllers.Assets.at(fakeValue[String], fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
         
 def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/javascripts/routes""","""controllers.Application.javascriptRoutes()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """views/login.scala.html""","""controllers.Application.login()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """views/gruppsida.scala.html""","""controllers.Application.gruppSida()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """views/kontakta.scala.html""","""controllers.Application.kontakta()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """views/spelhub.scala.html""","""controllers.Application.spelhub()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """views/Quiz.scala.html""","""controllers.Application.quiz()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """views/QuizStartsida.scala.html""","""controllers.Application.quizStart()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """getTeamStandings""","""controllers.Application.getTeamStandings()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """updateUserTable""","""controllers.Application.updateUserTable(id:String, gender:String, name:String, email:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """givePoints""","""controllers.Application.givePoints(id:String, points:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
-=======
-// @LINE:37
-private[this] lazy val controllers_Assets_at10_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
-private[this] lazy val controllers_Assets_at10_invoker = createInvoker(
-controllers.Assets.at(fakeValue[String], fakeValue[String]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
-        
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/javascripts/routes""","""controllers.Application.javascriptRoutes()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """views/login.scala.html""","""controllers.Application.login()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """views/gruppsida.scala.html""","""controllers.Application.gruppSida()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """views/kontakta.scala.html""","""controllers.Application.kontakta()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """views/spelhub.scala.html""","""controllers.Application.spelhub()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """views/Quiz.scala.html""","""controllers.Application.quiz()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """views/QuizStartsida.scala.html""","""controllers.Application.quizStart()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """updateUserTable""","""controllers.Application.updateUserTable(id:String, gender:String, name:String, email:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """givePoints""","""controllers.Application.givePoints(id:String, points:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
->>>>>>> origin/master
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -211,30 +183,10 @@ case controllers_Application_quiz6_route(params) => {
 case controllers_Application_quizStart7_route(params) => {
    call { 
         controllers_Application_quizStart7_invoker.call(controllers.Application.quizStart())
-<<<<<<< HEAD
-=======
    }
 }
         
 
-// @LINE:31
-case controllers_Application_updateUserTable8_route(params) => {
-   call(params.fromQuery[String]("id", None), params.fromQuery[String]("gender", None), params.fromQuery[String]("name", None), params.fromQuery[String]("email", None)) { (id, gender, name, email) =>
-        controllers_Application_updateUserTable8_invoker.call(controllers.Application.updateUserTable(id, gender, name, email))
-   }
-}
-        
-
-// @LINE:34
-case controllers_Application_givePoints9_route(params) => {
-   call(params.fromQuery[String]("id", None), params.fromQuery[String]("points", None)) { (id, points) =>
-        controllers_Application_givePoints9_invoker.call(controllers.Application.givePoints(id, points))
->>>>>>> origin/master
-   }
-}
-        
-
-<<<<<<< HEAD
 // @LINE:30
 case controllers_Application_getTeamStandings8_route(params) => {
    call { 
@@ -263,12 +215,6 @@ case controllers_Application_givePoints10_route(params) => {
 case controllers_Assets_at11_route(params) => {
    call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         controllers_Assets_at11_invoker.call(controllers.Assets.at(path, file))
-=======
-// @LINE:37
-case controllers_Assets_at10_route(params) => {
-   call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at10_invoker.call(controllers.Assets.at(path, file))
->>>>>>> origin/master
    }
 }
         

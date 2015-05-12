@@ -42,7 +42,6 @@ public class Application extends Controller {
 	    return ok(spelhub.render());
 	  }
 	  
-<<<<<<< HEAD
 	  public static Result quiz() {
 	    return ok(Quiz.render());
 	  }
@@ -77,15 +76,6 @@ public class Application extends Controller {
 		  }
 	    return ok(""+redPoints+"_"+bluePoints+"-"+blackPoints+"+");
 	  }
-=======
-	  	  	public static Result quiz() {
-	    return ok(Quiz.render());
-	  }
-	  
-	  	  	  	public static Result quizStart() {
-	    return ok(QuizStartsida.render());
-	  }
->>>>>>> origin/master
 	  
 	  public static Result givePoints(String id, String points){
 	        Connection conn = null;

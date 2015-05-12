@@ -26,11 +26,8 @@ GET     /views/Quiz.scala.html     controllers.Application.quiz()
 # Spelhub page
 GET     /views/QuizStartsida.scala.html     controllers.Application.quizStart()
 
-<<<<<<< HEAD
 # Get current team standings for pie chart
 GET     /getTeamStandings           controllers.Application.getTeamStandings()
-=======
->>>>>>> origin/master
 
 # Update user table
 GET    /updateUserTable             controllers.Application.updateUserTable(id: String, gender: String, name: String, email: String)
