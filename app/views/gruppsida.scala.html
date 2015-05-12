@@ -87,7 +87,7 @@
 	<body class="gruppsida">
 
 		<!-- Header -->
-			<div id="header-wrapper">
+					<div id="header-wrapper">
 				<header id="header" class="container">
 				
 					<!-- Logo -->
@@ -99,19 +99,22 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="@routes.Application.index()">Startsidan</a></li>
+								<li><a name="toppen" href="@routes.Application.index()">Välkommen</a></li>
 								<li>
-									<a href="">Spelmeny</a>
-									<ul>
-										<li>
-												<li><a href="#">Quiz</a></li>
+											<a href="@routes.Application.spelhub()">Spel</a>
+											<ul>
+												<li><a href="@routes.Application.quizStart()">Quiz</a></li>
 												<li><a href="#">Skyrim</a></li>
-									</ul>
+											</ul>
+									
 								</li>
 								<li class="current"><a href="@routes.Application.gruppSida()">Gruppsida</a></li>
 								<li><a href="@routes.Application.kontakta()">Kontakta oss</a></li>
 							</ul>
 						</nav>
+					
+				</header>
+			</div>
 					
 				</header>
 			</div>

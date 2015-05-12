@@ -6,6 +6,8 @@
 -->
 <html>
 	<head>
+		@import helper._
+        @import controllers.routes.javascript._
 		<title>Festivalkampen</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
@@ -18,11 +20,7 @@
 		<script  src="@routes.Assets.at("/javascripts/skel-layers.min.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/init.js")"></script>
 
-			body {
-	background-image: url(../../../../pic03.jpg);
-}
-
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="@routes.Assets.at("stylesheets/css/ie/v8.css")" /><![endif]-->
     <script type="text/javascript">
 function MM_swapImgRestore() { //v3.0
   var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
@@ -50,36 +48,34 @@ function MM_swapImage() { //v3.0
 	<body class="homepage" onLoad="MM_preloadImages('../../../../pic03.jpg')">
 
 		<!-- Header -->
-			<div id="header-wrapper">
+					<div id="header-wrapper">
 				<header id="header" class="container">
 				
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.html">Festivalkampen</a></h1>
+							<h1><a href="@routes.Application.index()">Festivalkampen</a></h1>
 							<span>av Grupp 11</span>
 						</div>
 					
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="index.html">Startsida</a></li>
-								<li>
-									<a href="">Droppmeny</a>
-									<ul>
-										<li><a href="#">Meny steg 1.1</a></li>
-										<li><a href="#">Meny steg 1.2</a></li>
-										<li>
-											<a href="">Undermeny steg2</a>
+								<li><a name="toppen" href="@routes.Application.index()">Välkommen</a></li>
+								<li class="current">
+											<a href="@routes.Application.spelhub()">Spel</a>
 											<ul>
-												<li><a href="#">Test3.1</a></li>
-												<li><a href="#">Test3.2</a></li>
+												<li><a href="@routes.Application.quizStart()">Quiz</a></li>
+												<li><a href="#">Skyrim</a></li>
 											</ul>
-									</ul>
+									
 								</li>
-								<li><a href="right-sidebar.html">Senaste nytt</a></li>
-								<li><a href="no-sidebar.html">Kontakta oss</a></li>
+								<li><a href="@routes.Application.gruppSida()">Gruppsida</a></li>
+								<li><a href="@routes.Application.kontakta()">Kontakta oss</a></li>
 							</ul>
 						</nav>
+					
+				</header>
+			</div>
 					
 				</header>
 			</div>
@@ -90,42 +86,41 @@ function MM_swapImage() { //v3.0
     <div class="row">
 						<div class="7u">
 						  <h2>Quizfråga nr. 1</h2>
-</div>
-					  <div class="5u">
-						  <ul>
-								<li></li>
-								<li></li>
+						  		<!-- Features --><!-- Main -->
+			<table  cellspacing="10">
+			  <tr>
+			    <td><label>
+				<ul>
+				<li id="svar3"><a href="#" class="button alt big icon fa-question-circle">Svar 1</a></li>
+			    </ul>  
+			    <td><label>
+				<ul>
+				<li id="svar3"><a href="#" class="button alt big icon fa-question-circle">Svar 2</a></li>
+			    </ul>			
+		      </tr>
+			  <tr>
+			    <td><label>
+				<ul>
+				<li id="svar3"><a href="#" class="button alt big icon fa-question-circle">Svar 3</a></li>
+			    </ul>
+			    <td><label>
+				<ul>
+				<li id="svar3"><a href="#" class="button alt big icon fa-question-circle">Svar 4</a></li>
+			    </ul>	
+		      </tr>
+			</table>
+									<div class="5u">
+							<ul>
+								<li id="start"><a href="@routes.Application.quiz()"
+								class="button big icon fa-arrow-circle-right">Nästa fråga</a></li>
 							</ul>
 						</div>
+</div>
 					</div>
 				</div>
 	</div>
 		
-		<!-- Features --><!-- Main -->
-			<table width="200" height="223">
-			  <tr>
-			    <td><label>
-			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_0">
-Svarsalternativ 1</label></td>
-		      </tr>
-			  <tr>
-			    <td><label>
-			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_1">
-Svarsalternativ 2</label></td>
-		      </tr>
-			  <tr>
-			    <td><label>
-			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_2">
-Svarsalternativ 3</label></td>
-		      </tr>
-			  <tr>
-			    <td><label>
-			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_3">
-		        Svarsalternativ 4 </label></td>
-		      </tr>
-    </table>
 <!-- Footer -->
-			<input type="button" name="button" id="button" value="Nästa fråga">
 			<div id="footer-wrapper">
 				<footer id="footer" class="container">
 					<div class="row">

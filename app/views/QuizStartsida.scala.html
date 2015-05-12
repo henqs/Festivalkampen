@@ -45,36 +45,34 @@ function MM_swapImage() { //v3.0
 	<body class="homepage" onLoad="MM_preloadImages('../../../../pic03.jpg')">
 
 		<!-- Header -->
-			<div id="header-wrapper">
+						<div id="header-wrapper">
 				<header id="header" class="container">
 				
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.html">Festivalkampen</a></h1>
+							<h1><a href="@routes.Application.index()">Festivalkampen</a></h1>
 							<span>av Grupp 11</span>
 						</div>
 					
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="index.html">Startsida</a></li>
-								<li>
-									<a href="">Droppmeny</a>
-									<ul>
-										<li><a href="#">Meny steg 1.1</a></li>
-										<li><a href="#">Meny steg 1.2</a></li>
-										<li>
-											<a href="">Undermeny steg2</a>
+								<li><a name="toppen" href="@routes.Application.index()">Välkommen</a></li>
+								<li class="current">
+											<a href="@routes.Application.spelhub()">Spel</a>
 											<ul>
-												<li><a href="#">Test3.1</a></li>
-												<li><a href="#">Test3.2</a></li>
+												<li><a href="@routes.Application.quizStart()">Quiz</a></li>
+												<li><a href="#">Skyrim</a></li>
 											</ul>
-									</ul>
+									
 								</li>
-								<li><a href="right-sidebar.html">Senaste nytt</a></li>
-								<li><a href="no-sidebar.html">Kontakta oss</a></li>
+								<li><a href="@routes.Application.gruppSida()">Gruppsida</a></li>
+								<li><a href="@routes.Application.kontakta()">Kontakta oss</a></li>
 							</ul>
 						</nav>
+					
+				</header>
+			</div>
 					
 				</header>
 			</div>
@@ -84,23 +82,25 @@ function MM_swapImage() { //v3.0
 <div class="container"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a></div>
 	</div>
 		
-		<!-- Features --><!-- Main -->
-			<table width="200" height="223">
-			  <tr>
-			    <td>&nbsp;</td>
-		      </tr>
-			  <tr>
-			    <td>&nbsp;</td>
-		      </tr>
-			  <tr>
-			    <td>&nbsp;</td>
-		      </tr>
-			  <tr>
-			    <td>&nbsp;</td>
-		      </tr>
-    </table>
 <!-- Footer -->
-<input <a href="@routes.Application.quiz()" type="button" name="button" id="button" value="Starta din quiz"></a>
+			<div id="banner-wrapper">
+				<div id="banner" class="box container">
+					<div class="row">
+						<div class="7u">
+							<h2 id="welcome-text">Det har kommit ett nytt quiz!</h2>
+							<p>Åtta frågor med 4 svarsalternativ. 
+							Försök att svara rätt på samtliga för att samla maximal poäng till ditt lag!</p>
+						</div>
+						<div class="5u">
+							<ul>
+								<li id="start"><a href="@routes.Application.quiz()"
+								class="button big icon fa-arrow-circle-right">Starta quiz</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+						
 <div id="footer-wrapper">
 	<footer id="footer" class="container">
 					<div class="row">

@@ -1,13 +1,13 @@
-New log file opened at Fri May 08 19:47:03 CEST 2015 by 8312@Henrik-Dator
-Taking next connection to: 60175
-New client attempting to connect on port: 60176-60175
-  Address = /192.168.0.14:60175
-This client on port 60176 has uuid abeb9b91-20d7-4224-b879-bcd719d5cefc configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
-Connected Clients: activator-abeb9b91-20d7-4224-b879-bcd719d5cefc
-Taking next connection to: 60175
-New client attempting to connect on port: 60318-60175
-  Address = /192.168.0.14:60175
-Handshake exception on socket: 60318
+New log file opened at Mon May 11 12:58:01 CEST 2015 by 9344@Henrik-Dator
+Taking next connection to: 53019
+New client attempting to connect on port: 53021-53019
+  Address = /192.168.0.14:53019
+This client on port 53021 has uuid 3615a9ee-56a2-4b2f-ae79-48096d6c18f1 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-3615a9ee-56a2-4b2f-ae79-48096d6c18f1
+Taking next connection to: 53019
+New client attempting to connect on port: 53167-53019
+  Address = /192.168.0.14:53019
+Handshake exception on socket: 53167
 sbt.impl.ipc.HandshakeException: Unable to perform handshake
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
 	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
@@ -17,15 +17,99 @@ Caused by: java.io.EOFException
 	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
 	... 2 more
-Taking next connection to: 60175
-New client attempting to connect on port: 60319-60175
-  Address = /192.168.0.14:60175
-This client on port 60319 has uuid 96c42751-264d-4bdb-99d9-c04a1a10d8c6 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-abeb9b91-20d7-4224-b879-bcd719d5cefc, play-fork-run-96c42751-264d-4bdb-99d9-c04a1a10d8c6
-Taking next connection to: 60175
+Taking next connection to: 53019
+New client attempting to connect on port: 53168-53019
+  Address = /192.168.0.14:53019
+This client on port 53168 has uuid 55c0c198-e539-40f2-94af-81ab4293d226 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-3615a9ee-56a2-4b2f-ae79-48096d6c18f1, play-fork-run-55c0c198-e539-40f2-94af-81ab4293d226
+Taking next connection to: 53019
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 60175
+Taking next connection to: 53019
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 60175
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53019
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 9344@Henrik-Dator logs at Mon May 11 14:26:40 CEST 2015, goodbye.
