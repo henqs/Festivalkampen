@@ -157,11 +157,15 @@
 				</div>
 			</div>
 		
-		<div id="instafeed" class="box container">
-	    	<script type="text/javascript">
+		
+		<center>
+		<div id="instafeed">
+	   	<script type="text/javascript">
 							var feed = new Instafeed({
-							  clientId: '6d41d581bf5542f583a285e8d4d9be0e',
-								limit: 2,
+							 clientId: '6d41d581bf5542f583a285e8d4d9be0e',
+								limit: 4,
+								get:'tagged',
+								tagName:'Fifa15',
 								sortBy: 'most-liked',
 								after: function () {
 							var images = $("#instafeed").find('a');
@@ -179,7 +183,8 @@
 					});
 						feed.run();
 			</script>
-		 </div>
+		</div>
+		</center>
 		<!-- Features -->
 			<div id="features-wrapper">
 				<div class="container">
