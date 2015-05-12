@@ -19,6 +19,7 @@
 		<script  src="@routes.Assets.at("/javascripts/init.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
 		<script>
+		
 		window.fbAsyncInit = function() {
 			FB.init({
 				appId      : '909582695765355',
@@ -28,9 +29,6 @@
 				version    : 'v2.2' // use version 2.2
 			});
 	
-			FB.Event.subscribe('auth.login', function(){
-			window.location.href = "@routes.Application.index()";
-			});
 			// Now that we've initialized the JavaScript SDK, we call 
 			// FB.getLoginStatus().  This function gets the state of the
 			// person visiting this page and can return one of three states to
@@ -48,7 +46,34 @@
 				if (response.status === 'connected') {
 					// Logged into your app and Facebook.
 					console.log('Logged in!');
-					window.location = "@routes.Application.index()";
+					var login = document.getElementById("login");
+					//login.style.display = 'none';
+					login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) {}); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
+					var welcomeText = document.getElementById("welcome-text");
+					FB.api('/me', function(response) {
+						console.log(response);
+						welcomeText.innerHTML = "Välkommen till Festivalkampen " + response.first_name + "!";
+						//Här vill vi köra updateUserTable()
+				        var updateDatabase = function() {
+				            var userId = ""+response.id;
+				            var userGender = ""+response.gender;
+				            var userFullName = ""+response.first_name+" "+response.last_name;
+				            var userEmail = ""+response.email;
+				            console.log(userId);
+				            console.log(userGender);
+				            console.log(userFullName);
+				            console.log(userEmail);
+                            jsRoutes.controllers.Application.updateUserTable(userId, userGender, userFullName, userEmail).ajax({
+                                success: function(data) {
+                                    $("#result").html(data);
+                                },
+                                error: function() {
+                                    alert("Problem med anslutningen till Facebook.")
+                                }
+                            })
+                        };
+						updateDatabase();
+					});
 				} else if (response.status === 'not_authorized') {
 					// The person is logged into Facebook, but not your app.
 				} else {
@@ -62,7 +87,7 @@
 	<body class="gruppsida">
 
 		<!-- Header -->
-			<div id="header-wrapper">
+					<div id="header-wrapper">
 				<header id="header" class="container">
 				
 					<!-- Logo -->
@@ -74,19 +99,22 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="@routes.Application.index()">Startsidan</a></li>
+								<li><a name="toppen" href="@routes.Application.index()">Välkommen</a></li>
 								<li>
-									<a href="">Spelmeny</a>
-									<ul>
-										<li>
-												<li><a href="#">Quiz</a></li>
+											<a href="@routes.Application.spelhub()">Spel</a>
+											<ul>
+												<li><a href="@routes.Application.quizStart()">Quiz</a></li>
 												<li><a href="#">Skyrim</a></li>
-									</ul>
+											</ul>
+									
 								</li>
 								<li class="current"><a href="@routes.Application.gruppSida()">Gruppsida</a></li>
 								<li><a href="@routes.Application.kontakta()">Kontakta oss</a></li>
 							</ul>
 						</nav>
+					
+				</header>
+			</div>
 					
 				</header>
 			</div>
@@ -101,7 +129,7 @@
 						</div>
 						<div class="5u">
 							<ul>
-								<li id="login"><a href="@routes.Application.login()" class="button big icon fa-arrow-circle-right">Knapp</a></li>
+								<li id="login"><a href="#" class="button big icon fa-arrow-circle-right">Knapp</a></li>
 								<li id="info"><a href="#" class="button alt big icon fa-question-circle">Knapp 2</a></li>
 							</ul>
 						</div>
@@ -117,21 +145,24 @@
 						
 							<!-- Box -->
 								<section class="box feature">
- <a class="twitter-timeline"
- href="https://twitter.com/hashtag/FKBl%C3%A5"
- data-widget-id="596629683980115968">
- #FKBlå Tweets
- </a> 
- <script>
- !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],
- p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);
- js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);
- }}(document,"script","twitter-wjs");
- </script> 
-							 <p>Twittra gärna om festivalen!</p>
-							 </div>
+									<a class="twitter-timeline"
+										href="https://twitter.com/hashtag/FKBl%C3%A5"
+										data-widget-id="596629683980115968">
+										#FKBlå Tweets
+									</a>
+									<script>
+											!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],
+											p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);
+											js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);
+											}}(document,"script","twitter-wjs");
+									</script> 
+										<p>Twittra gärna om festivalen!</p>
+												<div class="fb-page" data-href="https://www.facebook.com/facebook"
+										data-width="380" data-hide-cover="false" data-show-facepile="false" 
+										data-show-posts="true">
+									</div>
+								</div>
 							</a>
-					
 						</div>
 						
 		<!-- Footer -->
@@ -178,7 +209,7 @@
 						
 							<!-- Contact -->
 								<section class="widget contact last">
-									<h3>Kontakta oss</h3>
+									<h3><a name="@routes.Application.kontakta()"> Kontakta oss</a></h3>
 									<ul>
 										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="http://facebook.com/festivalkampen" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>

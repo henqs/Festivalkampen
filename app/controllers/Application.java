@@ -42,6 +42,41 @@ public class Application extends Controller {
 	    return ok(spelhub.render());
 	  }
 	  
+	  public static Result quiz() {
+	    return ok(Quiz.render());
+	  }
+	  
+	  public static Result quizStart() {
+	    return ok(QuizStartsida.render());
+	  }
+	   public static Result getTeamStandings() {
+	      Connection conn = null;
+		  Statement stmt = null;
+		  int redPoints = 0;
+		  int bluePoints = 0;
+		  int blackPoints = 0;
+		  int currentTeamId = -1;
+		  String getTeamStandings = "SELECT * FROM `team`";
+		  try{
+		      conn = DB.getConnection();
+		      stmt = conn.createStatement();
+		      ResultSet rs = stmt.executeQuery(getTeamStandings);
+		      while(rs.next()){
+		          currentTeamId = rs.getInt("id");
+		          if(currentTeamId == 0){
+		              redPoints = rs.getInt("points");
+		          }else if(currentTeamId == 1){
+		              bluePoints = rs.getInt("points");
+		          }else if(currentTeamId == 2){
+		              blackPoints = rs.getInt("points");
+		          }
+		      }
+		  }catch (SQLException se) {
+
+		  }
+	    return ok(""+redPoints+"_"+bluePoints+"-"+blackPoints+"+");
+	  }
+	  
 	  public static Result givePoints(String id, String points){
 	        Connection conn = null;
 		    Statement stmt = null;
@@ -123,7 +158,8 @@ public class Application extends Controller {
       Routes.javascriptRouter("jsRoutes",
         // Routes
         controllers.routes.javascript.Application.updateUserTable(),
-        controllers.routes.javascript.Application.givePoints()
+        controllers.routes.javascript.Application.givePoints(),
+        controllers.routes.javascript.Application.getTeamStandings()
       )
     );
   }

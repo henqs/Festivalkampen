@@ -19,6 +19,8 @@
 		<script  src="@routes.Assets.at("/javascripts/skel-layers.min.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/init.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
+		<script  src="@routes.Assets.at("/javascripts/instafeed.js")"></script>
+		<script  src="@routes.Assets.at("/javascripts/chart.js")"></script>
 		<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
 		
 		<!--[if lte IE 8]><link rel="stylesheet" href="@routes.Assets.at("stylesheets/css/ie/v8.css")" /><![endif]-->
@@ -120,11 +122,11 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li class="current"><a name="toppen" href="index.scala.html">Välkommen</a></li>
+								<li class="current"><a name="toppen" href="@routes.Application.index()">Välkommen</a></li>
 								<li>
 											<a href="@routes.Application.spelhub()">Spel</a>
 											<ul>
-												<li><a href="#">Quiz</a></li>
+												<li><a href="@routes.Application.quizStart()">Quiz</a></li>
 												<li><a href="#">Skyrim</a></li>
 											</ul>
 									
@@ -155,6 +157,29 @@
 				</div>
 			</div>
 		
+		<div id="instafeed" class="box container">
+	    	<script type="text/javascript">
+							var feed = new Instafeed({
+							  clientId: '6d41d581bf5542f583a285e8d4d9be0e',
+								limit: 2,
+								sortBy: 'most-liked',
+								after: function () {
+							var images = $("#instafeed").find('a');
+								$.each(images, function(index, image) {
+							var delay = (index * 5) + 'ms';
+								$(image).css('-webkit-animation-delay', delay);
+								$(image).css('-moz-animation-delay', delay);
+								$(image).css('-ms-animation-delay', delay);
+								$(image).css('-o-animation-delay', delay);
+								$(image).css('animation-delay', delay);
+								$(image).addClass('animated flipInX');
+								});
+						},
+							template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>'
+					});
+						feed.run();
+			</script>
+		 </div>
 		<!-- Features -->
 			<div id="features-wrapper">
 				<div class="container">
@@ -163,17 +188,66 @@
 						
 							<!-- Box -->
 								<section class="box feature">
-									<a href="#" class="image featured"><img src="@routes.Assets.at("images/pic02.jpg")">
-									<div class="inner">
-										<header>
-											<h2>Plats för text</h2>
-											<p>Även bild kan redigeras</p>
-										</header>
-										<p>Informativ text.</p>
-									</div>
-								</section>
+								<h2 id="team-standings">Ställningarna just nu:</h2>
+								<p id="red-points" style="color:red">Lag Röd:</p>
+			                    <p id="blue-points" style="color:blue">Lag Blå:</p>
+			                    <p id="black-points" style="color:black">Lag Svart:</p>
+									<div id="canvas-holder">
+			                <canvas id="chart-area" width="440" height="300"/>
+            		    </div>
+        <script>
+        jsRoutes.controllers.Application.getTeamStandings().ajax({
+            success: function(data) {
+                $("#result").html(data);
+                console.log(data);
+                var scalingRed = data.substring(0, data.indexOf('_'));
+                var scalingBlue = data.substring((data.indexOf('_')+1), data.indexOf('-'));
+                var scalingBlack = data.substring((data.indexOf('-')+1), data.indexOf('+'));
+                var scalingRedInt = parseInt(scalingRed);
+                var scalingBlueInt = parseInt(scalingBlue);
+                var scalingBlackInt = parseInt(scalingBlack);
+                console.log(scalingRedInt);
+                	var pieData = [
+				{
+					value: scalingRedInt,
+					color:"#FF0000",
+					highlight: "#FF3333",
+					label: "Röda laget!"
+				},
+				{
+					value: scalingBlueInt,
+					color: "#0000FF",
+					highlight: "#4D4DFF",
+					label: "Blå laget!"
+				},
+				{
+					value: scalingBlackInt,
+					color: "#191919",
+					highlight: "#474747",
+					label: "Svarta laget!"
+				},
 
-						</div>
+			];
+            var redPoints = document.getElementById("red-points");
+            var bluePoints = document.getElementById("blue-points");
+            var blackPoints = document.getElementById("black-points");
+            redPoints.innerHTML = "Lag Röd: "+scalingRedInt+" poäng!";
+            bluePoints.innerHTML = "Lag Blå: "+scalingBlueInt+" poäng!";
+            blackPoints.innerHTML ="Lag Svart: "+scalingBlackInt+" poäng!";
+			loadPieChart = function(){
+				var ctx = document.getElementById("chart-area").getContext("2d");
+				window.myPie = new Chart(ctx).Pie(pieData);
+			};
+			loadPieChart();
+            },
+            error: function() {
+                alert("Problem uppstod vid hämtning av lagställningarna")
+            }
+        })
+		
+        </script>
+			</section>
+				</div>
 						<div class="4u">
 						
 							<!-- Box -->
@@ -189,6 +263,7 @@
 								</section>
 
 						</div>
+		
 						<div class="4u">
 						
 							<!-- Box -->
@@ -294,7 +369,7 @@
 						
 							<!-- Contact -->
 								<section class="widget contact last">
-									<h3><a name="kontakta"> Kontakta oss</a></h3>
+									<h3><a name="@routes.Application.kontakta()"> Kontakta oss</a></h3>
 									<ul>
 										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="http://facebook.com/festivalkampen" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>

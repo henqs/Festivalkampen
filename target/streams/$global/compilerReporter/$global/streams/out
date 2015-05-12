@@ -1,4 +1,3 @@
-[error] C:\Users\Henrik\Desktop\activator-1.3.2-minimal\testApp\app\controllers\Application.java:42: cannot find symbol
-[error]   symbol:   variable spelhub
-[error]   location: class controllers.Application
-[error] spelhub
+[error] C:\Users\svett_000\Documents\GitHub\testApp\app\controllers\Application.java:162:  error: cannot find symbol
+[error]         controllers.routes.javascript.Application.getTeamStandings()
+[error]                                                  ^
