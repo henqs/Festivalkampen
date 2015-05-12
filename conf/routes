@@ -5,10 +5,19 @@
 # Home page
 GET     /                           controllers.Application.index()
 
+# TEST JS ROUTES
+GET    /assets/javascripts/routes   controllers.QuizController.javascriptRoutes()
+
+# skicka quiz-svar
+GET   /postquiz                     controllers.QuizController.sayHello(data: String)
+    
+GET   /views/quiz.scala.html        controllers.QuizController.quiz()
 
 
 
+POST   /registrerasvar              controllers.QuizController.registreraSvar()  
 
+POST   /raderasvar					controllers.QuizController.raderaSvar()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

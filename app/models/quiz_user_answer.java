@@ -1,24 +1,29 @@
 package models;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import play.db.ebean.Model;
+import play.db.ebean.Model.Finder;
 
 @Entity
 public class quiz_user_answer extends Model{
 	
 	@Id
-	int user_id;
+	public long user_id;
 	
-	int question_id;
+	public int question_id;
+	@Id
+	public int choice_id;
 	
-	int choice_id;
+	public byte is_right;
 	
-	boolean is_right;
+	public Date answer_time;
 	
-	Date answer_time;
+	public static Finder<Integer,quiz_user_answer> find = new Finder<Integer,quiz_user_answer>(
+		    Integer.class, quiz_user_answer.class
+		  );
 	
 }

@@ -18,9 +18,7 @@ public class quiz_question extends Model{
 	
 	public String question;
 	
-	public enum is_active{
-		
-	};
+
 	
 	public String getQuestion(){
 		return question;

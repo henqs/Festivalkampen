@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    @import helper._
+        @import controllers.routes.javascript._
+<script src ="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
+
+  Fråga 1: Hur stavas Justin Bieber <br>
+  <br>
+<form>
+<input type="radio" id="answer" name="Lorem Ipsum" value="A">A: Bieber stavas Bieber<br>
+<input type="radio" id="answer" name="Lorem Ipsum" value="B">B: Bieber stavas Bäber
+<br>
+<input type="radio" id="answer" name="Lorem Ipsum" value="C">C: Bieber stavas buber<br>
+<input type="radio" id="answer" name="Lorem Ipsum" value="D">D: Bieber stavas biiber<br>
+
+<input onClick="JSONAnswerObject();" type="button" id="theSubmit" name="theSubmit" value="Fire away!!"/>
+</form>
+
+<script type = "text/javascript">
+    
+    var data = "hello";
+
+  function JSONanswerObject() {
+
+          
+        $.ajax( {
+            url: "jsRoutes.controllers.QuizController.sayHello(data).ajax()",
+            
+            data: data,
+            success: function(result) {
+                console.log(result);
+                alert("plupp");
+            }
+            
+            
+        })
+  }
+   var test = function() {
+       jsRoutes.controllers.QuizController.sayHello("hej").ajax( {
+           alert("dsdsds");
+       });
+   }
+    test();
+
+ </script>
+
+
+</html>

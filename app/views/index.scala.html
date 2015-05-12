@@ -1,15 +1,13 @@
 @(message: String)
-
+    @import helper._
+        @import controllers.routes.javascript._
 @main("Welcome to Play") {
 
     @message
     
-    <form>
-					</br>
-		<input type="radio" name="svar" value="male">svar1
-		<input type="radio" name="svar" value="female">svar2
-		<input type="radio" name="svar" value="male">svar3
-		<input type="radio" name="svar" value="female">svar4</br>
+    <form action="@routes.QuizController.quiz" method="GET">
+					<br>
+		
     	<button>Klar</button>
     </form>
 
