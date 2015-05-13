@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <!--
 	PVT 15 - Grupp 11
-    Anledningen till varför det står på engelska är pga arbetsskada haha!!
-    Har även mycket automatgenererad kod via Dreamweaver. 
+    Anledningen till varfï¿½r det stï¿½r pï¿½ engelska ï¿½r pga arbetsskada haha!!
+    Har ï¿½ven mycket automatgenererad kod via Dreamweaver. 
 -->
 <html>
 	<head>
@@ -16,6 +16,8 @@
 		<script  src="@routes.Assets.at("/javascripts/skel.min.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/skel-layers.min.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/init.js")"></script>
+		<script  src="@routes.Assets.at("/javascripts/lib/html5-qrcode.min.js")"></script>
+		<script  src="@routes.Assets.at("/javascripts/mainqrcode.js")"></script>
 
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
     <script type="text/javascript">
@@ -57,7 +59,7 @@ function MM_swapImage() { //v3.0
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a name="toppen" href="@routes.Application.index()">Välkommen</a></li>
+								<li><a name="toppen" href="@routes.Application.index()">Vï¿½lkommen</a></li>
 								<li class="current">
 											<a href="@routes.Application.spelhub()">Spel</a>
 											<ul>
@@ -87,10 +89,30 @@ function MM_swapImage() { //v3.0
 				<div id="banner" class="box container">
 					<div class="row">
 						<div class="7u">
-							<h2 id="welcome-text">Välkommen till din spelhub!</h2>
-							<p>Delta i Festivalkampens spel för att vinna poäng till ditt lag! 
+							<h2 id="welcome-text">Vï¿½lkommen till din spelhub!</h2>
+							<p>Delta i Festivalkampens spel fï¿½r att vinna poï¿½ng till ditt lag! 
 							</p>
-						</div>
+
+<h3 class="center">QR code Reader Demo</h3>
+
+<div  class="center" id="reader" style="width:300px;height:250px;"></div>
+
+<h6 class="center">Result</h6>
+<span id="read" class="center"></span>
+<br>
+
+<h6 class="center">Read Error (Debug only)</h6>
+<span class="center">Will constantly show a message, can be ignored</span>
+<span id="read_error" class="center"></span>
+
+<br>
+<h6 class="center">Video Error</h6>
+<span id="vid_error" class="center"></span>
+
+<br>
+<br>
+<br>
+                        
 						<div class="5u">
 							<ul>
 								<li id="start"><a href="@routes.Application.quizStart()"
@@ -113,9 +135,9 @@ function MM_swapImage() { //v3.0
 								<section class="widget links">
 									<h3>Vad som helst1</h3>
 									<ul class="style2">
-										<li><a href="#">Text alt. länk - rad1, kolumn 1</a></li>
-										<li>Text alt. länk - rad2, kolumn 1</li>
-										<li>Text alt. länk - rad3, kolumn 1</li>
+										<li><a href="#">Text alt. lï¿½nk - rad1, kolumn 1</a></li>
+										<li>Text alt. lï¿½nk - rad2, kolumn 1</li>
+										<li>Text alt. lï¿½nk - rad3, kolumn 1</li>
 									</ul>
 								</section>
 						
@@ -126,8 +148,8 @@ function MM_swapImage() { //v3.0
 								<section class="widget links">
 									<h3>Vad som helst2</h3>
 									<ul class="style2">
-										<li><a href="#">Text alt. länk - rad1, kolumn 2</a></li>
-										<li>Text alt. länk - rad2, kolumn 2</li>
+										<li><a href="#">Text alt. lï¿½nk - rad1, kolumn 2</a></li>
+										<li>Text alt. lï¿½nk - rad2, kolumn 2</li>
 									</ul>
 								</section>
 						
@@ -138,7 +160,7 @@ function MM_swapImage() { //v3.0
 								<section class="widget links">
 									<h3>Vad som helst3</h3>
 									<ul class="style2">
-										<li><a href="#">Text alt. länk - rad1, kolumn 3</a></li>
+										<li><a href="#">Text alt. lï¿½nk - rad1, kolumn 3</a></li>
 									</ul>
 								</section>
 						
