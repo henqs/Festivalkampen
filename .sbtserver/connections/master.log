@@ -1,10 +1,7 @@
-New log file opened at Fri May 08 16:14:44 CEST 2015 by 5756@captiveportal-23-110.local.su.se
-Taking next connection to: 51691
-New client attempting to connect on port: 51692-51691
-  Address = /10.100.23.110:51691
-This client on port 51692 has uuid d87615ef-96a9-4ecb-abb2-e4646f9d8202 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-d87615ef-96a9-4ecb-abb2-e4646f9d8202
-Taking next connection to: 51691
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 51691
+New log file opened at Wed May 13 15:24:31 CEST 2015 by 13460@captiveportal-18-114.local.su.se
+Taking next connection to: 55056
+New client attempting to connect on port: 55057-55056
+  Address = /10.100.18.114:55056
+This client on port 55057 has uuid 5fb793e7-3d42-4982-9af0-ad009987ff9e configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-5fb793e7-3d42-4982-9af0-ad009987ff9e
+Taking next connection to: 55056

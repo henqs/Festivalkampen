@@ -2,6 +2,7 @@ package controllers;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.List;
 
 import models.quiz_question;
@@ -14,10 +15,9 @@ import play.mvc.Result;
 import views.html.*;
 import play.*;
 import play.mvc.BodyParser;
-
 import com.fasterxml.jackson.databind.JsonNode;
 
-import play.libs.Json;
+
 
 
 
@@ -32,11 +32,15 @@ import play.libs.Json;
  //   JsonNode json = request().body().asJson();
 //}
 public static Result quiz(){
+
+	String s = getFraga();
+	ok(quiz.render(getFraga(),alt1,alt2,alt3,alt4));
 	getSvarsalternativ();
-	return ok(quiz.render(getFraga(),alt1,alt2,alt3,alt4));
+	return ok(quiz.render(s,alt1,alt2,alt3,alt4));
 }
 public static Result sayHello(String data) {
     idata = Integer.parseInt(data);
+    System.out.println("hej");
     return ok();
 }
 
@@ -57,11 +61,11 @@ public static Result sayHello(String data) {
  		String fråga = q.getQuestion();
  		allaFrågor.add(fråga);
  	}
- 	if(allaFrågor.size() == i){
+ 	if(allaFrågor.size() == i+1){
  		i = 0;
  		nu = 0;
  	}
- 	i++;
+ 	
  	return allaFrågor.get(nu);
  }
  public static Result registreraSvar(){
@@ -73,18 +77,25 @@ public static Result sayHello(String data) {
  			alternativFrågor.add(q.choice_id);
  		}
  	}
+ 	
  	quiz.user_id = 1;
  	quiz.question_id = i+1;
  	
  	quiz.choice_id = alternativFrågor.get(idata);
+ 
+ 	for(quiz_question_choice q : qqaL){
+ 		if(q.choice_id == quiz.choice_id){
+ 			quiz.is_right = q.is_right_choice;
+ 		}
+ 	}
  	
  	Calendar cal = Calendar.getInstance();
  	quiz.answer_time = cal.getTime();
- 	rättaSvaret();
  	quiz.save();
+ 	i++;
  	return redirect(routes.QuizController.quiz());
  }
- private static Result getSvarsalternativ(){
+ private static void getSvarsalternativ(){
 	   ArrayList<String> svarsalternativ = new ArrayList<String>();
 	   List<quiz_question_choice> qqaL = quiz_question_choice.finder.all();
   	for(quiz_question_choice q : qqaL){
@@ -92,21 +103,21 @@ public static Result sayHello(String data) {
   			svarsalternativ.add(q.choice);
   		}
   	}
+  	Collections.shuffle(svarsalternativ);
   		alt1 = svarsalternativ.get(0);
   		alt2 = svarsalternativ.get(1);
   		alt3 = svarsalternativ.get(2);
+  		alt4 = svarsalternativ.get(3);
   		
-  		
-  		
-  		return ok();
   }
- private static void rättaSvaret(){
-	 ArrayList<String> svaren = new ArrayList<String>();
-	 List<quiz_question_choice> qqaL = quiz_question_choice.finder.all();
-	 for(quiz_question_choice q : qqaL){
-		 if(q.choice_id == idata){
-			 
+ public static Result raderaSvar(){
+	 List<quiz_user_answer> qqaA = quiz_user_answer.find.all();
+	 for(quiz_user_answer q: qqaA){
+		 if(q.user_id == 1){
+			 q.delete();
 		 }
 	 }
+	 i = 0;
+	 return redirect(routes.QuizController.quiz());
  }
 }

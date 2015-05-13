@@ -1,49 +1,48 @@
-<!DOCTYPE html>
-<html>
+
+@(message: String, alt1: String,alt2 : String, alt3: String, alt4: String)
     @import helper._
         @import controllers.routes.javascript._
-<script src ="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
-
-  Fråga 1: Hur stavas Justin Bieber <br>
-  <br>
-<form>
-<input type="radio" id="answer" name="Lorem Ipsum" value="A">A: Bieber stavas Bieber<br>
-<input type="radio" id="answer" name="Lorem Ipsum" value="B">B: Bieber stavas Bäber
-<br>
-<input type="radio" id="answer" name="Lorem Ipsum" value="C">C: Bieber stavas buber<br>
-<input type="radio" id="answer" name="Lorem Ipsum" value="D">D: Bieber stavas biiber<br>
-
-<input onClick="JSONAnswerObject();" type="button" id="theSubmit" name="theSubmit" value="Fire away!!"/>
+        <script src ="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="@routes.QuizController.javascriptRoutes"></script>
+<!DOCTYPE HTML>
+<html>
+ <head>
+ 
+ </head>
+    @message
+    <body>
+    <form action=@routes.QuizController.registreraSvar() method="post">
+					<br>
+		<input type="radio" name="svar" value="male">@alt1
+		<input type="radio" name="svar" value="female">@alt2
+		<input type="radio" name="svar" value="male">@alt3
+		<input type="radio" name="svar" value="female">@alt4><br>
+    	<input onClick="test();" type="button" id="theSubmit" name="theSubmit" value="Klar"/>
 </form>
+  
+<script type="text/javascript" charset="utf-8">
 
-<script type = "text/javascript">
+	function test() {
+	  var svar = document.getElementsByName("svar");
+	  var len = svar.length
+      for(i = 0; i < len; i++) {
+      	if(svar[i].checked) {
+      		var answer = i;
+      	}
+      }  
     
-    var data = "hello";
-
-  function JSONanswerObject() {
-
-          
-        $.ajax( {
-            url: "jsRoutes.controllers.QuizController.sayHello(data).ajax()",
             
-            data: data,
-            success: function(result) {
-                console.log(result);
-                alert("plupp");
-            }
-            
-            
-        })
-  }
-   var test = function() {
-       jsRoutes.controllers.QuizController.sayHello("hej").ajax( {
-           alert("dsdsds");
-       });
-   }
-    test();
-
+      jsRoutes.controllers.QuizController.sayHello(answer).ajax({
+      
+        success: function(data) {
+        	alert("success");
+          $("#result").html(data);
+        },
+        error: function() {
+          alert("Error!")
+        }
+      })
+    }
  </script>
-
-
+	</body>
 </html>
