@@ -23,8 +23,11 @@ GET     /views/spelhub.scala.html     controllers.Application.spelhub()
 # Spelhub page
 GET     /views/Quiz.scala.html     controllers.Application.quiz()
 
-# Spelhub page
+# Quizstart page
 GET     /views/QuizStartsida.scala.html     controllers.Application.quizStart()
+
+# QR-test
+GET     /views/testqr.scala.html            controllers.Application.testqr()
 
 # Get current team standings for pie chart
 GET     /getTeamStandings           controllers.Application.getTeamStandings()

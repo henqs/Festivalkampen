@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/svett_000/Documents/GitHub/testApp/conf/routes
-// @HASH:12406ca29966b856e7a31785726b19ce6ee6c35d
-// @DATE:Tue May 12 12:14:11 CEST 2015
+// @HASH:9b9b56a47d0b0720fc1acf6acfcf3f05542631fb
+// @DATE:Thu May 14 11:58:09 CEST 2015
 
 package controllers;
 
