@@ -1,23 +1,26 @@
 <!DOCTYPE HTML>
 <!--
 	PVT 15 - Grupp 11
-    Anledningen till varfˆr det stÂr pÂ engelska ‰r pga arbetsskada haha!!
-    Har ‰ven mycket automatgenererad kod via Dreamweaver. 
+    Anledningen till varf√∂r det st√•r p√• engelska √§r pga arbetsskada haha!!
+    Har √§ven mycket automatgenererad kod via Dreamweaver. 
 -->
 <html>
 	<head>
+		@import helper._
+        @import controllers.routes.javascript._
 		<title>Festivalkampen</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		
 		<script  src="@routes.Assets.at("/javascripts/jquery.min.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/jquery.dropotron.min.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/skel.min.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/skel-layers.min.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/init.js")"></script>
 
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="@routes.Assets.at("stylesheets/css/ie/v8.css")" /><![endif]-->
     <script type="text/javascript">
 function MM_swapImgRestore() { //v3.0
   var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
@@ -45,7 +48,7 @@ function MM_swapImage() { //v3.0
 	<body class="homepage" onLoad="MM_preloadImages('../../../../pic03.jpg')">
 
 		<!-- Header -->
-						<div id="header-wrapper">
+					<div id="header-wrapper">
 				<header id="header" class="container">
 				
 					<!-- Logo -->
@@ -57,12 +60,12 @@ function MM_swapImage() { //v3.0
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a name="toppen" href="@routes.Application.index()">V‰lkommen</a></li>
+								<li><a name="toppen" href="@routes.Application.index()">V√§lkommen</a></li>
 								<li class="current">
 											<a href="@routes.Application.spelhub()">Spel</a>
 											<ul>
 												<li><a href="@routes.Application.quizStart()">Quiz</a></li>
-												<li><a href="@routes.Application.gruppAktivitet()">Skyrim</a></li>
+												<li><a href="#">Skyrim</a></li>
 											</ul>
 									
 								</li>
@@ -79,33 +82,23 @@ function MM_swapImage() { //v3.0
 		
 		<!-- Banner -->
 			<div id="banner-wrapper">
-<div class="container"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a></div>
-	</div>
+				<div class="box container"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a>
+		<div class="row">
+						<div class="7u">
+							<h2 id="welcome-text">GruppAktivitets sida!</h2>
+								<p>Gruppaktiviteter med hj√§lp av 'streckkods' funktion till kameran kommer att finnas h√§r 
+								Gruppaktivitetssidan kommer snart!</p>
+								
+								<a href="@routes.Application.gruppSida()" class="image featured"><img src="@routes.Assets.at("images/Viktigt/pic03.jpg")">
+	
+						</div>
+		</div>
+				</div>
+		</div>
 		
 <!-- Footer -->
-			<div id="banner-wrapper">
-				<div id="banner" class="box container">
-					<div class="row">
-						<div class="7u">
-							<h2 id="welcome-text">V‰lkommen till din spelhub!</h2>
-							<p>Delta i Festivalkampens spel fˆr att vinna po‰ng till ditt lag! 
-							</p>
-						</div>
-						<div class="5u">
-							<ul>
-								<li id="start"><a href="@routes.Application.quizStart()"
-								class="button big icon fa-arrow-circle-right">Quiz</a></li>
-								
-								<li id="start"><a href="@routes.Application.gruppAktivitet()"
-								class="button big icon fa-arrow-circle-right">Gruppaktivitet</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-						
-<div id="footer-wrapper">
-	<footer id="footer" class="container">
+			<div id="footer-wrapper">
+				<footer id="footer" class="container">
 					<div class="row">
 						<div class="3u">
 						
@@ -113,9 +106,9 @@ function MM_swapImage() { //v3.0
 								<section class="widget links">
 									<h3>Vad som helst1</h3>
 									<ul class="style2">
-										<li><a href="#">Text alt. l‰nk - rad1, kolumn 1</a></li>
-										<li>Text alt. l‰nk - rad2, kolumn 1</li>
-										<li>Text alt. l‰nk - rad3, kolumn 1</li>
+										<li><a href="#">Text alt. l√§nk - rad1, kolumn 1</a></li>
+										<li>Text alt. l√§nk - rad2, kolumn 1</li>
+										<li>Text alt. l√§nk - rad3, kolumn 1</li>
 									</ul>
 								</section>
 						
@@ -126,8 +119,8 @@ function MM_swapImage() { //v3.0
 								<section class="widget links">
 									<h3>Vad som helst2</h3>
 									<ul class="style2">
-										<li><a href="#">Text alt. l‰nk - rad1, kolumn 2</a></li>
-										<li>Text alt. l‰nk - rad2, kolumn 2</li>
+										<li><a href="#">Text alt. l√§nk - rad1, kolumn 2</a></li>
+										<li>Text alt. l√§nk - rad2, kolumn 2</li>
 									</ul>
 								</section>
 						
@@ -138,7 +131,7 @@ function MM_swapImage() { //v3.0
 								<section class="widget links">
 									<h3>Vad som helst3</h3>
 									<ul class="style2">
-										<li><a href="#">Text alt. l‰nk - rad1, kolumn 3</a></li>
+										<li><a href="#">Text alt. l√§nk - rad1, kolumn 3</a></li>
 									</ul>
 								</section>
 						

@@ -42,6 +42,10 @@ public class Application extends Controller {
 	    return ok(spelhub.render());
 	  }
 	  
+	  	  	public static Result gruppAktivitet() {
+	    return ok(gruppAktivitet.render());
+	  }
+	  
 	  public static Result quiz() {
 	    return ok(Quiz.render());
 	  }

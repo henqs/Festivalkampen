@@ -20,8 +20,11 @@ GET     /views/kontakta.scala.html     controllers.Application.kontakta()
 # Spelhub page
 GET     /views/spelhub.scala.html     controllers.Application.spelhub()
 
-# Spelhub page
+# Quiz page
 GET     /views/Quiz.scala.html     controllers.Application.quiz()
+
+# Spelhub page
+GET     /views/gruppAktivitet.scala.html     controllers.Application.gruppAktivitet()
 
 # Spelhub page
 GET     /views/QuizStartsida.scala.html     controllers.Application.quizStart()
