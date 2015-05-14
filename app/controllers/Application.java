@@ -159,7 +159,8 @@ public class Application extends Controller {
         // Routes
         controllers.routes.javascript.Application.updateUserTable(),
         controllers.routes.javascript.Application.givePoints(),
-        controllers.routes.javascript.Application.getTeamStandings()
+        controllers.routes.javascript.Application.getTeamStandings(),
+        controllers.routes.javascript.QuizController.sayHello()
       )
     );
   }

@@ -48,15 +48,15 @@ public static Result sayHello(String data) {
     return ok();
 }
 
- public static Result javascriptRoutes() {
-    response().setContentType("text/javascript");
-    return ok(
-      Routes.javascriptRouter("jsRoutes",
+ //public static Result javascriptRoutes() {
+ //   response().setContentType("text/javascript");
+ //   return ok(
+ //     Routes.javascriptRouter("jsRoutes",
         // Routes
-        controllers.routes.javascript.QuizController.sayHello()
-      )
-    );
-  }
+ //       controllers.routes.javascript.QuizController.sayHello()
+//      )
+ //   );
+//  }
  private static String getFraga(){
  	ArrayList<String> allaFrågor = new ArrayList<String>();
  	List<quiz_question> qq = quiz_question.find.all();
