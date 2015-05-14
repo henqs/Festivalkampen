@@ -1,4 +1,8 @@
+@(message: String, alt1: String,alt2 : String,alt3: String,alt4: String)
+    @import helper._
+        @import controllers.routes.javascript._
 <!DOCTYPE HTML>
+
 <!--
 	PVT 15 - Grupp 11
     Anledningen till varför det står på engelska är pga arbetsskada haha!!
@@ -6,21 +10,20 @@
 -->
 <html>
 	<head>
-		@import helper._
-        @import controllers.routes.javascript._
 		<title>Festivalkampen</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		
 		<script  src="@routes.Assets.at("/javascripts/jquery.min.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/jquery.dropotron.min.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/skel.min.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/skel-layers.min.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/init.js")"></script>
-
-		<!--[if lte IE 8]><link rel="stylesheet" href="@routes.Assets.at("stylesheets/css/ie/v8.css")" /><![endif]-->
+		<script type="text/javascript" src="@routes.QuizController.javascriptRoutes"></script>
+		<script src ="https://code.jquery.com/jquery-1.10.2.js"></script>
+		
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
     <script type="text/javascript">
 function MM_swapImgRestore() { //v3.0
   var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
@@ -30,7 +33,6 @@ function MM_preloadImages() { //v3.0
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
 }
-
 function MM_findObj(n, d) { //v4.01
   var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
     d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
@@ -38,14 +40,78 @@ function MM_findObj(n, d) { //v4.01
   for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
   if(!x && d.getElementById) x=d.getElementById(n); return x;
 }
-
 function MM_swapImage() { //v3.0
   var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
+
     </script>
+	<script type="text/javascript">
+    
+    window.onbeforeunload = function () {
+   	
+   	
+	return false;
+	}
+	
+	</script>
+	<script type="text/javascript">
+    
+	function check2() {
+	var val = document.getElementsByName("RadioGroup1");
+	var vale = val.length;
+	var d = 0;
+	
+
+	for(i=0;i<vale;i++){
+	if(val[i].checked){
+	
+	d+=1;
+	}
+	}
+	if(d==0){
+	alert("välj ett alternativ");
+	return false;
+
+	}
+	}
+	
+	</script>
+	<script type="text/javascript" charset="utf-8">
+
+	function test() {
+		
+	  var svar = document.getElementsByName("RadioGroup1");
+	  var len = svar.length
+      for(i = 0; i < len; i++) {
+      	if(svar[i].checked) {
+      		var answer = i;
+      	}
+      }  
+    
+            
+      jsRoutes.controllers.QuizController.sayHello(answer).ajax({
+      
+        success: function(data) {
+        	
+          $("#result").html(data);
+        },
+        error: function() {
+         
+        }
+      })
+    }
+ </script>
+ <script type="text/javascript" language="javascript">
+    
+    function GoBack()
+    {
+        window.history.forward();
+    }
+    </script>
+	
 	</head>
-	<body class="homepage" onLoad="MM_preloadImages('../../../../pic03.jpg')">
+	<body class="homepage" onLoad="MM_preloadImages('../../../../pic03.jpg');GoBack();">
 
 		<!-- Header -->
 					<div id="header-wrapper">
@@ -85,42 +151,57 @@ function MM_swapImage() { //v3.0
 <div class="box container"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a>
     <div class="row">
 						<div class="7u">
-						  <h2>Quizfråga nr. 1</h2>
-						  		<!-- Features --><!-- Main -->
-			<table  cellspacing="10">
-			  <tr>
-			    <td><label>
-				<ul>
-				<li id="svar3"><a href="#" class="button alt big icon fa-question-circle">Svar 1</a></li>
-			    </ul>  
-			    <td><label>
-				<ul>
-				<li id="svar3"><a href="#" class="button quiz big icon fa-question-circle">Svar 2</a></li>
-			    </ul>			
-		      </tr>
-			  <tr>
-			    <td><label>
-				<ul>
-				<li id="svar3"><a href="#" class="button quiz big icon fa-circle-right">Svar 3</a></li>
-			    </ul>
-			    <td><label>
-				<ul>
-				<li id="svar3"><a href="#" class="button">Svar 4</a></li>
-			    </ul>	
-		      </tr>
-			</table>
-									<div class="5u">
-							<ul>
-								<li id="start"><a href="@routes.Application.quiz()"
-								class="button big icon fa-arrow-circle-right">Nästa fråga</a></li>
-							</ul>
-						</div>
+						  <h2>@message</h2>
 </div>
+					  
+		<!-- Features --><!-- Main -->
+			<table width="200" height="223">
+			  <tr>
+			    <td><label>
+			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_0">
+@alt1</label></td>
+		      
+			 
+			    <td><label>
+			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_1">
+@alt2</label></td>
+		      </tr>
+			  <tr>
+			    <td><label>
+			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_2">
+@alt3</label></td>
+		      
+			  
+			    <td><label>
+			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_3">
+		        @alt4 </label></td>
+		      </tr>
+    </table>
+	
+			<div class="5u">
+				<form action=@routes.QuizController.registreraSvar() method="post" onclick="window.onbeforeunload = null;" onsubmit="return check2();">
+					<br>
+	
+				<button onClick="test()";>Nästa fråga</button>
+    
+			</form>
+			
+			    	<form action=@routes.QuizController.raderaSvar() method="post" onclick="window.onbeforeunload = null;">
+					<br>
+	
+    	<button id="radera">Radera svar</button>
+    </form>
+	
+			</div>
 					</div>
 				</div>
 	</div>
 		
+
 <!-- Footer -->
+		
+
+
 			<div id="footer-wrapper">
 				<footer id="footer" class="container">
 					<div class="row">

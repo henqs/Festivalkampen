@@ -46,10 +46,6 @@ public class Application extends Controller {
 	    return ok(gruppAktivitet.render());
 	  }
 	  
-	  public static Result quiz() {
-	    return ok(Quiz.render());
-	  }
-	  
 	  public static Result quizStart() {
 	    return ok(QuizStartsida.render());
 	  }
