@@ -1,11 +1,23 @@
 <!DOCTYPE HTML>
 
 <html>
+<style type="text/css">
+#v{
+    width:320px;
+    height:240px;
+}
+#qr-canvas{
+    display:none;
+}
+#result{
+    display:none;
+}
+</style>
 	<head>
 		@import helper._
         @import controllers.routes.javascript._
 		@Templates.head()
-		
+        <script type="text/javascript" src="@routes.Assets.at("/javascripts/llqrcode.js")"></script>
     <script type="text/javascript">
 function MM_swapImgRestore() { //v3.0
   var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
@@ -30,7 +42,7 @@ function MM_swapImage() { //v3.0
 }
     </script>
 	</head>
-	<body class="homepage" onLoad="MM_preloadImages('../../../../pic03.jpg')">
+	<body class="homepage">
 
 		<!-- Header -->
 		@Templates.header()
@@ -40,12 +52,37 @@ function MM_swapImage() { //v3.0
 				<div class="box container"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a>
 		<div class="row">
 						<div class="7u">
-							<h2 id="welcome-text">GruppAktivitets sida!</h2>
-								<p>Gruppaktiviteter med hjälp av 'streckkods' funktion till kameran kommer att finnas här 
-								Gruppaktivitetssidan kommer snart!</p>
-								
-								<a href="@routes.Application.gruppSida()" class="image featured"><img src="@routes.Assets.at("images/Viktigt/pic03.jpg")">
-	
+							<h2 id="welcome-text">Gruppaktiviteter!</h2>
+								<p>Här kan du skanna QR-koder som erhålls under gruppaktiviteter för att tjäna poäng till ditt lag!</p>
+							    <div class="select">
+                                <label for="videoSource">Välj kamera: </label><select id="videoSource"></select>
+                                <p> </p>
+                                </div>
+                                <script type="text/javascript" src="@routes.Assets.at("/javascripts/webqr.js")"></script>
+								<div id="mainbody">
+<table class="tsel" border="0" width="100%">
+<tr>
+<td valign="top" align="center" width="50%">
+<table class="tsel" border="0">
+<tr>
+<tr><td colspan="2" align="center">
+<div id="outdiv">
+</div></td></tr>
+</table>
+</td>
+</tr>
+<tr></tr>
+<tr><td colspan="3" align="center">
+<div id="result"></div>
+</td></tr>
+</table>
+</div>&nbsp;
+<div id="footer">
+<br>
+</div>
+</div>
+<canvas id="qr-canvas" width="800" height="600"></canvas>
+<script type="text/javascript">load();</script>
 						</div>
 		</div>
 				</div>
