@@ -1,6 +1,6 @@
-// @SOURCE:C:/Users/svett_000/Documents/GitHub/testApp/conf/routes
-// @HASH:12406ca29966b856e7a31785726b19ce6ee6c35d
-// @DATE:Tue May 12 12:14:11 CEST 2015
+// @SOURCE:C:/Users/Henrik/Desktop/activator-1.3.2-minimal/testApp/conf/routes
+// @HASH:2ea6eae7198f44a6679788033585d628b39c5ff0
+// @DATE:Mon May 18 13:10:40 CEST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,12 +15,16 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:39
-// @LINE:36
-// @LINE:33
-// @LINE:30
-// @LINE:27
-// @LINE:24
+// @LINE:48
+// @LINE:45
+// @LINE:43
+// @LINE:41
+// @LINE:38
+// @LINE:35
+// @LINE:32
+// @LINE:29
+// @LINE:26
+// @LINE:23
 // @LINE:21
 // @LINE:18
 // @LINE:15
@@ -29,11 +33,49 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
-// @LINE:39
+// @LINE:45
+// @LINE:43
+// @LINE:41
+// @LINE:23
+class ReverseQuizController {
+
+
+// @LINE:43
+def registreraSvar(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "registrerasvar")
+}
+                        
+
+// @LINE:41
+def sayHello(data:String): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "postquiz" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("data", data)))))
+}
+                        
+
+// @LINE:23
+def quiz(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "views/quiz.scala.html")
+}
+                        
+
+// @LINE:45
+def raderaSvar(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "raderasvar")
+}
+                        
+
+}
+                          
+
+// @LINE:48
 class ReverseAssets {
 
 
-// @LINE:39
+// @LINE:48
 def at(file:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -43,11 +85,11 @@ def at(file:String): Call = {
 }
                           
 
-// @LINE:36
-// @LINE:33
-// @LINE:30
-// @LINE:27
-// @LINE:24
+// @LINE:38
+// @LINE:35
+// @LINE:32
+// @LINE:29
+// @LINE:26
 // @LINE:21
 // @LINE:18
 // @LINE:15
@@ -57,17 +99,10 @@ def at(file:String): Call = {
 class ReverseApplication {
 
 
-// @LINE:27
+// @LINE:29
 def quizStart(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "views/QuizStartsida.scala.html")
-}
-                        
-
-// @LINE:24
-def quiz(): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "views/Quiz.scala.html")
 }
                         
 
@@ -85,6 +120,13 @@ def spelhub(): Call = {
 }
                         
 
+// @LINE:26
+def gruppAktivitet(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "views/gruppAktivitet.scala.html")
+}
+                        
+
 // @LINE:18
 def kontakta(): Call = {
    import ReverseRouteContext.empty
@@ -92,21 +134,21 @@ def kontakta(): Call = {
 }
                         
 
-// @LINE:30
+// @LINE:32
 def getTeamStandings(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "getTeamStandings")
 }
                         
 
-// @LINE:33
+// @LINE:35
 def updateUserTable(id:String, gender:String, name:String, email:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "updateUserTable" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("id", id)), Some(implicitly[QueryStringBindable[String]].unbind("gender", gender)), Some(implicitly[QueryStringBindable[String]].unbind("name", name)), Some(implicitly[QueryStringBindable[String]].unbind("email", email)))))
 }
                         
 
-// @LINE:36
+// @LINE:38
 def givePoints(id:String, points:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "givePoints" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("id", id)), Some(implicitly[QueryStringBindable[String]].unbind("points", points)))))
@@ -140,12 +182,16 @@ def login(): Call = {
                   
 
 
-// @LINE:39
-// @LINE:36
-// @LINE:33
-// @LINE:30
-// @LINE:27
-// @LINE:24
+// @LINE:48
+// @LINE:45
+// @LINE:43
+// @LINE:41
+// @LINE:38
+// @LINE:35
+// @LINE:32
+// @LINE:29
+// @LINE:26
+// @LINE:23
 // @LINE:21
 // @LINE:18
 // @LINE:15
@@ -155,11 +201,65 @@ def login(): Call = {
 package controllers.javascript {
 import ReverseRouteContext.empty
 
-// @LINE:39
+// @LINE:45
+// @LINE:43
+// @LINE:41
+// @LINE:23
+class ReverseQuizController {
+
+
+// @LINE:43
+def registreraSvar : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.QuizController.registreraSvar",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "registrerasvar"})
+      }
+   """
+)
+                        
+
+// @LINE:41
+def sayHello : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.QuizController.sayHello",
+   """
+      function(data) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "postquiz" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("data", data)])})
+      }
+   """
+)
+                        
+
+// @LINE:23
+def quiz : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.QuizController.quiz",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "views/quiz.scala.html"})
+      }
+   """
+)
+                        
+
+// @LINE:45
+def raderaSvar : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.QuizController.raderaSvar",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "raderasvar"})
+      }
+   """
+)
+                        
+
+}
+              
+
+// @LINE:48
 class ReverseAssets {
 
 
-// @LINE:39
+// @LINE:48
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -173,11 +273,11 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:36
-// @LINE:33
-// @LINE:30
-// @LINE:27
-// @LINE:24
+// @LINE:38
+// @LINE:35
+// @LINE:32
+// @LINE:29
+// @LINE:26
 // @LINE:21
 // @LINE:18
 // @LINE:15
@@ -187,23 +287,12 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 class ReverseApplication {
 
 
-// @LINE:27
+// @LINE:29
 def quizStart : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.quizStart",
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "views/QuizStartsida.scala.html"})
-      }
-   """
-)
-                        
-
-// @LINE:24
-def quiz : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.quiz",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "views/Quiz.scala.html"})
       }
    """
 )
@@ -231,6 +320,17 @@ def spelhub : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:26
+def gruppAktivitet : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.gruppAktivitet",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "views/gruppAktivitet.scala.html"})
+      }
+   """
+)
+                        
+
 // @LINE:18
 def kontakta : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.kontakta",
@@ -242,7 +342,7 @@ def kontakta : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:30
+// @LINE:32
 def getTeamStandings : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.getTeamStandings",
    """
@@ -253,7 +353,7 @@ def getTeamStandings : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:33
+// @LINE:35
 def updateUserTable : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.updateUserTable",
    """
@@ -264,7 +364,7 @@ def updateUserTable : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:36
+// @LINE:38
 def givePoints : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.givePoints",
    """
@@ -314,12 +414,16 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:39
-// @LINE:36
-// @LINE:33
-// @LINE:30
-// @LINE:27
-// @LINE:24
+// @LINE:48
+// @LINE:45
+// @LINE:43
+// @LINE:41
+// @LINE:38
+// @LINE:35
+// @LINE:32
+// @LINE:29
+// @LINE:26
+// @LINE:23
 // @LINE:21
 // @LINE:18
 // @LINE:15
@@ -329,11 +433,45 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
-// @LINE:39
+// @LINE:45
+// @LINE:43
+// @LINE:41
+// @LINE:23
+class ReverseQuizController {
+
+
+// @LINE:43
+def registreraSvar(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.QuizController.registreraSvar(), HandlerDef(this.getClass.getClassLoader, "", "controllers.QuizController", "registreraSvar", Seq(), "POST", """""", _prefix + """registrerasvar""")
+)
+                      
+
+// @LINE:41
+def sayHello(data:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.QuizController.sayHello(data), HandlerDef(this.getClass.getClassLoader, "", "controllers.QuizController", "sayHello", Seq(classOf[String]), "GET", """ skicka quiz-svar""", _prefix + """postquiz""")
+)
+                      
+
+// @LINE:23
+def quiz(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.QuizController.quiz(), HandlerDef(this.getClass.getClassLoader, "", "controllers.QuizController", "quiz", Seq(), "GET", """""", _prefix + """views/quiz.scala.html""")
+)
+                      
+
+// @LINE:45
+def raderaSvar(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.QuizController.raderaSvar(), HandlerDef(this.getClass.getClassLoader, "", "controllers.QuizController", "raderaSvar", Seq(), "POST", """""", _prefix + """raderasvar""")
+)
+                      
+
+}
+                          
+
+// @LINE:48
 class ReverseAssets {
 
 
-// @LINE:39
+// @LINE:48
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -342,11 +480,11 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
-// @LINE:36
-// @LINE:33
-// @LINE:30
-// @LINE:27
-// @LINE:24
+// @LINE:38
+// @LINE:35
+// @LINE:32
+// @LINE:29
+// @LINE:26
 // @LINE:21
 // @LINE:18
 // @LINE:15
@@ -356,15 +494,9 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 class ReverseApplication {
 
 
-// @LINE:27
+// @LINE:29
 def quizStart(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.quizStart(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "quizStart", Seq(), "GET", """ Spelhub page""", _prefix + """views/QuizStartsida.scala.html""")
-)
-                      
-
-// @LINE:24
-def quiz(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.quiz(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "quiz", Seq(), "GET", """ Spelhub page""", _prefix + """views/Quiz.scala.html""")
 )
                       
 
@@ -380,25 +512,31 @@ def spelhub(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
+// @LINE:26
+def gruppAktivitet(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.gruppAktivitet(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "gruppAktivitet", Seq(), "GET", """ Spelhub page""", _prefix + """views/gruppAktivitet.scala.html""")
+)
+                      
+
 // @LINE:18
 def kontakta(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.kontakta(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "kontakta", Seq(), "GET", """ Kontakta page""", _prefix + """views/kontakta.scala.html""")
 )
                       
 
-// @LINE:30
+// @LINE:32
 def getTeamStandings(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.getTeamStandings(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "getTeamStandings", Seq(), "GET", """ Get current team standings for pie chart""", _prefix + """getTeamStandings""")
 )
                       
 
-// @LINE:33
+// @LINE:35
 def updateUserTable(id:String, gender:String, name:String, email:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.updateUserTable(id, gender, name, email), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "updateUserTable", Seq(classOf[String], classOf[String], classOf[String], classOf[String]), "GET", """ Update user table""", _prefix + """updateUserTable""")
 )
                       
 
-// @LINE:36
+// @LINE:38
 def givePoints(id:String, points:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.givePoints(id, points), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "givePoints", Seq(classOf[String], classOf[String]), "GET", """ Give user points""", _prefix + """givePoints""")
 )

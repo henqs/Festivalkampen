@@ -35,7 +35,7 @@ import java.util.*;
  //   public Result sayHello() {
  //   JsonNode json = request().body().asJson();
 //}
-public static Result quiz(){
+	public static Result quiz(){
 
 	String s = getFraga();
 	ok(quiz.render(getFraga(),alt1,alt2,alt3,alt4));

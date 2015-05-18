@@ -20,8 +20,10 @@ GET     /views/kontakta.scala.html     controllers.Application.kontakta()
 # Spelhub page
 GET     /views/spelhub.scala.html     controllers.Application.spelhub()
 
+GET   /views/quiz.scala.html        controllers.QuizController.quiz()
+
 # Spelhub page
-GET     /views/Quiz.scala.html     controllers.Application.quiz()
+GET     /views/gruppAktivitet.scala.html     controllers.Application.gruppAktivitet()
 
 # Spelhub page
 GET     /views/QuizStartsida.scala.html     controllers.Application.quizStart()
@@ -34,6 +36,13 @@ GET    /updateUserTable             controllers.Application.updateUserTable(id: 
 
 # Give user points
 GET     /givePoints                 controllers.Application.givePoints(id: String, points: String)    
+
+# skicka quiz-svar
+GET   /postquiz                     controllers.QuizController.sayHello(data: String)
+
+POST   /registrerasvar              controllers.QuizController.registreraSvar()  
+
+POST   /raderasvar					controllers.QuizController.raderaSvar()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
