@@ -8,16 +8,8 @@
 	<head>
 	    @import helper._
         @import controllers.routes.javascript._
-		<title>Festivalkampen</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="@routes.Assets.at("stylesheets/css/ie/html5shiv.js")"></script><![endif]-->
-		<script  src="@routes.Assets.at("/javascripts/jquery.min.js")"></script>
-		<script  src="@routes.Assets.at("/javascripts/jquery.dropotron.min.js")"></script>
-		<script  src="@routes.Assets.at("/javascripts/skel.min.js")"></script>
-		<script  src="@routes.Assets.at("/javascripts/skel-layers.min.js")"></script>
-		<script  src="@routes.Assets.at("/javascripts/init.js")"></script>
+		@Templates.head()
+		
 		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/instafeed.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/chart.js")"></script>
@@ -110,34 +102,8 @@
 	    
 		</script>
 		<!-- Header -->
-			<div id="header-wrapper">
-				<header id="header" class="container">
-				
-					<!-- Logo -->
-						<div id="logo">
-							<h1><a href="@routes.Application.index()">Festivalkampen</a></h1>
-							<span>av Grupp 11</span>
-						</div>
-					
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li class="current"><a name="toppen" href="@routes.Application.index()">Välkommen</a></li>
-								<li>
-											<a href="@routes.Application.spelhub()">Spel</a>
-											<ul>
-												<li><a href="@routes.Application.quizStart()">Quiz</a></li>
-												<li><a href="@routes.Application.gruppAktivitet()">Gruppaktivitet</a></li>
-											</ul>
-									
-								</li>
-								<li><a href="@routes.Application.gruppSida()">Gruppsida</a></li>
-								<li><a href="@routes.Application.kontakta()">Kontakta oss</a></li>
-							</ul>
-						</nav>
-					
-				</header>
-			</div>
+
+		@Templates.header()
 		
 		<!-- Banner -->
 			<div id="banner-wrapper">
@@ -159,31 +125,7 @@
 		
 		
 		<center>
-		<div id="instafeed">
-	   	<script type="text/javascript">
-							var feed = new Instafeed({
-							 clientId: '6d41d581bf5542f583a285e8d4d9be0e',
-								limit: 4,
-								get:'tagged',
-								tagName:'Fifa15',
-								sortBy: 'most-liked',
-								after: function () {
-							var images = $("#instafeed").find('a');
-								$.each(images, function(index, image) {
-							var delay = (index * 5) + 'ms';
-								$(image).css('-webkit-animation-delay', delay);
-								$(image).css('-moz-animation-delay', delay);
-								$(image).css('-ms-animation-delay', delay);
-								$(image).css('-o-animation-delay', delay);
-								$(image).css('animation-delay', delay);
-								$(image).addClass('animated flipInX');
-								});
-						},
-							template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>'
-					});
-						feed.run();
-			</script>
-		</div>
+			@Templates.instafeed()
 		</center>
 		<!-- Features -->
 			<div id="features-wrapper">
@@ -329,75 +271,13 @@
 					</div>
 				</div>
 			</div>
+						
 
-		<!-- Footer -->
-			<div id="footer-wrapper">
-				<footer id="footer" class="container">
-					<div class="row">
-						<div class="3u">
-						
-							<!-- Links -->
-								<section class="widget links">
-									<h3>Vad som helst1</h3>
-									<ul class="style2">
-										<li><a href="#">Text alt. länk - rad1, kolumn 1</a></li>
-										<li>Text alt. länk - rad2, kolumn 1</li>
-										<li>Text alt. länk - rad3, kolumn 1</li>
-									</ul>
-								</section>
-						
-						</div>
-						<div class="3u">
-						
-							<!-- Links -->
-								<section class="widget links">
-									<h3>Vad som helst2</h3>
-									<ul class="style2">
-										<li><a href="@routes.Application.gruppSida()">Klicka här för att komma till gruppsidan</a></li>
-										<li>Text alt. länk - rad2, kolumn 2</li>
-									</ul>
-								</section>
-						
-						</div>
-						<div class="3u">
-						
-							<!-- Links -->
-								<section class="widget links">
-									<h3><a href="#toppen">Tillbaka till början</a></h3>
-									<ul class="style2">
-										<li><a href="#">Tillbaka till toppen</a></li>
-									</ul>
-								</section>
-						
-						</div>
-						<div class="3u">
-						
 							<!-- Contact -->
-								<section class="widget contact last">
-									<h3><a name="@routes.Application.kontakta()"> Kontakta oss</a></h3>
-									<ul>
-										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="http://facebook.com/festivalkampen" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-									</ul>
-									<p>Stockholms Universitet<br />
-									Borgarfjordsgatan 12, 164 55 Kista<br />
-									Sweden</p>
-								</section>
-						
-						</div>
-					</div>
-					<div class="row">
-						<div class="12u">
-							<div id="copyright">
-								<ul class="menu">
-									<li>&copy; Festivalkampen. All rights reserved</li><li>Grupp 11</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</footer>
-			</div>
+							<center>
+								@Templates.kontakta()
+								
+							</center>
 
 	</body>
 </html>

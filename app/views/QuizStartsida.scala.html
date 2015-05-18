@@ -6,16 +6,8 @@
 -->
 <html>
 	<head>
-		<title>Festivalkampen</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script  src="@routes.Assets.at("/javascripts/jquery.min.js")"></script>
-		<script  src="@routes.Assets.at("/javascripts/jquery.dropotron.min.js")"></script>
-		<script  src="@routes.Assets.at("/javascripts/skel.min.js")"></script>
-		<script  src="@routes.Assets.at("/javascripts/skel-layers.min.js")"></script>
-		<script  src="@routes.Assets.at("/javascripts/init.js")"></script>
+		@Templates.head()
+		
 
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
     <script type="text/javascript">
@@ -101,73 +93,11 @@ function MM_swapImage() { //v3.0
 				</div>
 			</div>
 						
-<div id="footer-wrapper">
-	<footer id="footer" class="container">
-					<div class="row">
-						<div class="3u">
-						
-							<!-- Links -->
-								<section class="widget links">
-									<h3>Vad som helst1</h3>
-									<ul class="style2">
-										<li><a href="#">Text alt. länk - rad1, kolumn 1</a></li>
-										<li>Text alt. länk - rad2, kolumn 1</li>
-										<li>Text alt. länk - rad3, kolumn 1</li>
-									</ul>
-								</section>
-						
-						</div>
-						<div class="3u">
-						
-							<!-- Links -->
-								<section class="widget links">
-									<h3>Vad som helst2</h3>
-									<ul class="style2">
-										<li><a href="#">Text alt. länk - rad1, kolumn 2</a></li>
-										<li>Text alt. länk - rad2, kolumn 2</li>
-									</ul>
-								</section>
-						
-						</div>
-						<div class="3u">
-						
-							<!-- Links -->
-								<section class="widget links">
-									<h3>Vad som helst3</h3>
-									<ul class="style2">
-										<li><a href="#">Text alt. länk - rad1, kolumn 3</a></li>
-									</ul>
-								</section>
-						
-						</div>
-						<div class="3u">
-						
 							<!-- Contact -->
-								<section class="widget contact last">
-									<h3>Kontakta oss</h3>
-									<ul>
-										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="http://facebook.com/festivalkampen" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-									</ul>
-									<p>Stockholms Universitet<br />
-									Borgarfjordsgatan 12, 164 55 Kista<br />
-									Sweden</p>
-								</section>
-						
-						</div>
-					</div>
-					<div class="row">
-						<div class="12u">
-							<div id="copyright">
-								<ul class="menu">
-									<li>&copy; Festivalkampen. All rights reserved</li><li>Grupp 11</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</footer>
-			</div>
+							<center>
+								@Templates.kontakta()
+								
+							</center>
 
 	</body>
 </html>

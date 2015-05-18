@@ -7,16 +7,7 @@
 -->
 <html>
 	<head>
-		<title>Festivalkampen</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-	    <script  src="@routes.Assets.at("/javascripts/jquery.min.js")"></script>
-		<script  src="@routes.Assets.at("/javascripts/jquery.dropotron.min.js")"></script>
-		<script  src="@routes.Assets.at("/javascripts/skel.min.js")"></script>
-		<script  src="@routes.Assets.at("/javascripts/skel-layers.min.js")"></script>
-		<script  src="@routes.Assets.at("/javascripts/init.js")"></script>
+			@Templates.head()
 		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
 		<script>
 		window.fbAsyncInit = function() {
@@ -62,39 +53,8 @@
 	<body class="login-page">
 
 		<!-- Header -->
-			<div id="header-wrapper">
-				<header id="header" class="container">
-				
-					<!-- Logo -->
-						<div id="logo">
-							<h1><a href="@routes.Application.index()">Festivalkampen</a></h1>
-							<span>av Grupp 11</span>
-						</div>
-					
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="@routes.Application.index()">Välkommen</a></li>
-								<li>
-									<a href="">Spel</a>
-									<ul>
-										<li><a href="#">Meny steg 1.1</a></li>
-										<li><a href="#">Meny steg 1.2</a></li>
-										<li>
-											<a href="">Undermeny steg2</a>
-											<ul>
-												<li><a href="#">Test3.1</a></li>
-												<li><a href="#">Test3.2</a></li>
-											</ul>
-									</ul>
-								</li>
-								<li><a href="@routes.Application.gruppSida()">Gruppsida</a></li>
-								<li><a href="@routes.Application.kontakta()">Kontakta oss</a></li>
-							</ul>
-						</nav>
-					
-				</header>
-			</div>
+			
+			@Templates.header()
 		
 		<!-- Main -->
 			<div id="main-wrapper">
@@ -160,31 +120,7 @@
 						<div class="3u">
 						
 							<!-- Contact -->
-								<section class="widget contact last">
-									<h3><a name="@routes.Application.kontakta()"> Kontakta oss</a></h3>
-									<ul>
-										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="http://facebook.com/festivalkampen" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-									</ul>
-									<p>Stockholms Universitet<br />
-									Borgarfjordsgatan 12, 164 55 Kista<br />
-									Sweden</p>
-								</section>
-						
-						</div>
-					</div>
-					<div class="row">
-						<div class="12u">
-							<div id="copyright">
-								<ul class="menu">
-									<li>&copy; Festivalkampen. All rights reserved</li><li>Grupp 11</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</footer>
-			</div>
+								@Templates.kontakta()
 
 	</body>
 </html>

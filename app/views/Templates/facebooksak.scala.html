@@ -1,0 +1,67 @@
+
+<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
+		<script>
+		
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '909582695765355',
+				cookie     : true,  // enable cookies to allow the server to access 
+									// the session
+				xfbml      : true,  // parse social plugins on this page
+				version    : 'v2.2' // use version 2.2
+			});
+	
+			// Now that we've initialized the JavaScript SDK, we call 
+			// FB.getLoginStatus().  This function gets the state of the
+			// person visiting this page and can return one of three states to
+			// the callback you provide.  They can be:
+			//
+			// 1. Logged into your app ('connected')
+			// 2. Logged into Facebook, but not your app ('not_authorized')
+			// 3. Not logged into Facebook and can't tell if they are logged into
+			//    your app or not.
+			//
+			// These three cases are handled in the callback function.
+
+			FB.getLoginStatus(function(response) {
+				statusChangeCallback(response);
+				if (response.status === 'connected') {
+					// Logged into your app and Facebook.
+					console.log('Logged in!');
+					var login = document.getElementById("login");
+					//login.style.display = 'none';
+					login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) {}); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
+					var welcomeText = document.getElementById("welcome-text");
+					FB.api('/me', function(response) {
+						console.log(response);
+						welcomeText.innerHTML = "Välkommen till Festivalkampen " + response.first_name + "!";
+						//Här vill vi köra updateUserTable()
+				        var updateDatabase = function() {
+				            var userId = ""+response.id;
+				            var userGender = ""+response.gender;
+				            var userFullName = ""+response.first_name+" "+response.last_name;
+				            var userEmail = ""+response.email;
+				            console.log(userId);
+				            console.log(userGender);
+				            console.log(userFullName);
+				            console.log(userEmail);
+                            jsRoutes.controllers.Application.updateUserTable(userId, userGender, userFullName, userEmail).ajax({
+                                success: function(data) {
+                                    $("#result").html(data);
+                                },
+                                error: function() {
+                                    alert("Problem med anslutningen till Facebook.")
+                                }
+                            })
+                        };
+						updateDatabase();
+					});
+				} else if (response.status === 'not_authorized') {
+					// The person is logged into Facebook, but not your app.
+				} else {
+					// The person is not logged into Facebook, so we're not sure if
+					// they are logged into this app or not.
+				}
+			});
+		};
+	</script>
