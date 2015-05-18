@@ -21,8 +21,6 @@
     display:none;
 }
 </style>
-<script type="text/javascript" src="@routes.Assets.at("/javascripts/llqrcode.js")"></script>
-<script type="text/javascript" src="@routes.Assets.at("/javascripts/webqr.js")"></script>
 <script  src="@routes.Assets.at("/javascripts/jquery.min.js")"></script>
 <script  src="@routes.Assets.at("/javascripts/jquery.dropotron.min.js")"></script>
 <script  src="@routes.Assets.at("/javascripts/skel.min.js")"></script>
@@ -32,15 +30,20 @@
 <script  src="@routes.Assets.at("/javascripts/instafeed.js")"></script>
 <script  src="@routes.Assets.at("/javascripts/chart.js")"></script>
 <script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
+<script type="text/javascript" src="@routes.Assets.at("/javascripts/llqrcode.js")"></script>
 </head>
 
 <body>
 <div id="main">
 <div id="header">
-<div style="position:relative;top:+20px;left:0px;"><g:plusone size="medium"></g:plusone></div>
+
 <p id="mp1">
 QR Code scanner
 </p>
+<div class="select">
+    <label for="videoSource">Välj kamera: </label><select id="videoSource"></select>
+  </div>
+<script type="text/javascript" src="@routes.Assets.at("/javascripts/webqr.js")"></script>
 </div>
 <div id="mainbody">
 <table class="tsel" border="0" width="100%">
@@ -64,7 +67,7 @@ QR Code scanner
 <br>
 </div>
 </div>
-<canvas id="qr-canvas" width="180" height="120"></canvas>
+<canvas id="qr-canvas" width="800" height="600"></canvas>
 <script type="text/javascript">load();</script>
 </body>
 
