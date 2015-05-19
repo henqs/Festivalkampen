@@ -140,15 +140,17 @@
 							<!-- Sidebar --> 
 								<div id="sidebar">
 									<section class="widget thumbnails">
+									<center>
 										<h3>Funktioner</h3>
+									</center>
 										<div class="grid">
 											<div class="row no-collapse 50%">
-												<div class="6u"><a href="#" class="image fit"><img src="@routes.Assets.at("images/pic04.jpg")" alt="" /></a></div>
-												<div class="6u"><a href="#" class="image fit"><img src="@routes.Assets.at("images/pic05.jpg")" alt="" /></a></div>
+												<div class="6u"><a href="@routes.Application.gruppAktivitet()" class="image fit"><img src="@routes.Assets.at("images/pic04.jpg")" alt="" /></a></div>
+												<div class="6u"><a href="@routes.Application.quizStart()" class="image fit"><img src="@routes.Assets.at("images/pic05.jpg")" alt="" /></a></div>
 											</div>
 											<div class="row no-collapse 50%">
-												<div class="6u"><a href="#" class="image fit"><img src="@routes.Assets.at("images/pic06.jpg")" alt="" /></a></div>
-												<div class="6u"><a href="#" class="image fit"><img src="@routes.Assets.at("images/pic07.jpg")" alt="" /></a></div>
+												<div class="6u"><a href="@routes.Application.gruppSida()" class="image fit"><img src="@routes.Assets.at("images/pic06.jpg")" alt="" /></a></div>
+												<div class="6u"><a href="@routes.Application.kontakta()" class="image fit"><img src="@routes.Assets.at("images/pic07.jpg")" alt="" /></a></div>
 											</div>
 										</div>
 									</section>
@@ -159,9 +161,11 @@
 				</div>
 			</div>
 						<p> </p>
+						<center>
 						<ul>
                             <li id="logout"><a onclick="FB.logout(function(response) {}); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>
                         </ul>
+                        </center>
 							<!-- Contact -->
 							<center>
 								@Templates.kontakta()
