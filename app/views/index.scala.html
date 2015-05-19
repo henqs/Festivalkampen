@@ -112,7 +112,6 @@
 							<section class="box feature">
 								<h3 id="team-standings">Ställningarna just nu:</h3>
 									@Templates.piechart()
-        </script>
 						</div>
 						<div class="5u">
 							<ul>
@@ -132,18 +131,15 @@
 			@Templates.instafeed()
 		</center>
 		<!-- Main -->
-			<div id="main-wrapper">
-				<div class="container">
+		<p> </p>
+		<div id="banner-wrapper">
+				<div id="banner" class="box container">
 					<div class="row">
-						<div class="4u">
-						
-							<!-- Sidebar --> 
-								<div id="sidebar">
-									<section class="widget thumbnails">
-									<center>
-										<h3>Funktioner</h3>
-									</center>
-										<div class="grid">
+						<div class="7u">
+							<section class="box feature">
+								<center>
+								<h2>Funktioner</h2>
+								<div class="grid">
 											<div class="row no-collapse 50%">
 												<div class="6u"><a href="@routes.Application.gruppAktivitet()" class="image fit"><img src="@routes.Assets.at("images/aktivitetThumbnail.jpg")" alt="" /></a></div>
 												<div class="6u"><a href="@routes.Application.quizStart()" class="image fit"><img src="@routes.Assets.at("images/quizThumbnail.jpg")" alt="" /></a></div>
@@ -153,19 +149,18 @@
 												<div class="6u"><a href="@routes.Application.kontakta()" class="image fit"><img src="@routes.Assets.at("images/kontaktThumbnail.jpg")" alt="" /></a></div>
 											</div>
 										</div>
-									</section>
-								</div>
-						
+								</center>
 						</div>
+					
 					</div>
-				</div>
-			</div>
-						<p> </p>
-						<center>
+					<center>
 						<ul>
                             <li id="logout"><a onclick="FB.logout(function(response) {}); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>
                         </ul>
                         </center>
+				</div>
+			</div>
+						<p> </p>
 							<!-- Contact -->
 							<center>
 								@Templates.kontakta()
