@@ -111,36 +111,13 @@
 					<div class="row">
 						<div class="7u">
 							<h2 id="welcome-text">Välkommen till Festivalkampen!</h2>
-							<p>Detta är en app som förgyller din vistelse hos oss.</p>
-						</div>
-						<div class="5u">
-							<ul>
-								<li id="login"><a href="@routes.Application.login()" class="button big icon fa-arrow-circle-right">Logga in</a></li>
-								<li id="info"><a href="#" class="button alt big icon fa-question-circle">Mer info</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-		
-		<center>
-			@Templates.instafeed()
-		</center>
-		<!-- Features -->
-			<div id="features-wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="4u">
-						
-							<!-- Box -->
-								<section class="box feature">
-								<h2 id="team-standings">Ställningarna just nu:</h2>
+							<section class="box feature">
+								<h3 id="team-standings">Ställningarna just nu:</h3>
 								<p id="red-points" style="color:red">Lag Röd:</p>
 			                    <p id="blue-points" style="color:blue">Lag Blå:</p>
 			                    <p id="black-points" style="color:black">Lag Svart:</p>
 									<div id="canvas-holder">
-			                <canvas id="chart-area" width="440" height="300"/>
+			                <canvas id="chart-area" width="240" height="150"/>
             		    </div>
         <script>
         jsRoutes.controllers.Application.getTeamStandings().ajax({
@@ -193,6 +170,33 @@
         })
 		
         </script>
+						</div>
+						<div class="5u">
+							<ul>
+								<li id="login"><a href="@routes.Application.login()" class="button big icon fa-arrow-circle-right">Logga in</a></li>
+								<li id="info"><a href="#" class="button alt big icon fa-question-circle">Mer info</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		<center>
+		    <div id="instafeedrubrik">
+				<instafeedrubrik>Tagga din bild #pvtgrupp11 på Instagram!</instafeedrubrik>
+		    </div>
+	    </center>
+		
+		<center>
+			@Templates.instafeed()
+		</center>
+		<!-- Features -->
+			<div id="features-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="4u">
+						
+							<!-- Box -->
+								
 			</section>
 				</div>
 						<div class="4u">

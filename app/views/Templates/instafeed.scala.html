@@ -1,15 +1,22 @@
 		<div id="instafeed">
 	   	<script type="text/javascript">
+var limitVar = 0;
+	    	if ($(window).width() < 512 ) {
+							  limitVar = 2;
+							  } else {
+							  limitVar = 3;
+							  }
 							var feed = new Instafeed({
-							 clientId: '6d41d581bf5542f583a285e8d4d9be0e',
-								limit: 4,
-								get:'tagged',
-								tagName:'cat',
-								sortBy: 'most-liked',
+							  clientId: '6d41d581bf5542f583a285e8d4d9be0e',
+							 limit: limitVar,
+								get: 'tagged',
+								tagName: 'pvtgrupp11',
+								sortBy: 'random',
+								resolution: 'standard_resolution',
 								after: function () {
 							var images = $("#instafeed").find('a');
 								$.each(images, function(index, image) {
-							var delay = (index * 5) + 'ms';
+							var delay = (index * 75) + 'ms';
 								$(image).css('-webkit-animation-delay', delay);
 								$(image).css('-moz-animation-delay', delay);
 								$(image).css('-ms-animation-delay', delay);
@@ -20,6 +27,7 @@
 						},
 							template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>'
 					});
+				
 						feed.run();
 			</script>
 		</div>

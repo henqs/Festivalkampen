@@ -668,31 +668,35 @@
 		}
 
 
-/*********************************************************************************/
-/* Instafeed                                                                        */
-/*********************************************************************************/
-	
+/**********************************************************************************/
+/*Instafeed                                                                       */
+/**********************************************************************************/
 #instafeed a {
-  padding:5px 5px 1px 5px;
-  margin:10px;
-  border:1px solid #e1e1e1;
+  padding:10px 10px 1px 10px;
+  margin:5px;
   display:inline-block;
-  border-radius: 4px;
   position:relative;
+  border:1px solid #f7f5ef;
+  max-width:393px;
+  max-height:393px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.015);
+  box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.05);
 }
 
 #instafeed .likes {
-  background:rgba(222,89,135,0.8);
-  font-family:sans-serif;
+  background:rgba(15, 86, 255, 0.2);
+  font-family:'Arial black';
   font-size:1em;
   position:absolute;
   color:#ffffff;
-  right:5px;
-  top:5px;
-  left:5px;
+  right:10px;
+  top:10px;
+  left:10px;
   opacity:0;
   text-align:center;
-  line-height:150px;
+  line-height:100%;
   text-shadow:0 1px rgba(0,0,0,0.5);
   -webkit-font-smoothing:antialiased;
   -webkit-transition: opacity 100ms ease;
@@ -703,12 +707,34 @@
 }
 
 #instafeed a:hover .likes {
-  opacity:1;
+  opacity:10;
 }
 
 #instafeed img {
-  width: 170px;
-  height: 170px;
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
 
-
-
+#instafeedrubrik {
+  font-family: 'billabong';
+  font-size:25pt;
+  font-style: italic;
+  padding:10px 10px 1px 10px;
+  margin:5px;
+  
+  /* display:inline-block;
+  position:relative;
+  border:1px solid #f7f5ef;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.015);
+  box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.05);
+  width: 1200px; */
+  
+}
+    
+@font-face {
+    font-family: 'billabong'; /*a name to be used later*/
+    src: url('http://social-fonts.com/assets/fonts/billabong/billabong.ttf'); /*URL to font*/
+}
