@@ -1,0 +1,49 @@
+<script  src="@routes.Assets.at("/javascripts/chart.js")"></script>
+									<div id="canvas-holder">
+			                <canvas id="chart-area" width="240" height="150"/>
+            		    </div>
+        <script>
+        jsRoutes.controllers.Application.getTeamStandings().ajax({
+            success: function(data) {
+                $("#result").html(data);
+                console.log(data);
+                var scalingRed = data.substring(0, data.indexOf('_'));
+                var scalingBlue = data.substring((data.indexOf('_')+1), data.indexOf('-'));
+                var scalingBlack = data.substring((data.indexOf('-')+1), data.indexOf('+'));
+                var scalingRedInt = parseInt(scalingRed);
+                var scalingBlueInt = parseInt(scalingBlue);
+                var scalingBlackInt = parseInt(scalingBlack);
+                console.log(scalingRedInt);
+                	var pieData = [
+				{
+					value: scalingRedInt,
+					color:"#FF0000",
+					highlight: "#FF3333",
+					label: "Röda laget"
+				},
+				{
+					value: scalingBlueInt,
+					color: "#0000FF",
+					highlight: "#4D4DFF",
+					label: "Blå laget"
+				},
+				{
+					value: scalingBlackInt,
+					color: "#191919",
+					highlight: "#474747",
+					label: "Svarta laget"
+				},
+
+			];
+			loadPieChart = function(){
+				var ctx = document.getElementById("chart-area").getContext("2d");
+				window.myPie = new Chart(ctx).Pie(pieData);
+			};
+			loadPieChart();
+            },
+            error: function() {
+                alert("Problem uppstod vid hämtning av lagställningarna")
+            }
+        })
+		
+        </script>

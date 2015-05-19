@@ -12,15 +12,12 @@
 		
 		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
 		<script  src="@routes.Assets.at("/javascripts/instafeed.js")"></script>
-		<script  src="@routes.Assets.at("/javascripts/chart.js")"></script>
 		<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
 		
 		<!--[if lte IE 8]><link rel="stylesheet" href="@routes.Assets.at("stylesheets/css/ie/v8.css")" /><![endif]-->
 	</head>
 	<body class="homepage">
 	<!--DET HÄR ÄR POÄNGGIVARTESTER-->
-	<input type='button' value='Ge Axel 10 poäng' id='givePointsBtn' />
-	
 	<script>
 	    var givePoints = function() {
 		    var userId = "628246407306132";
@@ -60,12 +57,14 @@
 			
 			FB.getLoginStatus(function(response) {
 				statusChangeCallback(response);
+				var logout = document.getElementById("logout");
 				if (response.status === 'connected') {
 					// Logged into your app and Facebook.
 					console.log('Logged in!');
 					var login = document.getElementById("login");
-					//login.style.display = 'none';
-					login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) {}); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
+					login.style.display = 'none';
+					logout.style.display = 'list-item';
+					//login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) {}); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
 					var welcomeText = document.getElementById("welcome-text");
 					FB.api('/me', function(response) {
 						console.log(response);
@@ -92,10 +91,9 @@
 						updateDatabase();
 					});
 				} else if (response.status === 'not_authorized') {
-					// The person is logged into Facebook, but not your app.
+					logout.style.display = 'none';
 				} else {
-					// The person is not logged into Facebook, so we're not sure if
-					// they are logged into this app or not.
+					logout.style.display = 'none';
 				}
 			});
 		};
@@ -113,68 +111,12 @@
 							<h2 id="welcome-text">Välkommen till Festivalkampen!</h2>
 							<section class="box feature">
 								<h3 id="team-standings">Ställningarna just nu:</h3>
-								<p id="red-points" style="color:red">Lag Röd:</p>
-			                    <p id="blue-points" style="color:blue">Lag Blå:</p>
-			                    <p id="black-points" style="color:black">Lag Svart:</p>
-									<div id="canvas-holder">
-			                <canvas id="chart-area" width="240" height="150"/>
-            		    </div>
-        <script>
-        jsRoutes.controllers.Application.getTeamStandings().ajax({
-            success: function(data) {
-                $("#result").html(data);
-                console.log(data);
-                var scalingRed = data.substring(0, data.indexOf('_'));
-                var scalingBlue = data.substring((data.indexOf('_')+1), data.indexOf('-'));
-                var scalingBlack = data.substring((data.indexOf('-')+1), data.indexOf('+'));
-                var scalingRedInt = parseInt(scalingRed);
-                var scalingBlueInt = parseInt(scalingBlue);
-                var scalingBlackInt = parseInt(scalingBlack);
-                console.log(scalingRedInt);
-                	var pieData = [
-				{
-					value: scalingRedInt,
-					color:"#FF0000",
-					highlight: "#FF3333",
-					label: "Röda laget!"
-				},
-				{
-					value: scalingBlueInt,
-					color: "#0000FF",
-					highlight: "#4D4DFF",
-					label: "Blå laget!"
-				},
-				{
-					value: scalingBlackInt,
-					color: "#191919",
-					highlight: "#474747",
-					label: "Svarta laget!"
-				},
-
-			];
-            var redPoints = document.getElementById("red-points");
-            var bluePoints = document.getElementById("blue-points");
-            var blackPoints = document.getElementById("black-points");
-            redPoints.innerHTML = "Lag Röd: "+scalingRedInt+" poäng!";
-            bluePoints.innerHTML = "Lag Blå: "+scalingBlueInt+" poäng!";
-            blackPoints.innerHTML ="Lag Svart: "+scalingBlackInt+" poäng!";
-			loadPieChart = function(){
-				var ctx = document.getElementById("chart-area").getContext("2d");
-				window.myPie = new Chart(ctx).Pie(pieData);
-			};
-			loadPieChart();
-            },
-            error: function() {
-                alert("Problem uppstod vid hämtning av lagställningarna")
-            }
-        })
-		
+									@Templates.piechart()
         </script>
 						</div>
 						<div class="5u">
 							<ul>
 								<li id="login"><a href="@routes.Application.login()" class="button big icon fa-arrow-circle-right">Logga in</a></li>
-								<li id="info"><a href="#" class="button alt big icon fa-question-circle">Mer info</a></li>
 							</ul>
 						</div>
 					</div>
@@ -189,52 +131,6 @@
 		<center>
 			@Templates.instafeed()
 		</center>
-		<!-- Features -->
-			<div id="features-wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="4u">
-						
-							<!-- Box -->
-								
-			</section>
-				</div>
-						<div class="4u">
-						
-							<!-- Box -->
-								<section class="box feature">
-									<a href="#" class="image featured"><img src="@routes.Assets.at("images/pic02.jpg")">
-									<div class="inner">
-										<header>
-											<h2>Plats för text</h2>
-											<p>Även bild kan redigeras</p>
-										</header>
-										<p>Informativ text.</p>
-									</div>
-								</section>
-
-						</div>
-		
-						<div class="4u">
-						
-							<!-- Box -->
-								<section class="box feature last">
-									<a href="@routes.Application.gruppSida()" class="image featured"><img src="@routes.Assets.at("images/pic03.jpg")">
-									<div class="inner">
-										<header>
-											<h2><a href="@routes.Application.gruppSida()">Klicka här för att komma till gruppsidan</a></h2>
-											<p>Möt din grupp!</p>
-										</header>
-										<p>Chatta med gruppen!
-										Se din grupps totala poäng!</p>
-									</div>
-								</section>
-
-						</div>
-					</div>
-				</div>
-			</div>
-
 		<!-- Main -->
 			<div id="main-wrapper">
 				<div class="container">
@@ -244,7 +140,7 @@
 							<!-- Sidebar --> 
 								<div id="sidebar">
 									<section class="widget thumbnails">
-										<h3>Logga in</h3>
+										<h3>Funktioner</h3>
 										<div class="grid">
 											<div class="row no-collapse 50%">
 												<div class="6u"><a href="#" class="image fit"><img src="@routes.Assets.at("images/pic04.jpg")" alt="" /></a></div>
@@ -255,28 +151,17 @@
 												<div class="6u"><a href="#" class="image fit"><img src="@routes.Assets.at("images/pic07.jpg")" alt="" /></a></div>
 											</div>
 										</div>
-										<a href="#" class="button icon fa-file-text-o">Glömt lösenord</a>
 									</section>
 								</div>
 						
-						</div>
-						<div class="8u important(collapse)"> 
-                        
-							<!-- Content -->
-								<div id="content">
-									<section class="last">
-										<h2>Om Festivalkampen</h2>
-										<p>Det är en app som är framtagen av ett par studenter vars intresse är vädligt uppskattad av universiteten.</p>
-										<a href="#" class="button icon fa-arrow-circle-right">Läs mer</a>
-									</section>
-								</div>
-
 						</div>
 					</div>
 				</div>
 			</div>
-						
-
+						<p> </p>
+						<ul>
+                            <li id="logout"><a onclick="FB.logout(function(response) {}); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>
+                        </ul>
 							<!-- Contact -->
 							<center>
 								@Templates.kontakta()
