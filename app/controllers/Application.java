@@ -49,6 +49,11 @@ public class Application extends Controller {
 	  public static Result quizStart() {
 	    return ok(QuizStartsida.render());
 	  }
+	  
+	  	  public static Result quizAvslut() {
+	    return ok(quizAvslut.render());
+	  }
+	  
 	   public static Result getTeamStandings() {
 	      Connection conn = null;
 		  Statement stmt = null;

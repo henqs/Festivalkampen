@@ -28,6 +28,10 @@ GET     /views/gruppAktivitet.scala.html     controllers.Application.gruppAktivi
 # Spelhub page
 GET     /views/QuizStartsida.scala.html     controllers.Application.quizStart()
 
+# Spelhub page
+GET     /views/quizAvslut.scala.html     controllers.Application.quizAvslut()
+
+
 # Get current team standings for pie chart
 GET     /getTeamStandings           controllers.Application.getTeamStandings()
 

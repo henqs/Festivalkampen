@@ -7,11 +7,15 @@
 <html>
 	<head>
 		@Templates.head()
+		<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
 	</head>
 	<body class="homepage" onLoad="MM_preloadImages('../../../../pic03.jpg')">
 
 		<!-- Header -->
-			@Templates.header()
+				@Templates.header()
+		
 		<!-- Banner -->
 			<div id="banner-wrapper">
 <div class="container"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a></div>
@@ -22,25 +26,20 @@
 				<div id="banner" class="box container">
 					<div class="row">
 						<div class="7u">
-							<h2 id="welcome-text">Det har kommit ett nytt quiz!</h2>
-							<p>Åtta frågor med 4 svarsalternativ. 
-							Försök att svara rätt på samtliga för att samla maximal poäng till ditt lag!</p>
+							<h2 id="welcome-text">Ditt bidrag till slaget har registrerats</h2>
+							<p>Så här ser ställningarna ut efter ditt bidrag!</p>
 						</div>
-						<div class="5u">
-							<ul>
-								<li id="start"><a href="@routes.QuizController.quiz()"
-								class="button big icon fa-arrow-circle-right">Starta quiz</a></li>
-								
-									<li id="start"><a href="@routes.Application.quizAvslut()"
-								class="button big icon fa-arrow-circle-right">Quiz avslut</a></li>
-							</ul>
+							@Templates.piechart()
 						</div>
 					</div>
 				</div>
 			</div>
+						<div class="5u">
+
 						
 							<!-- Contact -->
 							<center>
+								
 								@Templates.kontakta()
 								
 							</center>

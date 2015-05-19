@@ -3,6 +3,14 @@
   <html>
       <head>
 			@Templates.head()
+			<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
       </head>
       <body class="no-sidebar">
   
@@ -17,33 +25,36 @@
   
                           <!-- Content -->
                                   <h2>Kontakta oss</h2>
-                                  <p>Här kan man alltid göra ett kontaktformulär som kopplas. </p>
-                                      <!-- Fixa formula för inloggningsformuläret -->
-                                      <!--<div class="sign-in-form">
-                                            <div class="in-form Personal">-->
-                  								<h3>Skapa nytt konto</h3>
-                  								<ul>
-                      								<li><a href="#" class="facebook">Facebook</a></li>
-                      								<li><a href="#" class="twitter">Twitter</a></li>
-                     								<li><a href="#" class="g-plus">Google</a></li>
-                  								</ul>
-                  								<h4>Personlig information</h4>
-                  								<form>
-                      								<input type="text" placeholder="Förnamn*" required>
-                      								<input type="text" placeholder="Efternamn*" required>
-                     								<input type="text" placeholder="Emailadress*" required>
-                  								</form>
-                  								<h5>Inloggningsinformation</h5>
-                  								<form>
-                      								<input type="password" placeholder="Lösenord*" required>
-                      								<input type="password" placeholder="Bekräfta lösenord*" required>
-                      								<input type="submit" value="Bekräfta">
-                  								</form>
-  
+								  	<section class="box feature">
+									<a class="twitter-timeline"
+										href="https://twitter.com/hashtag/Festivalkampen"
+										data-widget-id="596259077593931776">
+										#Festivalkampen Tweets
+										</a>
+
+									</a> 
+
+									<script>
+										             
+										!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],
+										p=/^http:/.test(d.location)?'http':'https';
+										if(!d.getElementById(id)){js=d.createElement(s);
+										js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
+										fjs.parentNode.insertBefore(js,fjs);
+											}}
+											(document,"script","twitter-wjs");
+									</script> 
+										<p>Festivalkampens Twitter</p>
+
+                  								<h3>Facebook</h3>
+										<div class="fb-page" data-href="https://www.facebook.com/groups/608374422633736/"
+										data-width="380" data-hide-cover="false" data-show-facepile="false" 
+										data-show-posts="true">
+										</div>
                       </div>
                   </div>
               </div>
-                
+
 							<!-- Contact -->
 							<center>
 								@Templates.kontakta()
