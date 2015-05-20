@@ -1,17 +1,13 @@
-    @import helper._
-        @import controllers.routes.javascript._
 <!DOCTYPE HTML>
-
 <html>
 	<head>
 	<meta name="viewport" content="width=320; user-scalable=no" />
-	<meta http-equiv="Content-type" content="text/html, charset=utf-8">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<title>ColorThief Demo</title>
-    <script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
-	<script type="text/javascript" charset="utf-8" script  src="@routes.Assets.at("javascripts/jquery.min.js")"></script>
-	<script type="text/javascript" charset="utf-8" script  src="@routes.Assets.at("javascripts/quantize.js")"></script>
-	<script type="text/javascript" charset="utf-8" script  src="@routes.Assets.at("javascripts/color-thief.js")"></script>
-	<script type="text/javascript" src="@routes.Assets.at("javascripts/llqrcode.js")"></script>
+
+	<script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="quantize.js"></script>
+	<script type="text/javascript" charset="utf-8" src="color-thief.js"></script>
 
 	<style>
 	#yourimage {

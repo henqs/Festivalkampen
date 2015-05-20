@@ -35,30 +35,21 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 -->
 <html>
 	<head>
-		<title>Festivalkampen</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-	    <script  src=""""),_display_(/*15.21*/routes/*15.27*/.Assets.at("/javascripts/jquery.min.js")),format.raw/*15.67*/(""""></script>
-		<script  src=""""),_display_(/*16.18*/routes/*16.24*/.Assets.at("/javascripts/jquery.dropotron.min.js")),format.raw/*16.74*/(""""></script>
-		<script  src=""""),_display_(/*17.18*/routes/*17.24*/.Assets.at("/javascripts/skel.min.js")),format.raw/*17.62*/(""""></script>
-		<script  src=""""),_display_(/*18.18*/routes/*18.24*/.Assets.at("/javascripts/skel-layers.min.js")),format.raw/*18.69*/(""""></script>
-		<script  src=""""),_display_(/*19.18*/routes/*19.24*/.Assets.at("/javascripts/init.js")),format.raw/*19.58*/(""""></script>
-		<script  src=""""),_display_(/*20.18*/routes/*20.24*/.Assets.at("/javascripts/facebookSDK.js")),format.raw/*20.65*/(""""></script>
+			"""),_display_(/*10.5*/Templates/*10.14*/.head()),format.raw/*10.21*/("""
+		"""),format.raw/*11.3*/("""<script  src=""""),_display_(/*11.18*/routes/*11.24*/.Assets.at("/javascripts/facebookSDK.js")),format.raw/*11.65*/(""""></script>
 		<script>
-		window.fbAsyncInit = function() """),format.raw/*22.35*/("""{"""),format.raw/*22.36*/("""
-			"""),format.raw/*23.4*/("""FB.init("""),format.raw/*23.12*/("""{"""),format.raw/*23.13*/("""
-				"""),format.raw/*24.5*/("""appId      : '909582695765355',
+		window.fbAsyncInit = function() """),format.raw/*13.35*/("""{"""),format.raw/*13.36*/("""
+			"""),format.raw/*14.4*/("""FB.init("""),format.raw/*14.12*/("""{"""),format.raw/*14.13*/("""
+				"""),format.raw/*15.5*/("""appId      : '909582695765355',
 				cookie     : true,  // enable cookies to allow the server to access 
 									// the session
 				xfbml      : true,  // parse social plugins on this page
 				version    : 'v2.2' // use version 2.2
-			"""),format.raw/*29.4*/("""}"""),format.raw/*29.5*/(""");
+			"""),format.raw/*20.4*/("""}"""),format.raw/*20.5*/(""");
 	
-			FB.Event.subscribe('auth.login', function()"""),format.raw/*31.47*/("""{"""),format.raw/*31.48*/("""
-			"""),format.raw/*32.4*/("""window.location.href = """"),_display_(/*32.29*/routes/*32.35*/.Application.index()),format.raw/*32.55*/("""";
-			"""),format.raw/*33.4*/("""}"""),format.raw/*33.5*/(""");
+			FB.Event.subscribe('auth.login', function()"""),format.raw/*22.47*/("""{"""),format.raw/*22.48*/("""
+			"""),format.raw/*23.4*/("""window.location.href = """"),_display_(/*23.29*/routes/*23.35*/.Application.index()),format.raw/*23.55*/("""";
+			"""),format.raw/*24.4*/("""}"""),format.raw/*24.5*/(""");
 			// Now that we've initialized the JavaScript SDK, we call 
 			// FB.getLoginStatus().  This function gets the state of the
 			// person visiting this page and can return one of three states to
@@ -71,60 +62,29 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 			//
 			// These three cases are handled in the callback function.
 
-			FB.getLoginStatus(function(response) """),format.raw/*46.41*/("""{"""),format.raw/*46.42*/("""
-				"""),format.raw/*47.5*/("""statusChangeCallback(response);
-				if (response.status === 'connected') """),format.raw/*48.42*/("""{"""),format.raw/*48.43*/("""
-					"""),format.raw/*49.6*/("""// Logged into your app and Facebook.
+			FB.getLoginStatus(function(response) """),format.raw/*37.41*/("""{"""),format.raw/*37.42*/("""
+				"""),format.raw/*38.5*/("""statusChangeCallback(response);
+				if (response.status === 'connected') """),format.raw/*39.42*/("""{"""),format.raw/*39.43*/("""
+					"""),format.raw/*40.6*/("""// Logged into your app and Facebook.
 					console.log('Logged in!');
-					window.location = """"),_display_(/*51.26*/routes/*51.32*/.Application.index()),format.raw/*51.52*/("""";
-				"""),format.raw/*52.5*/("""}"""),format.raw/*52.6*/(""" """),format.raw/*52.7*/("""else if (response.status === 'not_authorized') """),format.raw/*52.54*/("""{"""),format.raw/*52.55*/("""
-					"""),format.raw/*53.6*/("""// The person is logged into Facebook, but not your app.
-				"""),format.raw/*54.5*/("""}"""),format.raw/*54.6*/(""" """),format.raw/*54.7*/("""else """),format.raw/*54.12*/("""{"""),format.raw/*54.13*/("""
-					"""),format.raw/*55.6*/("""// The person is not logged into Facebook, so we're not sure if
+					window.location = """"),_display_(/*42.26*/routes/*42.32*/.Application.index()),format.raw/*42.52*/("""";
+				"""),format.raw/*43.5*/("""}"""),format.raw/*43.6*/(""" """),format.raw/*43.7*/("""else if (response.status === 'not_authorized') """),format.raw/*43.54*/("""{"""),format.raw/*43.55*/("""
+					"""),format.raw/*44.6*/("""// The person is logged into Facebook, but not your app.
+				"""),format.raw/*45.5*/("""}"""),format.raw/*45.6*/(""" """),format.raw/*45.7*/("""else """),format.raw/*45.12*/("""{"""),format.raw/*45.13*/("""
+					"""),format.raw/*46.6*/("""// The person is not logged into Facebook, so we're not sure if
 					// they are logged into this app or not.
-				"""),format.raw/*57.5*/("""}"""),format.raw/*57.6*/("""
-			"""),format.raw/*58.4*/("""}"""),format.raw/*58.5*/(""");
-		"""),format.raw/*59.3*/("""}"""),format.raw/*59.4*/(""";
+				"""),format.raw/*48.5*/("""}"""),format.raw/*48.6*/("""
+			"""),format.raw/*49.4*/("""}"""),format.raw/*49.5*/(""");
+		"""),format.raw/*50.3*/("""}"""),format.raw/*50.4*/(""";
 	</script>
 	</head>
 	<body class="login-page">
 
 		<!-- Header -->
-			<div id="header-wrapper">
-				<header id="header" class="container">
-				
-					<!-- Logo -->
-						<div id="logo">
-							<h1><a href=""""),_display_(/*70.22*/routes/*70.28*/.Application.index()),format.raw/*70.48*/("""">Festivalkampen</a></h1>
-							<span>av Grupp 11</span>
-						</div>
-					
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href=""""),_display_(/*77.23*/routes/*77.29*/.Application.index()),format.raw/*77.49*/("""">Välkommen</a></li>
-								<li>
-									<a href="">Spel</a>
-									<ul>
-										<li><a href="#">Meny steg 1.1</a></li>
-										<li><a href="#">Meny steg 1.2</a></li>
-										<li>
-											<a href="">Undermeny steg2</a>
-											<ul>
-												<li><a href="#">Test3.1</a></li>
-												<li><a href="#">Test3.2</a></li>
-											</ul>
-									</ul>
-								</li>
-								<li><a href=""""),_display_(/*91.23*/routes/*91.29*/.Application.gruppSida()),format.raw/*91.53*/("""">Gruppsida</a></li>
-								<li><a href=""""),_display_(/*92.23*/routes/*92.29*/.Application.kontakta()),format.raw/*92.52*/("""">Kontakta oss</a></li>
-							</ul>
-						</nav>
-					
-				</header>
-			</div>
+			
+			"""),_display_(/*57.5*/Templates/*57.14*/.header()),format.raw/*57.23*/("""
 		
-		<!-- Main -->
+		"""),format.raw/*59.3*/("""<!-- Main -->
 			<div id="main-wrapper">
 				<div class="container">
 					<div class="row 200%">
@@ -188,33 +148,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 						<div class="3u">
 						
 							<!-- Contact -->
-								<section class="widget contact last">
-									<h3><a name=""""),_display_(/*164.24*/routes/*164.30*/.Application.kontakta()),format.raw/*164.53*/(""""> Kontakta oss</a></h3>
-									<ul>
-										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="http://facebook.com/festivalkampen" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-									</ul>
-									<p>Stockholms Universitet<br />
-									Borgarfjordsgatan 12, 164 55 Kista<br />
-									Sweden</p>
-								</section>
-						
-						</div>
-					</div>
-					<div class="row">
-						<div class="12u">
-							<div id="copyright">
-								<ul class="menu">
-									<li>&copy; Festivalkampen. All rights reserved</li><li>Grupp 11</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</footer>
-			</div>
+								"""),_display_(/*123.10*/Templates/*123.19*/.kontakta()),format.raw/*123.30*/("""
 
-	</body>
+	"""),format.raw/*125.2*/("""</body>
 </html>"""))}
   }
 
@@ -227,11 +163,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 }
               /*
                   -- GENERATED --
-                  DATE: Tue May 12 11:38:42 CEST 2015
-                  SOURCE: C:/Users/svett_000/Documents/GitHub/testApp/app/views/login.scala.html
-                  HASH: 7caca1a9440322e434c7885dd9b0f584f10f68d1
-                  MATRIX: 798->0|1456->631|1471->637|1532->677|1588->706|1603->712|1674->762|1730->791|1745->797|1804->835|1860->864|1875->870|1941->915|1997->944|2012->950|2067->984|2123->1013|2138->1019|2200->1060|2285->1117|2314->1118|2345->1122|2381->1130|2410->1131|2442->1136|2705->1372|2733->1373|2812->1424|2841->1425|2872->1429|2924->1454|2939->1460|2980->1480|3013->1486|3041->1487|3639->2057|3668->2058|3700->2063|3801->2136|3830->2137|3863->2143|3985->2238|4000->2244|4041->2264|4075->2271|4103->2272|4131->2273|4206->2320|4235->2321|4268->2327|4356->2388|4384->2389|4412->2390|4445->2395|4474->2396|4507->2402|4648->2516|4676->2517|4707->2521|4735->2522|4767->2527|4795->2528|5029->2735|5044->2741|5085->2761|5262->2911|5277->2917|5318->2937|5751->3343|5766->3349|5811->3373|5881->3416|5896->3422|5940->3445|7891->5368|7907->5374|7952->5397
-                  LINES: 29->1|43->15|43->15|43->15|44->16|44->16|44->16|45->17|45->17|45->17|46->18|46->18|46->18|47->19|47->19|47->19|48->20|48->20|48->20|50->22|50->22|51->23|51->23|51->23|52->24|57->29|57->29|59->31|59->31|60->32|60->32|60->32|60->32|61->33|61->33|74->46|74->46|75->47|76->48|76->48|77->49|79->51|79->51|79->51|80->52|80->52|80->52|80->52|80->52|81->53|82->54|82->54|82->54|82->54|82->54|83->55|85->57|85->57|86->58|86->58|87->59|87->59|98->70|98->70|98->70|105->77|105->77|105->77|119->91|119->91|119->91|120->92|120->92|120->92|192->164|192->164|192->164
+                  DATE: Tue May 19 12:21:30 CEST 2015
+                  SOURCE: /Users/andersdahl/Documents/kod/pvt/testApp/app/views/login.scala.html
+                  HASH: 06fa30a74b51df72fdcab667b5bf49ac1d7d9209
+                  MATRIX: 798->0|1180->356|1198->365|1226->372|1256->375|1298->390|1313->396|1375->437|1460->494|1489->495|1520->499|1556->507|1585->508|1617->513|1880->749|1908->750|1987->801|2016->802|2047->806|2099->831|2114->837|2155->857|2188->863|2216->864|2814->1434|2843->1435|2875->1440|2976->1513|3005->1514|3038->1520|3160->1615|3175->1621|3216->1641|3250->1648|3278->1649|3306->1650|3381->1697|3410->1698|3443->1704|3531->1765|3559->1766|3587->1767|3620->1772|3649->1773|3682->1779|3823->1893|3851->1894|3882->1898|3910->1899|3942->1904|3970->1905|4072->1981|4090->1990|4120->1999|4153->2005|5959->3783|5978->3792|6011->3803|6042->3806
+                  LINES: 29->1|38->10|38->10|38->10|39->11|39->11|39->11|39->11|41->13|41->13|42->14|42->14|42->14|43->15|48->20|48->20|50->22|50->22|51->23|51->23|51->23|51->23|52->24|52->24|65->37|65->37|66->38|67->39|67->39|68->40|70->42|70->42|70->42|71->43|71->43|71->43|71->43|71->43|72->44|73->45|73->45|73->45|73->45|73->45|74->46|76->48|76->48|77->49|77->49|78->50|78->50|85->57|85->57|85->57|87->59|151->123|151->123|151->123|153->125
                   -- GENERATED --
               */
           

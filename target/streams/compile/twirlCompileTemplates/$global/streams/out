@@ -1,4 +1,3 @@
-[error] C:\Users\svett_000\Documents\GitHub\testApp\app\views\index.scala.html:77: Not parsed?
-[error]     }; 
-[error]     ^
-[error] (compile:twirlCompileTemplates) Twirl compilation failed
+[0m[[31merror[0m] [0m/Users/andersdahl/Documents/kod/pvt/testApp/app/views/gruppAktivitet.scala.html:86: Expected ')' but found 'EOF'[0m
+[0m[[31merror[0m] [0m</html>[0m
+[0m[[31merror[0m] [0m       ^[0m

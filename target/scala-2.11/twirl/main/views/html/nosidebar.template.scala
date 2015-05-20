@@ -209,8 +209,8 @@ Seq[Any](format.raw/*1.2*/("""<!DOCTYPE HTML>
 }
               /*
                   -- GENERATED --
-                  DATE: Tue May 12 11:38:42 CEST 2015
-                  SOURCE: C:/Users/svett_000/Documents/GitHub/testApp/app/views/nosidebar.scala.html
+                  DATE: Tue May 19 12:21:30 CEST 2015
+                  SOURCE: /Users/andersdahl/Documents/kod/pvt/testApp/app/views/nosidebar.scala.html
                   HASH: 9a300b1f25aff1955cdb304e76c8cbe9d0a1dc76
                   MATRIX: 802->1
                   LINES: 29->1

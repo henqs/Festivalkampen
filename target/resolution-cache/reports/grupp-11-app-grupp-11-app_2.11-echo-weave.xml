@@ -7,15 +7,15 @@
 		revision="1.0-SNAPSHOT"
 		conf="echo-weave"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, echo-trace-compile, echo-trace-test, echo-weave, echo-sigar, fork-run"
-		date="20150512113842"/>
+		date="20150519122229"/>
 	<dependencies>
 		<module organisation="org.aspectj" name="aspectjweaver">
-			<revision name="1.8.4" status="release" pubdate="20141106220427" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.aspectj.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
+			<revision name="1.8.4" status="release" pubdate="20141106220427" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.aspectj.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="0">
 				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
-				<metadata-artifact status="no" details="" size="2420" time="0" location="C:\Users\svett_000\.ivy2\cache\org.aspectj\aspectjweaver\ivy-1.8.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/aspectj/aspectjweaver/1.8.4/aspectjweaver-1.8.4.pom"/>
+				<metadata-artifact status="no" details="" size="2391" time="0" location="/Users/andersdahl/.ivy2/cache/org.aspectj/aspectjweaver/ivy-1.8.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/aspectj/aspectjweaver/1.8.4/aspectjweaver-1.8.4.pom"/>
 				<caller organisation="grupp-11-app" name="grupp-11-app_2.11" conf="echo-weave" rev="1.8.4" rev-constraint-default="1.8.4" rev-constraint-dynamic="1.8.4" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="aspectjweaver" type="jar" ext="jar" status="no" details="" size="1862339" time="0" location="C:\Users\svett_000\.ivy2\cache\org.aspectj\aspectjweaver\jars\aspectjweaver-1.8.4.jar">
+					<artifact name="aspectjweaver" type="jar" ext="jar" status="no" details="" size="1862339" time="0" location="/Users/andersdahl/.ivy2/cache/org.aspectj/aspectjweaver/jars/aspectjweaver-1.8.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/aspectj/aspectjweaver/1.8.4/aspectjweaver-1.8.4.jar"/>
 					</artifact>
 				</artifacts>
