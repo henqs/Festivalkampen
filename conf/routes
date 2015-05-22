@@ -34,6 +34,9 @@ GET     /getTeamStandings           controllers.Application.getTeamStandings()
 # Update user table
 GET    /updateUserTable             controllers.Application.updateUserTable(id: String, gender: String, name: String, email: String)
 
+# Upload stuff
+POST    /public/photos                     controllers.Application.upload()
+
 # Give user points
 GET     /givePoints                 controllers.Application.givePoints(id: String, points: String)    
 
