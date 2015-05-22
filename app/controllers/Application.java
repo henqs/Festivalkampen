@@ -2,6 +2,9 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
+import play.mvc.Http.*;
+import play.mvc.Http.MultipartFormData.FilePart;
+import java.io.File;
 
 import java.sql.*;
 
@@ -49,6 +52,22 @@ public class Application extends Controller {
 	  public static Result quizStart() {
 	    return ok(QuizStartsida.render());
 	  }
+	  public static Result upload() {
+        MultipartFormData body = request().body().asMultipartFormData();
+        FilePart picture = body.getFile("picture");
+        if (picture != null) {
+            String fileName = picture.getFilename();
+            String contentType = picture.getContentType(); 
+            File file = picture.getFile();
+            System.out.println(fileName);
+            file.renameTo(new File("public/photos", fileName));
+            return ok(spelhub.render());
+        } else {
+            flash("error", "Missing file");
+            return redirect(routes.Application.index());    
+        }
+}
+	  
 	   public static Result getTeamStandings() {
 	      Connection conn = null;
 		  Statement stmt = null;

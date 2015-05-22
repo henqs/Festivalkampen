@@ -35,8 +35,8 @@
 	</head>
 
 	<body>
-
-		<input type="file" capture="camera" accept="image/*" id="takePictureField">
+        @form(action = routes.Application.upload, 'enctype -> "multipart/form-data") {
+		<input type="file" capture="camera" accept="image/*" id="takePictureField" name = "picture">
 
 		<img id="yourimage">
 
@@ -78,10 +78,13 @@
             $("#yourimage").attr("src",URL.createObjectURL(event.target.files[0]));
         }
 	}
-
-
-
     </script>
+    <p>
+        <input type="submit">
+    </p>
+    
+}
+ 
 	</body>
 
 </html>
