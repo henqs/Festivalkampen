@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    @import helper._
+    @import controllers.routes.javascript._
+    @Templates.head()
+    <script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
+</head>
+    
+<body class="fotofeed">
+    <!-- Header -->
+    @Templates.header()
+    
+    <!-- Main -->
+
+    <div id="banner-wrapper">
+        <div id="banner" class="box container">
+            <div class="row">
+                <div class="7u">
+                    <h2 id="welcome-text">Fototävling</h2>
+                    <p>Här kan du se allas bidrag till fototävlingen</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="banner-wrapper">
+        <div id="banner" class="box container">
+            <div class="row">
+                <div id = "picList" class="7u">
+                    
+                    
+                </div>
+                <ul>
+				    <li id="buttonlist">
+				    <button id="nextbutton" onclick = "nextPage()">Nästa sida</button>
+				    </li>
+				</ul>
+            </div>
+        </div>
+    </div>
+    <!-- Features -->
+    <div id="features-wrapper">
+        <div class="container">
+            <div class="row">
+                
+                <div class="4u">
+                   
+                </div>
+                
+            </div>
+        </div>
+        <script>
+    var currentImage = 0;
+    var currentPage = 10;
+    renderPhotos = function(){
+        console.log("Nu kör vi renderphotos! Image = "+currentImage+" Sida = " + currentPage);
+    while(currentImage < currentPage){
+        console.log("ETT: " + currentImage);
+        currentImage++;
+        jsRoutes.controllers.Application.getPhotos(""+currentImage).ajax({
+            success: function(data) {
+                $("#result").html(data);
+                if(data === ""){
+                    return;
+                }
+                var picList = document.getElementById("picList");
+                var linkPic = document.createElement("a");
+                var picArea = document.createElement("img");
+                linkPic.href = "/assets/photos/"+data;
+                picArea.height=200;
+                picArea.width=200;
+                picArea.src = "/assets/photos/"+data;
+                picList.appendChild(linkPic);
+                linkPic.appendChild(picArea);
+            },
+            error: function() {
+                alert("Problem when accessing photos")
+            }
+        })
+    }
+    }
+    renderPhotos();
+    
+    nextPage = function(){
+      console.log("Nästa sida kör!");
+      currentPage+=10;
+      renderPhotos();
+    }
+    
+    </script>
+        <!-- Box -->
+        <section class="box feature">
+        </section>
+        <!-- Contact -->
+        <center>
+            @Templates.kontakta()
+
+        </center>
+    </div>
+</body>
+</html>

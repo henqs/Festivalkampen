@@ -5,7 +5,7 @@ import play.mvc.*;
 import play.mvc.Http.*;
 import play.mvc.Http.MultipartFormData.FilePart;
 import java.io.File;
-
+import java.util.ArrayList;
 import java.sql.*;
 
 import models.User;
@@ -36,6 +36,9 @@ public class Application extends Controller {
 	  public static Result gruppSida() {
 	    return ok(gruppsida.render());
 	  }
+	  public static Result photoFeed() {
+	      return ok(photofeed.render());
+	  }
 
 	public static Result kontakta() {
 	    return ok(kontakta.render());
@@ -61,13 +64,13 @@ public class Application extends Controller {
             File file = picture.getFile();
             System.out.println(fileName);
             file.renameTo(new File("public/photos", fileName));
-            return ok(spelhub.render());
+            insertPicture(fileName);
+            return ok(photofeed.render());
         } else {
             flash("error", "Missing file");
-            return redirect(routes.Application.index());    
+            return redirect(routes.Application.index());
         }
 }
-	  
 	   public static Result getTeamStandings() {
 	      Connection conn = null;
 		  Statement stmt = null;
@@ -136,7 +139,7 @@ public class Application extends Controller {
 				stmt.executeUpdate(insertIntoDatabaseUser);
 				stmt.executeUpdate(insertIntoDatabaseTeam);
 			} catch (SQLException se) {
-
+                System.out.println("Something went wrong when updating points");
 			}
 			return ok(ajax_result.render(id));
 		}
@@ -171,6 +174,26 @@ public class Application extends Controller {
 			return ok(ajax_result.render(id));
 		}
     
+    public static Result insertPicture(String fileName){
+        Connection conn = null;
+		Statement stmt = null;
+		int attempts = 0;
+        String insertIntoDatabase = "INSERT INTO `picture`(`filename`) VALUES ('"+fileName+"')";
+        boolean success = false;
+        while(success == false && attempts < 75){
+            try {
+			    conn = DB.getConnection();
+			    stmt = conn.createStatement();
+			    stmt.executeUpdate(insertIntoDatabase);
+			    System.out.println(insertIntoDatabase);
+			    success = true;
+            }catch (SQLException se) {
+                System.out.println("Something went wrong when saving file. Retrying...");
+                attempts++;
+		    }
+        }
+		return ok(ajax_result.render(fileName));
+    }
     public static Result javascriptRoutes() {
     response().setContentType("text/javascript");
     return ok(
@@ -179,9 +202,33 @@ public class Application extends Controller {
         controllers.routes.javascript.Application.updateUserTable(),
         controllers.routes.javascript.Application.givePoints(),
         controllers.routes.javascript.Application.getTeamStandings(),
+        controllers.routes.javascript.Application.getPhotos(),
         controllers.routes.javascript.QuizController.sayHello()
       )
     );
+  }
+  public static Result getPhotos(String id){
+      Connection conn = null;
+	  Statement stmt = null;
+	  String getPhotoNames = "SELECT `filename` FROM `picture` WHERE id="+id;
+	  String photos = "";
+	  boolean success = false;
+	  int attempts = 0;
+	  while(success == false && attempts < 75){
+      try{
+		  conn = DB.getConnection();
+		  stmt = conn.createStatement();
+		  ResultSet rs = stmt.executeQuery(getPhotoNames);
+		  while(rs.next()){
+			       photos = rs.getString("filename");
+			    }
+		  success = true;
+      }catch (SQLException se){
+          System.out.println("Failed to load photo. Retrying...");
+          attempts++;
+      }
+	  }
+      return ok(photos);
   }
 
 	public static void testPush() {
