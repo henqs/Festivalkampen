@@ -54,7 +54,7 @@
         </div>
         <script>
     var currentImage = 0;
-    var currentPage = 10;
+    var currentPage = 5;
     renderPhotos = function(){
         console.log("Nu kör vi renderphotos! Image = "+currentImage+" Sida = " + currentPage);
     while(currentImage < currentPage){
@@ -86,7 +86,7 @@
     
     nextPage = function(){
       console.log("Nästa sida kör!");
-      currentPage+=10;
+      currentPage+=5;
       renderPhotos();
     }
     
