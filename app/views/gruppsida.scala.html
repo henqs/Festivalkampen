@@ -4,6 +4,60 @@
 	<head>
 		@Templates.head()
 		@Templates.facebooksak()
+		
+				<script>
+	window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '909582695765355',
+				cookie     : true,  // enable cookies to allow the server to access 
+									// the session
+				xfbml      : true,  // parse social plugins on this page
+				version    : 'v2.2' // use version 2.2
+			});
+
+			FB.getLoginStatus(function(response) {
+				statusChangeCallback(response);
+				if (response.status === 'connected') {
+					// Logged into your app and Facebook.
+					FB.api('/me', function(response) {
+						console.log(response);
+				            var userId = ""+response.id;
+				          			function hittaLag() {
+								jsRoutes.controllers.Application.getTeam(userID).ajax({
+                                success: function(data) {
+                                    $("#result").html(data);
+									if (userID === "0") {
+									document.getElementById("hittaLag").href = "@routes.Application.gruppSidaR()";
+									document.getElementById("welcome-text").innerHTML = "Du tillhör grupp röd!";
+									} else if (userID === "0") {
+									document.getElementById("hittaLag").href = "@routes.Application.gruppSidaB()";
+									document.getElementById("welcome-text").innerHTML = "Du tillhör grupp blå!";
+									} else if (userID === "0") {
+									document.getElementById("hittaLag").href = "@routes.Application.gruppSidaSvart()";
+									document.getElementById("welcome-text").innerHTML = "Du tillhör grupp grön!!";
+									}
+                                },
+                                error: function() {
+                                    alert("Något gick fel med att hämta användar ID från databasen.")
+                                }
+                            })
+				}
+				hittaLag();
+					});
+				} else if (response.status === 'not_authorized') {
+					document.getElementById("hittaLag").href = "@routes.Application.gruppSidaR()";
+					document.getElementById("welcome-text").innerHTML = "Du måste vara inloggad för att använda denna funktion";
+					document.getElementById("login").style.display = "none";
+					
+				} else {
+					document.getElementById("hittaLag").href = "@routes.Application.gruppSidaR()";
+					document.getElementById("welcome-text").innerHTML = "Var god att starta om applikationen !";
+					document.getElementById("login").style.display = "none";
+				}
+			});
+		};
+	    
+		</script>
 	</head>
 	<body class="gruppsida">
 
@@ -15,19 +69,20 @@
 				<div id="banner" class="box container">
 					<div class="row">
 						<div class="7u">
-							<h2 id="welcome-text">Välkommen till din gruppsida</h2>
-							<p>Här kan du twittra med andra från din grupp.</p>
+							<h2 id="welcome-text">Välkommen</h2>
+							<p>På gruppsidan kan du möta andra från din grupp.</p>
 						</div>
 						<div class="5u">
 							<ul>
-								<li id="login"><a href="#" class="button big icon fa-arrow-circle-right">Knapp</a></li>
-								<li id="info"><a href="#" class="button alt big icon fa-question-circle">Knapp 2</a></li>
+								<li id="login"><a id="hittaLag" href="#" class="button big icon fa-arrow-circle-right">Till ditt lag!</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 
+			
+				
 					<!-- Features -->
 			<div id="features-wrapper">
 				<div class="container">

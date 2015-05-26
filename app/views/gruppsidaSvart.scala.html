@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		@Templates.head()
+		@Templates.facebooksak()
+		<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
+	</head>
+	<body class="gruppsida">
+
+		<!-- Header -->
+			@Templates.header()
+		
+		<!-- Main -->
+			<div id="banner-wrapper">
+				<div id="banner" class="box container">
+					<div class="row">
+						<div class="7u">
+							<h2 id="welcome-text">Lag grön</h2>
+							<p>Välkommen till din grupp!</p>
+						</div>
+						<div class="5u">
+						@Templates.piechart()
+						</div>
+					</div>
+				</div>
+			</div>
+
+					<!-- Features -->
+			<div id="features-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="4u">
+						
+							<!-- Box -->
+								<section class="box feature">
+								<p>Twitter om grupp</p>
+									<a class="twitter-timeline"
+										href="https://twitter.com/hashtag/FKGr%C3%B6n"
+										data-widget-id="603138329345921025">
+										#FKGrön
+
+									</a>
+           
+									<script>
+											!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],
+											p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);
+											js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);
+											}}(document,"script","twitter-wjs");
+									</script> 
+										
+
+												<div class="fb-page" data-href="https://www.facebook.com/groups/538378142982542/"
+										data-width="380" data-hide-cover="false" data-show-facepile="false" 
+										data-show-posts="true">
+									</div>
+
+								</div>
+							</a>
+						</div>
+						
+
+							<!-- Contact -->
+							<center>
+								@Templates.kontakta()
+								
+							</center>
+	</body>
+</html>
