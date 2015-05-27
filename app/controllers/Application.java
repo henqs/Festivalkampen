@@ -130,6 +130,40 @@ public class Application extends Controller {
 	    return ok(""+redPoints+"_"+bluePoints+"-"+blackPoints+"+");
 	  }
 	  
+	  public static Result checkQrStatus(String id){
+	      Connection conn = null;
+		  Statement stmt = null;
+		  String qrStatus = "";
+		  String getUserInfo = "SELECT * FROM `user` WHERE id="+id;
+		  try {
+				conn = DB.getConnection();
+				stmt = conn.createStatement();
+				ResultSet rsu = stmt.executeQuery(getUserInfo);
+			    while(rsu.next()){
+			        qrStatus += ""+rsu.getInt("qr10");
+			        qrStatus += "-"+rsu.getInt("qr20");
+			        qrStatus += "_"+rsu.getInt("qr30");
+			    }
+		  } catch (SQLException se) {
+
+			}
+			return ok(qrStatus);
+	  }
+	  
+	  public static Result changeQrStatus(String id, String qrCode){
+	      Connection conn = null;
+		  Statement stmt = null;
+		  String changeQrStatus = "UPDATE `user` SET `qr"+qrCode+"`='1' WHERE id="+id;
+		  try {
+				conn = DB.getConnection();
+				stmt = conn.createStatement();
+				stmt.executeUpdate(changeQrStatus);
+		  }catch (SQLException se) {
+                System.out.println("Could not update QR-status");
+		    }
+		return ok(qrCode);
+	  }
+	  
 	  public static Result givePoints(String id, String points){
 	        Connection conn = null;
 		    Statement stmt = null;
@@ -214,6 +248,8 @@ public class Application extends Controller {
         controllers.routes.javascript.Application.givePoints(),
         controllers.routes.javascript.Application.getTeamStandings(),
 		controllers.routes.javascript.Application.getTeam(),
+		controllers.routes.javascript.Application.checkQrStatus(),
+        controllers.routes.javascript.Application.changeQrStatus(),
         controllers.routes.javascript.QuizController.sayHello()
 
       )

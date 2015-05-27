@@ -1,6 +1,9 @@
-// QRCODE reader Copyright 2011 Lazar Laszlo
+﻿// QRCODE reader Copyright 2011 Lazar Laszlo
 // http://www.webqr.com
 'use strict'
+/*@routes.Application.javascriptRoutes;
+@import helper._
+@import controllers.routes.javascript._*/
 var captureInitiated = false;
 var gCtx = null;
 var gCanvas = null;
@@ -129,7 +132,25 @@ function read(a)
         html+="<a target='_blank' href='"+a+"'>"+a+"</a><br>";
     html+="<b>"+htmlEntities(a)+"</b><br><br>";
     document.getElementById("result").innerHTML=html;
-    window.open(a);
+    if(a === "http://FVK10101010.com"){
+		console.log("Nu skannade vi FVK10");
+		var pointsButton = document.getElementById("points");
+		pointsButton.href = "javascript:give10();"
+		pointsButton.click();
+	}
+	else if(a === "http://FVK20202020.com"){
+		console.log("Nu skannade vi FVK20");
+		var pointsButton = document.getElementById("points");
+		pointsButton.href = "javascript:give20();"
+		console.log(pointsButton);
+		pointsButton.click();
+	}
+	else if(a === "http://FVK30303030.com"){
+		console.log("Nu skannade vi FVK30");
+		var pointsButton = document.getElementById("points");
+		pointsButton.href = "javascript:give30();"
+		pointsButton.click();
+	}
 }	
 
 function isCanvasSupported(){

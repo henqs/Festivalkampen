@@ -50,6 +50,12 @@ GET    /updateUserTable             controllers.Application.updateUserTable(id: 
 # Give user points
 GET     /givePoints                 controllers.Application.givePoints(id: String, points: String)   
 
+# Check QR status
+GET     /checkQrStatus                 controllers.Application.checkQrStatus(id: String)
+
+# Change QR status
+GET     /changeQrStatus                 controllers.Application.changeQrStatus(id: String, qrCode: String)
+
 # Get Team
 GET    /getTeam             controllers.Application.getTeam(userID: String)   
 

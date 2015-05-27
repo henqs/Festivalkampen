@@ -1,5 +1,11 @@
+<!-- De tre QR-koderna som kan scannas är: 
+1. http://FVK10101010.com
+2. http://FVK20202020.com
+3. http://FVK30303030.com
+Så om ni vill testköra kan ni generera ngn av dessa tre i en QR-generator.
+Jag använde: http://goqr.me/
+-->
 <!DOCTYPE HTML>
-
 <html>
 <style type="text/css">
 #v{
@@ -12,44 +18,189 @@
 #result{
     display:none;
 }
+#points{
+    display:none;
+}
+#id{
+    display:none;
+}
 </style>
 	<head>
 		@import helper._
         @import controllers.routes.javascript._
 		@Templates.head()
+		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
         <script type="text/javascript" src="@routes.Assets.at("/javascripts/llqrcode.js")"></script>
-    <script type="text/javascript">
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
-function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
-
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
-}
-
-function MM_swapImage() { //v3.0
-  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-}
-    </script>
+        <script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
+        	<script>
+	window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '909582695765355',
+				cookie     : true,  // enable cookies to allow the server to access 
+									// the session
+				xfbml      : true,  // parse social plugins on this page
+				version    : 'v2.2' // use version 2.2
+			});
+	
+			// Now that we've initialized the JavaScript SDK, we call 
+			// FB.getLoginStatus().  This function gets the state of the
+			// person visiting this page and can return one of three states to
+			// the callback you provide.  They can be:
+			//
+			// 1. Logged into your app ('connected')
+			// 2. Logged into Facebook, but not your app ('not_authorized')
+			// 3. Not logged into Facebook and can't tell if they are logged into
+			//    your app or not.
+			//
+			// These three cases are handled in the callback function.
+			
+			FB.getLoginStatus(function(response) {
+				statusChangeCallback(response);
+				var logout = document.getElementById("logout");
+				if (response.status === 'connected') {
+					// Logged into your app and Facebook.
+					console.log('Logged in!');
+					FB.api('/me', function(response) {
+						console.log(response);
+						var userId = ""+response.id;
+						var p = document.createElement("P");
+						var t = document.createTextNode(""+userId);
+						p.id = "id";
+						p.appendChild(t);
+						document.body.appendChild(p);
+					});
+				} else if (response.status === 'not_authorized') {
+					logout.style.display = 'none';
+				} else {
+					logout.style.display = 'none';
+				}
+			});
+		};
+		</script>
 	</head>
 	<body class="homepage">
-
+	<script>
+	
+	
+	    give10 = function(){
+	        var userIdPara = document.getElementById("id");
+	        var userId = userIdPara.innerHTML;
+	        jsRoutes.controllers.Application.checkQrStatus(userId).ajax({
+                success: function(data) {
+                    $("#result").html(data);
+                    var qr10 = data.substring(0, data.indexOf('-'));
+                    console.log(qr10);
+                    if(qr10 === "1"){
+                        window.alert("Du har redan fått poäng för den här tävlingen!");
+                        location.reload();
+                    }else{
+                        jsRoutes.controllers.Application.givePoints(userId, "10").ajax({
+                success: function(data) {
+                    $("#result").html(data);
+                        jsRoutes.controllers.Application.changeQrStatus(userId, "10").ajax({
+                            success: function(data) {
+                                $("#result").html(data);
+                                window.alert("Snyggt jobbat! Du bidrog med 10 poäng till ditt lag!")
+                                window.location = "@routes.Application.index()";
+                            }, 
+                            error: function() {
+                                alert("Problem med att ge poäng.")
+                            }
+                        })
+                },
+                error: function() {
+                    alert("Problem med att ge poäng.")
+                }
+            })
+                    }
+                },
+                error: function() {
+                    alert("Problem med att hämta qr-status.")
+                }
+            })
+	    }
+	     give20 = function(){
+	        var userIdPara = document.getElementById("id");
+	        var userId = userIdPara.innerHTML;
+	        jsRoutes.controllers.Application.checkQrStatus(userId).ajax({
+                success: function(data) {
+                    $("#result").html(data);
+                    var qr20 = data.substring((data.indexOf('-')+1), data.indexOf('_'));
+                    console.log(qr20);
+                    if(qr20 === "1"){
+                        window.alert("Du har redan fått poäng för den här tävlingen!");
+                        location.reload();
+                    }else{
+                        jsRoutes.controllers.Application.givePoints(userId, "20").ajax({
+                success: function(data) {
+                    $("#result").html(data);
+                    jsRoutes.controllers.Application.changeQrStatus(userId, "20").ajax({
+                            success: function(data) {
+                                $("#result").html(data);
+                                window.alert("Snyggt jobbat! Du bidrog med 20 poäng till ditt lag!")
+                                window.location = "@routes.Application.index()";
+                            }, 
+                            error: function() {
+                                alert("Problem med att ge poäng.")
+                            }
+                        })
+                },
+                error: function() {
+                    alert("Problem med att ge poäng.")
+                }
+            })
+                    }
+                },
+                error: function() {
+                    alert("Problem med att hämta qr-status.")
+                }
+            })
+	    }
+	        give30 = function(){
+	        var userIdPara = document.getElementById("id");
+	        var userId = userIdPara.innerHTML;
+	        jsRoutes.controllers.Application.checkQrStatus(userId).ajax({
+                success: function(data) {
+                    $("#result").html(data);
+                    var qr30 = data.substring((data.indexOf('_')+1), data.length);
+                    console.log(qr30);
+                    if(qr30 === "1"){
+                        window.alert("Du har redan fått poäng för den här tävlingen!");
+                        location.reload();
+                    }else{
+                        jsRoutes.controllers.Application.givePoints(userId, "30").ajax({
+                success: function(data) {
+                    $("#result").html(data);
+                    jsRoutes.controllers.Application.changeQrStatus(userId, "30").ajax({
+                            success: function(data) {
+                                $("#result").html(data);
+                               window.alert("Snyggt jobbat! Du bidrog med 30 poäng till ditt lag!")
+                                window.location = "@routes.Application.index()";
+                            }, 
+                            error: function() {
+                                alert("Problem med att ge poäng.")
+                            }
+                        })
+                },
+                error: function() {
+                    alert("Problem med att ge poäng.")
+                }
+            })
+                    }
+                },
+                error: function() {
+                    alert("Problem med att hämta qr-status.")
+                }
+            })
+	    }
+	</script>
+    
 		<!-- Header -->
 		@Templates.header()
 		
 		<!-- Banner -->
 			<div id="banner-wrapper">
-				<div class="box container"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a>
+				<div class="box container">
 		<div class="row">
 						<div class="7u">
 							<h2 id="welcome-text">Gruppaktiviteter!</h2>
@@ -58,7 +209,7 @@ function MM_swapImage() { //v3.0
                                 <label for="videoSource">Välj kamera: </label><select id="videoSource"></select>
                                 <p> </p>
                                 </div>
-                                <script type="text/javascript" src="@routes.Assets.at("/javascripts/webqr.js")"></script>
+                                <script type="text/javascript" src="@routes.Assets.at("/javascripts/webqr34.js")"></script>
 								<div id="mainbody">
 <table class="tsel" border="0" width="100%">
 <tr>
@@ -77,6 +228,11 @@ function MM_swapImage() { //v3.0
 </td></tr>
 </table>
 </div>&nbsp;
+<center>
+<ul>
+<a id = "points">OK!</a>
+</ul>
+</center>
 <div id="footer">
 <br>
 </div>

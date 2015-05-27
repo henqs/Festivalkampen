@@ -3,8 +3,8 @@
 <html>
 	<head>
 		@Templates.head()
-		@Templates.facebooksak()
-		
+		<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
+		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
 				<script>
 	window.fbAsyncInit = function() {
 			FB.init({
@@ -23,16 +23,17 @@
 						console.log(response);
 				            var userId = ""+response.id;
 				          			function hittaLag() {
-								jsRoutes.controllers.Application.getTeam(userID).ajax({
+				          			    console.log(userId);
+								jsRoutes.controllers.Application.getTeam(userId).ajax({
                                 success: function(data) {
                                     $("#result").html(data);
-									if (userID === "0") {
+									if (data === "0") {
 									document.getElementById("hittaLag").href = "@routes.Application.gruppSidaR()";
 									document.getElementById("welcome-text").innerHTML = "Du tillhör grupp röd!";
-									} else if (userID === "0") {
+									} else if (data === "1") {
 									document.getElementById("hittaLag").href = "@routes.Application.gruppSidaB()";
 									document.getElementById("welcome-text").innerHTML = "Du tillhör grupp blå!";
-									} else if (userID === "0") {
+									} else if (data === "2") {
 									document.getElementById("hittaLag").href = "@routes.Application.gruppSidaSvart()";
 									document.getElementById("welcome-text").innerHTML = "Du tillhör grupp grön!!";
 									}
