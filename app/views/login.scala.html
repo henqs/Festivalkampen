@@ -1,10 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	PVT 15 - Grupp 11
-	OBS: För att kunna se login-knappen behöver man ansluta från en URL som är specificerad i Facebooks
-	egen apputvecklingsmiljö. Jag kör för tillfället på http://people.dsv.su.se/~axna8273/login.html som
-	hemsida. På den syns knappen men inte CSS:en. Använder den för att testa funktionalitet.
--->
+
 <html>
 	<head>
 			@Templates.head()
@@ -57,10 +52,11 @@
 			@Templates.header()
 		
 		<!-- Main -->
-			<div id="main-wrapper">
-				<div class="container">
-					<div class="row 200%">
-						<div class="8u">
+					<div id="banner-wrapper">
+				<div id="banner" class="box container">
+					<div class="row">
+						<div class="7u">
+
 							<div id="login">
 								<!-- Content -->
 									<article>
@@ -77,50 +73,12 @@
 				</div>
 			</div>
 
-		<!-- Footer -->
-			<div id="footer-wrapper">
-				<footer id="footer" class="container">
-					<div class="row">
-						<div class="3u">
-						
-							<!-- Links -->
-								<section class="widget links">
-									<h3>Vad som helst1</h3>
-									<ul class="style2">
-										<li><a href="#">Text alt. l�nk - rad1, kolumn 1</a></li>
-										<li>Text alt. l�nk - rad2, kolumn 1</li>
-										<li>Text alt. l�nk - rad3, kolumn 1</li>
-									</ul>
-								</section>
-						
-						</div>
-						<div class="3u">
-						
-							<!-- Links -->
-								<section class="widget links">
-									<h3>Vad som helst2</h3>
-									<ul class="style2">
-										<li><a href="#">Text alt. l�nk - rad1, kolumn 2</a></li>
-										<li>Text alt. l�nk - rad2, kolumn 2</li>
-									</ul>
-								</section>
-						
-						</div>
-						<div class="3u">
-						
-							<!-- Links -->
-								<section class="widget links">
-									<h3>Vad som helst3</h3>
-									<ul class="style2">
-										<li><a href="#">Text alt. l�nk - rad1, kolumn 3</a></li>
-									</ul>
-								</section>
-						
-						</div>
-						<div class="3u">
+	
 						
 							<!-- Contact -->
+							<center>
 								@Templates.kontakta()
+							</center>
 
 	</body>
 </html>

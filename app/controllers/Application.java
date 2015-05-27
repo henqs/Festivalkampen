@@ -33,6 +33,18 @@ public class Application extends Controller {
 	  public static Result gruppSida() {
 	    return ok(gruppsida.render());
 	  }
+	  
+	  	  public static Result gruppSidaR() {
+	    return ok(gruppsidaR.render());
+	  }
+	  
+	  	  public static Result gruppSidaB() {
+	    return ok(gruppsidaB.render());
+	  }
+	  
+	  	  public static Result gruppSidaSvart() {
+	    return ok(gruppsidaSvart.render());
+	  }
 
 	public static Result kontakta() {
 	    return ok(kontakta.render());
@@ -52,6 +64,42 @@ public class Application extends Controller {
 	  
 	  	  public static Result quizAvslut() {
 	    return ok(quizAvslut.render());
+	  }
+	  ////////////////////////////Hämtar en användares lag//////////////////////////////77
+	  	public static Result getTeam(String userID){
+
+			Connection conn = null;
+			Statement stmt = null;
+			String getUserTeam = "SELECT team FROM `user` WHERE id="+userID;
+			System.out.println("Nu kör vi " +  userID);
+							
+		  
+		  try{
+		      conn = DB.getConnection();
+		      stmt = conn.createStatement();
+			  
+		      ResultSet rts = stmt.executeQuery(getUserTeam);
+			  rts.next();
+		      String str = rts.getString("team");
+			  rts.close();
+		      return ok("" + str);
+   
+		  }catch(SQLException se){
+				//Handle errors for JDBC
+		        return null;
+			}finally{
+				 //finally block used to close resources
+				 try{
+				    if(stmt!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }// do nothing
+				 try{
+				    if(conn!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }//end finally try
+		   	}//end try
 	  }
 	  
 	   public static Result getTeamStandings() {
@@ -165,7 +213,9 @@ public class Application extends Controller {
         controllers.routes.javascript.Application.updateUserTable(),
         controllers.routes.javascript.Application.givePoints(),
         controllers.routes.javascript.Application.getTeamStandings(),
+		controllers.routes.javascript.Application.getTeam(),
         controllers.routes.javascript.QuizController.sayHello()
+
       )
     );
   }
