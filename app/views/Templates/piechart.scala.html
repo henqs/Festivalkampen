@@ -9,10 +9,10 @@
                 console.log(data);
                 var scalingRed = data.substring(0, data.indexOf('_'));
                 var scalingBlue = data.substring((data.indexOf('_')+1), data.indexOf('-'));
-                var scalingBlack = data.substring((data.indexOf('-')+1), data.indexOf('+'));
+                var scalingGreen = data.substring((data.indexOf('-')+1), data.indexOf('+'));
                 var scalingRedInt = parseInt(scalingRed);
                 var scalingBlueInt = parseInt(scalingBlue);
-                var scalingBlackInt = parseInt(scalingBlack);
+                var scalingGreenInt = parseInt(scalingGreen);
                 console.log(scalingRedInt);
                 	var pieData = [
 				{
@@ -28,10 +28,10 @@
 					label: "Blå laget"
 				},
 				{
-					value: scalingBlackInt,
-					color: "#191919",
-					highlight: "#474747",
-					label: "Svarta laget"
+					value: scalingGreenInt,
+					color: "#59c203",
+					highlight: "#5dc903",
+					label: "Gröna laget"
 				},
 
 			];

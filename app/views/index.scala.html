@@ -5,34 +5,9 @@
     Har även mycket automatgenererad kod via Dreamweaver. 
 -->
 <html>
+
+
 	<head>
-	    @import helper._
-        @import controllers.routes.javascript._
-		@Templates.head()
-		
-		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
-		<script  src="@routes.Assets.at("/javascripts/instafeed.js")"></script>
-		<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
-		
-		<!--[if lte IE 8]><link rel="stylesheet" href="@routes.Assets.at("stylesheets/css/ie/v8.css")" /><![endif]-->
-	</head>
-	<body class="homepage">
-	<!--DET HÄR ÄR POÄNGGIVARTESTER-->
-	<script>
-	    var givePoints = function() {
-		    var userId = "628246407306132";
-            jsRoutes.controllers.Application.givePoints(userId, "10").ajax({
-                success: function(data) {
-                    $("#result").html(data);
-                },
-                error: function() {
-                    alert("Problem med att ge poäng.")
-                }
-            })
-        };
-        $('#givePointsBtn').click(givePoints);
-	</script>
-	<!--HÄR TAR POÄNGGIVARTESTET SLUT-->
 	<script>
 	window.fbAsyncInit = function() {
 			FB.init({
@@ -55,15 +30,38 @@
 			//
 			// These three cases are handled in the callback function.
 			
+		    
 			FB.getLoginStatus(function(response) {
 				statusChangeCallback(response);
 				var logout = document.getElementById("logout");
 				if (response.status === 'connected') {
 					// Logged into your app and Facebook.
+		        	var loginTop = document.getElementById("loginTop");
+		        	var loginTopA = document.createElement("a");
+		        	var loginTopText = document.createTextNode("Logga ut");
+		        	loginTopA.appendChild(loginTopText);
+		        	loginTop.appendChild(loginTopA);
+					loginTopA.href="javascript:FB.logout(function(response) {}); javascript:location.reload();";
+					var navPanel = document.getElementById("navPanel");
+		        	var navDiv = navPanel.getElementsByTagName( 'div' )[0];
+		        	var navNav = navDiv.getElementsByTagName( 'nav' )[0];
+		        	var knappen = document.createElement("a");
+		        	knappen.className = "link depth-0";
+		        	knappen.href = "javascript:FB.logout(function(response) {}); javascript:location.reload();";
+		        	knappen.styleName ="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);";
+		        	console.log(knappen);
+		        	var spannet = document.createElement("span");
+		        	spannet.class = "indent-0";
+		        	knappen.appendChild(spannet);
+		        	knappen.appendChild(loginTopText);
+		        	navNav.appendChild(knappen);
+					
+					//<li id="logoutTop"><a id = "logoutTopA" href ="javascript:FB.logout(function(response) {}); javascript:location.reload();">Logga ut</a></li>
+					//<a id = "loginTopA" href="@routes.Application.login()">Logga in</a>
 					console.log('Logged in!');
 					var login = document.getElementById("login");
 					login.style.display = 'none';
-					logout.style.display = 'list-item';
+					logout.style.display = 'initial';
 					//login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) {}); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
 					var welcomeText = document.getElementById("welcome-text");
 					FB.api('/me', function(response) {
@@ -94,33 +92,82 @@
 					logout.style.display = 'none';
 				} else {
 					logout.style.display = 'none';
+					var loginTop = document.getElementById("loginTop");
+		        	var loginTopA = document.createElement("a");
+		        	var loginTopText = document.createTextNode("Logga in");
+		        	loginTopA.appendChild(loginTopText);
+		        	loginTop.appendChild(loginTopA);
+		        	loginTopA.href = "@routes.Application.login()";
+		        	
+		        	var navPanel = document.getElementById("navPanel");
+		        	var navDiv = navPanel.getElementsByTagName( 'div' )[0];
+		        	var navNav = navDiv.getElementsByTagName( 'nav' )[0];
+		        	var knappen = document.createElement("a");
+		        	knappen.className = "link depth-0";
+		        	knappen.href = "@routes.Application.login()"
+		        	console.log(knappen);
+		        	var spannet = document.createElement("span");
+		        	spannet.class = "indent-0";
+		        	knappen.appendChild(spannet);
+		        	knappen.appendChild(loginTopText);
+		        	navNav.appendChild(knappen);
+		        	//<a class="link depth-0" href="/views/kontakta.scala.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Kontakta oss</a>
+		        	//Hitta navPanel
+		        	//Hitta första div under navPanel
+		        	//Hitta första nav under diven
+		        	//Appenda en knapp enligt mönster ovan
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	
 				}
 			});
 		};
-	    
 		</script>
-		<!-- Header -->
 
-		@Templates.header()
-		
+	</head>
+	<body class="homepage">
+	    @Templates.head()
+	    @Templates.header()
+	    @import helper._
+        @import controllers.routes.javascript._
+		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
+		<script  src="@routes.Assets.at("/javascripts/instafeed.js")"></script>
+		<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
+		<!--[if lte IE 8]><link rel="stylesheet" href="@routes.Assets.at("stylesheets/css/ie/v8.css")" /><![endif]-->
+		<!-- Header -->
 		<!-- Banner -->
+	
+		<!-- Main -->
 			<div id="banner-wrapper">
-				<div id="banner" class="box container">
+				<div id="banner" class="frambild container">
 					<div class="row">
 						<div class="7u">
-							<h2 id="welcome-text">Välkommen till Festivalkampen!</h2>
-							<section class="box feature">
-								<h3 id="team-standings">Ställningarna just nu:</h3>
-									@Templates.piechart()
+							<h2 id="welcome-text">Välkommen!</h2>
+							<div span>
+							Festivalkampen är den ultimata festivalappen, tävla mot andra besökare i exempelvis bildtävlingar, festivalanpassade quiz och massa annat kul! 
+							<p></p>
+							Logga in idag för att vinna fina priser genom att dela din upplevelse och tävla mot dina vänner.
+							</div>
+							
 						</div>
 						<div class="5u">
 							<ul>
-								<li id="login"><a href="@routes.Application.login()" class="button big icon fa-arrow-circle-right">Logga in</a></li>
+								<center>
+								<h3>Ställningarna just nu!</h3>
+								@Templates.piechart()
+								</center>
+								<br>
+								<li id="login"><a href="@routes.Application.login()" class="button big icon fa-arrow-circle-right">Logga in</a></li>	
+								<li id="logout"><a onclick="FB.logout(function(response) {}); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
+		
+		<br>
 		<center>
 		    <div id="instafeedrubrik">
 				<instafeedrubrik>Tagga din bild #pvtgrupp11 på Instagram!</instafeedrubrik>
@@ -129,37 +176,10 @@
 		
 		<center>
 			@Templates.instafeed()
-		</center>
-		<!-- Main -->
-		<p> </p>
-		<div id="banner-wrapper">
-				<div id="banner" class="box container">
-					<div class="row">
-						<div class="7u">
-							<section class="box feature">
-								<center>
-								<h2>Funktioner</h2>
-								<div class="grid">
-											<div class="row no-collapse 50%">
-												<div class="6u"><a href="@routes.Application.gruppAktivitet()" class="image fit"><img src="@routes.Assets.at("images/aktivitetThumbnail.jpg")" alt="" /></a></div>
-												<div class="6u"><a href="@routes.Application.quizStart()" class="image fit"><img src="@routes.Assets.at("images/quizThumbnail.jpg")" alt="" /></a></div>
-											</div>
-											<div class="row no-collapse 50%">
-												<div class="6u"><a href="@routes.Application.gruppSida()" class="image fit"><img src="@routes.Assets.at("images/gruppsidaThumbnail.jpg")" alt="" /></a></div>
-												<div class="6u"><a href="@routes.Application.kontakta()" class="image fit"><img src="@routes.Assets.at("images/kontaktThumbnail.jpg")" alt="" /></a></div>
-											</div>
-										</div>
-								</center>
-						</div>
-					
-					</div>
-					<center>
-						<ul>
-                            <li id="logout"><a onclick="FB.logout(function(response) {}); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>
-                        </ul>
-                        </center>
-				</div>
-			</div>
+		</center
+		<p></p>
+
+		
 						<p> </p>
 							<!-- Contact -->
 							<center>

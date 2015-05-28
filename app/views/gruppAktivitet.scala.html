@@ -41,7 +41,11 @@ Jag använde: http://goqr.me/
 				xfbml      : true,  // parse social plugins on this page
 				version    : 'v2.2' // use version 2.2
 			});
-	
+	        
+	        	FB.Event.subscribe('auth.logout', function(){
+			window.location.href = "@routes.Application.index()";
+			});
+	        
 			// Now that we've initialized the JavaScript SDK, we call 
 			// FB.getLoginStatus().  This function gets the state of the
 			// person visiting this page and can return one of three states to
@@ -58,7 +62,26 @@ Jag använde: http://goqr.me/
 				statusChangeCallback(response);
 				var logout = document.getElementById("logout");
 				if (response.status === 'connected') {
-					// Logged into your app and Facebook.
+					// Logged into your app and Facebook
+					var loginTop = document.getElementById("loginTop");
+		        	var loginTopA = document.createElement("a");
+		        	var loginTopText = document.createTextNode("Logga ut");
+		        	loginTopA.appendChild(loginTopText);
+		        	loginTop.appendChild(loginTopA);
+					loginTopA.href="javascript:FB.logout(function(response) {});";
+					var navPanel = document.getElementById("navPanel");
+		        	var navDiv = navPanel.getElementsByTagName( 'div' )[0];
+		        	var navNav = navDiv.getElementsByTagName( 'nav' )[0];
+		        	var knappen = document.createElement("a");
+		        	knappen.className = "link depth-0";
+		        	knappen.href = "javascript:FB.logout(function(response) {});";
+		        	knappen.styleName ="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);";
+		        	console.log(knappen);
+		        	var spannet = document.createElement("span");
+		        	spannet.class = "indent-0";
+		        	knappen.appendChild(spannet);
+		        	knappen.appendChild(loginTopText);
+		        	navNav.appendChild(knappen);
 					console.log('Logged in!');
 					FB.api('/me', function(response) {
 						console.log(response);
@@ -70,9 +93,36 @@ Jag använde: http://goqr.me/
 						document.body.appendChild(p);
 					});
 				} else if (response.status === 'not_authorized') {
-					logout.style.display = 'none';
+					
 				} else {
-					logout.style.display = 'none';
+					var loginTop = document.getElementById("loginTop");
+		        	var loginTopA = document.createElement("a");
+		        	var loginTopText = document.createTextNode("Logga in");
+		        	loginTopA.appendChild(loginTopText);
+		        	loginTop.appendChild(loginTopA);
+		        	loginTopA.href = "@routes.Application.login()";
+		        	
+		        	var navPanel = document.getElementById("navPanel");
+		        	var navDiv = navPanel.getElementsByTagName( 'div' )[0];
+		        	var navNav = navDiv.getElementsByTagName( 'nav' )[0];
+		        	var knappen = document.createElement("a");
+		        	knappen.className = "link depth-0";
+		        	knappen.href = "@routes.Application.login()"
+		        	console.log(knappen);
+		        	var spannet = document.createElement("span");
+		        	spannet.class = "indent-0";
+		        	knappen.appendChild(spannet);
+		        	knappen.appendChild(loginTopText);
+		        	navNav.appendChild(knappen);
+		        	//<a class="link depth-0" href="/views/kontakta.scala.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Kontakta oss</a>
+		        	//Hitta navPanel
+		        	//Hitta första div under navPanel
+		        	//Hitta första nav under diven
+		        	//Appenda en knapp enligt mönster ovan
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
 				}
 			});
 		};
@@ -246,6 +296,7 @@ Jag använde: http://goqr.me/
 		
 						
 											<!-- Contact -->
+							<br>
 							<center>
 								@Templates.kontakta()
 								

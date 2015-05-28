@@ -18,6 +18,26 @@
 			FB.getLoginStatus(function(response) {
 				statusChangeCallback(response);
 				if (response.status === 'connected') {
+				    var loginTop = document.getElementById("loginTop");
+		        	var loginTopA = document.createElement("a");
+		        	var loginTopText = document.createTextNode("Logga ut");
+		        	loginTopA.appendChild(loginTopText);
+		        	loginTop.appendChild(loginTopA);
+					loginTopA.href="javascript:FB.logout(function(response) {}); javascript:location.reload();";
+					var navPanel = document.getElementById("navPanel");
+		        	var navDiv = navPanel.getElementsByTagName( 'div' )[0];
+		        	var navNav = navDiv.getElementsByTagName( 'nav' )[0];
+		        	var knappen = document.createElement("a");
+		        	knappen.className = "link depth-0";
+		        	knappen.href = "javascript:FB.logout(function(response) {}); javascript:location.reload();";
+		        	knappen.styleName ="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);";
+		        	console.log(knappen);
+		        	var spannet = document.createElement("span");
+		        	spannet.class = "indent-0";
+		        	knappen.appendChild(spannet);
+		        	knappen.appendChild(loginTopText);
+		        	navNav.appendChild(knappen);
+					console.log('Logged in!');
 					// Logged into your app and Facebook.
 					FB.api('/me', function(response) {
 						console.log(response);
@@ -46,14 +66,43 @@
 				hittaLag();
 					});
 				} else if (response.status === 'not_authorized') {
-					document.getElementById("hittaLag").href = "@routes.Application.login()";
-					document.getElementById("welcome-text").innerHTML = "Du måste vara inloggad för att använda denna funktion";
-					document.getElementById("hittaLag").innerHTML = "Logga in";
-					
-				} else {
-					document.getElementById("hittaLag").href = "@routes.Application.gruppSidaR()";
+				    document.getElementById("hittaLag").href = "@routes.Application.gruppSidaR()";
 					document.getElementById("welcome-text").innerHTML = "Var god att starta om applikationen !";
 					document.getElementById("login").style.display = "none";
+					
+				} else {
+				    document.getElementById("hittaLag").href = "@routes.Application.login()";
+					document.getElementById("welcome-text").innerHTML = "Du måste vara inloggad för att använda denna funktion";
+					document.getElementById("hittaLag").innerHTML = "Logga in";
+					var loginTop = document.getElementById("loginTop");
+		        	var loginTopA = document.createElement("a");
+		        	var loginTopText = document.createTextNode("Logga in");
+		        	loginTopA.appendChild(loginTopText);
+		        	loginTop.appendChild(loginTopA);
+		        	loginTopA.href = "@routes.Application.login()";
+		        	
+		        	var navPanel = document.getElementById("navPanel");
+		        	var navDiv = navPanel.getElementsByTagName( 'div' )[0];
+		        	var navNav = navDiv.getElementsByTagName( 'nav' )[0];
+		        	var knappen = document.createElement("a");
+		        	knappen.className = "link depth-0";
+		        	knappen.href = "@routes.Application.login()"
+		        	console.log(knappen);
+		        	var spannet = document.createElement("span");
+		        	spannet.class = "indent-0";
+		        	knappen.appendChild(spannet);
+		        	knappen.appendChild(loginTopText);
+		        	navNav.appendChild(knappen);
+		        	//<a class="link depth-0" href="/views/kontakta.scala.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Kontakta oss</a>
+		        	//Hitta navPanel
+		        	//Hitta första div under navPanel
+		        	//Hitta första nav under diven
+		        	//Appenda en knapp enligt mönster ovan
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	
 				}
 			});
 		};
@@ -86,6 +135,7 @@
 						
 
 							<!-- Contact -->
+							<br>
 							<center>
 								@Templates.kontakta()
 								

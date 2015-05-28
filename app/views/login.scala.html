@@ -13,7 +13,7 @@
 				xfbml      : true,  // parse social plugins on this page
 				version    : 'v2.2' // use version 2.2
 			});
-	
+	        
 			FB.Event.subscribe('auth.login', function(){
 			window.location.href = "@routes.Application.index()";
 			});
@@ -33,13 +33,59 @@
 				statusChangeCallback(response);
 				if (response.status === 'connected') {
 					// Logged into your app and Facebook.
+					var loginTop = document.getElementById("loginTop");
+		        	var loginTopA = document.createElement("a");
+		        	var loginTopText = document.createTextNode("Logga ut");
+		        	loginTopA.appendChild(loginTopText);
+		        	loginTop.appendChild(loginTopA);
+					loginTopA.href="javascript:FB.logout(function(response) {});";
+					var navPanel = document.getElementById("navPanel");
+		        	var navDiv = navPanel.getElementsByTagName( 'div' )[0];
+		        	var navNav = navDiv.getElementsByTagName( 'nav' )[0];
+		        	var knappen = document.createElement("a");
+		        	knappen.className = "link depth-0";
+		        	knappen.href = "javascript:FB.logout(function(response) {});";
+		        	knappen.styleName ="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);";
+		        	console.log(knappen);
+		        	var spannet = document.createElement("span");
+		        	spannet.class = "indent-0";
+		        	knappen.appendChild(spannet);
+		        	knappen.appendChild(loginTopText);
+		        	navNav.appendChild(knappen);
 					console.log('Logged in!');
 					window.location = "@routes.Application.index()";
 				} else if (response.status === 'not_authorized') {
 					// The person is logged into Facebook, but not your app.
 				} else {
-					// The person is not logged into Facebook, so we're not sure if
-					// they are logged into this app or not.
+					var loginTop = document.getElementById("loginTop");
+		        	var loginTopA = document.createElement("a");
+		        	var loginTopText = document.createTextNode("Logga in");
+		        	loginTopA.appendChild(loginTopText);
+		        	loginTop.appendChild(loginTopA);
+		        	loginTopA.href = "@routes.Application.login()";
+		        	
+		        	var navPanel = document.getElementById("navPanel");
+		        	var navDiv = navPanel.getElementsByTagName( 'div' )[0];
+		        	var navNav = navDiv.getElementsByTagName( 'nav' )[0];
+		        	var knappen = document.createElement("a");
+		        	knappen.className = "link depth-0";
+		        	knappen.href = "@routes.Application.login()"
+		        	console.log(knappen);
+		        	var spannet = document.createElement("span");
+		        	spannet.class = "indent-0";
+		        	knappen.appendChild(spannet);
+		        	knappen.appendChild(loginTopText);
+		        	navNav.appendChild(knappen);
+		        	//<a class="link depth-0" href="/views/kontakta.scala.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Kontakta oss</a>
+		        	//Hitta navPanel
+		        	//Hitta första div under navPanel
+		        	//Hitta första nav under diven
+		        	//Appenda en knapp enligt mönster ovan
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	
 				}
 			});
 		};
@@ -64,6 +110,7 @@
 										<h2>Logga in</h2>
 										<p>För att kunna delta i Festivalkampen behöver du logga in med ditt Facebook-konto</p>
 										<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+										<br>
 										</fb:login-button>
 										<p>Om du inte har ett Facebook-konto kan du skapa ett <a href="http://www.facebook.com">här</a>
 									</article>
@@ -76,6 +123,7 @@
 	
 						
 							<!-- Contact -->
+							<br>
 							<center>
 								@Templates.kontakta()
 							</center>

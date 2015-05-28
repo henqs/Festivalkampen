@@ -12,7 +12,7 @@
 
 	body
 	{
-		background-color:		#a3d9fe;
+		background-color:		#CCE6FF;
 		/*background-image:		-moz-linear-gradient(top, rgba(0,0,0,0.05), rgba(0,0,0,0)),		url('images/bg01.png');
 		/*background-image:		-webkit-linear-gradient(top, rgba(0,0,0,0.05), rgba(0,0,0,0)),	url('images/bg01.png');
 		/*background-image:		-o-linear-gradient(top, rgba(0,0,0,0.05), rgba(0,0,0,0)),		url('images/bg01.png');
@@ -277,7 +277,7 @@
 				table.default thead
 				{
 					background: #404248;
-					color: #fff;
+					color: #000000;
 				}
 				
 				table.default tfoot
@@ -314,6 +314,7 @@
 				display: block;
 				width: 100%;
 				margin: 0 0 2.5em 0;
+				
 			}
 		
 			.image.left
@@ -480,11 +481,26 @@
 	
 		.box
 		{
-			background: #fff;
+			position:relative;
+			background: #F0F9FF;
+			opacity:1.0;
 			border-radius: 6px;
-			box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.015);
-			box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.05);
+			box-shadow: 3px 3px 3px 5px rgba(0,0,0,0.015);
+			box-shadow: 3px 3px 3px 5px rgba(0,0,0,0.05);
 		}
+		
+		.frambild
+		{
+			position:relative;
+			background: #F0F9FF;
+			opacity:1.0;
+			background-image: url("../../images/crowd.jpg");
+			border-radius: 6px;
+			box-shadow: 3px 3px 3px 5px rgba(0,0,0,0.015);
+			box-shadow: 3px 3px 3px 5px rgba(0,0,0,0.05);
+		}
+
+}
 
 /*********************************************************************************/
 /* Icons                                                                         */
@@ -722,6 +738,7 @@
   font-style: italic;
   padding:10px 10px 1px 10px;
   margin:5px;
+  margin-top:30px;
   
   /* display:inline-block;
   position:relative;
@@ -737,4 +754,26 @@
 @font-face {
     font-family: 'billabong'; /*a name to be used later*/
     src: url('https://social-fonts.com/assets/fonts/billabong/billabong.ttf'); /*URL to font*/
+}
+
+
+#piechart {
+
+position:relative;
+right:1px;
+
+}
+
+#kampText {
+position:absolute;
+bottom:0;
+font-style:arial;
+font-size:15px;
+color:black;
+text-decoration:underline;
+    padding-top: 2px;
+    padding-right: 50px;
+    padding-bottom: 250px;
+    padding-left: 50px;
+margin-top:10px;
 }
