@@ -3,6 +3,10 @@ package controllers;
 import play.*;
 import play.mvc.*;
 
+import play.mvc.Http.*;
+import play.mvc.Http.MultipartFormData.FilePart;
+import java.io.File;
+
 import java.sql.*;
 
 import models.User;
@@ -45,7 +49,11 @@ public class Application extends Controller {
 	  	  public static Result gruppSidaSvart() {
 	    return ok(gruppsidaSvart.render());
 	  }
-
+		
+		public static Result photoFeed() {
+	      return ok(photofeed.render());
+	  }
+		
 	public static Result kontakta() {
 	    return ok(kontakta.render());
 	  }
@@ -64,6 +72,26 @@ public class Application extends Controller {
 	  
 	  	  public static Result quizAvslut() {
 	    return ok(quizAvslut.render());
+	  }
+	   	  public static Result fotoSida() {
+	    return ok(fotoSida.render());
+	  }
+	  
+	  public static Result upload(String userFullName, String userId) {
+        MultipartFormData body = request().body().asMultipartFormData();
+        FilePart picture = body.getFile("picture");
+        if (picture != null) {
+            String fileName = picture.getFilename();
+            String contentType = picture.getContentType(); 
+            File file = picture.getFile();
+            System.out.println(fileName);
+            file.renameTo(new File("public/photos", fileName));
+            insertPicture(fileName, userFullName, userId);
+            return ok(photofeed.render());
+        } else {
+            flash("error", "Missing file");
+            return redirect(routes.Application.index());
+        }
 	  }
 	  ////////////////////////////Hämtar en användares lag//////////////////////////////77
 	  	public static Result getTeam(String userID){
@@ -239,6 +267,53 @@ public class Application extends Controller {
 			return ok(ajax_result.render(id));
 		}
     
+	 public static Result insertPicture(String fileName, String userFullName, String userId){
+        Connection conn = null;
+		Statement stmt = null;
+		int attempts = 0;
+        String insertIntoDatabase = "INSERT INTO `picture`(`filename`, `userFullName`, `userId`) VALUES ('"+fileName+"', '"+userFullName+"', '"+userId+"')";
+        boolean success = false;
+        while(success == false && attempts < 10){
+            try {
+			    conn = DB.getConnection();
+			    stmt = conn.createStatement();
+			    stmt.executeUpdate(insertIntoDatabase);
+			    System.out.println(insertIntoDatabase);
+			    success = true;
+            }catch (SQLException se) {
+                System.out.println("Something went wrong when saving file. Retrying...");
+                attempts++;
+		    }
+        }
+		return ok(ajax_result.render(fileName));
+    }
+	
+	public static Result getPhotos(String id){
+      Connection conn = null;
+	  Statement stmt = null;
+	  String getPhotoInfo = "SELECT * FROM `picture` WHERE id="+id;
+	  String photo = "";
+	  String fullName = "";
+	  boolean success = false;
+	  int attempts = 0;
+	  while(success == false && attempts < 10){
+      try{
+		  conn = DB.getConnection();
+		  stmt = conn.createStatement();
+		  ResultSet rs = stmt.executeQuery(getPhotoInfo);
+		  while(rs.next()){
+			       photo = rs.getString("filename");
+			       fullName = rs.getString("userFullName");
+			    }
+		  success = true;
+      }catch (SQLException se){
+          System.out.println("Failed to load photo. Retrying...");
+          attempts++;
+      }
+	  }
+      return ok(photo+"/"+fullName);
+  }
+	
     public static Result javascriptRoutes() {
     response().setContentType("text/javascript");
     return ok(
@@ -250,6 +325,7 @@ public class Application extends Controller {
 		controllers.routes.javascript.Application.getTeam(),
 		controllers.routes.javascript.Application.checkQrStatus(),
         controllers.routes.javascript.Application.changeQrStatus(),
+		controllers.routes.javascript.Application.getPhotos(),
         controllers.routes.javascript.QuizController.sayHello()
 
       )

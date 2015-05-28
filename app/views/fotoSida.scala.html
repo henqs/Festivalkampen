@@ -1,0 +1,232 @@
+    @import helper._
+        @import controllers.routes.javascript._
+<!DOCTYPE HTML>
+<html>
+	<head>
+	@Templates.head()
+	<meta name="viewport" content="width=320; user-scalable=no" />
+	<meta http-equiv="Content-type" content="text/html, charset=utf-8">
+	<title>Festivalkampen</title>
+    <script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
+	<script type="text/javascript" charset="utf-8" script  src="@routes.Assets.at("javascripts/jquery.min.js")"></script>
+	<script type="text/javascript" charset="utf-8" script  src="@routes.Assets.at("javascripts/quantize.js")"></script>
+	<script type="text/javascript" charset="utf-8" script  src="@routes.Assets.at("javascripts/color-thief.js")"></script>
+	<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
+    
+	<style>
+	#submit{
+	    display: none;
+	}
+	#paraId{
+	    display: none;
+	}
+	#paraName{
+	    display: none;
+	}
+	#yourimage {
+		width:100%;
+	}
+
+	#swatches {
+		width: 100%;
+		height: 50px;
+	}
+	#swatch0{
+        display: none;
+    }
+    #swatch1{
+        display: none;
+    }
+    #swatch2{
+        display: none;
+    }
+    #swatch3{
+        display: none;
+    }
+    #swatch4{
+        display: none;
+    }
+	.swatch {
+		width:18%;
+		height: 50px;
+		border-style:solid;
+		border-width:thin;
+		float: left;
+		margin-right: 3px;
+	}
+	</style>
+	<script>
+	window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '909582695765355',
+				cookie     : true,  // enable cookies to allow the server to access 
+									// the session
+				xfbml      : true,  // parse social plugins on this page
+				version    : 'v2.2' // use version 2.2
+			});
+	        
+	        FB.Event.subscribe('auth.logout', function(){
+			    window.location.href = "@routes.Application.index()";
+			});
+	        
+			// Now that we've initialized the JavaScript SDK, we call 
+			// FB.getLoginStatus().  This function gets the state of the
+			// person visiting this page and can return one of three states to
+			// the callback you provide.  They can be:
+			//
+			// 1. Logged into your app ('connected')
+			// 2. Logged into Facebook, but not your app ('not_authorized')
+			// 3. Not logged into Facebook and can't tell if they are logged into
+			//    your app or not.
+			//
+			// These three cases are handled in the callback function.
+			
+			FB.getLoginStatus(function(response) {
+				statusChangeCallback(response);
+				if (response.status === 'connected') {
+					// Logged into your app and Facebook.
+					var loginTop = document.getElementById("loginTop");
+		        	var loginTopA = document.createElement("a");
+		        	var loginTopText = document.createTextNode("Logga ut");
+		        	loginTopA.appendChild(loginTopText);
+		        	loginTop.appendChild(loginTopA);
+					loginTopA.href="javascript:FB.logout(function(response) {});";
+					var navPanel = document.getElementById("navPanel");
+		        	var navDiv = navPanel.getElementsByTagName( 'div' )[0];
+		        	var navNav = navDiv.getElementsByTagName( 'nav' )[0];
+		        	var knappen = document.createElement("a");
+		        	knappen.className = "link depth-0";
+		        	knappen.href = "javascript:FB.logout(function(response) {});";
+		        	knappen.styleName ="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);";
+		        	console.log(knappen);
+		        	var spannet = document.createElement("span");
+		        	spannet.class = "indent-0";
+		        	knappen.appendChild(spannet);
+		        	knappen.appendChild(loginTopText);
+		        	navNav.appendChild(knappen);
+					FB.api('/me', function(response) {
+						console.log(response);
+					
+						var textId = document.createTextNode(""+response.id);
+						var paraId = document.getElementById("paraId");
+						paraId.appendChild(textId);
+						paraId.style.display = "none";
+				        console.log(paraId);
+				
+				        var textName = document.createTextNode(""+response.first_name + "+"+response.last_name);
+				        var paraName = document.getElementById("paraName");
+				        paraName.appendChild(textName);
+				        paraName.style.display = "none";
+				        console.log(paraName);
+				        
+				        var fullName = document.getElementById("paraName").innerHTML;
+	                   
+	                    var userId = document.getElementById("paraId").innerHTML;
+	                   
+	                    
+	                    var form = document.getElementById("form");
+	                    form.action = "/public/photos?userFullName="+fullName+"&amp;userId="+userId+"";
+					});
+				} else if (response.status === 'not_authorized') {
+					// The person is logged into Facebook, but not your app.
+				} else {
+					// The person is not logged into Facebook, so we're not sure if
+					// they are logged into this app or not.
+					var loginTop = document.getElementById("loginTop");
+		        	var loginTopA = document.createElement("a");
+		        	var loginTopText = document.createTextNode("Logga in");
+		        	loginTopA.appendChild(loginTopText);
+		        	loginTop.appendChild(loginTopA);
+		        	loginTopA.href = "@routes.Application.login()";
+		        	
+		        	var navPanel = document.getElementById("navPanel");
+		        	var navDiv = navPanel.getElementsByTagName( 'div' )[0];
+		        	var navNav = navDiv.getElementsByTagName( 'nav' )[0];
+		        	var knappen = document.createElement("a");
+		        	knappen.className = "link depth-0";
+		        	knappen.href = "@routes.Application.login()"
+		        	console.log(knappen);
+		        	var spannet = document.createElement("span");
+		        	spannet.class = "indent-0";
+		        	knappen.appendChild(spannet);
+		        	knappen.appendChild(loginTopText);
+		        	navNav.appendChild(knappen);
+		        	//<a class="link depth-0" href="/views/kontakta.scala.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Kontakta oss</a>
+		        	//Hitta navPanel
+		        	//Hitta första div under navPanel
+		        	//Hitta första nav under diven
+		        	//Appenda en knapp enligt mönster ovan
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+				}
+			});
+		};
+		</script>
+	<p id = "paraName"></p>
+    <p id = "paraId"></p>
+	</head>
+
+	<body>
+	    @Templates.header()
+        <form id = "form" action="" method="POST" enctype="multipart/form-data">
+		<input type="file" capture="camera" accept="image/*" id="takePictureField" name = "picture">
+    
+		<img id="yourimage">
+
+		<div id="swatches">
+			<div id="swatch0" class="swatch"></div>
+			<div id="swatch1" class="swatch"></div>
+			<div id="swatch2" class="swatch"></div>
+			<div id="swatch3" class="swatch"></div>
+			<div id="swatch4" class="swatch"></div>
+		</div>
+
+    <script>
+	var desiredWidth;
+
+    $(document).ready(function() {
+        console.log('onReady');
+		$("#takePictureField").on("change",gotPic);
+		$("#yourimage").load(getSwatches);
+		desiredWidth = window.innerWidth;
+
+        if(!("url" in window) && ("webkitURL" in window)) {
+            window.URL = window.webkitURL;
+        }
+
+	});
+
+	function getSwatches(){
+		var colorArr = createPalette($("#yourimage"), 5);
+		for (var i = 0; i < Math.min(5, colorArr.length); i++) {
+			$("#swatch"+i).css("background-color","rgb("+colorArr[i][0]+","+colorArr[i][1]+","+colorArr[i][2]+")");
+			console.log($("#swatch"+i).css("background-color"));
+		}
+	}
+
+    //Credit: https://www.youtube.com/watch?v=EPYnGFEcis4&feature=youtube_gdata_player
+	function gotPic(event) {
+        if(event.target.files.length == 1 &&
+           event.target.files[0].type.indexOf("image/") == 0) {
+            $("#yourimage").attr("src",URL.createObjectURL(event.target.files[0]));
+            var submit = document.getElementById("submit");
+            submit.style.display = "initial";
+        }
+	}
+    </script>
+    <p>
+        <button type="submit" id = "submit" class="button big icon fa-arrow-circle-right">Ladda upp</button>
+    </p>
+    
+</form>
+    	<!-- Contact -->
+							<center>
+								@Templates.kontakta()
+								
+							</center>
+	</body>
+    
+</html>

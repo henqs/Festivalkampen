@@ -23,6 +23,12 @@ GET     /views/gruppsidaSvart.scala.html     controllers.Application.gruppSidaSv
 #Grupp page
 GET    /views/gruppsidaR.scala.html           controllers.Application.gruppSidaR()
 
+# Photofeed page
+GET     /view/photofeed.scala.html      controllers.Application.photoFeed()
+
+# Camera page
+GET     /view/fotoSida.scala.html      controllers.Application.fotoSida()
+
 # Kontakta page
 GET     /views/kontakta.scala.html     controllers.Application.kontakta()
 
@@ -40,6 +46,11 @@ GET     /views/QuizStartsida.scala.html     controllers.Application.quizStart()
 # Spelhub page
 GET     /views/quizAvslut.scala.html     controllers.Application.quizAvslut()
 
+# Get all photo file names
+GET     /getPhotos           controllers.Application.getPhotos(id: String)
+
+# Upload stuff
+POST   /public/photos                     controllers.Application.upload(userFullName: String, userId: String)
 
 # Get current team standings for pie chart
 GET     /getTeamStandings           controllers.Application.getTeamStandings()
