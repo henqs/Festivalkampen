@@ -7,7 +7,12 @@ import play.mvc.Http.*;
 import play.mvc.Http.MultipartFormData.FilePart;
 import java.io.File;
 
+import java.util.*;
 import java.sql.*;
+
+import models.quiz_question;
+import models.quiz_question_choice;
+import models.quiz_user_answer;
 
 import models.User;
 import views.html.*;
@@ -25,6 +30,8 @@ import views.html.*;
 
 public class Application extends Controller {
 	  static int newUserTeam = 0;
+	  
+	  static ArrayList<String> quizDataList = new ArrayList<String>();
 	  
 	  public static Result index() {
 	    return ok(index.render());
@@ -70,12 +77,48 @@ public class Application extends Controller {
 	    return ok(QuizStartsida.render());
 	  }
 	  
-	  	  public static Result quizAvslut() {
+	  public static Result quizKlarsida(){
+		  return ok(QuizKlarsida.render());
+	  }
+	  
+	  public static Result quizAvslut() {
 	    return ok(quizAvslut.render());
 	  }
-	   	  public static Result fotoSida() {
+	  public static Result quizInteInloggad(){
+		  return ok(QuizInteInloggad.render());
+	  }
+	  public static Result fotoSida() {
 	    return ok(fotoSida.render());
 	  }
+	  public static Result quizBegin(){
+		  String s1, s2, s3, s4, s5;
+		  s1 = quizDataList.get(0);
+		  s2 = quizDataList.get(1);
+		  s3 = quizDataList.get(2);
+		  s4 = quizDataList.get(3);
+		  s5 = quizDataList.get(4);
+		  return ok(quiz.render(s1, s2, s3, s4, s5));
+	  }
+	  public static void getQuizData(String s1, String s2, String s3, String s4, String s5){
+		  quizDataList.clear();
+		  quizDataList.add(s1);
+		  quizDataList.add(s2);
+		  quizDataList.add(s3);
+		  quizDataList.add(s4);
+		  quizDataList.add(s5);
+	  }
+	  
+	  public static Result taId(String id) {
+			System.out.println(id);
+			List<quiz_user_answer> qqa = quiz_user_answer.find.all();
+			  
+			  for(quiz_user_answer q : qqa){
+				  if(q.user_id == Long.parseLong(id)){
+				  	return ok("1");
+				  }
+			  }
+			  return ok("0");
+		}
 	  
 	  public static Result upload(String userFullName, String userId) {
         MultipartFormData body = request().body().asMultipartFormData();
@@ -326,7 +369,9 @@ public class Application extends Controller {
 		controllers.routes.javascript.Application.checkQrStatus(),
         controllers.routes.javascript.Application.changeQrStatus(),
 		controllers.routes.javascript.Application.getPhotos(),
-        controllers.routes.javascript.QuizController.sayHello()
+        controllers.routes.javascript.QuizController.sayHello(),
+		controllers.routes.javascript.Application.taId(),
+        controllers.routes.javascript.QuizController.quiz()
 
       )
     );

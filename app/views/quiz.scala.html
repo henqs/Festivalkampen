@@ -9,16 +9,109 @@
 		
 		<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
 		<script src ="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
+		<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '909582695765355',
+				cookie     : true,  // enable cookies to allow the server to access 
+									// the session
+				xfbml      : true,  // parse social plugins on this page
+				version    : 'v2.2' // use version 2.2
+			});
 	
+			FB.Event.subscribe('auth.logout', function(){
+		    	window.location.href = "@routes.Application.index()";
+			});
+			// Now that we've initialized the JavaScript SDK, we call 
+			// FB.getLoginStatus().  This function gets the state of the
+			// person visiting this page and can return one of three states to
+			// the callback you provide.  They can be:
+			//
+			// 1. Logged into your app ('connected')
+			// 2. Logged into Facebook, but not your app ('not_authorized')
+			// 3. Not logged into Facebook and can't tell if they are logged into
+			//    your app or not.
+			//
+			// These three cases are handled in the callback function.
+
+			FB.getLoginStatus(function(response) {
+				statusChangeCallback(response);
+				if (response.status === 'connected') {
+					// Logged into your app and Facebook.
+					var loginTop = document.getElementById("loginTop");
+		        	var loginTopA = document.createElement("a");
+		        	var loginTopText = document.createTextNode("Logga ut");
+		        	loginTopA.appendChild(loginTopText);
+		        	loginTop.appendChild(loginTopA);
+					loginTopA.href="javascript:FB.logout(function(response) {});";
+					var navPanel = document.getElementById("navPanel");
+		        	var navDiv = navPanel.getElementsByTagName( 'div' )[0];
+		        	var navNav = navDiv.getElementsByTagName( 'nav' )[0];
+		        	var knappen = document.createElement("a");
+		        	knappen.className = "link depth-0";
+		        	knappen.href = "javascript:FB.logout(function(response) {});";
+		        	knappen.styleName ="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);";
+		        	console.log(knappen);
+		        	var spannet = document.createElement("span");
+		        	spannet.class = "indent-0";
+		        	knappen.appendChild(spannet);
+		        	knappen.appendChild(loginTopText);
+		        	navNav.appendChild(knappen);
+					console.log('Logged in!');
+					FB.api('/me', function(response){
+						var userId = ""+response.id;
+						var userIdPara = document.getElementById("userId");
+						userIdPara.innerHTML = ""+userId;
+						userIdPara.style.display = 'none';
+						var form1 = document.getElementById("form1");
+						form1.action = "/registrerasvar?userId="+userId;
+						var form2 = document.getElementById("form2");
+						form2.action = "/tillbaka?userId="+userId;
+						console.log("Nu ska action vara uppdaterad");
+					});
+				} else if (response.status === 'not_authorized') {
+					// The person is logged into Facebook, but not your app.
+					
+				} else {
+					// The person is not logged into Facebook, so we're not sure if
+					// they are logged into this app or not.
+						var loginTop = document.getElementById("loginTop");
+		        	var loginTopA = document.createElement("a");
+		        	var loginTopText = document.createTextNode("Logga in");
+		        	loginTopA.appendChild(loginTopText);
+		        	loginTop.appendChild(loginTopA);
+		        	loginTopA.href = "@routes.Application.login()";
+		        	
+		        	var navPanel = document.getElementById("navPanel");
+		        	var navDiv = navPanel.getElementsByTagName( 'div' )[0];
+		        	var navNav = navDiv.getElementsByTagName( 'nav' )[0];
+		        	var knappen = document.createElement("a");
+		        	knappen.className = "link depth-0";
+		        	knappen.href = "@routes.Application.login()"
+		        	console.log(knappen);
+		        	var spannet = document.createElement("span");
+		        	spannet.class = "indent-0";
+		        	knappen.appendChild(spannet);
+		        	knappen.appendChild(loginTopText);
+		        	navNav.appendChild(knappen);
+		        	//<a class="link depth-0" href="/views/kontakta.scala.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Kontakta oss</a>
+		        	//Hitta navPanel
+		        	//Hitta första div under navPanel
+		        	//Hitta första nav under diven
+		        	//Appenda en knapp enligt mönster ovan
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+		        	navNav.removeChild(navNav.childNodes[1]);
+				}
+			});
+		};
+	</script>
 
     </script>
 	<script type="text/javascript">
-    
-    window.onbeforeunload = function () {
-   	
-   	
-	return false;
-	}
 	
 	</script>
 	<script type="text/javascript">
@@ -55,8 +148,9 @@
       	}
       }  
     
-            
-      jsRoutes.controllers.QuizController.sayHello(answer).ajax({
+      var userId = document.getElementById("userId").innerHTML;
+      console.log("Nu är vi innan sayHello. UserId är: " + userId);
+      jsRoutes.controllers.QuizController.sayHello(answer, userId).ajax({
       
         success: function(data) {
         	
@@ -77,58 +171,91 @@
     </script>
 	
 	</head>
-	<body class="homepage" onLoad="MM_preloadImages('../../../../pic03.jpg');GoBack();">
-
+	<body class="homepage" >
+		<p id = "userId"></p>
 		<!-- Header -->
 
-			@Templates.Spelheader()
+			@Templates.header()
 		
 		<!-- Banner -->
 			<div id="banner-wrapper">
-<div class="box container"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a>
+<div class="box container">
     <div class="row">
 						<div class="7u">
 						  <h2>@message</h2>
 </div>
 					  
 		<!-- Features --><!-- Main -->
-			<table width="200" height="223">
+			<div class="12u">
+            <table width="200" height="223">
 			  <tr>
-			    <td><label>
+			    <td>
+                <!-- DETTA ÄR ORIGINAL TAGGEN FÖR BILDINFOGNING I FORMULÄRTABELL 
+                <input type="image" src="img_submit.gif" alt="Submit"> -->
+                
+			      <!-- Detta är hur det egentligen ska se ut-->
 			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_0">
-@alt1</label></td>
-		      
+                    <label for = "RadioGroup1_0"><b>@alt1</b></label></td>		      
 			 
-			    <td><label>
+			    <td>
 			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_1">
-@alt2</label></td>
+			        <label for = "RadioGroup1_1"><b>@alt2</b></label></td>
 		      </tr>
 			  <tr>
-			    <td><label>
+			    <td>
 			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_2">
-@alt3</label></td>
+			        <label for = "RadioGroup1_2"><b>@alt3</b></label></td>
 		      
 			  
-			    <td><label>
+			    <td>
 			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_3">
-		        @alt4 </label></td>
+			        <label for = "RadioGroup1_3"><b>@alt4</b></label></td>
 		      </tr>
     </table>
-	
+    <style>
+        /*
+  Hide radio button (the round disc)
+  we will use just the label to create pushbutton effect
+*/
+input[type=radio] {
+    display:none; 
+    margin:10px;
+}
+ 
+/*
+  Change the look'n'feel of labels (which are adjacent to radiobuttons).
+  Add some margin, padding to label
+*/
+input[type=radio] + label {
+    display:inline-block;
+    margin:-2px;
+    padding: 4px 12px;
+    background-color: #0090C5;
+    border-color: #ddd;
+}
+/*
+ Change background color for label next to checked radio button
+ to make it look like highlighted button
+*/
+input[type=radio]:checked + label { 
+   background-image: none;
+    background-color:#59C203;
+}
+    </style>
+	</div>
 			<div class="5u">
-				<form action=@routes.QuizController.registreraSvar() method="post" onclick="window.onbeforeunload = null;" onsubmit="return check2();">
+				<form id = "form1" action="" method="post" onclick="window.onbeforeunload = null;" onsubmit="return check2();">
+	
+				<button class="button big icon fa-arrow-circle-right" onClick="test()";>Nästa fråga</button>
+    	
+			</form>
+			<form id = "form2" action="" method="post" onclick="window.onbeforeunload = null;">
 					<br>
 	
-				<button onClick="test()";>Nästa fråga</button>
+				<button class="button big icon fa-arrow-circle-right">Föregående fråga</button>
     
 			</form>
 			
-			    	<form action=@routes.QuizController.raderaSvar() method="post" onclick="window.onbeforeunload = null;">
-					<br>
-	
-    	<button id="radera">Radera svar</button>
-    </form>
-	
 			</div>
 					</div>
 				</div>

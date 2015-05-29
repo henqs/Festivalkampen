@@ -5,14 +5,12 @@
     Har även mycket automatgenererad kod via Dreamweaver. 
 -->
 <html>
-
 	<head>
 		@Templates.head()
 		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
-		<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
-		</head>
-	<script>
-	window.fbAsyncInit = function() {
+			
+		<script>
+		window.fbAsyncInit = function() {
 			FB.init({
 				appId      : '909582695765355',
 				cookie     : true,  // enable cookies to allow the server to access 
@@ -20,11 +18,9 @@
 				xfbml      : true,  // parse social plugins on this page
 				version    : 'v2.2' // use version 2.2
 			});
-	        
-	        FB.Event.subscribe('auth.logout', function(){
-			    window.location.href = "@routes.Application.index()";
+		FB.Event.subscribe('auth.logout', function(){
+			window.location.href = "@routes.Application.index()";
 			});
-	        
 			// Now that we've initialized the JavaScript SDK, we call 
 			// FB.getLoginStatus().  This function gets the state of the
 			// person visiting this page and can return one of three states to
@@ -36,11 +32,12 @@
 			//    your app or not.
 			//
 			// These three cases are handled in the callback function.
-			
+
 			FB.getLoginStatus(function(response) {
 				statusChangeCallback(response);
 				if (response.status === 'connected') {
-				    var loginTop = document.getElementById("loginTop");
+					// Logged into your app and Facebook.
+					var loginTop = document.getElementById("loginTop");
 		        	var loginTopA = document.createElement("a");
 		        	var loginTopText = document.createTextNode("Logga ut");
 		        	loginTopA.appendChild(loginTopText);
@@ -59,33 +56,10 @@
 		        	knappen.appendChild(spannet);
 		        	knappen.appendChild(loginTopText);
 		        	navNav.appendChild(knappen);
-					// Logged into your app and Facebook.
-					FB.api('/me', function(response) {
-						console.log(response);
-						var userId = ""+response.id;
-						var startButton = document.getElementById('start');
-						var userIdPara = document.getElementById("userId");
-						var userIdText = document.createTextNode(userId);
-						userIdPara.appendChild(userIdText);
-						userIdPara.style.display = 'none';
-	          			jsRoutes.controllers.Application.taId(userId).ajax({
-                                success: function(data) {
-                                    $("#result").html(data);
-                                	console.log("Nu hämtar vi id");
-                                	console.log("Data är: " + data);
-                                	if(data === "1"){
-                                		window.location = "@routes.Application.quizKlarsida()";
-                                	}
-                                },
-                                error: function() {
-                                    alert("Problem med anslutningen till Facebook.")
-                                }
-                            })
-					});
+					console.log('Logged in!');
 				} else if (response.status === 'not_authorized') {
-					window.location = "@routes.Application.quizInteInloggad()";
+					// The person is logged into Facebook, but not your app.
 				} else {
-					window.location = "@routes.Application.quizInteInloggad()";
 					var loginTop = document.getElementById("loginTop");
 		        	var loginTopA = document.createElement("a");
 		        	var loginTopText = document.createTextNode("Logga in");
@@ -118,40 +92,26 @@
 				}
 			});
 		};
-		
-		function startQuiz(){
-			var userId = document.getElementById("userId").innerHTML;
-			jsRoutes.controllers.QuizController.quiz(userId).ajax({
-                                success: function(data) {
-                                    $("#result").html(data);
-                                	console.log("Nu kör vi startquiz()");
-                                	window.location = "@routes.Application.quizBegin()";
-                                },
-                                error: function() {
-                                    alert("Problem vid quizstart!");
-                                }
-                            })
-		}
-		</script>
-	<body>
+	</script>
+	</head>
+	<body class="homepage" onLoad="MM_preloadImages('../../../../pic03.jpg')">
 
-	@Templates.header()
-<p id = userId></p>
+		<!-- Header -->
+			@Templates.header()
+		<!-- Banner -->
+			<div id="banner-wrapper">
+<div class="container"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../../../../pic03.jpg',1)"></a></div>
+	</div>
+		
 <!-- Footer -->
 			<div id="banner-wrapper">
 				<div id="banner" class="box container">
 					<div class="row">
 						<div class="7u">
-							<h2 id="welcome-text">Det har kommit ett nytt quiz!</h2>
-							<p>Åtta frågor med 4 svarsalternativ. 
-							Försök att svara rätt på samtliga för att samla maximal poäng till ditt lag!</p>
+							<h2 id="welcome-text">Du har redan gjort dagens quiz!</h2>
+							<p>Kom tillbaka imorgon för att tjäna mer poäng till ditt lag och leda dem mot segern</p>
 						</div>
-						<div class="5u">
-							<ul>
-								<li id="start"><a href="javascript:startQuiz();"
-								class="button big icon fa-arrow-circle-right">Starta quiz</a></li>
-							</ul>
-						</div>
+					
 					</div>
 				</div>
 			</div>

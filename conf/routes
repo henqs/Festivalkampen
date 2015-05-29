@@ -20,8 +20,20 @@ GET     /views/gruppsidaB.scala.html     controllers.Application.gruppSidaB()
 # Grupp page
 GET     /views/gruppsidaSvart.scala.html     controllers.Application.gruppSidaSvart()
 
-#Grupp page
+# Grupp page
 GET    /views/gruppsidaR.scala.html           controllers.Application.gruppSidaR()
+
+# Quiz page
+GET		/views/quiz.scala.html		controllers.Application.quizBegin()
+
+# Init quiz
+GET   /quiz        					controllers.QuizController.quiz(userId: String)
+
+# Quizklar page
+GET		/views/QuizKlarsida.scala.html		controllers.Application.quizKlarsida()
+
+# Quiz not logged in page
+GET     /views/QuizInteInloggad.scala.html  controllers.Application.quizInteInloggad()
 
 # Photofeed page
 GET     /view/photofeed.scala.html      controllers.Application.photoFeed()
@@ -34,8 +46,6 @@ GET     /views/kontakta.scala.html     controllers.Application.kontakta()
 
 # Spelhub page
 GET     /views/spelhub.scala.html     controllers.Application.spelhub()
-
-GET   /views/quiz.scala.html        controllers.QuizController.quiz()
 
 # Spelhub page
 GET     /views/gruppAktivitet.scala.html     controllers.Application.gruppAktivitet()
@@ -70,12 +80,15 @@ GET     /changeQrStatus                 controllers.Application.changeQrStatus(i
 # Get Team
 GET    /getTeam             controllers.Application.getTeam(userID: String)   
 
-# skicka quiz-svar
-GET   /postquiz                     controllers.QuizController.sayHello(data: String)
+# Send quiz answers
+GET   /postquiz                     controllers.QuizController.sayHello(data: String, userId: String)
 
-POST   /registrerasvar              controllers.QuizController.registreraSvar()  
+#Hämta id
+GET 	/taId						controllers.Application.taId(id: String)
 
-POST   /raderasvar					controllers.QuizController.raderaSvar()
+POST   /registrerasvar              controllers.QuizController.registreraSvar(userId: String)  
+
+POST   /tillbaka                       controllers.QuizController.tillbaka(userId: String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
