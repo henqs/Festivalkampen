@@ -68,7 +68,8 @@
 				} else if (response.status === 'not_authorized') {
 				    document.getElementById("hittaLag").href = "@routes.Application.gruppSidaR()";
 					document.getElementById("welcome-text").innerHTML = "Var god att starta om applikationen !";
-					document.getElementById("login").style.display = "none";
+					document.getElementById("hittaLag").innerHTML = "Logga in";
+					document.getElementById("hittaLag").href = "@routes.Application.login()";
 					
 				} else {
 				    document.getElementById("hittaLag").href = "@routes.Application.login()";
