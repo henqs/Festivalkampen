@@ -339,7 +339,7 @@ public class Application extends Controller {
 	  String fullName = "";
 	  boolean success = false;
 	  int attempts = 0;
-	  while(success == false && attempts < 10){
+	  //while(success == false && attempts < 10){
       try{
 		  conn = DB.getConnection();
 		  stmt = conn.createStatement();
@@ -353,7 +353,7 @@ public class Application extends Controller {
           System.out.println("Failed to load photo. Retrying...");
           attempts++;
       }
-	  }
+	  //}
       return ok(photo+"/"+fullName);
   }
 	
