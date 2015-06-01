@@ -136,6 +136,8 @@ public class Application extends Controller {
     }
     return products();
 }*/
+private static final String DIRECTORY = "";
+
 	  public static Result upload(String userFullName, String userId) {
         MultipartFormData body = request().body().asMultipartFormData();
         FilePart picture = body.getFile("picture");
@@ -146,7 +148,7 @@ public class Application extends Controller {
             System.out.println(fileName);
             //file.renameTo(new File("public/photos", fileName));
             try {
-                FileUtils.moveFile(file, new File("public/photos", fileName));
+                FileUtils.copyFile(file, new File("public/photos", fileName));
             } catch (IOException ioe) {
                 System.out.println("Something went wrong when moving file!");
                 return redirect(routes.Application.index());
