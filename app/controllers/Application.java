@@ -136,9 +136,10 @@ public class Application extends Controller {
     }
     return products();
 }*/
-private static final String DIRECTORY = Play.application().path().getAbsolutePath()+"/public/photos";
+private static final String DIRECTORY = Play.application().path().getAbsolutePath()+"\\public\\photos";
 
 	  public static Result upload(String userFullName, String userId) {
+	      System.out.println(DIRECTORY);
         MultipartFormData body = request().body().asMultipartFormData();
         FilePart picture = body.getFile("picture");
         if (picture != null) {
