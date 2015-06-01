@@ -129,7 +129,7 @@
 	}
 	}
 	if(d==0){
-	alert("välj ett alternativ");
+	alert("Välj ett alternativ");
 	return false;
 
 	}
@@ -182,36 +182,47 @@
 <div class="box container">
     <div class="row">
 						<div class="7u">
+						<center>
 						  <h2>@message</h2>
+						  </center>
 </div>
 					  
 		<!-- Features --><!-- Main -->
 			<div class="12u">
-            <table width="200" height="223">
+		
+            <table width="0" height="0">
 			  <tr>
 			    <td>
                 <!-- DETTA ÄR ORIGINAL TAGGEN FÖR BILDINFOGNING I FORMULÄRTABELL 
                 <input type="image" src="img_submit.gif" alt="Submit"> -->
-                
 			      <!-- Detta är hur det egentligen ska se ut-->
+			      <center>
 			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_0">
                     <label for = "RadioGroup1_0"><b>@alt1</b></label></td>		      
-			 
+			        </center>
 			    <td>
+			    <center>
 			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_1">
 			        <label for = "RadioGroup1_1"><b>@alt2</b></label></td>
+			        </center>
 		      </tr>
 			  <tr>
 			    <td>
+			    <br>
+			    <center>
 			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_2">
 			        <label for = "RadioGroup1_2"><b>@alt3</b></label></td>
-		      
+		      </center>
 			  
 			    <td>
+			    <center>
+			    <br>
 			      <input type="radio" name="RadioGroup1" value="alternativknapp" id="RadioGroup1_3">
 			        <label for = "RadioGroup1_3"><b>@alt4</b></label></td>
+			        </center>
 		      </tr>
     </table>
+      </center>
     <style>
         /*
   Hide radio button (the round disc)
@@ -262,6 +273,7 @@ input[type=radio]:checked + label {
 	</div>
 		
 								<!-- Contact -->
+							<br>
 							<center>
 								@Templates.kontakta()
 								
