@@ -74,18 +74,18 @@ public class Application extends Controller {
 	  }
 	  
 	  public static Result quizStart() {
-	    return ok(QuizStartsida.render());
+	    return ok(quizStartsida.render());
 	  }
 	  
 	  public static Result quizKlarsida(){
-		  return ok(QuizKlarsida.render());
+		  return ok(quizKlarsida.render());
 	  }
 	  
 	  public static Result quizAvslut() {
 	    return ok(quizAvslut.render());
 	  }
 	  public static Result quizInteInloggad(){
-		  return ok(QuizInteInloggad.render());
+		  return ok(quizInteInloggad.render());
 	  }
 	  public static Result fotoSida() {
 	    return ok(fotoSida.render());

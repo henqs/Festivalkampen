@@ -30,10 +30,10 @@ GET		/views/quiz.scala.html		controllers.Application.quizBegin()
 GET   /quiz        					controllers.QuizController.quiz(userId: String)
 
 # Quizklar page
-GET		/views/QuizKlarsida.scala.html		controllers.Application.quizKlarsida()
+GET		/views/quizKlarsida.scala.html		controllers.Application.quizKlarsida()
 
 # Quiz not logged in page
-GET     /views/QuizInteInloggad.scala.html  controllers.Application.quizInteInloggad()
+GET     /views/quizInteInloggad.scala.html  controllers.Application.quizInteInloggad()
 
 # Photofeed page
 GET     /view/photofeed.scala.html      controllers.Application.photoFeed()
@@ -51,7 +51,7 @@ GET     /views/spelhub.scala.html     controllers.Application.spelhub()
 GET     /views/gruppAktivitet.scala.html     controllers.Application.gruppAktivitet()
 
 # Spelhub page
-GET     /views/QuizStartsida.scala.html     controllers.Application.quizStart()
+GET     /views/quizStartsida.scala.html     controllers.Application.quizStart()
 
 # Spelhub page
 GET     /views/quizAvslut.scala.html     controllers.Application.quizAvslut()
