@@ -6,7 +6,7 @@
         jsRoutes.controllers.Application.getTeamStandings().ajax({
             success: function(data) {
                 $("#result").html(data);
-                if(result === "0_0-0+"){
+                if(data === "0_0-0+"){
                     alert("Problem med anslutning till databasen. Vänlig försök senare.");
                 }
                 console.log(data);
