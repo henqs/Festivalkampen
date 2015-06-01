@@ -155,6 +155,9 @@
                 $("#result").html(data);
                 console.log("Data är: "+data);
                 if(data === "/"){
+                    console.log("Slut på bilder. Return!");
+                    var nextBtn = document.getElementById("nextbutton");
+                    nextBtn.style.display = "none";
                     return;
                 }
                 var picList = document.getElementById("picList");

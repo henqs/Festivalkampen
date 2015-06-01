@@ -138,7 +138,7 @@ public class Application extends Controller {
 }*/
 private static final String DIRECTORY = Play.application().path().getAbsolutePath()+"\\public\\photos\\";
 
-	  public static Result upload(String userFullName, String userId) {
+	  public static Result upload(/*String userFullName, String userId*/) {
 	      System.out.println(DIRECTORY);
         MultipartFormData body = request().body().asMultipartFormData();
         FilePart picture = body.getFile("picture");
@@ -154,7 +154,7 @@ private static final String DIRECTORY = Play.application().path().getAbsolutePat
                 System.out.println("Something went wrong when moving file!");
                 return redirect(routes.Application.index());
             }
-            insertPicture(fileName, userFullName, userId);
+            //insertPicture(fileName, userFullName, userId);
             return ok(photofeed.render());
         } else {
             flash("error", "Missing file");
@@ -394,6 +394,8 @@ private static final String DIRECTORY = Play.application().path().getAbsolutePat
 		controllers.routes.javascript.Application.checkQrStatus(),
         controllers.routes.javascript.Application.changeQrStatus(),
 		controllers.routes.javascript.Application.getPhotos(),
+		controllers.routes.javascript.Application.insertPicture(),
+		controllers.routes.javascript.Application.upload(),
         controllers.routes.javascript.QuizController.sayHello(),
 		controllers.routes.javascript.Application.taId(),
         controllers.routes.javascript.QuizController.quiz()

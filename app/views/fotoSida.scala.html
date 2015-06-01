@@ -23,6 +23,9 @@
 	#paraName{
 	    display: none;
 	}
+	#paraPic{
+	    display: none;
+	}
 	#yourimage {
 		width:100%;
 	}
@@ -56,6 +59,7 @@
 	}
 	</style>
 	<script>
+	
 	window.fbAsyncInit = function() {
 			FB.init({
 				appId      : '909582695765355',
@@ -113,19 +117,31 @@
 						paraId.style.display = "none";
 				        console.log(paraId);
 				
-				        var textName = document.createTextNode(""+response.first_name + "+"+response.last_name);
+				        var textName = document.createTextNode(""+response.first_name + " " +response.last_name);
 				        var paraName = document.getElementById("paraName");
 				        paraName.appendChild(textName);
 				        paraName.style.display = "none";
 				        console.log(paraName);
-				        
-				        var fullName = document.getElementById("paraName").innerHTML;
-	                   
-	                    var userId = document.getElementById("paraId").innerHTML;
-	                   
+	                    //var form = document.getElementById("form");
+	                    //form.action = "/public/photos?userFullName="+fullName+"&amp;userId="+userId+"";
+	                    //form.action = uploadPicture();
+	                    var submitButton = document.getElementById("submit");
+	                    console.log(submitButton);
+	                    submitButton.onclick= function(){
+                            var fullName = document.getElementById("paraName").innerHTML;
+    	                    var userId = document.getElementById("paraId").innerHTML;
+    	                    var picName = document.getElementById("paraPic").innerHTML;
+	                        jsRoutes.controllers.Application.insertPicture(picName, fullName, userId).ajax({
+                                success: function(data) {
+                                    $('#result').html(data);
+                                    console.log('Lyckades med insertPicture');
+                                },
+                                error: function() {
+                                    console.log('Lyckades med insertPicture');
+                                }
+                            })
+	                    }
 	                    
-	                    var form = document.getElementById("form");
-	                    form.action = "/public/photos?userFullName="+fullName+"&amp;userId="+userId+"";
 					});
 				} else if (response.status === 'not_authorized') {
 					// The person is logged into Facebook, but not your app.
@@ -167,11 +183,12 @@
 		</script>
 	<p id = "paraName"></p>
     <p id = "paraId"></p>
+    <p id = "paraPic"></p>
 	</head>
-
+@Templates.header()
 	<body>
-	    @Templates.header()
-        <form id = "form" action="" method="POST" enctype="multipart/form-data">
+	    
+        <form id = "form" action="@routes.Application.upload" method="POST" enctype="multipart/form-data">
 		<input type="file" capture="camera" accept="image/*" id="takePictureField" name = "picture">
     
 		<img id="yourimage">
@@ -212,6 +229,11 @@
         if(event.target.files.length == 1 &&
            event.target.files[0].type.indexOf("image/") == 0) {
             $("#yourimage").attr("src",URL.createObjectURL(event.target.files[0]));
+            console.log(event.target.files[0].name);
+            var picName = document.createTextNode(""+event.target.files[0].name);
+            var paraPic = document.getElementById("paraPic");
+            paraPic.appendChild(picName);
+            console.log(paraPic);
             var submit = document.getElementById("submit");
             submit.style.display = "initial";
         }
