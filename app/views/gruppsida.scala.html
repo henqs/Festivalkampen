@@ -49,13 +49,13 @@
                                     $("#result").html(data);
 									if (data === "0") {
 									document.getElementById("hittaLag").href = "@routes.Application.gruppSidaR()";
-									document.getElementById("welcome-text").innerHTML = "Du tillhör grupp röd!";
+									document.getElementById("welcome-text").innerHTML = "Du tillhör grupp Röd!";
 									} else if (data === "1") {
 									document.getElementById("hittaLag").href = "@routes.Application.gruppSidaB()";
-									document.getElementById("welcome-text").innerHTML = "Du tillhör grupp blå!";
+									document.getElementById("welcome-text").innerHTML = "Du tillhör grupp Blå!";
 									} else if (data === "2") {
 									document.getElementById("hittaLag").href = "@routes.Application.gruppSidaSvart()";
-									document.getElementById("welcome-text").innerHTML = "Du tillhör grupp grön!!";
+									document.getElementById("welcome-text").innerHTML = "Du tillhör grupp Grön!";
 									}
                                 },
                                 error: function() {

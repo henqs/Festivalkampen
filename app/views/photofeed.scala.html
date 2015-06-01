@@ -143,12 +143,12 @@
         </div>
         <script>
     var currentImage = 0;
-    var currentPage = 5;
+    var currentPage = 4;
     getPhotos = function(){
-        currentImage++;
-        if(currentImage > currentPage){
+        if(currentImage >= currentPage){
             return;
         }
+        currentImage++;
         setTimeout(function(){
             jsRoutes.controllers.Application.getPhotos(""+currentImage).ajax({
             success: function(data) {
@@ -185,7 +185,7 @@
     getPhotos();
     
     nextPage = function(){
-      currentPage+=5;
+      currentPage+=4;
       getPhotos();
     }
     
