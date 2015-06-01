@@ -136,7 +136,7 @@ public class Application extends Controller {
     }
     return products();
 }*/
-private static final String DIRECTORY = "/public/photos/";
+private static final String DIRECTORY = Play.application().path().getAbsolutePath()+"/public/photos";
 
 	  public static Result upload(String userFullName, String userId) {
         MultipartFormData body = request().body().asMultipartFormData();
@@ -148,7 +148,7 @@ private static final String DIRECTORY = "/public/photos/";
             System.out.println(fileName);
             //file.renameTo(new File("public/photos", fileName));
             try {
-                FileUtils.copyFile(file, new File(DIRECTORY, fileName));
+                FileUtils.moveFile(file, new File(DIRECTORY, fileName));
             } catch (IOException ioe) {
                 System.out.println("Something went wrong when moving file!");
                 return redirect(routes.Application.index());
