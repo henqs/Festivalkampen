@@ -8,8 +8,8 @@
 
 	<head>
 		@Templates.head()
-		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
 		<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
+		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
 	<script>
 	window.fbAsyncInit = function() {
 			FB.init({
@@ -120,7 +120,11 @@
 			});
 		};
 		
-		function startQuiz(){
+		</script>
+		</head>
+	<body>
+<script>
+    function startQuiz(){
 			var userId = document.getElementById("userId").innerHTML;
 			jsRoutes.controllers.QuizController.quiz(userId).ajax({
                                 success: function(data) {
@@ -133,10 +137,7 @@
                                 }
                             })
 		}
-		</script>
-		</head>
-	<body>
-
+</script>
 	@Templates.header()
 <p id = userId></p>
 <!-- Footer -->
