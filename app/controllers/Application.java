@@ -148,7 +148,8 @@ public class Application extends Controller {
             try {
                 FileUtils.moveFile(file, new File("public/photos", fileName));
             } catch (IOException ioe) {
-                System.out.println("Problem operating on filesystem");
+                System.out.println("Something went wrong when moving file!");
+                return redirect(routes.Application.index());
             }
             insertPicture(fileName, userFullName, userId);
             return ok(photofeed.render());
