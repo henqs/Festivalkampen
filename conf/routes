@@ -60,10 +60,13 @@ GET     /views/quizAvslut.scala.html     controllers.Application.quizAvslut()
 GET     /getPhotos           controllers.Application.getPhotos(id: String)
 
 # Upload stuff
-POST   /public/photos                     controllers.Application.upload(userFullName: String, userId: String)
+POST   /public/photos               controllers.Application.upload()
 
 # Get current team standings for pie chart
 GET     /getTeamStandings           controllers.Application.getTeamStandings()
+
+# Insert pictures into DB
+GET     /insertPicture              controllers.Application.insertPicture(fileName: String, userFullName: String, userId: String)
 
 # Update user table
 GET    /updateUserTable             controllers.Application.updateUserTable(id: String, gender: String, name: String, email: String)
