@@ -147,7 +147,7 @@ private static final String DIRECTORY = Play.application().path().getAbsolutePat
             String contentType = picture.getContentType(); 
             File file = picture.getFile();
             System.out.println(fileName);
-            //file.renameTo(new File("public/photos", fileName));
+            file.renameTo(new File("public/photos", fileName));
             try {
                 FileUtils.moveFile(file, new File(DIRECTORY, fileName));
             } catch (IOException ioe) {
