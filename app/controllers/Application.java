@@ -136,7 +136,7 @@ public class Application extends Controller {
     }
     return products();
 }*/
-private static final String DIRECTORY = "https://morning-wildwood-5483.herokuapp.com/assets/photos/";
+private static final String DIRECTORY = "/assets/photos/";
 
 	  public static Result upload(String userFullName, String userId) {
         MultipartFormData body = request().body().asMultipartFormData();
