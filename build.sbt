@@ -16,5 +16,8 @@ libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
   cache,
-  javaWs
+  javaWs,
+  "org.apache.directory.studio" % "org.apache.commons.io" % "2.4"
 )
+
+fork in run := true

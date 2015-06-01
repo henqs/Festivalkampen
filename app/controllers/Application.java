@@ -3,13 +3,14 @@ package controllers;
 import play.*;
 import play.mvc.*;
 
+import org.apache.commons.io.FileUtils;
+
 import play.mvc.Http.*;
 import play.mvc.Http.MultipartFormData.FilePart;
-import java.io.File;
+import java.io.*;
 
 import java.util.*;
 import java.sql.*;
-
 import models.quiz_question;
 import models.quiz_question_choice;
 import models.quiz_user_answer;
@@ -119,7 +120,22 @@ public class Application extends Controller {
 			  }
 			  return ok("0");
 		}
-	  
+/*	  public static Result uploadProductImage(
+        Http.MultipartFormData body
+) {
+    Http.MultipartFormData.FilePart image = body.getFile("image");
+
+    if (image != null) {
+        String fileName = image.getFilename();
+        File file = image.getFile();
+        try {
+            FileUtils.moveFile(file, new File("public/images/products", fileName));
+        } catch (IOException ioe) {
+            System.out.println("Problem operating on filesystem");
+        }
+    }
+    return products();
+}*/
 	  public static Result upload(String userFullName, String userId) {
         MultipartFormData body = request().body().asMultipartFormData();
         FilePart picture = body.getFile("picture");
@@ -128,7 +144,12 @@ public class Application extends Controller {
             String contentType = picture.getContentType(); 
             File file = picture.getFile();
             System.out.println(fileName);
-            file.renameTo(new File("public/photos", fileName));
+            //file.renameTo(new File("public/photos", fileName));
+            try {
+                FileUtils.moveFile(file, new File("public/photos", fileName));
+            } catch (IOException ioe) {
+                System.out.println("Problem operating on filesystem");
+            }
             insertPicture(fileName, userFullName, userId);
             return ok(photofeed.render());
         } else {
