@@ -136,7 +136,7 @@ public class Application extends Controller {
     }
     return products();
 }*/
-private static final String DIRECTORY = "/assets/photos/";
+private static final String DIRECTORY = "/public/photos/";
 
 	  public static Result upload(String userFullName, String userId) {
         MultipartFormData body = request().body().asMultipartFormData();
