@@ -63,7 +63,8 @@
 					FB.api('/me', function(response) {
 						console.log(response);
 						var userId = ""+response.id;
-						var startButton = document.getElementById('start');
+						var startButton = document.getElementById('startBtn');
+						startButton.style.display = "initial";
 						var userIdPara = document.getElementById("userId");
 						var userIdText = document.createTextNode(userId);
 						userIdPara.appendChild(userIdText);
@@ -148,8 +149,12 @@
 						</div>
 						<div class="5u">
 							<ul>
-								<li id="start"><a href="javascript:startQuiz();"
+								<li id="start"><a id = "startBtn" href="javascript:startQuiz();"
 								class="button big icon fa-arrow-circle-right">Starta quiz</a></li>
+								<script>
+								    var startButtonLink = document.getElementById("startBtn");
+	                                startButtonLink.style.display = 'none';
+								</script>
 							</ul>
 						</div>
 					</div>
