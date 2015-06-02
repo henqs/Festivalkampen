@@ -10,6 +10,11 @@
 		@Templates.head()
 		<script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
 		<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
+	<style>
+	    #startBtn{
+	        display: none;
+	    }
+	</style>
 	<script>
 	window.fbAsyncInit = function() {
 			FB.init({
@@ -63,8 +68,6 @@
 					FB.api('/me', function(response) {
 						console.log(response);
 						var userId = ""+response.id;
-						var startButton = document.getElementById('startBtn');
-						startButton.style.display = "initial";
 						var userIdPara = document.getElementById("userId");
 						var userIdText = document.createTextNode(userId);
 						userIdPara.appendChild(userIdText);
@@ -76,10 +79,13 @@
                                 	console.log("Data är: " + data);
                                 	if(data === "1"){
                                 		window.location = "@routes.Application.quizKlarsida()";
+                                		return;
                                 	}
+                                	var startButton = document.getElementById('startBtn');
+						            startButton.style.display = "list-item";
                                 },
                                 error: function() {
-                                    alert("Problem med anslutningen till Facebook.")
+                                    alert("Problem vid hämtning av användar-ID. Vänligen försök igen.")
                                 }
                             })
 					});

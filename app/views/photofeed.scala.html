@@ -115,7 +115,10 @@
             <div class="row">
                 <div class="7u">
                     <h2 id="welcome-text">Fototävling</h2>
-                    <p>Här kan du se allas bidrag till fototävlingen. Klicka på knappen nedan för att fånga ditt favoritögonblick för chans till ära och poäng!</p>
+                    <p>Här kan du se alla bidrag till fototävlingen. Klicka på knappen nedan för att fånga ditt favoritögonblick för chans till ära och poäng!</p>
+                    <br>
+                    <p>Temat för tävlingen är:</p>
+                    <p><b>"Fånga ögonblicket!"</b></p>
                     <ul>
                         <li id="camera"><a href="@routes.Application.fotoSida()" class="button big icon fa-arrow-circle-right">Till kameran!</a></li>	
                     </ul>
@@ -123,7 +126,7 @@
             </div>
         </div>
     </div>
-    
+    <br>
     <div id="banner-wrapper">
         <div id="banner" class="box container">
             <div class="row">
@@ -209,7 +212,7 @@
                             })
             },
             error: function() {
-                alert("Problem when accessing photos")
+                console.log("Problem when accessing photos")
             }
         })
         }, 1000);

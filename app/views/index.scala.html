@@ -8,6 +8,14 @@
 
 
 	<head>
+	<style>
+	    #login{
+	        display: none;
+	    }
+	    #logout{
+	        display: none;
+	    }
+	</style>
 	<script>
 	window.fbAsyncInit = function() {
 			FB.init({
@@ -34,6 +42,7 @@
 			FB.getLoginStatus(function(response) {
 				statusChangeCallback(response);
 				var logout = document.getElementById("logout");
+				var login = document.getElementById("login");
 				if (response.status === 'connected') {
 					// Logged into your app and Facebook.
 		        	var loginTop = document.getElementById("loginTop");
@@ -59,7 +68,6 @@
 					//<li id="logoutTop"><a id = "logoutTopA" href ="javascript:FB.logout(function(response) {}); javascript:location.reload();">Logga ut</a></li>
 					//<a id = "loginTopA" href="@routes.Application.login()">Logga in</a>
 					console.log('Logged in!');
-					var login = document.getElementById("login");
 					login.style.display = 'none';
 					logout.style.display = 'initial';
 					//login.innerHTML = '<li id="login"><a onclick="FB.logout(function(response) {}); location.reload();" class="button big icon fa-arrow-circle-right">Logga ut</a></li>';
@@ -90,8 +98,10 @@
 					});
 				} else if (response.status === 'not_authorized') {
 					logout.style.display = 'none';
+					login.style.display = 'initial';
 				} else {
 					logout.style.display = 'none';
+					login.style.display = 'initial';
 					var loginTop = document.getElementById("loginTop");
 		        	var loginTopA = document.createElement("a");
 		        	var loginTopText = document.createTextNode("Logga in");

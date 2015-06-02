@@ -152,7 +152,7 @@ private static final String DIRECTORY = play.Play.application().path().getAbsolu
             System.out.println(fileName);
            // file.renameTo(new File("public/photos", fileName));
             try {
-                FileUtils.moveFile(file, new File(DIRECTORY+"/../../public/photos", fileName));
+                FileUtils.moveFile(file, new File(DIRECTORY+"/public/photos", fileName));
                 
                 System.out.println(DIRECTORY+"/public/photos");
             } catch (IOException ioe) {
@@ -369,7 +369,7 @@ private static final String DIRECTORY = play.Play.application().path().getAbsolu
 	  String fullName = "";
 	  boolean success = false;
 	  int attempts = 0;
-	  //while(success == false && attempts < 10){
+	  while(success == false && attempts < 4){
       try{
 		  conn = DB.getConnection();
 		  stmt = conn.createStatement();
@@ -383,7 +383,7 @@ private static final String DIRECTORY = play.Play.application().path().getAbsolu
           System.out.println("Failed to load photo. Retrying...");
           attempts++;
       }
-	  //}
+	  }
       return ok(photo+"/"+fullName);
   }
 	

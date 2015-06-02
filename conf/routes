@@ -60,7 +60,7 @@ GET     /views/quizAvslut.scala.html     controllers.Application.quizAvslut()
 GET     /getPhotos           controllers.Application.getPhotos(id: String)
 
 # Upload stuff
-POST   /public/photos               controllers.Application.upload()
+POST   /views/photofeed.scala.html               controllers.Application.upload()
 
 # Get current team standings for pie chart
 GET     /getTeamStandings           controllers.Application.getTeamStandings()
