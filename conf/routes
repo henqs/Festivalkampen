@@ -36,10 +36,10 @@ GET		/views/quizKlarsida.scala.html		controllers.Application.quizKlarsida()
 GET     /views/quizInteInloggad.scala.html  controllers.Application.quizInteInloggad()
 
 # Photofeed page
-GET     /view/photofeed.scala.html      controllers.Application.photoFeed()
+GET     /views/photofeed.scala.html      controllers.Application.photoFeed()
 
 # Camera page
-GET     /view/fotoSida.scala.html      controllers.Application.fotoSida()
+GET     /views/fotoSida.scala.html      controllers.Application.fotoSida()
 
 # Kontakta page
 GET     /views/kontakta.scala.html     controllers.Application.kontakta()
