@@ -152,7 +152,7 @@ private static final String DIRECTORY = Play.application().path()+"";
             System.out.println(fileName);
            // file.renameTo(new File("public/photos", fileName));
             try {
-                
+                FileUtils.moveFile(file, new File("../../..", fileName));
                 System.out.println(DIRECTORY+"/public/photos");
             } catch (IOException ioe) {
                 System.out.println("Something went wrong when moving file!");
