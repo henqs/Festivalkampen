@@ -9,7 +9,7 @@
     <script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
     <script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
     <style>
-    #paraPic{
+    #paraPicName{
 	    display: none;
 	}
     </style>
@@ -168,6 +168,7 @@
                 var picSource = data.substring(0, data.indexOf("/"));
                 var textPicName = document.createTextNode(""+picSource);
                 var paraPicName = document.getElementById("paraPicName");
+                paraPicName.innerHTML = "";
                 paraPicName.appendChild(textPicName);
                 console.log("Parapicname innehåller: " + paraPicName.innerHTML);
                 jsRoutes.controllers.Application.getDirectory().ajax({
