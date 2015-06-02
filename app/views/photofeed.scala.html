@@ -166,10 +166,11 @@
                 var takenByPara = document.createElement("p");
                 var takenByText = document.createTextNode("Av: "+data.substring((data.indexOf("/")+1), data.length));
                 takenByPara.appendChild(takenByText);
-                linkPic.href = "/assets/photos/"+data.substring(0, data.indexOf("/"));
+                var picSource = data.substring(0, data.indexOf("/"));
+                linkPic.href = "/assets/photos/"+picSource;
                 picArea.height=200;
                 picArea.width=200;
-                picArea.src = "/assets/photos/"+data.substring(0, data.indexOf("/"));
+                picArea.src = "/assets/photos/"+picSource;
                 picList.appendChild(linkPic);
                 linkPic.appendChild(picArea);
                 picList.appendChild(takenByPara);
