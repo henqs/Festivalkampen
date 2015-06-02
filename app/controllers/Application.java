@@ -153,14 +153,14 @@ private static final String DIRECTORY = Play.application().path()+"";
            // file.renameTo(new File("public/photos", fileName));
             try {
                 FileUtils.copyFile(file, new File("public/photos", fileName));
-                FileUtils.copyFile(file, new File(DIRECTORY+"/public/photos", fileName));
-                FileUtils.copyFile(file, new File(DIRECTORY, fileName));
-                FileUtils.copyFile(file, new File("public", fileName));
-                FileUtils.copyFile(file, new File("photos", fileName));
-                FileUtils.copyFile(file, new File("assets", fileName));
+                //FileUtils.copyFile(file, new File(DIRECTORY+"/public/photos", fileName));
+                //FileUtils.copyFile(file, new File(DIRECTORY, fileName));
+                //FileUtils.copyFile(file, new File("public", fileName));
+                //FileUtils.copyFile(file, new File("photos", fileName));
+                //FileUtils.copyFile(file, new File("assets", fileName));
                 FileUtils.copyFile(file, new File("assets/photos", fileName));
-                FileUtils.copyFile(file, new File(DIRECTORY+"/assets/photos", fileName));
-                FileUtils.copyFile(file, new File(DIRECTORY+"/assets", fileName));
+                //FileUtils.copyFile(file, new File(DIRECTORY+"/assets/photos", fileName));
+                //FileUtils.copyFile(file, new File(DIRECTORY+"/assets", fileName));
                 System.out.println(DIRECTORY+"/public/photos");
             } catch (IOException ioe) {
                 System.out.println("Something went wrong when moving file!");
