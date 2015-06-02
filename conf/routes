@@ -68,6 +68,9 @@ GET     /getTeamStandings           controllers.Application.getTeamStandings()
 # Insert pictures into DB
 GET     /insertPicture              controllers.Application.insertPicture(fileName: String, userFullName: String, userId: String)
 
+# Get absolute directory
+GET     /getDirectory               controllers.Application.getDirectory()
+
 # Update user table
 GET    /updateUserTable             controllers.Application.updateUserTable(id: String, gender: String, name: String, email: String)
 

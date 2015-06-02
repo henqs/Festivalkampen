@@ -136,8 +136,11 @@ public class Application extends Controller {
     }
     return products();
 }*/
-private static final String DIRECTORY = Play.application().path().getAbsolutePath()+"/public/photos";
+private static final String DIRECTORY = Play.application().path().getAbsolutePath()+"\\public\\photos";
 
+        public static Result getDirectory(){
+            return ok(""+DIRECTORY);
+        }
 	  public static Result upload(/*String userFullName, String userId*/) {
 	      System.out.println(DIRECTORY);
         MultipartFormData body = request().body().asMultipartFormData();
@@ -394,6 +397,7 @@ private static final String DIRECTORY = Play.application().path().getAbsolutePat
 		controllers.routes.javascript.Application.checkQrStatus(),
         controllers.routes.javascript.Application.changeQrStatus(),
 		controllers.routes.javascript.Application.getPhotos(),
+		controllers.routes.javascript.Application.getDirectory(),
 		controllers.routes.javascript.Application.insertPicture(),
 		controllers.routes.javascript.Application.upload(),
         controllers.routes.javascript.QuizController.sayHello(),

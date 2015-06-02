@@ -8,6 +8,11 @@
     @Templates.head()
     <script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
     <script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
+    <style>
+    #paraPic{
+	    display: none;
+	}
+    </style>
     <script>
 		window.fbAsyncInit = function() {
 			FB.init({
@@ -98,7 +103,7 @@
 <body class="fotofeed">
     <!-- Header -->
     @Templates.header()
-    
+    <p id = "paraPicName"></p>
     <!-- Main -->
 
     <div id="banner-wrapper">
@@ -160,25 +165,39 @@
                     nextBtn.style.display = "none";
                     return;
                 }
-                var picList = document.getElementById("picList");
-                var linkPic = document.createElement("a");
-                var picArea = document.createElement("img");
-                var takenByPara = document.createElement("p");
-                var takenByText = document.createTextNode("Av: "+data.substring((data.indexOf("/")+1), data.length));
-                takenByPara.appendChild(takenByText);
                 var picSource = data.substring(0, data.indexOf("/"));
-                linkPic.href = "/assets/photos/"+picSource;
-                picArea.height=200;
-                picArea.width=200;
-                picArea.src = "/assets/photos/"+picSource;
-                picList.appendChild(linkPic);
-                linkPic.appendChild(picArea);
-                picList.appendChild(takenByPara);
-                var fillerbr1 = document.createElement("br");
-                var fillerbr2 = document.createElement("br");
-                picList.appendChild(fillerbr1);
-                picList.appendChild(fillerbr2);
-                getPhotos();
+                var textPicName = document.createTextNode(""+picSource);
+                var paraPicName = document.getElementById("paraPicName");
+                paraPicName.appendChild(textPicName);
+                console.log("Parapicname innehåller: " + paraPicName.innerHTML);
+                jsRoutes.controllers.Application.getDirectory().ajax({
+                                success: function(data) {
+                                    $('#result').html(data);
+                                    console.log("Directory is: " + data);
+                                    var picList = document.getElementById("picList");
+                                    var linkPic = document.createElement("a");
+                                    var picArea = document.createElement("img");
+                                    var takenByPara = document.createElement("p");
+                                    var takenByText = document.createTextNode("Av: "+data.substring((data.indexOf("/")+1), data.length));
+                                    takenByPara.appendChild(takenByText);
+                                    var picSource2 = document.getElementById("paraPicName").innerHTML;
+                                    linkPic.href = ""+data+"/"+picSource2;
+                                    picArea.height=200;
+                                    picArea.width=200;
+                                    picArea.src = ""+data+"/"+picSource2;
+                                    picList.appendChild(linkPic);
+                                    linkPic.appendChild(picArea);
+                                    picList.appendChild(takenByPara);
+                                    var fillerbr1 = document.createElement("br");
+                                    var fillerbr2 = document.createElement("br");
+                                    picList.appendChild(fillerbr1);
+                                    picList.appendChild(fillerbr2);
+                                    getPhotos();
+                                },
+                                error: function() {
+                                    console.log("Directory failade");
+                                }
+                            })
             },
             error: function() {
                 alert("Problem when accessing photos")
