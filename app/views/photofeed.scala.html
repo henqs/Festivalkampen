@@ -167,10 +167,10 @@
                 var takenByText = document.createTextNode("Av: "+data.substring((data.indexOf("/")+1), data.length));
                 takenByPara.appendChild(takenByText);
                 var picSource = data.substring(0, data.indexOf("/"));
-                linkPic.href = "/assets/photos/"+picSource;
+                linkPic.href = "@routes.Assets.at("/photos/gruppBla.png")";
                 picArea.height=200;
                 picArea.width=200;
-                picArea.src = "/assets/photos/"+picSource;
+                picArea.src = "@routes.Assets.at("/photos/gruppBla.png")";
                 picList.appendChild(linkPic);
                 linkPic.appendChild(picArea);
                 picList.appendChild(takenByPara);
