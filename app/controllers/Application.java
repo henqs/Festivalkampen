@@ -152,7 +152,7 @@ private static final String DIRECTORY = play.Play.application().path().getAbsolu
             System.out.println(fileName);
            // file.renameTo(new File("public/photos", fileName));
             try {
-                FileUtils.moveFile(file, new File(DIRECTORY+"/../public/photos", fileName));
+                FileUtils.moveFile(file, new File(DIRECTORY+"/../../public/photos", fileName));
                 
                 System.out.println(DIRECTORY+"/public/photos");
             } catch (IOException ioe) {
