@@ -152,7 +152,7 @@ private static final String DIRECTORY = Play.application().path().getAbsolutePat
             System.out.println(fileName);
            // file.renameTo(new File("public/photos", fileName));
             try {
-                FileUtils.copyFile(file, new File(DIRECTORY, fileName));
+                FileUtils.copyFile(file, new File("../../../", fileName));
                 
                 System.out.println(DIRECTORY+"/public/photos");
             } catch (IOException ioe) {
