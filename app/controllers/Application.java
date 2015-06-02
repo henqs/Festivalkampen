@@ -136,7 +136,7 @@ public class Application extends Controller {
     }
     return products();
 }*/
-private static final String DIRECTORY = Play.application().path().getAbsolutePath()+"";
+private static final String DIRECTORY = play.Play.application().path().getAbsolutePath();
 
         public static Result getDirectory(){
             return ok(""+DIRECTORY);
@@ -152,7 +152,7 @@ private static final String DIRECTORY = Play.application().path().getAbsolutePat
             System.out.println(fileName);
            // file.renameTo(new File("public/photos", fileName));
             try {
-                FileUtils.copyFile(file, new File("../../../", fileName));
+                FileUtils.moveFile(file, new File(DIRECTORY+"/public/photos", fileName));
                 
                 System.out.println(DIRECTORY+"/public/photos");
             } catch (IOException ioe) {
