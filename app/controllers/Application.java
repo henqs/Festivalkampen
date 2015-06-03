@@ -369,7 +369,7 @@ private static final String DIRECTORY = play.Play.application().path().getAbsolu
 	  String fullName = "";
 	  boolean success = false;
 	  int attempts = 0;
-	  while(success == false && attempts < 4){
+	  while(success == false && attempts < 3){
       try{
 		  conn = DB.getConnection();
 		  stmt = conn.createStatement();

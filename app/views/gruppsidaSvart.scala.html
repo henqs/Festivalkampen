@@ -62,25 +62,25 @@
 							
                                 success: function(data) {
                                     $("#result").html(data);
-									if (data < 1) {
-									console.log("Dina poäng uppgår till: " + data)
-									document.getElementById("point-text").innerHTML = "Skärp dig! <br>Dina personligt insamlade poäng är tragiskt nog: " + data;
+								if (data < 1) {
+									
+									document.getElementById("point-text").innerHTML = "<b>Ta upp kampen! <br>Du har inte fått några poäng än!</b>";
 									} else if (data < 100) {
-									console.log("Dina poäng uppgår till: " + data)
-									document.getElementById("point-text").innerHTML = "Skapligt! <br>Dina personligt insamlade poäng uppgår till: " + data;
+									
+									document.getElementById("point-text").innerHTML = "<b>Inte illa!<br>Du har bidragit med <br><p><i><font size='24'>" + data + "</font><br></i></p> poäng till ditt lag!</b>";
 									} else if (data < 500) {
-									console.log("Dina poäng uppgår till: " + data)
-									document.getElementById("point-text").innerHTML = "Det ser ljust ut! <br>Dina personligt insamlade poäng uppgår till: " + data;
+									
+									document.getElementById("point-text").innerHTML = "<b>Det ser ljust ut! <br>Du har bidragit med <br><p><i><font size='24'>" + data + "</font><br></i></p> poäng till ditt lag!</b>";
 									} else if (data < 1000) {
-									console.log("Dina poäng uppgår till: " + data)
-									document.getElementById("point-text").innerHTML = "Imponerande! <br>Dina personligt insamlade poäng uppgår till: " + data;
+									
+									document.getElementById("point-text").innerHTML = "<b>Imponerande! <br>Du har bidragit med hela <br><p><i><font size='24'>" + data + "</font><br></i></p> poäng till ditt lag!</b>";
 									} else if (data > 1000) {
-									console.log("Dina poäng uppgår till: " + data)
-									document.getElementById("point-text").innerHTML = "En sann stjärna! <br>Dina personligt insamlade poäng uppgår till hela: " + data;
+									
+									document.getElementById("point-text").innerHTML = "<b>En sann stjärna! <br>Du har bidragit med ofattbara <br><p><i><font size='24'>" + data + "</font><br></i></p> poäng till ditt lag!</b>";
 									}
                                 },
                                 error: function() {
-                                    alert("Något gick fel med att hämta användar ID från databasen.")
+                                    alert("Något gick fel med att hämta poäng från databasen. Vänligen försök igen senare.");
                                 }
                             })
 	
@@ -135,12 +135,12 @@
 				<div id="banner" class="box container">
 					<div class="row">
 						<div class="7u">
-							<img id="welcome-text" src="@routes.Assets.at("/images/gruppGron.png")" width = "170" height = "50"></img>
+							<img id="welcome-text" src="@routes.Assets.at("/images/gruppGron.png")" width = "250" height = "90"></img>
 							<script  src="@routes.Assets.at("/javascripts/facebookSDK.js")"></script>
 						</div>
 		   	<div class="7u">
 		   	
-			                <p id="point-text">Här skall dina insamlade poäng synas om inte databasen strular!</p>
+			                <p id="point-text"></p>
 		 	 </div>
 
 						<div class="5u">
@@ -162,7 +162,6 @@
 						
 							<!-- Box -->
 								<section class="box feature">
-								<p>Twitter om grupp</p>
 									<a class="twitter-timeline" href="https://twitter.com/hashtag/FKGron" data-widget-id="605361867981266944">#FKGron tweets</a>
                                     <script>
                                     ! function(d, s, id) {

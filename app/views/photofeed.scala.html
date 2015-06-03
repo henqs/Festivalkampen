@@ -155,7 +155,7 @@
         </div>
         <script>
     var currentImage = 0;
-    var currentPage = 4;
+    var currentPage = 3;
     getPhotos = function(){
         if(currentImage >= currentPage){
             return;
@@ -215,12 +215,12 @@
                 console.log("Problem when accessing photos")
             }
         })
-        }, 1000);
+        }, 2000);
     }
     getPhotos();
     
     nextPage = function(){
-      currentPage+=4;
+      currentPage+=3;
       getPhotos();
     }
     
