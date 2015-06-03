@@ -227,7 +227,19 @@ private static final String DIRECTORY = play.Play.application().path().getAbsolu
 		      }
 		  }catch (SQLException se) {
 
-		  }
+		  }finally{
+				 //finally block used to close resources
+				 try{
+				    if(stmt!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }// do nothing
+				 try{
+				    if(conn!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }//end finally try
+		   	}//end try
 	    return ok(""+redPoints+"_"+bluePoints+"-"+blackPoints+"+");
 	  }
 	  
@@ -247,7 +259,19 @@ private static final String DIRECTORY = play.Play.application().path().getAbsolu
 			    }
 		  } catch (SQLException se) {
 
-			}
+			}finally{
+				 //finally block used to close resources
+				 try{
+				    if(stmt!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }// do nothing
+				 try{
+				    if(conn!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }//end finally try
+		   	}//end try
 			return ok(qrStatus);
 	  }
 	  
@@ -261,7 +285,19 @@ private static final String DIRECTORY = play.Play.application().path().getAbsolu
 				stmt.executeUpdate(changeQrStatus);
 		  }catch (SQLException se) {
                 System.out.println("Could not update QR-status");
-		    }
+		  }finally{
+				 //finally block used to close resources
+				 try{
+				    if(stmt!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }// do nothing
+				 try{
+				    if(conn!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }//end finally try
+		   	}//end try
 		return ok(qrCode);
 	  }
 	  
@@ -306,7 +342,19 @@ private static final String DIRECTORY = play.Play.application().path().getAbsolu
 				stmt.executeUpdate(insertIntoDatabaseTeam);
 			} catch (SQLException se) {
 
-			}
+			}finally{
+				 //finally block used to close resources
+				 try{
+				    if(stmt!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }// do nothing
+				 try{
+				    if(conn!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }//end finally try
+		   	}//end try
 			return ok(ajax_result.render(id));
 		}
 //	// Create user and send to database
@@ -336,7 +384,19 @@ private static final String DIRECTORY = play.Play.application().path().getAbsolu
 				stmt.executeUpdate(insertIntoDatabase);
 			} catch (SQLException se) {
 
-			}
+			}finally{
+				 //finally block used to close resources
+				 try{
+				    if(stmt!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }// do nothing
+				 try{
+				    if(conn!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }//end finally try
+		   	}//end try
 			return ok(ajax_result.render(id));
 		}
     
@@ -356,7 +416,19 @@ private static final String DIRECTORY = play.Play.application().path().getAbsolu
             }catch (SQLException se) {
                 System.out.println("Something went wrong when saving file. Retrying...");
                 attempts++;
-		    }
+		    }finally{
+				 //finally block used to close resources
+				 try{
+				    if(stmt!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }// do nothing
+				 try{
+				    if(conn!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }//end finally try
+		   	}//end try
         }
 		return ok(ajax_result.render(fileName));
     }
@@ -382,7 +454,19 @@ private static final String DIRECTORY = play.Play.application().path().getAbsolu
       }catch (SQLException se){
           System.out.println("Failed to load photo. Retrying...");
           attempts++;
-      }
+      }finally{
+				 //finally block used to close resources
+				 try{
+				    if(stmt!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }// do nothing
+				 try{
+				    if(conn!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }//end finally try
+		   	}//end try
 	  }
       return ok(photo+"/"+fullName);
   }
