@@ -53,6 +53,40 @@
 		        	knappen.appendChild(loginTopText);
 		        	navNav.appendChild(knappen);
 					console.log('Logged in!');
+					FB.api('/me', function(response) {
+						console.log(response);
+				            var userId = ""+response.id;
+				          			function hittaPoint() {
+				          			    console.log(userId);
+								jsRoutes.controllers.Application.getPoint(userId).ajax({
+							
+                                success: function(data) {
+                                    $("#result").html(data);
+									if (data < 1) {
+									console.log(data)
+									document.getElementById("point-text").innerHTML = "Skärp dig! <br>Dina personligt insamlade poäng är tragiskt nog: " + data;
+									} else if (data < 100) {
+									console.log(data)
+									document.getElementById("point-text").innerHTML = "Skapligt! <br>Dina personligt insamlade poäng uppgår till: " + data;
+									} else if (data < 500) {
+									console.log(data)
+									document.getElementById("point-text").innerHTML = "Det ser ljust ut! <br>Dina personligt insamlade poäng uppgår till: " + data;
+									} else if (data < 1000) {
+									console.log(data)
+									document.getElementById("point-text").innerHTML = "Imponerande! <br>Dina personligt insamlade poäng uppgår till: " + data;
+									} else if (data > 1000) {
+									console.log(data)
+									document.getElementById("point-text").innerHTML = "En sann stjärna! <br>Dina personligt insamlade poäng uppgår till hela: " + data;
+									}
+                                },
+                                error: function() {
+                                    alert("Något gick fel med att hämta användar ID från databasen.")
+                                }
+                            })
+	
+				}
+				hittaPoint();
+					});
 				} else if (response.status === 'not_authorized') {
 					// The person is logged into Facebook, but not your app.
 				} else {
@@ -101,10 +135,14 @@
 					<div class="row">
 						<div class="7u">
 							<img id="welcome-text" src="@routes.Assets.at("/images/gruppRod.png")" width = "170" height = "50"></img>
-							<p>Här kan du twittra med andra från din grupp.</p>
 						</div>
+										<div class="7u">
+				<p id="point-text">Här skall dina insamlade poäng synas om inte databasen strular!</p>
+				</div>
+
 						<div class="5u">
-						@Templates.piechart()
+							<h4>Lagställning</h4>
+							@Templates.piechart()
 						</div>
 					</div>
 				</div>

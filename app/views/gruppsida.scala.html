@@ -45,6 +45,7 @@
 				          			function hittaLag() {
 				          			    console.log(userId);
 								jsRoutes.controllers.Application.getTeam(userId).ajax({
+							
                                 success: function(data) {
                                     $("#result").html(data);
 									if (data === "0") {
@@ -62,6 +63,7 @@
                                     alert("Något gick fel med att hämta användar ID från databasen.")
                                 }
                             })
+	
 				}
 				hittaLag();
 					});

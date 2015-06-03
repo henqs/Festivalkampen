@@ -86,6 +86,9 @@ GET     /changeQrStatus                 controllers.Application.changeQrStatus(i
 # Get Team
 GET    /getTeam             controllers.Application.getTeam(userID: String)   
 
+# Get Point
+GET    /getPoint             controllers.Application.getPoint(UserID: String) 
+
 # Send quiz answers
 GET   /postquiz                     controllers.QuizController.sayHello(data: String, userId: String)
 

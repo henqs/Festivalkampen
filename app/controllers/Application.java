@@ -386,6 +386,46 @@ private static final String DIRECTORY = play.Play.application().path().getAbsolu
 	  }
       return ok(photo+"/"+fullName);
   }
+  
+  
+  	  ////////////////////////////Hämtar en användares poäng//////////////////////////////77
+	  	public static Result getPoint(String userId){
+
+			Connection conn = null;
+			Statement stmt = null;
+			String getUserPoint = "SELECT `points` FROM `user` WHERE id="+ userId;
+			System.out.println("Nu kör vi " +  userId);
+							
+		  
+		  try{
+		      conn = DB.getConnection();
+		      stmt = conn.createStatement();
+			  
+		      ResultSet rts = stmt.executeQuery(getUserPoint);
+			  rts.next();
+		      String str = rts.getString("points");
+			  rts.close();
+		      return ok("" + str);
+   
+		  }catch(SQLException se){
+				//Handle errors for JDBC
+		        return null;
+			}finally{
+				 //finally block used to close resources
+				 try{
+				    if(stmt!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }// do nothing
+				 try{
+				    if(conn!=null)
+				       conn.close();
+				 }catch(SQLException se){
+				 }//end finally try
+		   	}//end try
+	  }
+	  
+	  
 	
     public static Result javascriptRoutes() {
     response().setContentType("text/javascript");
@@ -396,6 +436,7 @@ private static final String DIRECTORY = play.Play.application().path().getAbsolu
         controllers.routes.javascript.Application.givePoints(),
         controllers.routes.javascript.Application.getTeamStandings(),
 		controllers.routes.javascript.Application.getTeam(),
+		controllers.routes.javascript.Application.getPoint(),
 		controllers.routes.javascript.Application.checkQrStatus(),
         controllers.routes.javascript.Application.changeQrStatus(),
 		controllers.routes.javascript.Application.getPhotos(),
